@@ -17,7 +17,7 @@ So here's what the mod changes:
 - **+20 bonus to Hiding** at the start (up from +10)
 - **40** points to distribute **at level 1**, and **15** from that point on.
 - **Ellusive mind**: This is a renamed **Slippery mind** (universal +1 saving throw as per BeamDog's design), which now offers instead a **+1 bonus** against **Spells** and **Wands**, and a **+2 bonus** against the schools of **Enchantment and Illusion**. I did this not just because it is a little closer to how Slippery mind works in Forgotten Realms, but also because I don't want the name to clash with the **Slippery Mind** feat in **ToF** (Talents of Fâerun) by DavidW. I'm happy to consider the Shadowdancer's mind as "especially slippery".
-- At level **10**, regenerate 1 HP per round, much like your shade companion.
+- At level **10**, regenerate 1 HP per round while invisible, much like your shade companion.
 
 
 #### SKILLS
