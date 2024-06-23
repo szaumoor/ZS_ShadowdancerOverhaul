@@ -1,0 +1,36 @@
+IF
+	Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
+	Heard([ANYONE],111)
+THEN
+	RESPONSE #100
+		MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+	Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
+	ActionListEmpty()
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	OR(2)
+		Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
+		Global("ZS_SDSHD_STRAT", "GLOBAL", 1)
+	ActionListEmpty()
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	Global("ZS_SDSHD_STRAT", "GLOBAL", 2)
+	ActionListEmpty()
+//	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf([PC]))
+END

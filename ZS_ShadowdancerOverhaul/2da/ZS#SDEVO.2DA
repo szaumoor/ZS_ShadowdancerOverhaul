@@ -1,0 +1,27 @@
+2DA V1.0
+****
+                ResRef      Type
+BLINDNESS       SPWI106     3
+FRIENDS         SPWI107     3
+SHIELD          SPWI114     3
+SLEEP           SPWI116     3
+DRAIN_LIFE      ZS#SDSB     3
+FAMILIAR        SPWI123     3
+DET_INVISIB     SPWI203     3
+HORROR          SPWI205     3
+LUCK            SPWI209     3
+STRENGTH        SPWI214     3
+VOCALIZE        SPWI219     3
+PWSLEEP         SPWI220     3
+RAY_ENF         SPWI221     3
+DARKNESS        ZS#SDSH     3
+DEAFNESS        SPWI223     3
+GLITTERDUST     SPWI224     3
+HOLD_PERSON     SPWI306     3
+NON_DETECT      SPWI310     3
+P_NMISSILES     SPWI311     3
+VAMPIRIC_TO     ZS#SDSD     3
+DIRE_CHARM      SPWI316     3
+DIM_DOOR        ZS#SDH07    3
+WIZARD_EYE      SPWI425     3
+SHADOW_DOOR     SPWI505     3

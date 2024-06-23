@@ -1,0 +1,117 @@
+BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
+AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
+VERSION "v1.0"
+README ~ZS_ShadowdancerOverhaul/README.md~
+AUTO_EVAL_STRINGS
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+LANGUAGE
+"English"
+"english"
+"ZS_ShadowdancerOverhaul/lang/english/setup.tra"
+LANGUAGE
+"Spanish"
+"spanish"
+"ZS_ShadowdancerOverhaul/lang/english/setup.tra" "ZS_ShadowdancerOverhaul/lang/spanish/setup.tra"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1000 DESIGNATED 100
+REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" "Only compatible with BGEE BG2EE EET"
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// COPYING ALL THE RELEVANT FILES
+
+COPY
+  "%MOD_FOLDER%/spl" override
+  "%MOD_FOLDER%/cre" override
+  "%MOD_FOLDER%/bam" override
+  "%MOD_FOLDER%/eff" override
+  "%MOD_FOLDER%/itm" override
+  "%MOD_FOLDER%/wav" override
+  "%MOD_FOLDER%/vvc" override
+  "%MOD_FOLDER%/bcs" override
+
+INCLUDE "ZS_ShadowdancerOverhaul/libs/a7#add_kit_ex.tpa"
+INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa"
+
+// Kit insertion (BG2EE)
+LAF ADD_KIT_EX
+    INT_VAR
+        help = RESOLVE_STR_REF(@0)
+        briefdesc = RESOLVE_STR_REF(@0)
+    STR_VAR
+        kit_name   = ~ZS_SHADOWDANCER~
+        source_kit = ~SHADOWDANCER~
+        backstab   = ~2 2 2 2 2 2 2 2 3 3 3 3 4~
+        thiefskl = ~40 15~
+        clswpbon = ~0 0 3~
+        clab_path = ~ZS_ShadowdancerOverhaul/2da/ZSSDCLAB.2da~
+    RET kit_id
+END
+
+INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
+
+LAF action_add_hla // self-concealment
+    STR_VAR
+        kit_name = ~ZS_SHADOWDANCER~
+        ability = ~AP_ZS#SDH01~
+        num_allowed = ~3~
+        prerequisite = ~GA_SPCL938~ // requires Shadow Form
+END
+
+LAF action_add_hla // shadow master
+    STR_VAR
+        kit_name = ~ZS_SHADOWDANCER~
+        ability = ~AP_ZS#SDH02~
+        num_allowed = ~1~
+END
+
+INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1003 DESIGNATED 300
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_rogue_thac0.tpa~
+LAF generate_rogue_thac0
+    STR_VAR
+        class1 = ~thief~
+        class2 = ~mage_thief~
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1004 DESIGNATED 400
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_rogue_thac0.tpa~
+LAF generate_rogue_thac0
+    STR_VAR
+        class1 = ~bard~
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1005 DESIGNATED 5000
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
+REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "1000" "This component requires the Shadowdancer Overhaul component"
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_alter_header.tpa~
+
+COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
+    SAY UNIDENTIFIED_DESC @6000
+    SAY DESC @6000
+    LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection
+        INT_VAR
+            def_target = 1  // Self
+            def_duration = 30
+            def_parameter1 = 50
+            def_parameter2 = 0
+        STR_VAR
+            function_name = ~ADD_SPELL_EFFECT~
+            effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
+    END
+    LPF ALTER_SPELL_HEADER
+        INT_VAR
+            header_type = 1
+            speed = 0 // instant casting
+    END
+BUT_ONLY
