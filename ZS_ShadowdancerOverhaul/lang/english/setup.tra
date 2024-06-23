@@ -148,6 +148,8 @@ Requirements: Shadow Form~
 @22 = ~Shadow conjuration
 This skill allows to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available:
 Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.~
+@23 = ~Backstab immunity removed~
+@24 = ~Backstab immunity removal effect wore off~
 
 // END OF SHADOWDANCER SPELLS
 
