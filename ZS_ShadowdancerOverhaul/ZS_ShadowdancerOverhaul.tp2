@@ -15,7 +15,7 @@ LANGUAGE
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100
-REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" "Only compatible with BGEE BG2EE EET"
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with BGEE BG2EE EET"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
 
@@ -91,27 +91,32 @@ END
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "1000" "This component requires the Shadowdancer Overhaul component"
+REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" "This component requires the Shadowdancer Overhaul component"
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_alter_header.tpa~
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa~
 
-COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
-    SAY UNIDENTIFIED_DESC @6000
-    SAY DESC @6000
-    LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection
-        INT_VAR
-            def_target = 1  // Self
-            def_duration = 30
-            def_parameter1 = 50
-            def_parameter2 = 0
-        STR_VAR
-            function_name = ~ADD_SPELL_EFFECT~
-            effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
-    END
-    LPF ALTER_SPELL_HEADER
-        INT_VAR
-            header_type = 1
-            speed = 0 // instant casting
-    END
-BUT_ONLY
+ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
+    COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
+        SAY UNIDENTIFIED_DESC @6000
+        SAY DESC @6000
+        LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection
+            INT_VAR
+                def_target = 1  // Self
+                def_duration = 30
+                def_parameter1 = 50
+                def_parameter2 = 0
+            STR_VAR
+                function_name = ~ADD_SPELL_EFFECT~
+                effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
+        END
+        LPF ALTER_SPELL_HEADER
+            INT_VAR
+                header_type = 1
+                speed = 0 // instant casting
+        END
+    BUT_ONLY
+END ELSE BEGIN
+    PRINT "Spirit form not found in the game"
+END

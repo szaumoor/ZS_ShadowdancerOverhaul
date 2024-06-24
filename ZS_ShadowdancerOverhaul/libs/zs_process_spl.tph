@@ -9,17 +9,19 @@ COPY_EXISTING ~ZS#SDL1C.SPL~ ~override~ // Shadow Jump
 BUT_ONLY
 
 // Tweak Rod of Shadowstep for consistency
-COPY_EXISTING ~ohdrod.ITM~ ~override~ // Rod of Shadow Jump
-    SAY NAME2 @5001
-    SAY IDENTIFIED_DESC @5000
-    LPF ALTER_ITEM_EFFECT
-        INT_VAR
-            check_headers = 1
-            match_opcode = 146
-        STR_VAR
-            resource = ~ZS#SDL1C~
-    END
-BUT_ONLY
+ACTION_IF FILE_EXISTS_IN_GAME ~ohdrod.ITM~ BEGIN
+    COPY_EXISTING ~ohdrod.ITM~ ~override~ // Rod of Shadow Jump
+        SAY NAME2 @5001
+        SAY IDENTIFIED_DESC @5000
+        LPF ALTER_ITEM_EFFECT
+            INT_VAR
+                check_headers = 1
+                match_opcode = 146
+            STR_VAR
+                resource = ~ZS#SDL1C~
+        END
+    BUT_ONLY
+END
 
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     SAY NAME1 @9
@@ -89,42 +91,45 @@ COPY_EXISTING ~ZS#SDH2D.SPL~ ~override~ // critical hit effect sw master
     END
 BUT_ONLY
 
+ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
+    COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
+        SAY UNIDENTIFIED_DESC @11
+        SET op9_loc_speed = 255 + (20 << 16)
+        LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection, RGB (38,15,61)
+            INT_VAR
+                def_target = 1  // Self
+                def_duration = 30
+                def_parameter1 = 50
+                def_parameter2 = 0
+            STR_VAR
+                function_name = ~ADD_SPELL_EFFECT~
+                effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ // near black tint
+        END
+        LPF ALTER_SPELL_EFFECT
+            INT_VAR
+                match_opcode = 50
+                parameter1 = "-784830976"
+                match_parameter2 = 0
+                parameter2 = op9_loc_speed
+        END
+        LPF ALTER_SPELL_EFFECT
+            INT_VAR
+                match_opcode = 215
+            STR_VAR
+                resource = ~PARALH~
+        END
+    BUT_ONLY
+END
 
-COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
-    SAY UNIDENTIFIED_DESC @11
-    SET op9_loc_speed = 255 + (20 << 16)
-    LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection, RGB (38,15,61)
+ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ BEGIN
+    COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
+    LPF ALTER_EFFECT
         INT_VAR
-            def_target = 1  // Self
-            def_duration = 30
-            def_parameter1 = 50
-            def_parameter2 = 0
-        STR_VAR
-            function_name = ~ADD_SPELL_EFFECT~
-            effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ // near black tint
-    END
-    LPF ALTER_SPELL_EFFECT
-        INT_VAR
-            match_opcode = 50
-            parameter1 = "-784830976"
-            match_parameter2 = 0
-            parameter2 = op9_loc_speed
-    END
-    LPF ALTER_SPELL_EFFECT
-        INT_VAR
-            match_opcode = 215
-        STR_VAR
-            resource = ~PARALH~
-    END
-BUT_ONLY
-
-COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
-  LPF ALTER_EFFECT
-    INT_VAR
-        match_duration = 60
-        duration = 120
-    END
-BUT_ONLY
+            match_duration = 60
+            duration = 120
+        END
+    BUT_ONLY
+END
 
 COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's disabled Thief buttons, and prevents them from using Summon Shade
     LPF DELETE_SPELL_EFFECT
@@ -138,84 +143,86 @@ COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's d
     END
 BUT_ONLY
 
-COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze, adds new headers for better saving throws
-    SAY UNIDENTIFIED_DESC @12
-    LPF ALTER_SPELL_EFFECT
-        INT_VAR
-            header_type = 2
-            match_opcode = 213 // no longer delayed
-            parameter2 = 1 // uses time now to allow fancy visuals when returning
-            timing = 0
-            duration = 30
-            probability1 = 9
-            resist_dispel = 0
-    END
-    LPF ALTER_SPELL_EFFECT
-        INT_VAR
-            header_type = 2
-            match_opcode = 215
-            timing = 0
-            duration = 0 // instant, no need to apply duration
-            probability1 = 9
-            resist_dispel = 0
-        STR_VAR
-            resource = ~BDETHER~ // visual effect of Ether gate
-    END
-    LPF a7_auto_apply_spl_effect
-        INT_VAR
-            def_target = 2
-            def_type = 2
-            def_timing = 4
-            def_savetype = 1
-            def_savebonus = "-4"
-            def_resist_dispel = 0
-            def_probability1 = 9
-        STR_VAR
-            function_name = ~ADD_SPELL_EFFECT~
-            effect_codes  = ~op=215,dur=29,res=BDETHER;op=146,res=ZSSDMAZ0,dur=29~
-    END
-    LPF a7_auto_apply_spl_effect
-        INT_VAR
-            def_target = 2
-            def_type = 2
-            def_timing = 4
-            def_savetype = 1
-            def_savebonus = "-4"
-        STR_VAR // add cast spell eff
-            function_name = ~ADD_SPELL_EFFECT~
-            effect_codes  = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ //
-    END
-    LPF ADD_SPELL_HEADER
-        INT_VAR
-            zs_min_level_for_copy = 28
-            copy_header = 1
-    END
-    LPF ALTER_EFFECT
-        INT_VAR
-            header = 1
-            savebonus = "-5"
-    END
-    LPF ADD_SPELL_HEADER
-        INT_VAR
-            zs_min_level_for_copy = 36
-            copy_header = 1
-    END
-    LPF ALTER_EFFECT
-        INT_VAR
-            header = 2
-            savebonus = "-6"
-    END
-    LPF ADD_SPELL_HEADER
-        INT_VAR
-            zs_min_level_for_copy = 44
-            copy_header = 1
-    END
-    LPF ALTER_EFFECT
-        INT_VAR
-            header = 3
-            savebonus = "-7"
-    END
-BUT_ONLY
+ACTION_IF FILE_EXISTS_IN_GAME ~SPCL937.SPL~ BEGIN
+    COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze, adds new headers for better saving throws
+        SAY UNIDENTIFIED_DESC @12
+        LPF ALTER_SPELL_EFFECT
+            INT_VAR
+                header_type = 2
+                match_opcode = 213 // no longer delayed
+                parameter2 = 1 // uses time now to allow fancy visuals when returning
+                timing = 0
+                duration = 30
+                probability1 = 9
+                resist_dispel = 0
+        END
+        LPF ALTER_SPELL_EFFECT
+            INT_VAR
+                header_type = 2
+                match_opcode = 215
+                timing = 0
+                duration = 0 // instant, no need to apply duration
+                probability1 = 9
+                resist_dispel = 0
+            STR_VAR
+                resource = ~BDETHER~ // visual effect of Ether gate
+        END
+        LPF a7_auto_apply_spl_effect
+            INT_VAR
+                def_target = 2
+                def_type = 2
+                def_timing = 4
+                def_savetype = 1
+                def_savebonus = "-4"
+                def_resist_dispel = 0
+                def_probability1 = 9
+            STR_VAR
+                function_name = ~ADD_SPELL_EFFECT~
+                effect_codes  = ~op=215,dur=29,res=BDETHER;op=146,res=ZSSDMAZ0,dur=29~
+        END
+        LPF a7_auto_apply_spl_effect
+            INT_VAR
+                def_target = 2
+                def_type = 2
+                def_timing = 4
+                def_savetype = 1
+                def_savebonus = "-4"
+            STR_VAR // add cast spell eff
+                function_name = ~ADD_SPELL_EFFECT~
+                effect_codes  = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ //
+        END
+        LPF ADD_SPELL_HEADER
+            INT_VAR
+                zs_min_level_for_copy = 28
+                copy_header = 1
+        END
+        LPF ALTER_EFFECT
+            INT_VAR
+                header = 1
+                savebonus = "-5"
+        END
+        LPF ADD_SPELL_HEADER
+            INT_VAR
+                zs_min_level_for_copy = 36
+                copy_header = 1
+        END
+        LPF ALTER_EFFECT
+            INT_VAR
+                header = 2
+                savebonus = "-6"
+        END
+        LPF ADD_SPELL_HEADER
+            INT_VAR
+                zs_min_level_for_copy = 44
+                copy_header = 1
+        END
+        LPF ALTER_EFFECT
+            INT_VAR
+                header = 3
+                savebonus = "-7"
+        END
+    BUT_ONLY
+END
 
 // END SD SPELLS
 
