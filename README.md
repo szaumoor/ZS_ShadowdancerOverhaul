@@ -77,6 +77,7 @@ This is just for consistency. If installed, Spirit Form will also protect agains
 
 ## Known Issues
 - CTRL + R your character might make the effects of Shadow Master bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
+- It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
 - There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug, mixed with settings your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not).
 - The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure.
 
