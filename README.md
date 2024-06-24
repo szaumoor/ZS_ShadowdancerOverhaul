@@ -67,6 +67,8 @@ Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump, and it
 ### 2. Streamline THAC0 for Thieves
 This component streamlines the THAC0 for Thieves and allows them to attain the more reasonable THAC0 of 6 that priests can attain. Essentially, every even THAC0 level lasts only for one level, and uneven ones persist for 2 levels. 20, 19, 19, 18, 17, 17, 16, 15, 15... This is recommended unless you're using another mod that does the same.
 
+Be warned, however, that it will conflict with the swashbuckler class, since the THAC0 bonuses in the vanilla class rely on Thieves attaining a THAC0 of 10 at most, which means Swashbucklers will attain a THAC0 of -4 instead of 0, like Fighters.
+
 ### 3. Improve the THAC0 of Bards too to match the changes to Thieves
 This simply matches the THAC0 progression of Bards to that of the Thieves as per the previous component.
 

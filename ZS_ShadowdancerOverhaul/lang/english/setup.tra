@@ -14,33 +14,29 @@ Advantages:
 – May cast Summon Shadow once per day, gaining a single use at level 4.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
 
-
-SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. <PRO_HESHE> cannot damage, be targeted by enemies, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time.
+SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose.
 
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
-– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes you detectable again.
+– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes the Shadowdancer detectable again.
 – +5% critical chance, improved to +10% at level 12.
 – +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +6.
 – +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +4.
 
 Additionally, every time <PRO_HESHE> gains another use of Shadow Jump, the total distance <PRO_HESHE> can travel before returning to the Prime increases by a factor of 1.
 
+SUMMON SHADOW: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, immune to turning, is highly resistant to damage, and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. This undead companion grows in power with the Shadowdancer, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
 
-SUMMON  SHADOW: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, immune to turning, is highly resistant to damage, and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. This undead companion grows in power as <PRO_HESHE> does every four levels, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
+SHADOW ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
-
-SHADOW  ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
-
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter.
+– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
 – At level 12, the spell spreads upon impact, causing chaos among enemies that are close by.
 – At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4.
-– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects, which may not be resisted during the spell's effect.
+– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds.
 
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
 However, the spell failure, the susceptibility to sneak attacks, blindness (level 17), and the damage susceptibility (level 14) cannot be resisted once they take hold.
-
 
 Disadvantages:
 – Alignment restricted to any non-lawful.
