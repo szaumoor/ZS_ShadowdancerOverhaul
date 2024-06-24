@@ -28,7 +28,7 @@ So here's what the mod changes:
   - You get an **increasing bonus** to **THAC0** (up to +6, on top of invisibility bonuses), **damage** (up to +4), and **critical hit** chances (up to +10%) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
   - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
 - **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and D&D but essentially the idea is that you're able to discombobulate enemies in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
-  - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy fear, berserker, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
+  - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserker, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
   - At higher levels it becomes a small AoE, and later makes enemies take 10% more physical damage and get a AC penalty of 4, and the blindness effect is guaranteed when the saving throw fails.
   - Doesn't affect creatures of INT of 18 and above as well as powerful creatures that can't be tricked, like golems, dragons, balors, solars, etc.
@@ -50,7 +50,7 @@ So here's what the mod changes:
   - **Future plans**: Add the possibility of talking with it to change strategy. It should attack on sight now and you can talk with it, but there's no effect to it.
 
 **HLAS**
-  - **Self-concealment**: 5% dmg resistance, +1 AC, can be taken three times. Inspired by NWN.
+  - **Self-concealment**: 5% physical and cold resistance, +1 AC, can be taken three times. Inspired by NWN.
   - **Shadow Master**: Immune to blindness, nondetection, +2 Save vs. Illusion, and at night, you gain 15 extra health, move 35% faster, backstabs inflict blindness unless a save vs. spell at -2 succeeds and critical hits makes target susceptible to backstabs and inflict a -2 penalty to Save vs. Spell and Death. Additionally it makes the Shadowdancer incapable of critically missing, and improves critical chances by 5% for the duration (not stackable). Can be taken once. Inspired by Pathfinder.
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemies inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
@@ -66,6 +66,8 @@ Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump, and it
 
 ### 2. Streamline THAC0 for Thieves
 This component streamlines the THAC0 for Thieves and allows them to attain the more reasonable THAC0 of 6 that priests can attain. Essentially, every even THAC0 level lasts only for one level, and uneven ones persist for 2 levels. 20, 19, 19, 18, 17, 17, 16, 15, 15... This is recommended unless you're using another mod that does the same.
+
+Be warned, however, that it will conflict with the swashbuckler class, since the THAC0 bonuses in the vanilla class rely on Thieves attaining a THAC0 of 10 at most, which means Swashbucklers will attain a THAC0 of -4 instead of 0, like Fighters.
 
 ### 3. Improve the THAC0 of Bards too to match the changes to Thieves
 This simply matches the THAC0 progression of Bards to that of the Thieves as per the previous component.
