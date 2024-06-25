@@ -28,7 +28,7 @@ So here's what the mod changes:
   - You get an **increasing bonus** to **THAC0** (up to +6, on top of invisibility bonuses), **damage** (up to +4), and **critical hit** chances (up to +10%) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
   - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
 - **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and D&D but essentially the idea is that you're able to discombobulate enemies in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
-  - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserker, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
+  - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserk, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
   - At higher levels it becomes a small AoE, and later makes enemies take 10% more physical damage and get a AC penalty of 4, and the blindness effect is guaranteed when the saving throw fails.
   - Doesn't affect creatures of INT of 18 and above as well as powerful creatures that can't be tricked, like golems, dragons, balors, solars, etc.
@@ -51,16 +51,16 @@ So here's what the mod changes:
 
 **HLAS**
   - **Self-concealment**: 5% physical and cold resistance, +1 AC, can be taken three times. Inspired by NWN.
-  - **Shadow Master**: Immune to blindness, nondetection, +2 Save vs. Illusion, and at night, you gain 15 extra health, move 35% faster, backstabs inflict blindness unless a save vs. spell at -2 succeeds and critical hits makes target susceptible to backstabs and inflict a -2 penalty to Save vs. Spell and Death. Additionally it makes the Shadowdancer incapable of critically missing, and improves critical chances by 5% for the duration (not stackable). Can be taken once. Inspired by Pathfinder.
+  - **Shadow Master**: Immune to blindness, nondetection, +2 Save vs. Illusion, and at night, you gain 15 extra health, move 35% faster, backstabs inflict blindness for 3 rounds unless a save vs. spell at -2 succeeds and 2d4 cold damage; critical hits makes the target susceptible to backstabs for 2 rounds and inflict a non-stackable -2 penalty to Save vs. Spell and Death. During those two rounds, it makes the Shadowdancer incapable of critically missing, and improves critical chances by 5% for the duration (not stackable). Can be taken once. Inspired by Pathfinder.
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemies inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
   - **Shadow Form**: Same, but it also makes your invisibility undispellable for its duration, and it makes you resist also 50% of ALL damage for 5 rounds, since it's meant to mimic 50% displacement i.e. 50% of the attacks should miss (and damage reduction, but damage reduction is implemented very differently in NWN/NWN2). Can be taken unlimited times.
 
-**Feats (ToF only)**
-These exist only so they are implemented if ToF (Talents of Faêrun) is installed. To be determined how this is done.
+**Feats (Only to be made available by ToF or other Feat mods)**
+These exist only so they are implemented if ToF or another Feat mod is installed. To be determined how this is done.
 - **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards.
 - **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards.
-- **Shadow Evocation**: can cast a selection of spells from level 1 to level 5 twice per day. Available from level 7 on. Can only be taken once. Inspired by NWN.
+- **Shadow Evocation**: can cast a selection of spells from level 1 to level 5 three times per day. Available from level 7 on. Can only be taken once. Inspired by NWN.
 
 Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump, and it's usable **3 times per day**. It does not disappear forever when drained.
 
@@ -78,9 +78,9 @@ This is just for consistency. If installed, Spirit Form will also protect agains
 ## Known Issues
 - CTRL + R your character might make the effects of Shadow Master bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
 - It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
-- There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug, mixed with settings your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not).
-- The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure.
+- There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug, mixed with setting your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not), the rest is up to you and your tolerance for cheesiness.
+- The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback will be welcomed.
 
 ## Credits
 - All the community on **Discord** for providing help and helpful code.
-- **BeamDog** for introducing me to the class of Shadowdancers, which is currently my favorite class, conceptually. This mod is really an attempt of making me like it functionally too.
+- **BeamDog** for introducing me to the Shadowdancer kit, which is currently my favorite class/kit, conceptually. This mod is really my way of making me like it functionally too.
