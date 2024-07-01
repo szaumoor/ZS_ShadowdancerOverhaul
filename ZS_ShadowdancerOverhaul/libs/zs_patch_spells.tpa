@@ -7,7 +7,8 @@
 // Code format:          "param1=value1,param2=value2;...second effect..."
 // Supported parameters: op (Opcode), tgt (Target), tmg (Timing), pwr (Power), p1 (Parameter1), p2 (Parameter2),
 //                       rd (Resist/Dispel), dur (Duration), pro1 (Probability1), pro2 (Probability2), res (Resource),
-//                       dnum (Dice Number), dsize (Dice Size), stype (Save Type), sbonus (Save Bonus), spec (Special), ip (Insert Point)
+//                       dnum (Dice Number), dsize (Dice Size), stype (Save Type), sbonus (Save Bonus), spec (Special),
+//                       ip (Insert Point), t (Type)
 //                       All parameters except "Opcode" are optional.
 DEFINE_PATCH_FUNCTION a7_auto_apply_spl_effect
 INT_VAR
@@ -27,6 +28,7 @@ INT_VAR
   def_savebonus     = 0
   def_special       = 0
   def_insertpoint   = "-1"
+  def_type          = 3
 STR_VAR
   // Supported functions: ADD_SPELL_EFFECT, ADD_SPELL_CFEFFECT, ADD_ITEM_EFFECT, ADD_ITEM_EQEFFECT and (limited) ADD_CRE_EFFECT
   function_name     = ~~
@@ -93,6 +95,7 @@ BEGIN
       SET savebonus = (VARIABLE_IS_SET EVAL ~effects_%idx%_sbonus~) ? EVAL ~effects_%idx%_sbonus~ : def_savebonus
       SET special = (VARIABLE_IS_SET EVAL ~effects_%idx%_spec~) ? EVAL ~effects_%idx%_spec~ : def_special
       SET insertpoint = (VARIABLE_IS_SET EVAL ~effects_%idx%_ip~) ? EVAL ~effects_%idx%_ip~ : def_insertpoint
+      SET type = (VARIABLE_IS_SET EVAL ~effects_%idx%_t~) ? EVAL ~effects_%idx%_t~ : def_type
       PATCH_IF (VARIABLE_IS_SET EVAL ~effects_%idx%_res~) BEGIN
         TEXT_SPRINT resource EVAL ~%effects_%idx%_res%~
       END ELSE BEGIN
@@ -117,6 +120,7 @@ BEGIN
           savebonus     = savebonus
           special       = special
           insert_point  = insertpoint
+          type          = type
         STR_VAR
           resource      = EVAL ~%resource%~
         END

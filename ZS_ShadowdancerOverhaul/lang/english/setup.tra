@@ -220,6 +220,9 @@ The nighthaunt becomes briefly able to see invisible creatures, revealing them r
 
   // END INSTALLER TEXT
 
+@1006 = ~Give a selection of items extra hidden traits if wielded/worn by Shadowdancers~
+@1007 = ~Add a variety of new Shadowdancer-inspired items to the game~
+
 
 // ITMS
 
@@ -233,6 +236,47 @@ Charge abilities:
 Weight: 2~
 
 @5001 = ~Rod of Shadow Jump~
+
+// Lava's Shade of Sword Coast Item
+@5010 = ~This unusual ioun stone was found in the shadow version of the Gnoll Stronghold. It is cold to the touch and seems to be enchanted with Shadow Magic or some other source of dark energy. Individuals with affinity to the shadow can extract more benefits from it.
+
+STATISTICS:
+
+Equipped Abilities:
+- Save vs. Necromancy: +2
+- Armor Class during the night: +1
+- THAC0 during the night: +1
+- For Shadowdancers only: +2 Saves vs. Illusion, +25% cold resistance
+
+
+Weight: 1~
+
+// Lava's Shade of Sword Coast Item
+@5020 = ~This sword was named after Thaxll'ssillyia - an infamous and powerful shadow dragon from the Plane of Shadows. Tales say that his breath can drain life from living things and his wings are powerful enough to destroy walls, causing unresistable fear in those that face him.
+
+The sword itself is covered with an unusual purple flame that does not burn as normal fire, but twist reality, make its vivid colors fade away. Characters with affinity for the shadow can extract more benefits from it.
+
+STATISTICS:
+
+Equipped Abilities:
+- Saving Throw vs. Death: +2
+- Saving Throw vs. Illusion: +2 (shadowdancers only)
+
+Combat Abilities:
+- Has a 10% chance to cause additional 1d4 acid damage
+- 50% chance of causing 1d2 magic damage (shadowdancers only)
+- If a Save vs. Death at -1 is failed, THAC0 is reduced by 2 for 3 rounds (shadowdancers only)
+
+THAC0: +2, +4 vs. good characters
+Damage: 1d8+2, +4 vs. good characters
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Ninja-to
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
 
 
 // OTHER TWEAKS
