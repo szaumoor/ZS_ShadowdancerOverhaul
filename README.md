@@ -75,6 +75,21 @@ This simply matches the THAC0 progression of Bards to that of the Thieves as per
 ### 4. Make Shaman Spirit Form mirror the benefits of Shadow Form
 This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
 
+### 5. Give a selection of items extra hidden traits if wielded/worn by Shadowdancers
+
+This components gives a selection of gear a few hidden bonuses if wielded by the Shadowdancer. This component does not require the overhaul to work: the original shadowdancer class will benefit from it. These changes are for the most part mild effects for stealth or evasion:
+
+- Shadow Armor +3: +10% Hiding in the Shadows
+- The Night's Gift +5 / The Night's Embrace +3 (SoD): +10% Hiding in the Shadows, +2 AC
+- Armor of the Deep Night +4 & Cloak of the Dark Moon: 10% Hiding in the Shadows and Move Silently
+- Shadow Dragon Scale: 10% Hiding in the Shadows, Saving throws +1
+- Night Walkers: Movement speed bonus is 4 points higher for Shadowdancers
+- Worn Whispers/Whispers of Silence: +5% Hiding in the Shadows
+- Cloak of Displacement: +1 AC
+- Soft Feet (SoD): +2 movement speed, +10% Hiding in the Shadows and Move Silently
+- Ioun Stone of Darklings (Lava's Shades of the Sword Coast): Protects against critical hits (universal), adds +2 saves against Illusion and 25% cold resistance for Shadowdancers
+- Tongue of Thaxll'ssillyia +2 (Lava's Shades of the Sword Coast): +2 Saves against Illusion, 50% chance to cause 1d2 magic damage, -2 THAC0 for 3 rounds is Save vs. Death at -1 is failed
+
 ## Known Issues
 - CTRL + R your character might make the effects of Shadow Master bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
 - It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
