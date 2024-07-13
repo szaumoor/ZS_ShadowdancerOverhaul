@@ -29,10 +29,10 @@ SUMMON SHADOW: Once per day, the Shadowdancer may summon an neutrally-aligned in
 
 SHADOW ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
-– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by.
-– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4.
-– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds.
+– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4
+– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by
+– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4
+– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds
 
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
@@ -59,10 +59,10 @@ Instantly step into the Shadow Plane for about 7 seconds, moving faster by a fac
 
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
-– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0.
-– +5% critical chance, improved to +10% at level 12.
-– +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +6.
-– +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +4.
+– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0
+– +5% critical chance, improved to +10% at level 12
+– +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +6
+– +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +4
 
 Additionally, every time you gain another use of Shadow Jump, the total distance you can travel before returning to the Prime increases by a factor of 1.~
 
@@ -70,10 +70,10 @@ Additionally, every time you gain another use of Shadow Jump, the total distance
 @6 = ~Shadow Illusion
 Conjure shadowy illusions that surround an enemy and discombobulate them, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
-– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by.
-– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4.
-– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects, which may not be resisted during the spell's effect.
+– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4
+– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by
+– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4
+– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects, which may not be resisted during the spell's effect
 
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and creatures who don't have the capacity for mental confusion, such as golems. It is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
@@ -111,8 +111,8 @@ This ability opens a temporary gateway to a small pocket within the Plane of Sha
 After being released, living beings resurface feeling weak for 1 turn, causing the following non-stackable effects:
 
  – Strength, Dexterity, AC, THAC0, damage, saving throws, and casting speed: -2
- – Movement speed reduced by 25%.
- – 5% more likely to critically miss when attacking.
+ – Movement speed reduced by 25%
+ – 5% more likely to critically miss when attacking
 
  This cannot reduce Strength and Dexterity below 1.~
 
@@ -125,7 +125,7 @@ Your synergy with the power of shadow deepens. You gain the following perks:
 – Nondetection
 – +2 Saves against spells and effects from the school of Illusion
 – At night, +15 health and 35% faster movement
-– Critical hits make the target vulnerable to backstabs for 2 rounds and inflict a -2 weakness when saving against Spell and Death, while your critical hits chances improve by 5% (non-cumulative) and you become unable to critically miss.
+– Critical hits make the target vulnerable to backstabs for 2 rounds and inflict a -2 weakness when saving against Spell and Death, while your critical hits chances improve by 5% (non-cumulative) and you become unable to critically miss
 – Backstabs inflict 2d4 extra cold damage without any save allowed, as well as blindness on targets for 3 rounds unless a Save vs. Spell at -2 is made
 
 Requirements: Shadowdancer only.~
@@ -142,10 +142,13 @@ Requirements: Shadow Form~
 @20 = ~This increases the number of uses of Shadow Illusion by 1. Can be taken twice at most.~
 @21 = ~Shadow conjuration~
 @22 = ~Shadow conjuration
-This skill allows to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available:
+This skill allow the Shadowdancer to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available:
+
 Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.~
 @23 = ~Backstab immunity removed~
 @24 = ~Backstab immunity removal effect wore off~
+
+@50 = ~Weakened by Shadow Maze~
 
 // END OF SHADOWDANCER SPELLS
 
@@ -191,7 +194,7 @@ The shade becomes invisible as per the Improved Invisibility spell for 2 turns.~
 The shade attempts to dispel all magic as per the wizard or cleric Dispel Magic spell.~
 @216 = ~Doom the Living~
 @217 = ~Doom the Living
-The nigthaunt points its finger to a living target sending a ray of dark energy. The victim dies unless it succeeds a Save vs. Death at -2. If failed, the spell will still inflict 1d10+4 magic damage and inflict Doom on the target for 1 turn, which cannot be resisted.~
+The nigthaunt points its finger to a living target sending a ray of dark energy. The victim dies unless it succeeds a Save vs. Death at -2. If failed, the spell will still inflict 1d10+4 magic damage and affect the target with the effects of the Doom spell for 1 turn, which cannot be resisted.~
 @218 = ~See Invisibility~
 @219 = ~See Invisibility
 The nighthaunt becomes briefly able to see invisible creatures, revealing them right after, unless protected against divination attacks. The nighthaunt can cast this spell once per 3 rounds.~

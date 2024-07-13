@@ -91,6 +91,14 @@ COPY_EXISTING ~ZS#SDH2D.SPL~ ~override~ // critical hit effect sw master
     END
 BUT_ONLY
 
+COPY_EXISTING ~ZSSDMAZ0.SPL~ ~override~ // maze weaken effect
+    LPF ALTER_EFFECT
+        INT_VAR
+            match_opcode = 139
+            parameter1 = RESOLVE_STR_REF (@50)
+    END
+BUT_ONLY
+
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
     COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
         SAY UNIDENTIFIED_DESC @11
