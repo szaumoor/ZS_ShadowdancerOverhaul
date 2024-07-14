@@ -64,6 +64,15 @@ LAF action_add_hla // shadow master
         num_allowed = ~1~
 END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
+    COPY_EXISTING ~luzs_62.2DA~ ~override~
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
+    BUT_ONLY
+END
+
 INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
 
@@ -544,4 +553,18 @@ ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
     BUT_ONLY
 END ELSE BEGIN
     PRINT "Spirit form not found in the game"
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1010 DESIGNATED 5001
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
+    COPY_EXISTING ~LUTH4.2DA~ ~override~
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
+    BUT_ONLY
 END
