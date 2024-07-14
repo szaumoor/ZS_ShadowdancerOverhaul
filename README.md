@@ -90,6 +90,14 @@ This components gives a selection of gear a few hidden bonuses if wielded by the
 - Ioun Stone of Darklings (Lava's Shades of the Sword Coast): Protects against critical hits (universal), adds +2 saves against Illusion and 25% cold resistance for Shadowdancers
 - Tongue of Thaxll'ssillyia +2 (Lava's Shades of the Sword Coast): +2 Saves against Illusion, 50% chance to cause 1d2 magic damage, -2 THAC0 for 3 rounds is Save vs. Death at -1 is failed
 
+### 6. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
+
+This component allows vanilla Shadowdancers to take advantage of RR's new HLAs. RR does not support shadowdancers, and this ensures the new HLAs are provided.
+
+### Compatibility
+
+As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs when this mod is installed. RR must be installed first.
+
 ## Known Issues
 - CTRL + R your character might make the effects of Shadow Master bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
 - It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
