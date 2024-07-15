@@ -2,16 +2,18 @@ BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
 VERSION "v1.0"
 README ~ZS_ShadowdancerOverhaul/README.md~
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
+ALWAYS
+    INCLUDE "ZS_ShadowdancerOverhaul/libs/a7#add_kit_ex.tpa"
+    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa"
+    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
+END
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 LANGUAGE
 "English"
 "english"
 "ZS_ShadowdancerOverhaul/lang/english/setup.tra"
-LANGUAGE
-"Spanish"
-"spanish"
-"ZS_ShadowdancerOverhaul/lang/english/setup.tra" "ZS_ShadowdancerOverhaul/lang/spanish/setup.tra"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100
@@ -19,18 +21,15 @@ REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with BGEE BG2E
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
 
-COPY
-  "%MOD_FOLDER%/spl" override
-  "%MOD_FOLDER%/cre" override
-  "%MOD_FOLDER%/bam" override
-  "%MOD_FOLDER%/eff" override
-  "%MOD_FOLDER%/itm" override
-  "%MOD_FOLDER%/wav" override
-  "%MOD_FOLDER%/vvc" override
-  "%MOD_FOLDER%/bcs" override
-
-INCLUDE "ZS_ShadowdancerOverhaul/libs/a7#add_kit_ex.tpa"
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa"
+COPY "%MOD_FOLDER%/spl" override
+   "%MOD_FOLDER%/cre" override
+   "%MOD_FOLDER%/bam" override
+   "%MOD_FOLDER%/eff" override
+   "%MOD_FOLDER%/itm" override
+   "%MOD_FOLDER%/wav" override
+   "%MOD_FOLDER%/vvc" override
+   "%MOD_FOLDER%/bcs" override
+   "%MOD_FOLDER%/2da/LUZSSD.2DA" override
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -44,28 +43,31 @@ LAF ADD_KIT_EX
         thiefskl = ~40 15~
         clswpbon = ~0 0 3~
         clab_path = ~ZS_ShadowdancerOverhaul/2da/ZSSDCLAB.2da~
+        luabbr = ~ZSSD~
     RET kit_id
 END
 
 INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
 
-LAF action_add_hla // self-concealment
-    STR_VAR
-        kit_name = ~ZS_SHADOWDANCER~
-        ability = ~AP_ZS#SDH01~
-        num_allowed = ~3~
-        prerequisite = ~GA_SPCL938~ // requires Shadow Form
-END
+COPY_EXISTING ~LUZSSD.2DA~ ~override~
+    LPF patch_add_hla // self-concealment
+        STR_VAR
+            kit_name = ~ZS_SHADOWDANCER~
+            ability = ~AP_ZS#SDH01~
+            num_allowed = ~3~
+            prerequisite = ~GA_SPCL938~ // requires Shadow Form
+    END
 
-LAF action_add_hla // shadow master
-    STR_VAR
-        kit_name = ~ZS_SHADOWDANCER~
-        ability = ~AP_ZS#SDH02~
-        num_allowed = ~1~
-END
+    LPF patch_add_hla // shadow master
+        STR_VAR
+            kit_name = ~ZS_SHADOWDANCER~
+            ability = ~AP_ZS#SDH02~
+            num_allowed = ~1~
+    END
+BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
-    COPY_EXISTING ~luzs_62.2DA~ ~override~
+    COPY_EXISTING ~LUZSSD.2DA~ ~override~
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
