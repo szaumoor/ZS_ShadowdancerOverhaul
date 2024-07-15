@@ -567,6 +567,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
-        LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
     BUT_ONLY
 END
