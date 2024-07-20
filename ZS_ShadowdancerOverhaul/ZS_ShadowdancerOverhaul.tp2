@@ -5,31 +5,28 @@ README ~ZS_ShadowdancerOverhaul/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
 ALWAYS
-    INCLUDE "ZS_ShadowdancerOverhaul/libs/a7#add_kit_ex.tpa"
-    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa"
-    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
+    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_functions.tph"
 END
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 LANGUAGE
 "English"
 "english"
 "ZS_ShadowdancerOverhaul/lang/english/setup.tra"
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with BGEE BG2EE EET"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
 
-COPY "%MOD_FOLDER%/spl" override
-   "%MOD_FOLDER%/cre" override
-   "%MOD_FOLDER%/bam" override
-   "%MOD_FOLDER%/eff" override
-   "%MOD_FOLDER%/itm" override
-   "%MOD_FOLDER%/wav" override
-   "%MOD_FOLDER%/vvc" override
-   "%MOD_FOLDER%/bcs" override
-   "%MOD_FOLDER%/2da/LUZSSD.2DA" override
+COPY "%MOD_FOLDER%/spl" ~override~
+     "%MOD_FOLDER%/cre" ~override~
+     "%MOD_FOLDER%/bam" ~override~
+     "%MOD_FOLDER%/eff" ~override~
+     "%MOD_FOLDER%/itm" ~override~
+     "%MOD_FOLDER%/wav" ~override~
+     "%MOD_FOLDER%/vvc" ~override~
+     "%MOD_FOLDER%/bcs" ~override~
+     "%MOD_FOLDER%/2da/LUZSSD.2DA" ~override~
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -39,15 +36,13 @@ LAF ADD_KIT_EX
     STR_VAR
         kit_name   = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
-        backstab   = ~2 2 2 2 2 2 2 2 3 3 3 3 4~
+        backstab   = ~2 2 2 2 3 3 3 3 4~
         thiefskl = ~40 15~
         clswpbon = ~0 0 3~
         clab_path = ~ZS_ShadowdancerOverhaul/2da/ZSSDCLAB.2da~
         luabbr = ~ZSSD~
     RET kit_id
 END
-
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
 
 COPY_EXISTING ~LUZSSD.2DA~ ~override~
     LPF patch_add_hla // self-concealment
@@ -73,6 +68,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
     BUT_ONLY
+END ELSE BEGIN
+    PRINT "Rogue Rebalancing HLA component not installed, skipping..."
 END
 
 INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
@@ -82,28 +79,17 @@ INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
 BEGIN @1003 DESIGNATED 300
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_rogue_thac0.tpa~
-LAF generate_rogue_thac0
-    STR_VAR
-        class1 = ~thief~
-        class2 = ~mage_thief~
-END
+LAF generate_rogue_thac0 STR_VAR class1 = ~thief~ class2 = ~mage_thief~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1004 DESIGNATED 400
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_rogue_thac0.tpa~
-LAF generate_rogue_thac0
-    STR_VAR
-        class1 = ~bard~
-END
+LAF generate_rogue_thac0 STR_VAR class1 = ~bard~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1006 DESIGNATED 410 // item weaks
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa~
 
 // ARMORS
 ACTION_IF FILE_EXISTS_IN_GAME ~LEAT08.ITM~ BEGIN
@@ -472,8 +458,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOIO.itm~ BEGIN
     BUT_ONLY
 END
 
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_itm_dmg_by_class.tpa"
-
 ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOSW.itm~ BEGIN
     COPY_EXISTING ~l#GNOSW.itm~ ~override~ // Tongue of Thax +2 (Shades of the sword coast)
         WRITE_LONG 0x08 74704 // ninjato
@@ -523,15 +507,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOSW.itm~ BEGIN
     BUT_ONLY
 END
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" "This component requires the Shadowdancer Overhaul component"
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_alter_header.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa~
 
 ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
     COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
@@ -554,7 +534,7 @@ ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
         END
     BUT_ONLY
 END ELSE BEGIN
-    PRINT "Spirit form not found in the game"
+    WARN "Spirit form not found in the game"
 END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -569,4 +549,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
         LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
     BUT_ONLY
+END ELSE BEGIN
+    WARN "Rogue Rebalancing HLA component is not installed"
 END

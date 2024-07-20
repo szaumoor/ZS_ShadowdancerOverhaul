@@ -1,15 +1,12 @@
-@0 = ~SHADOWDANCER: Shadowdancers dwell in the twilight between light and shadow, mastering the art of weaving darkness to become elusive and enigmatic figures of deception. Free from strict moral codes or traditional boundaries, Shadowdancers embody a diverse array of adventurers who recognize the power and utility of the shadows.
-
-These versatile adventurers have many motivations, and their exceptional stealth and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unparalleled subtlety.
-
-As masters of visual trickery, Shadowdancers often operate outside the bounds of law, using their talents to evade detection by authorities. However, their affinity with darkness does not align them inherently with evil or good. To Shadowdancers, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
+@0 = ~SHADOWDANCER: Shadowdancers dwell in the border between light and shadow, mastering the art of weaving darkness to become elusive figures of trickery. They embody a diverse array of adventurers who recognize the power and utility of shadow and magic. They have many motivations, and their exceptional stealth, dexterity, and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unmatched skill. Their affinity with darkness, however, does not align them necessarily with evil. To a Shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
 
 Advantages:
 – +20 extra points to Hide in the Shadows and Move Silently.
 – Infravision.
+– Natural Dodging: permanent +2 AC and +2 Movement speed bonus.
 – Ellusive mind: The mind of a Shadowdancer is especially difficult to pin down: <PRO_HESHE> has an innate saving throw bonus of +1 against Spells and Wands, as well as a +2 against spells in the school of Enchantment and Illusion.
 – Hide In Plain Sight: The Shadowdancer may unerringly hide, even when in plain sight, for 3 rounds, every 5 rounds. This cooldown decreases to 4 rounds at level 5, 3 rounds at level 10, and 2 rounds at level 20.
-– May cast Shadow Jump once per day. Gains one use at levels 1 and 4, and get an additional use every 4 levels thereafter.
+– May cast Shadow Jump once per day. A new use is gained every three levels.
 – May cast Shadow Illusion once per day, gaining a single use at level 3.
 – May cast Summon Shadow once per day, gaining a single use at level 4.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
@@ -19,9 +16,9 @@ SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
 – May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes the Shadowdancer detectable again.
-– +5% critical chance, improved to +10% at level 12.
-– +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +6.
-– +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +4.
+– +5% critical chance, improved to +10% at level 10, +15% at level 22, and +20% at level 30.
+– +1 THAC0 bonus, +1 every time a new use is gained, up to a bonus of +10.
+– +1 damage bonus, +1 every other time a new use is gained, up to a bonus of +5.
 
 Additionally, every time <PRO_HESHE> gains another use of Shadow Jump, the total distance <PRO_HESHE> can travel before returning to the Prime increases by a factor of 1.
 
@@ -29,10 +26,10 @@ SUMMON SHADOW: Once per day, the Shadowdancer may summon an neutrally-aligned in
 
 SHADOW ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4
-– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by
-– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4
-– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds
+– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
+– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by.
+– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4.
+– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds.
 
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
@@ -40,10 +37,10 @@ However, the spell failure, the susceptibility to sneak attacks, blindness (leve
 
 Disadvantages:
 – Alignment restricted to any non-lawful.
-– Slower and lesser backstab multiplier compared to an unkitted Thief:
-  Level 1-8: x2
-  Level 9-12: x3
-  Level 13+: x4
+– Lesser potential backstab multiplier compared to an unkitted Thief:
+  Level 1-4: x2
+  Level 5-8: x3
+  Level 9+: x4
 – May only distribute 15 skill points per level (40 at level 1) among thieving skills.
 – May not use the Set Snare ability or learn any high-level abilities that introduce traps.
 
@@ -60,9 +57,9 @@ Instantly step into the Shadow Plane for about 7 seconds, moving faster by a fac
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
 – May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0
-– +5% critical chance, improved to +10% at level 12
-– +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +6
-– +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +4
+– +5% critical chance, improved to +10% at level 10
+– +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +7
+– +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +5
 
 Additionally, every time you gain another use of Shadow Jump, the total distance you can travel before returning to the Prime increases by a factor of 1.~
 

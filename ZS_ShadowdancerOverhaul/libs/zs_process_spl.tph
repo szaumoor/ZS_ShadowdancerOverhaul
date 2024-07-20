@@ -286,11 +286,7 @@ END
     COPY_EXISTING ~ZS#SDSH.SPL~ ~override~ // Darkness
         SAY NAME1 @210
         SAY UNIDENTIFIED_DESC @211
-        LPF ALTER_HEADER
-            INT_VAR
-                match_type = 1
-                projectile = %ZSSDDARK%
-        END
+        LPF ALTER_HEADER INT_VAR match_type = 1 projectile = %ZSSDDARK% END
     BUT_ONLY
 
     // END SPL FILES
