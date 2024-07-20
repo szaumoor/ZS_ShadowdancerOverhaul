@@ -14,10 +14,12 @@ So here's what the mod changes:
 #### PASSIVES
 - **Hide in plain sight** now works with an innate spell. You can choose to  instantly hide in plain sight (i.e. you become invisible) for 15 seconds. After 5 rounds, this ability returns to you. This prevents spamming. The hiding ability remains the same as any other Thief's. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic.
 - **Innate Infravision**: Small detail but Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default.
+- **Natural dodging**: Start out with a bonus to AC and movement speed of 2
 - **+20 bonus to Hiding** at the start (up from +10)
 - **40** points to distribute **at level 1**, and **15** from that point on.
 - **Ellusive mind**: This is a renamed **Slippery mind** (universal +1 saving throw as per BeamDog's design), which now offers instead a **+1 bonus** against **Spells** and **Wands**, and a **+2 bonus** against the schools of **Enchantment and Illusion**. I did this not just because it is a little closer to how Slippery mind works in Forgotten Realms, but also because I don't want the name to clash with the **Slippery Mind** feat in **ToF** (Talents of Fâerun) by DavidW. I'm happy to consider the Shadowdancer's mind as "especially slippery".
 - At level **10**, regenerate 1 HP per round while invisible, much like your shade companion.
+- **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This makes them combat-wise as feasible as any other thief, which prevents the annoyance of vanilla Shadowdancers who can't backstab anything until level 5, while keeping backstab power progression equally satisfying as with any other thief.
 
 
 #### SKILLS
