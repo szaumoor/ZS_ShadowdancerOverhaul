@@ -7,11 +7,12 @@ Advantages:
 – Ellusive mind: The mind of a Shadowdancer is especially difficult to pin down: <PRO_HESHE> has an innate saving throw bonus of +1 against Spells and Wands, as well as a +2 against spells in the school of Enchantment and Illusion.
 – Hide In Plain Sight: The Shadowdancer may unerringly hide, even when in plain sight, for 3 rounds, every 5 rounds. This cooldown decreases to 4 rounds at level 5, 3 rounds at level 10, and 2 rounds at level 20.
 – May cast Shadow Jump once per day. A new use is gained every three levels.
-– May cast Shadow Illusion once per day, gaining a single use at level 3.
+– May cast Shadow Illusion once per day, gaining a single use at level 3, and another one at level 12 and 20.
 – May cast Summon Shadow once per day, gaining a single use at level 4.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
+– May cast Shadow Conjuration once per day. Another use is gained at level 21 and 28.
 
-SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose.
+SHADOW JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose.
 
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
@@ -49,7 +50,6 @@ Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
 @1 = ~Biography of shadowdancer test~ // no idea what this does in the add kit function
 
   // SHADOWDANCER SPELLS
-
 @3 = ~Shadow Jump~
 @4 = ~Shadow Jump
 Instantly step into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. You cannot damage enemies, or cast spells while you're in this plane, but you may move at will during this time.
@@ -93,7 +93,6 @@ The HD of the creature is always one less than the Shadowdancer, and it grows up
 @9 = ~Hide in plain sight~
 @10 = ~Hide in plain sight
 Unerringly hide, even when in plain sight, for 15 seconds, every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.~
-
 @11 = ~Shadow Form
 
 Duration: 5 rounds
@@ -101,7 +100,6 @@ Casting Time: Instant
 Area of Effect: The caster
 
 This ability temporarily transposes some of the user's tissue with shadow-stuff, making the subject partially incorporeal and regenerating 1 HP per second. For the next 5 rounds, gain a +4 AC bonus, and all attacks directed against the Shadowdancer deal 50% less of their normal damage. During this time, the user becomes invisible, receives a +4 bonus to all Saving Throws, and may not be detected by any means until they choose to partially reveal themselves by taking an offensive action, or the effect runs out.~
-
 @12 = ~Shadow Maze
 This ability opens a temporary gateway to a small pocket within the Plane of Shadow. All enemies within 7 feet of the Shadowdancer must make a Save vs. Spell at a -4 penalty or become trapped inside a small pocket in the Shadow Plane between 5 to 14 rounds. This spell becomes increasingly difficult to resist as the Shadowdancer becomes more experienced: at level 28, the penalty becomes -5, and at 36, -6.
 
@@ -112,8 +110,6 @@ After being released, living beings resurface feeling weak for 1 turn, causing t
  – 5% more likely to critically miss when attacking
 
  This cannot reduce Strength and Dexterity below 1.~
-
-
 @13 = ~Shadow Master~
 @14 = ~Shadow Master
 Your synergy with the power of shadow deepens. You gain the following perks:
@@ -126,31 +122,27 @@ Your synergy with the power of shadow deepens. You gain the following perks:
 – Backstabs inflict 2d4 extra cold damage without any save allowed, as well as blindness on targets for 3 rounds unless a Save vs. Spell at -2 is made
 
 Requirements: Shadowdancer only.~
-
 @15 = ~Self Concealment~
 @16 = ~Self Concealment
-Your very being starts becoming one with the shadow. Gain permanent 5% physical and cold damage resistance plus +1 AC. May be taken three times.
+Your very being starts becoming one with the shadow. Gain permanent 5% universal damage resistance, plus +1 AC. May be taken three times.
 
 Requirements: Shadow Form~
-
 @17 = ~Extra use: Shadow Jump~
 @18 = ~This increases the number of uses of Shadow Jump by 1. Can be taken unlimited times.~
 @19 = ~Extra use: Shadow Illusion~
 @20 = ~This increases the number of uses of Shadow Illusion by 1. Can be taken twice at most.~
-@21 = ~Shadow conjuration~
-@22 = ~Shadow conjuration
+@21 = ~Shadow Conjuration~
+@22 = ~Shadow Conjuration
 This skill allow the Shadowdancer to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available:
 
 Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.~
 @23 = ~Backstab immunity removed~
 @24 = ~Backstab immunity removal effect wore off~
-
 @50 = ~Weakened by Shadow Maze~
 
 // END OF SHADOWDANCER SPELLS
 
 // SUMMON SHADOW DIALOG
-
 @100 = ~Your shadowy companion slowly turns to look at you with their formless eyes. A cold, emotionless voice rings clearly in your mind: "Greetings, my <PRO_LADYLORD>. What is it you command?"~
 @101 = ~Attack enemies as soon as you see them.~
 @102 = ~Do not attack enemies unless they attack you first.~
@@ -160,11 +152,9 @@ Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibi
 @106 = ~Your shadowy companion slowly turns to look at you with their formless eyes and stares at you, awaiting for orders. A voice says in your mind: "Yes, my <PRO_LADYLORD>?"~
 @107 = ~The voice says: "As you say, my <PRO_LADYLORD>".~ // order
 // @108 = ~The shade ignores your attempts to communicate with it.~ // no way of detecting "owner" for now
-
 // END SUMMON SHADOW DIALOG
 
 // SUMMONED SHADOW STR
-
 @200 = ~Fade~
 @201 = ~Fade
 The shade instantly becomes invisible for 24 hours.~
@@ -202,31 +192,20 @@ The nighthaunt becomes briefly able to see invisible creatures, revealing them r
 @252 = ~Shadowlord~
 @253 = ~Greater Shadowlord~
 @254 = ~Nighthaunt~
-
 // END OF SUMMON SHADOW SPELLS
 
 // INSTALLER TEXT
-
 @1000 = ~Install the overhauled Shadowdancer Kit~
-
 //@1002 = ~Fix Shadowdancer's wrong penalty (bug present in 2.6) for using weapons without proficiency for it (should be a +3 penalty, not +5 like wizards and sorcerers)~ //deprecated -- not needed since the mod no longer edits BeamDog's Shadowdancer
-
 @1003 = ~Make thief THAC0 progression streamlimed, and improve up to 6, like clerics (highly recommended for better rogue gameplay)~
-
-
 @1004 = ~Improve the THAC0 of Bards too to match the changes to Thieves~
-
 @1005 = ~Make Shaman Spirit Form mirror the benefits of Shadow Form~
-
-  // END INSTALLER TEXT
-
 @1006 = ~Give a selection of items extra hidden traits if wielded/worn by Shadowdancers~
 @1007 = ~Add a variety of new Shadowdancer-inspired items to the game~
 @1010 = ~Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA~
-
+// END INSTALLER TEXT
 
 // ITMS
-
 @5000 = ~This rod seems to writhe and shift in your hand, but you feel no movement. Oily shadows constantly crawl across its surface; their source is a mystery. The rod exudes a dark aura, and when gripped firmly in the correct fashion, it allows the wielder to seemingly "jump" between locations in battle.
 
 STATISTICS:
@@ -235,9 +214,7 @@ Charge abilities:
 – Shadow Jump 3 times/day
 
 Weight: 2~
-
 @5001 = ~Rod of Shadow Jump~
-
 // Lava's Shade of Sword Coast Item
 @5010 = ~This unusual ioun stone was found in the shadow version of the Gnoll Stronghold. It is cold to the touch and seems to be enchanted with Shadow Magic or some other source of dark energy. Individuals with affinity to the shadow can extract more benefits from it.
 
@@ -251,7 +228,6 @@ Equipped Abilities:
 
 
 Weight: 1~
-
 // Lava's Shade of Sword Coast Item
 @5020 = ~This sword was named after Thaxll'ssillyia - an infamous and powerful shadow dragon from the Plane of Shadows. Tales say that his breath can drain life from living things and his wings are powerful enough to destroy walls, causing unresistable fear in those that face him.
 
@@ -279,9 +255,7 @@ Requires:
 
 Weight: 3~
 
-
 // OTHER TWEAKS
-
 @6000 = ~Spirit Form
 
 Duration: 5 rounds
@@ -290,7 +264,5 @@ Area of Effect: The caster
 
 The shaman slips into a space between the spirit world and the material plane, rendering them partially incorporeal. For the next 5 rounds, gain a +4 AC bonus, regenerate 1 HP per second, and all attacks directed against the shaman deal 50% of their normal damage. During this time, the shaman is also under the effects of Improved Invisibility and may not be detected by any means until they choose to partially reveal themselves by taking an offensive action or the effect runs out.~
 
-
-// COMPONENTS
-
+// COMPONENT RESTRICTIONS
 @10000 = ~This component is only allowed in BGEE, BG2EE, IWDEE and EET~

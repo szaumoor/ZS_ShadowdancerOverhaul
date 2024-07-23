@@ -14,7 +14,7 @@ LANGUAGE
 "ZS_ShadowdancerOverhaul/lang/english/setup.tra"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100
-REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with BGEE BG2EE EET"
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with IWDEE BGEE BG2EE EET"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
 
@@ -27,6 +27,7 @@ COPY "%MOD_FOLDER%/spl" ~override~
      "%MOD_FOLDER%/vvc" ~override~
      "%MOD_FOLDER%/bcs" ~override~
      "%MOD_FOLDER%/2da/LUZSSD.2DA" ~override~
+     "%MOD_FOLDER%/2da/ZS#SDEVO.2DA" ~override~
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -34,9 +35,9 @@ LAF ADD_KIT_EX
         help = RESOLVE_STR_REF(@0)
         briefdesc = RESOLVE_STR_REF(@0)
     STR_VAR
-        kit_name   = ~ZS_SHADOWDANCER~
+        kit_name = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
-        backstab   = ~2 2 2 2 3 3 3 3 4~
+        backstab = ~2 2 2 2 3 3 3 3 4~
         thiefskl = ~40 15~
         clswpbon = ~0 0 3~
         clab_path = ~ZS_ShadowdancerOverhaul/2da/ZSSDCLAB.2da~
@@ -45,20 +46,10 @@ LAF ADD_KIT_EX
 END
 
 COPY_EXISTING ~LUZSSD.2DA~ ~override~
-    LPF patch_add_hla // self-concealment
-        STR_VAR
-            kit_name = ~ZS_SHADOWDANCER~
-            ability = ~AP_ZS#SDH01~
-            num_allowed = ~3~
-            prerequisite = ~GA_SPCL938~ // requires Shadow Form
-    END
-
-    LPF patch_add_hla // shadow master
-        STR_VAR
-            kit_name = ~ZS_SHADOWDANCER~
-            ability = ~AP_ZS#SDH02~
-            num_allowed = ~1~
-    END
+    // self-concealment
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability= ~AP_ZS#SDH01~ num_allowed=~3~ prerequisite=~GA_SPCL938~ END
+    // shadow master
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH02~ num_allowed=~1~ END
 BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
@@ -91,7 +82,6 @@ LAF generate_rogue_thac0 STR_VAR class1 = ~bard~ END
 BEGIN @1006 DESIGNATED 410 // item weaks
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// ARMORS
 ACTION_IF FILE_EXISTS_IN_GAME ~LEAT08.ITM~ BEGIN
     COPY_EXISTING ~LEAT08.ITM~ ~override~ // shadow armor +3
         LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
@@ -117,7 +107,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~LEAT08.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~LEAT14.ITM~ BEGIN
     COPY_EXISTING ~LEAT14.ITM~ ~override~ // the night's gift +5
         LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer, +2 AC
@@ -143,7 +132,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~LEAT14.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~bdleat07.ITM~ BEGIN
     COPY_EXISTING ~bdleat07.ITM~ ~override~ // the night's embrace +3
         LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer, +2 AC
@@ -169,7 +157,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdleat07.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~bdboot1.ITM~ BEGIN
     COPY_EXISTING ~bdboot1.ITM~ ~override~ // soft feet
         LPF a7_auto_apply_spl_effect // +10 move silently/hiding, movement speed +2 if shadowdancer
@@ -195,7 +182,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdboot1.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~LEAT17.ITM~ BEGIN
     COPY_EXISTING ~LEAT17.ITM~ ~override~ // armor of deep night +4
         LPF a7_auto_apply_spl_effect // +10 hiding/move silently if shadowdancer
@@ -221,7 +207,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~LEAT17.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~LEAT19.ITM~ BEGIN
     COPY_EXISTING ~LEAT19.ITM~ ~override~ // shadow dragon scale
         LPF a7_auto_apply_spl_effect // +10 hiding, +1 saves if shadowdancer
@@ -247,7 +232,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~LEAT19.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~ohrboot1.ITM~ BEGIN
     COPY_EXISTING ~ohrboot1.ITM~ ~override~ // night walkers (BG2EE EET)
         LPF a7_auto_apply_spl_effect // +4 movement speed if shadowdancer
@@ -273,7 +257,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~ohrboot1.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~ohrclck4.ITM~ BEGIN
     COPY_EXISTING ~ohrclck4.ITM~ ~override~ // cloak of the dark moon (BG2EE EET)
         LPF a7_auto_apply_spl_effect // +10 hiding/move silently if shadowdancer
@@ -299,7 +282,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~ohrclck4.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~BOOT02.ITM~ BEGIN
     COPY_EXISTING ~BOOT02.ITM~ ~override~ // worn whispers
         LPF a7_auto_apply_spl_effect // +5 hiding if shadowdancer
@@ -325,7 +307,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BOOT02.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
     COPY_EXISTING ~CLCK06.ITM~ ~override~ // whispers of silence
         LPF a7_auto_apply_spl_effect // +5 hiding if shadowdancer
@@ -351,7 +332,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
     COPY_EXISTING ~CLCK03.ITM~ ~override~ // cloak of displacement
         LPF a7_auto_apply_spl_effect // +1 AC if shadowdancer
@@ -377,7 +357,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~HELM29.ITM~ BEGIN
     COPY_EXISTING ~HELM29.ITM~ ~override~ // thieves' hood not upgraded
         LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
@@ -403,7 +382,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~HELM29.ITM~ BEGIN
             END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~HELM30.ITM~ BEGIN
     COPY_EXISTING ~HELM30.ITM~ ~override~ // thieves' hood
         LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
@@ -429,7 +407,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~HELM30.ITM~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOIO.itm~ BEGIN
     COPY_EXISTING ~l#GNOIO.itm~ ~override~ // IOUN STONE OF DARKLINGS (Shades of the sword coast)
         SAY IDENTIFIED_DESC @5010 // tweaked description
@@ -457,7 +434,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOIO.itm~ BEGIN
         END
     BUT_ONLY
 END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOSW.itm~ BEGIN
     COPY_EXISTING ~l#GNOSW.itm~ ~override~ // Tongue of Thax +2 (Shades of the sword coast)
         WRITE_LONG 0x08 74704 // ninjato
@@ -516,7 +492,6 @@ REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" "This component requires t
 ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
     COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
         SAY UNIDENTIFIED_DESC @6000
-        SAY DESC @6000
         LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection
             INT_VAR
                 def_target = 1  // Self
@@ -527,11 +502,7 @@ ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
                 function_name = ~ADD_SPELL_EFFECT~
                 effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
         END
-        LPF ALTER_SPELL_HEADER
-            INT_VAR
-                header_type = 1
-                speed = 0 // instant casting
-        END
+        LPF ALTER_SPELL_HEADER INT_VAR header_type = 1 speed = 0 END
     BUT_ONLY
 END ELSE BEGIN
     WARN "Spirit form not found in the game"
@@ -552,3 +523,5 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
 END ELSE BEGIN
     WARN "Rogue Rebalancing HLA component is not installed"
 END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
