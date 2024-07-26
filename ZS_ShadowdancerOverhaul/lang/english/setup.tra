@@ -1,7 +1,7 @@
 @0 = ~SHADOWDANCER: Shadowdancers dwell in the border between light and shadow, mastering the art of weaving darkness to become elusive figures of trickery. They embody a diverse array of adventurers who recognize the power and utility of shadow and magic. They have many motivations, and their exceptional stealth, dexterity, and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unmatched skill. Their affinity with darkness, however, does not align them necessarily with evil. To a Shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
 
 Advantages:
-– +20 extra points to Hide in the Shadows and Move Silently.
+– +20 extra points to Hide in the Shadows and Move Silently, improved by +5 at level 3 and every three levels thereafter.
 – Infravision.
 – Natural Dodging: permanent +2 AC and +2 Movement speed bonus.
 – Ellusive mind: The mind of a Shadowdancer is especially difficult to pin down: <PRO_HESHE> has an innate saving throw bonus of +1 against Spells and Wands, as well as a +2 against spells in the school of Enchantment and Illusion.
@@ -10,7 +10,7 @@ Advantages:
 – May cast Shadow Illusion once per day, gaining a single use at level 3, and another one at level 12 and 20.
 – May cast Summon Shadow once per day, gaining a single use at level 4.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
-– May cast Shadow Conjuration once per day. Another use is gained at level 21 and 28.
+– May cast Shadow Conjuration once per day at level 15. Another use is gained at level 21 and 28.
 
 SHADOW JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose.
 
@@ -35,6 +35,8 @@ SHADOW ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy i
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
 However, the spell failure, the susceptibility to sneak attacks, blindness (level 17), and the damage susceptibility (level 14) cannot be resisted once they take hold.
+
+SHADOW CONJURATION: This skill allow the Shadowdancer to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available: Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.
 
 Disadvantages:
 – Alignment restricted to any non-lawful.
@@ -196,14 +198,15 @@ The nighthaunt becomes briefly able to see invisible creatures, revealing them r
 
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer Kit~
-//@1002 = ~Fix Shadowdancer's wrong penalty (bug present in 2.6) for using weapons without proficiency for it (should be a +3 penalty, not +5 like wizards and sorcerers)~ //deprecated -- not needed since the mod no longer edits BeamDog's Shadowdancer
+@1002 = ~Fix vanilla shadowdancer bugs (wrong non-proficient penalty, wrong Shadow Twin duration)~ 
 @1003 = ~Make thief THAC0 progression streamlimed, and improve up to 6, like clerics (highly recommended for better rogue gameplay)~
 @1004 = ~Improve the THAC0 of Bards too to match the changes to Thieves~
 @1005 = ~Make Shaman Spirit Form mirror the benefits of Shadow Form~
 @1006 = ~Give a selection of items extra hidden traits if wielded/worn by Shadowdancers~
 @1007 = ~Add a variety of new Shadowdancer-inspired items to the game~
 @1010 = ~Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA~
-// END INSTALLER TEXT
+@1011 = ~Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)~
+// END INSTALLER TEXT1
 
 // ITMS
 @5000 = ~This rod seems to writhe and shift in your hand, but you feel no movement. Oily shadows constantly crawl across its surface; their source is a mystery. The rod exudes a dark aura, and when gripped firmly in the correct fashion, it allows the wielder to seemingly "jump" between locations in battle.
@@ -266,3 +269,5 @@ The shaman slips into a space between the spirit world and the material plane, r
 
 // COMPONENT RESTRICTIONS
 @10000 = ~This component is only allowed in BGEE, BG2EE, IWDEE and EET~
+@10001 = ~This component is only allowed in BGEE, BG2EE and EET~
+@10002 = ~Fix is already included in the main component~

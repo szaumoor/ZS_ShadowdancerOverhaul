@@ -1,14 +1,14 @@
 // DEPRECATED, MOD NO LONGER EDITS THE SHADOWDANCER KIT
 // This code was written by Argent77
 COPY_EXISTING ~clswpbon.2da~ ~override~
-READ_2DA_ENTRIES_NOW clswpbon 1
-FOR (row = 3; row < clswpbon; ++row) BEGIN
-    READ_2DA_ENTRY_FORMER clswpbon row 0 label
-    PATCH_IF (~%label%~ STR_EQ ~SHADOWDANCER~) BEGIN
-    SET_2DA_ENTRY_LATER clswpbon_out row 3 3
-    SET row = clswpbon
+    READ_2DA_ENTRIES_NOW clswpbon 1
+    FOR (row = 3; row < clswpbon; ++row) BEGIN
+        READ_2DA_ENTRY_FORMER clswpbon row 0 label
+        PATCH_IF (~%label%~ STR_EQ ~SHADOWDANCER~) BEGIN
+        SET_2DA_ENTRY_LATER clswpbon_out row 3 3
+        SET row = clswpbon
+        END
     END
-END
-SET_2DA_ENTRIES_NOW clswpbon_out 1
+    SET_2DA_ENTRIES_NOW clswpbon_out 1
 BUT_ONLY
 

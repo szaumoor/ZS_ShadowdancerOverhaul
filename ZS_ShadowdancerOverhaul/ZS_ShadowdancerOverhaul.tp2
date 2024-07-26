@@ -14,7 +14,7 @@ LANGUAGE
 "ZS_ShadowdancerOverhaul/lang/english/setup.tra"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100
-REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" "Only compatible with IWDEE BGEE BG2EE EET"
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
 
@@ -68,420 +68,24 @@ INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1003 DESIGNATED 300
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 LAF generate_rogue_thac0 STR_VAR class1 = ~thief~ class2 = ~mage_thief~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1004 DESIGNATED 400
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 LAF generate_rogue_thac0 STR_VAR class1 = ~bard~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1006 DESIGNATED 410 // item weaks
+REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10001
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-ACTION_IF FILE_EXISTS_IN_GAME ~LEAT08.ITM~ BEGIN
-    COPY_EXISTING ~LEAT08.ITM~ ~override~ // shadow armor +3
-        LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~LEAT14.ITM~ BEGIN
-    COPY_EXISTING ~LEAT14.ITM~ ~override~ // the night's gift +5
-        LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer, +2 AC
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT02~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT02~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~bdleat07.ITM~ BEGIN
-    COPY_EXISTING ~bdleat07.ITM~ ~override~ // the night's embrace +3
-        LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer, +2 AC
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT02~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT02~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~bdboot1.ITM~ BEGIN
-    COPY_EXISTING ~bdboot1.ITM~ ~override~ // soft feet
-        LPF a7_auto_apply_spl_effect // +10 move silently/hiding, movement speed +2 if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT03;op=177,p1=16417,p2=9,res=ZSSDIT08~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT03;op=177,p1=%id_num%,p2=9,res=ZSSDIT08~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~LEAT17.ITM~ BEGIN
-    COPY_EXISTING ~LEAT17.ITM~ ~override~ // armor of deep night +4
-        LPF a7_auto_apply_spl_effect // +10 hiding/move silently if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT03~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT03~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~LEAT19.ITM~ BEGIN
-    COPY_EXISTING ~LEAT19.ITM~ ~override~ // shadow dragon scale
-        LPF a7_auto_apply_spl_effect // +10 hiding, +1 saves if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT04~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT04~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~ohrboot1.ITM~ BEGIN
-    COPY_EXISTING ~ohrboot1.ITM~ ~override~ // night walkers (BG2EE EET)
-        LPF a7_auto_apply_spl_effect // +4 movement speed if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT05~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT05~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~ohrclck4.ITM~ BEGIN
-    COPY_EXISTING ~ohrclck4.ITM~ ~override~ // cloak of the dark moon (BG2EE EET)
-        LPF a7_auto_apply_spl_effect // +10 hiding/move silently if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01;op=177,p1=16417,p2=9,res=ZSSDIT03~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01;op=177,p1=%id_num%,p2=9,res=ZSSDIT03~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~BOOT02.ITM~ BEGIN
-    COPY_EXISTING ~BOOT02.ITM~ ~override~ // worn whispers
-        LPF a7_auto_apply_spl_effect // +5 hiding if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT06~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT06~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
-    COPY_EXISTING ~CLCK06.ITM~ ~override~ // whispers of silence
-        LPF a7_auto_apply_spl_effect // +5 hiding if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT06~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT06~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~CLCK06.ITM~ BEGIN
-    COPY_EXISTING ~CLCK03.ITM~ ~override~ // cloak of displacement
-        LPF a7_auto_apply_spl_effect // +1 AC if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT07~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT07~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~HELM29.ITM~ BEGIN
-    COPY_EXISTING ~HELM29.ITM~ ~override~ // thieves' hood not upgraded
-        LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01~ // vanilla shadowdancer
-            END
-            PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-                SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-                LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                    INT_VAR
-                        def_target = 1
-                        def_resist_dispel = 2
-                        def_timing = 2
-                    STR_VAR
-                        function_name = ~ADD_ITEM_EQEFFECT~
-                        effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01~ // new shadowdancer
-                END
-            END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~HELM30.ITM~ BEGIN
-    COPY_EXISTING ~HELM30.ITM~ ~override~ // thieves' hood
-        LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT01~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect // +10 hiding if shadowdancer
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT01~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOIO.itm~ BEGIN
-    COPY_EXISTING ~l#GNOIO.itm~ ~override~ // IOUN STONE OF DARKLINGS (Shades of the sword coast)
-        SAY IDENTIFIED_DESC @5010 // tweaked description
-        WRITE_LONG 0x18 (THIS - 2**25) // remove susceptibility to critical hits
-        LPF a7_auto_apply_spl_effect // +25 cold resist and +2 saves against illusion
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT09;op=177,p1=16417,p2=9,res=ZSSDIT10~ // vanilla shadowdancer
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT09;op=177,p1=%id_num%,p2=9,res=ZSSDIT10~ // new shadowdancer
-            END
-        END
-    BUT_ONLY
-END
-ACTION_IF FILE_EXISTS_IN_GAME ~l#GNOSW.itm~ BEGIN
-    COPY_EXISTING ~l#GNOSW.itm~ ~override~ // Tongue of Thax +2 (Shades of the sword coast)
-        WRITE_LONG 0x08 74704 // ninjato
-        WRITE_BYTE 0x31 95 // ninjato proficiency
-        SAY IDENTIFIED_DESC @5020 // tweaked description
-        LPF a7_auto_apply_spl_effect // +25 cold resist and +2 saves against illusion
-            INT_VAR
-                def_target = 1
-                def_resist_dispel = 2
-                def_timing = 2
-            STR_VAR
-                function_name = ~ADD_ITEM_EQEFFECT~
-                effect_codes = ~op=177,p1=16417,p2=9,res=ZSSDIT09~ // vanilla shadowdancer
-        END
-        LPF weapon_damage_by_kit// -2 THAC0 if Save vs. Death -1, 50% of causing 1d2 magic damage
-            STR_VAR
-                kit = "SHADOWDANCER"
-                spell = "ZSSDL#01"
-        END
-        LPF weapon_damage_by_kit// -2 THAC0 if Save vs. Death -1, 50% of causing 1d2 magic damage
-            STR_VAR
-                kit = "SHADOWDANCER"
-                spell = "ZSSDL#02"
-        END
-        PATCH_IF MOD_IS_INSTALLED "ZS_ShadowdancerOverhaul.tp2" "100" BEGIN
-            SET id_num = IDS_OF_SYMBOL (kit ZS_SHADOWDANCER)
-            LPF a7_auto_apply_spl_effect
-                INT_VAR
-                    def_target = 1
-                    def_resist_dispel = 2
-                    def_timing = 2
-                STR_VAR
-                    function_name = ~ADD_ITEM_EQEFFECT~
-                    effect_codes = ~op=177,p1=%id_num%,p2=9,res=ZSSDIT09~ // new shadowdancer
-            END
-            LPF weapon_damage_by_kit// -2 THAC0 if Save vs. Death -1, 50% of causing 1d2 magic damage
-            STR_VAR
-                kit = "ZS_SHADOWDANCER"
-                spell = "ZSSDL#01"
-            END
-            LPF weapon_damage_by_kit// -2 THAC0 if Save vs. Death -1, 50% of causing 1d2 magic damage
-                STR_VAR
-                    kit = "ZS_SHADOWDANCER"
-                    spell = "ZSSDL#02"
-            END
-        END
-    BUT_ONLY
-END
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/component_scripts/zs_itemtweaks.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000
@@ -523,5 +127,30 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
 END ELSE BEGIN
     WARN "Rogue Rebalancing HLA component is not installed"
 END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1002 DESIGNATED 5002
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ AND !(MOD_IS_INSTALLED ~ZS_ShadowdancerOverhaul.tp2~ ~100~) BEGIN
+    COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
+        LPF ALTER_EFFECT INT_VAR match_duration = 60 duration = 120 END
+    BUT_ONLY
+END ELSE BEGIN
+    PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
+END
+
+INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_fix_sd_prof_penalty.tph~
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+BEGIN @1011 DESIGNATED 5002
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
+FORBID_COMPONENT ~ZS_ShadowdancerOverhaul.tp2~ ~100~ @10002
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's disabled Thief buttons
+    LPF DELETE_EFFECT INT_VAR match_opcode=144 END
+BUT_ONLY
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

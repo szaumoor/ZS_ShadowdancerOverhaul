@@ -15,7 +15,7 @@ So here's what the mod changes:
 - **Hide in plain sight** now works with an innate spell. You can choose to  instantly hide in plain sight (i.e. you become invisible) for 15 seconds. After 5 rounds, this ability returns to you. This prevents spamming. The hiding ability remains the same as any other Thief's. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic.
 - **Innate Infravision**: Small detail but Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default.
 - **Natural dodging**: Start out with a bonus to AC and movement speed of 2
-- **+20 bonus to Hiding** at the start (up from +10)
+- **+20 bonus to Hiding** at the start (up from +10), improves by 5% at level 3, and every three levels thereafter
 - **40** points to distribute **at level 1**, and **15** from that point on.
 - **Ellusive mind**: This is a renamed **Slippery mind** (universal +1 saving throw as per BeamDog's design), which now offers instead a **+1 bonus** against **Spells** and **Wands**, and a **+2 bonus** against the schools of **Enchantment and Illusion**. I did this not just because it is a little closer to how Slippery mind works in Forgotten Realms, but also because I don't want the name to clash with the **Slippery Mind** feat in **ToF** (Talents of Fâerun) by DavidW. I'm happy to consider the Shadowdancer's mind as "especially slippery".
 - At level **10**, regenerate 1 HP per round while invisible, much like your shade companion.
@@ -52,13 +52,13 @@ So here's what the mod changes:
   - **Future plans**: Add the possibility of talking with it to change strategy. It should attack on sight now and you can talk with it, but there's no effect to it.
 
 **HLAS**
-  - **Self-concealment**: 5% physical and cold resistance, +1 AC, can be taken three times. Inspired by NWN.
+  - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN.
   - **Shadow Master**: Immune to blindness, nondetection, +2 Save vs. Illusion, and at night, you gain 15 extra health, move 35% faster, backstabs inflict blindness for 3 rounds unless a save vs. spell at -2 succeeds and 2d4 cold damage; critical hits makes the target susceptible to backstabs for 2 rounds and inflict a non-stackable -2 penalty to Save vs. Spell and Death. During those two rounds, it makes the Shadowdancer incapable of critically missing, and improves critical chances by 5% for the duration (not stackable). Can be taken once. Inspired by Pathfinder.
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemies inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
   - **Shadow Form**: Same, but it also makes your invisibility undispellable for its duration, and it makes you resist also 50% of ALL damage for 5 rounds, since it's meant to mimic 50% displacement i.e. 50% of the attacks should miss (and damage reduction, but damage reduction is implemented very differently in NWN/NWN2). Can be taken unlimited times.
 
-**Feats (Only to be made available by ToF or other Feat mods)**
+**Feats**
 These exist only so they are implemented if ToF or another Feat mod is installed. To be determined how this is done.
 - **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards.
 - **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards.
@@ -78,7 +78,6 @@ This simply matches the THAC0 progression of Bards to that of the Thieves as per
 This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
 
 ### 5. Give a selection of items extra hidden traits if wielded/worn by Shadowdancers
-
 This components gives a selection of gear a few hidden bonuses if wielded by the Shadowdancer. This component does not require the overhaul to work: the original shadowdancer class will benefit from it. These changes are for the most part mild effects for stealth or evasion:
 
 - Shadow Armor +3: +10% Hiding in the Shadows
@@ -93,11 +92,9 @@ This components gives a selection of gear a few hidden bonuses if wielded by the
 - Tongue of Thaxll'ssillyia +2 (Lava's Shades of the Sword Coast): +2 Saves against Illusion, 50% chance to cause 1d2 magic damage, -2 THAC0 for 3 rounds is Save vs. Death at -1 is failed
 
 ### 6. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
-
 This component allows vanilla Shadowdancers to take advantage of RR's new HLAs. RR does not support shadowdancers, and this ensures the new HLAs are provided.
 
 ### Compatibility
-
 As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs when this mod is installed. RR must be installed first.
 
 ## Known Issues
