@@ -59,10 +59,10 @@ So here's what the mod changes:
   - **Shadow Form**: Same, but it also makes your invisibility undispellable for its duration, and it makes you resist also 50% of ALL damage for 5 rounds, since it's meant to mimic 50% displacement i.e. 50% of the attacks should miss (and damage reduction, but damage reduction is implemented very differently in NWN/NWN2). Can be taken unlimited times.
 
 **Feats**
-These exist only so they are implemented if ToF or another Feat mod is installed. To be determined how this is done.
+These exist only so they are implemented if ToF or another Feat mod is installed. To be determined how this is done, but by default these abilities are available at different points.
 - **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards.
-- **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards.
-- **Shadow Evocation**: can cast a selection of spells from level 1 to level 5 three times per day. Available from level 7 on. Can only be taken once. Inspired by NWN.
+- **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards. By default, an extra use is gained at level 12, and then at level 20.
+- **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Available from level 15 on. Can be taken three times. By default, it's gained at level 15, and another use is gained at level 21 and 28. Inspired by NWN.
 
 Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump, and it's usable **3 times per day**. It does not disappear forever when drained.
 
