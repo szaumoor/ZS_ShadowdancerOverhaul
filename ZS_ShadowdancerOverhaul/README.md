@@ -58,7 +58,7 @@ So here's what the mod changes:
 
 **HLAS**
   - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN.
-  - **Shadow Adept**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
+  - **Shadow Artist**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
     - Immunity to Blindness
     - Nondetection and immunity to most divinations
     - At night: +15 health, 35% faster movement
@@ -110,7 +110,7 @@ This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, 
 As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs when this mod is installed. RR must be installed first.
 
 ## Known Issues
-- CTRL + R your character might make the effects at night of Shadow Master bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
+- CTRL + R your character might make the effects at night of Shadow Artist bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
 - It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
 - There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug (without source code access, that is), mixed with setting your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not), the rest is up to you and your tolerance for cheesiness. I personally just wait half a second more to reduce the chances of the enemy escaping my reach or automatically succeeding the attack, or until the time stop is visibly over.
 - Shadow Jump: Planar Shift is a Time Stop effect, so it would be possible to cast it over and over to make some effect on the enemy wear off with no consequences. So again, it's a matter of your tolerance for cheesiness. As an alternative, Shadow Jump: Dimensional Door, is added to have an alternative. See above for more information on that alternative.
