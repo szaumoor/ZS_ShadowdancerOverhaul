@@ -1,0 +1,24 @@
+DEFINE_PATCH_FUNCTION foreach_cre_effect
+INT_VAR
+    match_opcode = "-1"
+    match_timing = "-1"
+    timing = "-1"
+BEGIN
+    READ_LONG 0x2c4 effects_offset
+    READ_LONG 0x2c8 effects_num
+    SET effect_bytes = 0
+    FOR (index = 0 ; index < effects_num ; ++index) BEGIN
+        READ_LONG 0x08 opcode
+        PATCH_IF match_opcode = "-1" OR (match_opcode >= 0 AND opcode = match_opcode) BEGIN
+            PATCH_IF timing > "-1" AND (timing <= 10 OR timing = 4096) BEGIN
+                READ_LONG (effects_offset + effect_bytes + 0x1c) current_timing
+                PATCH_IF match_timing = "-1" OR (match_timing >= 0 AND current_timing = match_timing) BEGIN
+                    WRITE_LONG (effects_offset + effect_bytes + 0x1c) timing
+                END
+            END ELSE BEGIN
+                PATCH_FAIL "Invalid effect timing: %timing%"
+            END
+        END
+        effect_bytes += 0x108
+    END
+END

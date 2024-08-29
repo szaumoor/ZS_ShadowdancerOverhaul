@@ -1,7 +1,15 @@
 //SD SPELLS
-COPY_EXISTING ~ZS#SDL1C.SPL~ ~override~ // Shadow Jump
+COPY_EXISTING ~ZS#SDL1J.SPL~ ~override~ // Shadow Jump spell selection
     SAY NAME1 @3
     SAY UNIDENTIFIED_DESC @4
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL1C.SPL~ ~override~ // Shadow Jump planar shift
+    SAY NAME1 @300
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL1H.SPL~ ~override~ // Shadow Jump teleport
+    SAY NAME1 @301
 BUT_ONLY
 
 // Tweak Rod of Shadowstep for consistency
@@ -88,6 +96,12 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
         END
         LPF ALTER_EFFECT INT_VAR match_opcode=50 parameter1="-784830976" parameter2=op9_loc_speed END
         LPF ALTER_EFFECT INT_VAR match_opcode=215 STR_VAR resource=~PARALH~ END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=1 match_duration = 30 duration = 36 END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=2 match_duration = 30 duration = 42 END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 42 END
     BUT_ONLY
 END
 
@@ -231,50 +245,48 @@ COPY_EXISTING_REGEXP ~ZS#SDS0[4-9].CRE~ ~override~ // Shadow
     SAY NAME1 @250
     SAY NAME2 @250
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS1[0-1].CRE~ ~override~ // Shadow
     SAY NAME1 @250
     SAY NAME2 @250
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS1[2-9].CRE~ ~override~ // Greater Shadow
     SAY NAME1 @251
     SAY NAME2 @251
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS2[0-7].CRE~ ~override~ // Shadowlord
     SAY NAME1 @252
     SAY NAME2 @252
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS2[89].CRE~ ~override~ // Greater shadowlord
     SAY NAME1 @253
     SAY NAME2 @253
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS3[0-5].CRE~ ~override~ // Greater shadowlord
     SAY NAME1 @253
     SAY NAME2 @253
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS3[68].CRE~ ~override~ // Shadowhaunt
     SAY NAME1 @254
     SAY NAME2 @254
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDS40.CRE~ ~override~ // Shadowhaunt
     SAY NAME1 @254
     SAY NAME2 @254
     WRITE_ASCII 0x2cc ~zs_sdshd~ #8
-    WRITE_BYTE 0x275 20 // gender of type 20, i.e. immunity to death fog and death spell and anything that targets gender=summoned
 BUT_ONLY
+
+
+
+/*COPY_EXISTING_REGEXP ~ZS#SDS[0-9][0-9]\.cre~ ~override~
+    LPF foreach_cre_effect INT_VAR match_timing = 1 timing = 9 END
+BUT_ONLY*/ // no longer needed after one pass
 // END SHADOW CRE FILES
 // END SHADOW

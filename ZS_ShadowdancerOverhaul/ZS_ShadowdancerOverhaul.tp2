@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "v1.0.7"
+VERSION "v1.0.8"
 README ~ZS_ShadowdancerOverhaul/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
@@ -28,8 +28,6 @@ COPY "%MOD_FOLDER%/spl" ~override~
      "%MOD_FOLDER%/bcs" ~override~
      "%MOD_FOLDER%/2da/LUZSSD.2DA" ~override~
      "%MOD_FOLDER%/2da/ZS#SDEVO.2DA" ~override~
-
-
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -109,6 +107,12 @@ ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
                 effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
         END
         LPF ALTER_SPELL_HEADER INT_VAR header_type = 1 speed = 0 END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=1 match_duration = 30 duration = 36 END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=2 match_duration = 30 duration = 42 END
+        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 42 END
     BUT_ONLY
 END ELSE BEGIN
     WARN "Spirit form not found in the game"
@@ -140,7 +144,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ AND !(MOD_IS_INSTALLED ~ZS_Shadowdan
         LPF ALTER_EFFECT INT_VAR match_duration = 60 duration = 120 END
     BUT_ONLY
 END ELSE BEGIN
-    PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
+    WARN "Shadow twin doesn't exist in game or fix was installed already through main component"
 END
 
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_fix_sd_prof_penalty.tph~
