@@ -5,7 +5,7 @@ README ~ZS_ShadowdancerOverhaul/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
 ALWAYS
-    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_functions.tph"
+    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_sd_functions.tph"
 END
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 LANGUAGE
@@ -13,7 +13,7 @@ LANGUAGE
 "english"
 "ZS_ShadowdancerOverhaul/lang/english/setup.tra"
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1000 DESIGNATED 100
+BEGIN @1000 DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // COPYING ALL THE RELEVANT FILES
@@ -46,10 +46,8 @@ LAF ADD_KIT_EX
 END
 
 COPY_EXISTING ~LUZSSD.2DA~ ~override~
-    // self-concealment
-    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability= ~AP_ZS#SDH01~ num_allowed=~3~ prerequisite=~GA_SPCL938~ END
-    // shadow master
-    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH02~ num_allowed=~1~ END
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH01~ num_allowed=~3~ prerequisite=~GA_SPCL938~ END // self-concealment
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow master
 BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
@@ -67,46 +65,37 @@ INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1003 DESIGNATED 300
+BEGIN @1003 DESIGNATED 300 // THAC0 TWEAK THIEVES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 LAF generate_rogue_thac0 STR_VAR class1 = ~thief~ class2 = ~mage_thief~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1004 DESIGNATED 400
+BEGIN @1004 DESIGNATED 400 // THAC0 TWEAK BARDS
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 LAF generate_rogue_thac0 STR_VAR class1 = ~bard~ END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1006 DESIGNATED 410 // item weaks
+BEGIN @1006 DESIGNATED 410 // ITEM TWEAKS
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10001
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/component_scripts/zs_itemtweaks.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1005 DESIGNATED 5000
+BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM TWEAK
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" "This component requires the Shadowdancer Overhaul component"
+REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
-    COPY_EXISTING ~SPCL940.SPL~ ~override~ // Spirit Form, adds the extra effects
-        SAY UNIDENTIFIED_DESC @6000
-        LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection
-            INT_VAR
-                def_target = 1  // Self
-                def_duration = 30
-                def_parameter1 = 50
-                def_parameter2 = 0
-            STR_VAR
-                function_name = ~ADD_SPELL_EFFECT~
-                effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~
-        END
-        LPF ALTER_SPELL_HEADER INT_VAR header_type = 1 speed = 0 END
+    COPY_EXISTING ~SPCL940.SPL~ ~override~
+        LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@6000) END
+        LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 STR_VAR effects=~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~ END
+        LPF ALTER_HEADER INT_VAR match_type = 1 speed = 0 END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
         LPF ALTER_EFFECT INT_VAR match_globals = 0 header=1 match_duration = 30 duration = 36 END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
@@ -119,7 +108,7 @@ END ELSE BEGIN
 END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1010 DESIGNATED 5001
+BEGIN @1010 DESIGNATED 5001 // RR COMPATIBILITY FOR VANILLA SD
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -135,22 +124,22 @@ END ELSE BEGIN
 END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1002 DESIGNATED 5002
+BEGIN @1002 DESIGNATED 5002 // SHADOWDANCER VANILLA FIXES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ AND !(MOD_IS_INSTALLED ~ZS_ShadowdancerOverhaul.tp2~ ~100~) BEGIN
     COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
-        LPF ALTER_EFFECT INT_VAR match_duration = 60 duration = 120 END
+        LPF ALTER_EFFECT INT_VAR silent= match_duration = 60 duration = 120 END
     BUT_ONLY
 END ELSE BEGIN
-    WARN "Shadow twin doesn't exist in game or fix was installed already through main component"
+    PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
 END
 
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_fix_sd_prof_penalty.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN @1011 DESIGNATED 5003
+BEGIN @1011 DESIGNATED 5003 // SIMULACRUM FIXES FOR 2.6.6
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 FORBID_COMPONENT ~ZS_ShadowdancerOverhaul.tp2~ ~100~ @10002
 //////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,4 +1,4 @@
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa~
+INCLUDE ~ZSTweaks/libs/zs_auto_apply_effs.tpa~
 
 DEFINE_PATCH_FUNCTION ADD_EQUIPPED_EFF
     INT_VAR
@@ -100,6 +100,7 @@ INT_VAR
     p1=0
     p2=0
     t=1
+    tmg = 0
     dur=0
     rd=1
     pwr=1
@@ -112,7 +113,7 @@ BEGIN
     LPF a7_auto_apply_spl_effect
         INT_VAR
             def_target = 2
-            def_timing = 0
+            def_timing = tmg
             def_parameter1 = p1
             def_parameter2 = p2
             def_duration=0
@@ -120,6 +121,8 @@ BEGIN
             def_power=pwr
             def_type=t
             def_insertpoint=ip
+            def_savetype = stype
+            def_savebonus = sbonus
         STR_VAR
             function_name = ~ADD_SPELL_EFFECT~
             effect_codes = ~%effects%~

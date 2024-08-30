@@ -1,8 +1,0 @@
-INCLUDE "ZS_ShadowdancerOverhaul/libs/a7#add_kit_ex.tpa"
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_patch_spells.tpa"
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_hla_actions.tpa"
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_rogue_thac0.tpa~
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_itm_dmg_by_class.tpa"
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_alter_header.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_add_spell_header.tpa~
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_foreach_cre_effect.tpa"

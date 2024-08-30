@@ -1,15 +1,15 @@
 DEFINE_PATCH_FUNCTION patch_add_hla
-  STR_VAR
-	2da_row = ~1~
-    ability = ~*~
-    icon = ~*~
-    strref = ~*~
-    min_lev = ~1~
-    max_level = ~99~
-    num_allowed = ~1~
-    prerequisite = ~*~
-    excluded_by = ~*~
-    alignment_restrict = ~*~
+STR_VAR
+  2da_row = ~1~
+  ability = ~*~
+  icon = ~*~
+  strref = ~*~
+  min_lev = ~1~
+  max_level = ~99~
+  num_allowed = ~1~
+  prerequisite = ~*~
+  excluded_by = ~*~
+  alignment_restrict = ~*~
 BEGIN
   COUNT_2DA_COLS cols // amount of columns
   COUNT_2DA_ROWS cols rows // amount of rows
@@ -39,8 +39,8 @@ END
 
 
 DEFINE_PATCH_FUNCTION patch_remove_hla
-  STR_VAR
-    remove_ability = ~*~
+STR_VAR
+  remove_ability = ~*~
 BEGIN
   COUNT_2DA_COLS cols // amount of columns
   COUNT_2DA_ROWS cols rows // amount of rows
@@ -57,18 +57,18 @@ END
 
 
 DEFINE_PATCH_FUNCTION patch_replace_hla
-  STR_VAR
-    remove_ability = ~*~
-	2da_row = ~1~
-    ability = ~*~
-    icon = ~*~
-    strref = ~*~
-    min_lev = ~1~
-    max_level = ~99~
-    num_allowed = ~1~
-    prerequisite = ~*~
-    excluded_by = ~*~
-    alignment_restrict = ~*~
+STR_VAR
+  remove_ability = ~*~
+2da_row = ~1~
+  ability = ~*~
+  icon = ~*~
+  strref = ~*~
+  min_lev = ~1~
+  max_level = ~99~
+  num_allowed = ~1~
+  prerequisite = ~*~
+  excluded_by = ~*~
+  alignment_restrict = ~*~
 BEGIN
   COUNT_2DA_COLS cols // amount of columns
   COUNT_2DA_ROWS cols rows // amount of rows
@@ -107,10 +107,10 @@ END
 
 
 DEFINE_ACTION_FUNCTION get_hla_table
-  STR_VAR
-    kit_name = ~~
-  RET
-    hla_table
+STR_VAR
+  kit_name = ~~
+RET
+  hla_table
 BEGIN
   COPY_EXISTING ~luabbr.2da~ ~override~
     READ_2DA_ENTRIES_NOW file 2 // read all file into memory
@@ -129,18 +129,18 @@ END
 
 
 DEFINE_ACTION_FUNCTION action_add_hla
-  STR_VAR
-    kit_name = ~~
-	2da_row = ~1~
-    ability = ~*~
-    icon = ~*~
-    strref = ~*~
-    min_lev = ~1~
-    max_level = ~99~
-    num_allowed = ~1~
-    prerequisite = ~*~
-    excluded_by = ~*~
-    alignment_restrict = ~*~
+STR_VAR
+  kit_name = ~~
+2da_row = ~1~
+  ability = ~*~
+  icon = ~*~
+  strref = ~*~
+  min_lev = ~1~
+  max_level = ~99~
+  num_allowed = ~1~
+  prerequisite = ~*~
+  excluded_by = ~*~
+  alignment_restrict = ~*~
 BEGIN
   COPY_EXISTING ~luabbr.2da~ ~override~
 	COUNT_2DA_COLS l_cols // amount of columns
@@ -197,18 +197,18 @@ BEGIN
 END
 
 DEFINE_ACTION_FUNCTION add_hla_to_table
-  STR_VAR
-    table_name = ~~
-    2da_row = ~1~
-    ability = ~*~
-    icon = ~*~
-    strref = ~*~
-    min_lev = ~1~
-    max_level = ~99~
-    num_allowed = ~1~
-    prerequisite = ~*~
-    excluded_by = ~*~
-    alignment_restrict = ~*~
+STR_VAR
+  table_name = ~~
+  2da_row = ~1~
+  ability = ~*~
+  icon = ~*~
+  strref = ~*~
+  min_lev = ~1~
+  max_level = ~99~
+  num_allowed = ~1~
+  prerequisite = ~*~
+  excluded_by = ~*~
+  alignment_restrict = ~*~
 BEGIN
   ACTION_IF (FILE_EXISTS_IN_GAME ~%table_name%.2da~) BEGIN
     COPY_EXISTING ~%table_name%.2da~ ~override~
@@ -251,9 +251,9 @@ BEGIN
 END
 
 DEFINE_ACTION_FUNCTION action_remove_hla
-  STR_VAR
-    kit_name = ~~
-    remove_ability = ~*~
+STR_VAR
+  kit_name = ~~
+  remove_ability = ~*~
 BEGIN
   COPY_EXISTING ~luabbr.2da~ ~override~
 	COUNT_2DA_COLS l_cols // amount of columns
@@ -287,19 +287,19 @@ BEGIN
 END
 
 DEFINE_ACTION_FUNCTION action_replace_hla
-  STR_VAR
-    kit_name = ~~
-    remove_ability = ~*~
-	2da_row = ~1~
-    ability = ~*~
-    icon = ~*~
-    strref = ~*~
-    min_lev = ~1~
-    max_level = ~99~
-    num_allowed = ~1~
-    prerequisite = ~*~
-    excluded_by = ~*~
-    alignment_restrict = ~*~
+STR_VAR
+  kit_name = ~~
+  remove_ability = ~*~
+2da_row = ~1~
+  ability = ~*~
+  icon = ~*~
+  strref = ~*~
+  min_lev = ~1~
+  max_level = ~99~
+  num_allowed = ~1~
+  prerequisite = ~*~
+  excluded_by = ~*~
+  alignment_restrict = ~*~
 BEGIN
   COPY_EXISTING ~luabbr.2da~ ~override~
 	COUNT_2DA_COLS l_cols // amount of columns

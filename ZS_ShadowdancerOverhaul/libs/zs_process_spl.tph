@@ -1,74 +1,62 @@
 //SD SPELLS
 COPY_EXISTING ~ZS#SDL1J.SPL~ ~override~ // Shadow Jump spell selection
-    SAY NAME1 @3
-    SAY UNIDENTIFIED_DESC @4
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@3) ref_desc = RESOLVE_STR_REF(@4) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL1C.SPL~ ~override~ // Shadow Jump planar shift
-    SAY NAME1 @300
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@300) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL1H.SPL~ ~override~ // Shadow Jump teleport
-    SAY NAME1 @301
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@301) END
 BUT_ONLY
 
 // Tweak Rod of Shadowstep for consistency
 ACTION_IF FILE_EXISTS_IN_GAME ~ohdrod.ITM~ BEGIN
     COPY_EXISTING ~ohdrod.ITM~ ~override~ // Rod of Shadow Jump
-        SAY NAME2 @5001
-        SAY IDENTIFIED_DESC @5000
+        LPF ALTER_ITEM INT_VAR id_ref_name = RESOLVE_STR_REF(@5001) id_ref_desc = RESOLVE_STR_REF(@5000) END
         LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode=146 STR_VAR resource=~ZS#SDL1C~ END
     BUT_ONLY
 END
 
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
-    SAY NAME1 @9
-    SAY UNIDENTIFIED_DESC @10
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@9) ref_desc = RESOLVE_STR_REF(@10) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
-    SAY NAME1 @5
-    SAY UNIDENTIFIED_DESC @6
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) ref_desc = RESOLVE_STR_REF(@6) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL4A.SPL~ ~override~ // Summon Shadow
-    SAY NAME1 @7
-    SAY UNIDENTIFIED_DESC @8
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH01.SPL~ ~override~ // Self concealment
-    SAY NAME1 @15
-    SAY UNIDENTIFIED_DESC @16
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@15) ref_desc = RESOLVE_STR_REF(@16) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Shadow Master
-    SAY NAME1 @13
-    SAY UNIDENTIFIED_DESC @14
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@13) ref_desc = RESOLVE_STR_REF(@14) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH03.SPL~ ~override~ // extra shadow jump feat
-    SAY NAME1 @17
-    SAY UNIDENTIFIED_DESC @18
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@17) ref_desc = RESOLVE_STR_REF(@18) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH04.SPL~ ~override~ // extra shadow illusion feat
-    SAY NAME1 @19
-    SAY UNIDENTIFIED_DESC @20
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@19) ref_desc = RESOLVE_STR_REF(@20) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH05.SPL~ ~override~ // shadow conjuration hla
-    SAY NAME1 @21
-    SAY UNIDENTIFIED_DESC @22
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@3) ref_desc = RESOLVE_STR_REF(@4) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH06.SPL~ ~override~ // shadow conjuration
-    SAY NAME1 @21
-    SAY UNIDENTIFIED_DESC @22
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@3) ref_desc = RESOLVE_STR_REF(@4) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH07.SPL~ ~override~ // teleport without error sd version
-    SAY NAME1 @206
-    SAY UNIDENTIFIED_DESC @207
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@206) ref_desc = RESOLVE_STR_REF(@207) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDH2D.SPL~ ~override~ // critical hit effect sw master
@@ -82,18 +70,9 @@ BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
     COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
-        SAY UNIDENTIFIED_DESC @11
+        LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@11) END
         SET op9_loc_speed = 255 + (20 << 16)
-        LPF a7_auto_apply_spl_effect // add all other resistances, immunity to detection by divination and nondetection, RGB (38,15,61)
-            INT_VAR
-                def_target = 1  // Self
-                def_duration = 30
-                def_parameter1 = 50
-                def_parameter2 = 0
-            STR_VAR
-                function_name = ~ADD_SPELL_EFFECT~
-                effect_codes  = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ // near black tint
-        END
+        LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 STR_VAR effects = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ END
         LPF ALTER_EFFECT INT_VAR match_opcode=50 parameter1="-784830976" parameter2=op9_loc_speed END
         LPF ALTER_EFFECT INT_VAR match_opcode=215 STR_VAR resource=~PARALH~ END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
@@ -107,67 +86,23 @@ END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ BEGIN
     COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
-        LPF ALTER_EFFECT INT_VAR match_duration = 60 duration = 120 END
+        LPF ALTER_EFFECT INT_VAR silent = 1 match_duration = 60 duration = 120 END
     BUT_ONLY
 END
 
-COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's disabled Thief buttons, and prevents them from using Summon Shade
+COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shade in abilities
     LPF DELETE_EFFECT INT_VAR match_opcode = 144 END
-    LPF a7_auto_apply_spl_effect
-        STR_VAR
-            function_name = ~ADD_SPELL_EFFECT~
-            effect_codes  = ~op=172,tgt=1,res=ZS#SDL4A~ // shadow twins/simulacra cannot summon a second shadow
-    END
+    LPF ADD_SPL_SELFEFF STR_VAR effects = ~op=172,res=ZS#SDL4A~ END
 BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL937.SPL~ BEGIN
-    COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze, adds new headers for better saving throws
-        SAY UNIDENTIFIED_DESC @12
-        LPF ALTER_EFFECT
-            INT_VAR
-                header_type = 2
-                match_opcode = 213 // no longer delayed
-                parameter2 = 1 // uses time now to allow fancy visuals when returning
-                timing = 0
-                duration = 30
-                probability1 = 9
-                resist_dispel = 0
-        END
-        LPF ALTER_EFFECT
-            INT_VAR
-                header_type = 2
-                match_opcode = 215
-                timing = 0
-                duration = 0 // instant, no need to apply duration
-                probability1 = 9
-                resist_dispel = 0
-            STR_VAR
-                resource = ~BDETHER~ // visual effect of Ether gate
-        END
-        LPF a7_auto_apply_spl_effect
-            INT_VAR
-                def_target = 2
-                def_type = 2
-                def_timing = 4
-                def_savetype = 1
-                def_savebonus = "-4"
-                def_resist_dispel = 0
-                def_probability1 = 9
-            STR_VAR
-                function_name = ~ADD_SPELL_EFFECT~
-                effect_codes  = ~op=215,dur=29,res=BDETHER;op=146,res=ZSSDMAZ0,dur=29~
-        END
-        LPF a7_auto_apply_spl_effect
-            INT_VAR
-                def_target = 2
-                def_type = 2
-                def_timing = 4
-                def_savetype = 1
-                def_savebonus = "-4"
-            STR_VAR // add cast spell eff
-                function_name = ~ADD_SPELL_EFFECT~
-                effect_codes  = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ //
-        END
+    COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze
+        LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@12) END
+        LPF ALTER_EFFECT INT_VAR header_type=2 match_opcode=213 parameter2=1 timing=0 duration=30 probability1=9 resist_dispel=0 END
+        LPF ALTER_EFFECT INT_VAR header_type=2 match_opcode=215 timing=0 duration=0 probability1=9 resist_dispel=0
+        STR_VAR resource = ~BDETHER~ END
+        LPF ADD_SPL_TGTEFF INT_VAR t=2 tmg=4 stype=1 sbonus="-4" pro1=9 STR_VAR effects=~op=215,dur=29,res=BDETHER;op=146,res=ZSSDMAZ0,dur=29~ END
+        LPF ADD_SPL_TGTEFF INT_VAR t=2 tmg=4 stype=1 sbonus="-4" STR_VAR effects = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ END
         LPF ADD_SPELL_HEADER INT_VAR zs_min_level_for_copy = 28  copy_header = 1 END
         LPF ALTER_EFFECT INT_VAR header = 1 savebonus = "-5" END
         LPF ADD_SPELL_HEADER INT_VAR zs_min_level_for_copy = 36 copy_header = 1 END
@@ -176,117 +111,73 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SPCL937.SPL~ BEGIN
         LPF ALTER_EFFECT INT_VAR header = 3 savebonus = "-7" END
     BUT_ONLY
 END
-// END SD SPELLS
 
-// SHADOW
-// SHADOW SPL Files
 COPY_EXISTING ~ZS#SDSA.SPL~ ~override~ // Fade
-    SAY NAME1 @200
-    SAY UNIDENTIFIED_DESC @201
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@200) ref_desc = RESOLVE_STR_REF(@201) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSI.SPL~ ~override~ // Fade Improved
-    SAY NAME1 @212
-    SAY UNIDENTIFIED_DESC @213
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@212) ref_desc = RESOLVE_STR_REF(@213) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSB.SPL~ ~override~ // Drain Life
-    SAY NAME1 @202
-    SAY UNIDENTIFIED_DESC @203
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@202) ref_desc = RESOLVE_STR_REF(@203) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSD.SPL~ ~override~ // Vampiric Touch
-    SAY NAME1 @204
-    SAY UNIDENTIFIED_DESC @205
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@204) ref_desc = RESOLVE_STR_REF(@205) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSF.SPL~ ~override~ // Teleport without error
-    SAY NAME1 @206
-    SAY UNIDENTIFIED_DESC @207
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@206) ref_desc = RESOLVE_STR_REF(@207) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSG.SPL~ ~override~ // Beshadowed Self
-    SAY NAME1 @208
-    SAY UNIDENTIFIED_DESC @209
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@208) ref_desc = RESOLVE_STR_REF(@209) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSJ.SPL~ ~override~ // Dispel magic shadow
-    SAY NAME1 @214
-    SAY UNIDENTIFIED_DESC @215
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@214) ref_desc = RESOLVE_STR_REF(@215) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSK.SPL~ ~override~ // Slay the living
-    SAY NAME1 @216
-    SAY UNIDENTIFIED_DESC @217
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@216) ref_desc = RESOLVE_STR_REF(@217) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSM.SPL~ ~override~ // See invisibility
-    SAY NAME1 @218
-    SAY UNIDENTIFIED_DESC @219
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@218) ref_desc = RESOLVE_STR_REF(@219) END
 BUT_ONLY
 
 ADD_PROJECTILE ~ZS_ShadowdancerOverhaul/pro/ZSSDDARK.PRO~
 
 COPY_EXISTING ~ZS#SDSH.SPL~ ~override~ // Darkness
-    SAY NAME1 @210
-    SAY UNIDENTIFIED_DESC @211
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@210) ref_desc = RESOLVE_STR_REF(@211) END
     LPF ALTER_HEADER INT_VAR match_type = 1 projectile = %ZSSDDARK% END
 BUT_ONLY
 
-    // END SPL FILES
-
-    // SHADOW EFF FILES
-    // END OF SHADOW EFF FILES
-
 COMPILE ~ZS_ShadowdancerOverhaul/d/zs_sdshd.d~
 
-// SHADOW CRE FILES
 COPY_EXISTING_REGEXP ~ZS#SDS0[4-9].CRE~ ~override~ // Shadow
-    SAY NAME1 @250
-    SAY NAME2 @250
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@250) tooltip=RESOLVE_STR_REF(@250) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS1[0-1].CRE~ ~override~ // Shadow
-    SAY NAME1 @250
-    SAY NAME2 @250
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@250) tooltip=RESOLVE_STR_REF(@250) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS1[2-9].CRE~ ~override~ // Greater Shadow
-    SAY NAME1 @251
-    SAY NAME2 @251
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@251) tooltip=RESOLVE_STR_REF(@251) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS2[0-7].CRE~ ~override~ // Shadowlord
-    SAY NAME1 @252
-    SAY NAME2 @252
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@252) tooltip=RESOLVE_STR_REF(@252) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS2[89].CRE~ ~override~ // Greater shadowlord
-    SAY NAME1 @253
-    SAY NAME2 @253
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@253) tooltip=RESOLVE_STR_REF(@253) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS3[0-5].CRE~ ~override~ // Greater shadowlord
-    SAY NAME1 @253
-    SAY NAME2 @253
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@253) tooltip=RESOLVE_STR_REF(@253) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
 COPY_EXISTING_REGEXP ~ZS#SDS3[68].CRE~ ~override~ // Shadowhaunt
-    SAY NAME1 @254
-    SAY NAME2 @254
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@254) tooltip=RESOLVE_STR_REF(@254) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
-
 COPY_EXISTING ~ZS#SDS40.CRE~ ~override~ // Shadowhaunt
-    SAY NAME1 @254
-    SAY NAME2 @254
-    WRITE_ASCII 0x2cc ~zs_sdshd~ #8
+    LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@254) tooltip=RESOLVE_STR_REF(@254) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
-
-
-
-/*COPY_EXISTING_REGEXP ~ZS#SDS[0-9][0-9]\.cre~ ~override~
-    LPF foreach_cre_effect INT_VAR match_timing = 1 timing = 9 END
-BUT_ONLY*/ // no longer needed after one pass
-// END SHADOW CRE FILES
-// END SHADOW

@@ -281,3 +281,4 @@ The shaman slips into a space between the spirit world and the material plane, r
 @10000 = ~This component is only allowed in BGEE, BG2EE, IWDEE and EET~
 @10001 = ~This component is only allowed in BGEE, BG2EE and EET~
 @10002 = ~Fix is already included in the main component~
+@10003 = ~This component requires the Shadowdancer Overhaul component~
