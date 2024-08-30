@@ -8,7 +8,7 @@ Advantages:
 – Hide In Plain Sight: <PRO_HESHE> may unerringly hide, even when in plain sight, for 3 rounds, every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.
 – May cast Shadow Jump once per day. A new use is gained every three levels.
 – May cast Shadow Illusion once per day, gaining a single use at level 3, and another one at level 12 and 20.
-– May cast Summon Shadow once per day, gaining a single use at level 4.
+– May cast Summon Shade once per day, gaining a single use at level 4.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
 – May cast Shadow Conjuration once per day at level 12. Another use is gained at level 20 and 28.
 
@@ -25,7 +25,7 @@ Additionally, every time <PRO_HESHE> gains another use of Shadow Jump, the total
 
 Alternatively, the Shadowdancer may choose to instantly teleport to a place within sight. All the benefits mentioned before are applied.
 
-SUMMON  SHADOW: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, immune to turning and anti-summon spells, is highly resistant to damage, and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. This undead companion grows in power with the Shadowdancer, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
+SUMMON  SHADE: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, immune to turning and anti-summon spells, is highly resistant to damage, and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. This undead companion grows in power with the Shadowdancer, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
 
 SHADOW  ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
@@ -89,7 +89,7 @@ However, the spell failure, the susceptibility to sneak attacks, blindness (leve
 
 @7 = ~Summon Shade~
 @8 = ~Summon Shade
-Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature is completely immune to turning, is highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
+Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature is completely immune to turning and spells that destroy summoned creatures, is highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
 
 This loyal undead companion is not as powerful initially as the regular counterparts, but it grows in power as more experience is gained, becoming more and more capable and resistant, gaining some innate abilities, and ultimately evolving several times into greater types of creatures:
 
