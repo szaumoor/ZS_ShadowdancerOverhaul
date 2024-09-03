@@ -59,7 +59,7 @@ END
 DEFINE_PATCH_FUNCTION patch_replace_hla
 STR_VAR
   remove_ability = ~*~
-2da_row = ~1~
+  2da_row = ~1~
   ability = ~*~
   icon = ~*~
   strref = ~*~

@@ -49,11 +49,11 @@ So here's what the mod changes:
   - **Immune** to **Acid**, **Cold**, later becomes immune to **Electricity** too, and gains a small amount of Magic Resistance.
   - **Resists 20% of physical damage, 30% for missile**, which increases slowly up to 50% and 60% respectively later on. It starts off with 18 HP and goes up to 100 eventually.
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
-  - Evolves into a **Greater Shadow**, a **Shadowlord**, an **Great Shadowlord** and a **Nighthaunt**. See ShadowSpells.md for more details.
+  - Evolves into a **Greater Shadow**, a **Shadowlord**, an **Greater Shadowlord** and a **Nighthaunt**. See ShadowSpells.md for more details.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
   - Their attacks can **drain strength** which can be saved against (save vs. death, improves with level), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons**, at least at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
-  - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).I
+  - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
   - **Future plans**: Add the possibility of talking with it to change strategy. It should attack on sight now and you can talk with it, but there's no effect to it.
 
 **HLAS**
@@ -68,7 +68,12 @@ So here's what the mod changes:
     - Critical chances improve by 5% for 2 rounds after critically hitting (non stackable).
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemy inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
-  - **Shadow Form**: Same, but it also makes your invisibility undispellable for its duration, and it makes you resist also 50% of ALL damage for 5 rounds, since it's meant to mimic 50% displacement i.e. 50% of the attacks should miss (and damage reduction, but damage reduction is implemented very differently in NWN/NWN2). Can be taken unlimited times.
+  - **Shadow Form**: Same, but:
+    - It makes your invisibility undispellable for its duration
+    - It makes you resist +50% of ALL damage for 5 rounds, not just physical damage (mimics displacement).
+    - +4 AC is added, mimicking NWN
+    - Regenerate 1 HP per second while the effect is active
+    - Can be taken unlimited times.
 
 **Feats**
 These exist only so they are implemented if ToF or any other Feat mod is installed. The implementation of this depends on the authors of such mods.
@@ -112,8 +117,8 @@ As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs
 ## Known Issues
 - CTRL + R your character might make the effects at night of Shadow Artist bug out. You'll notice because the movement speed stops working and your max HP doesn't update correctly. Try CTRL + R again to reset it again. It's probably a matter of unlucky timing.
 - It will also bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within 30 seconds, the effect that returns the ability to you will be cancelled.
-- There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug (without source code access, that is), mixed with setting your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not), the rest is up to you and your tolerance for cheesiness. I personally just wait half a second more to reduce the chances of the enemy escaping my reach or automatically succeeding the attack, or until the time stop is visibly over.
-- Shadow Jump: Planar Shift is a Time Stop effect, so it would be possible to cast it over and over to make some effect on the enemy wear off with no consequences. So again, it's a matter of your tolerance for cheesiness. As an alternative, Shadow Jump: Dimensional Door, is added to have an alternative. See above for more information on that alternative.
+- There's a very small window where it's possible to hit someone at the very last moments of Shadow Jump during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug (without source code access, that is), mixed with setting your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not), the rest is up to you and your tolerance for cheesiness. I personally just wait half a second more to reduce the chances of the enemy escaping my reach, or until the time stop is visibly over.
+- Shadow Jump: Planar Shift is a Time Stop effect, so it would be possible to cast it over and over to make some effect on the enemy wear off with no consequences. So again, it's a matter of your tolerance for cheesiness. As an alternative, Shadow Jump: Dimensional Door, was added. See above for more information on that alternative.
 - The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback is welcome.
 
 ## Credits

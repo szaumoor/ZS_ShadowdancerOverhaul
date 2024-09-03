@@ -28,6 +28,7 @@ COPY "%MOD_FOLDER%/spl" ~override~
      "%MOD_FOLDER%/bcs" ~override~
      "%MOD_FOLDER%/2da/LUZSSD.2DA" ~override~
      "%MOD_FOLDER%/2da/ZS#SDEVO.2DA" ~override~
+     ~%MOD_FOLDER%/2da/ZS#SDSJ.2DA~ ~override~
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -46,8 +47,10 @@ LAF ADD_KIT_EX
 END
 
 COPY_EXISTING ~LUZSSD.2DA~ ~override~
-    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH01~ num_allowed=~3~ prerequisite=~GA_SPCL938~ END // self-concealment
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
+    LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH01~ num_allowed=~3~ prerequisite=~AP_ZS#SDH08~ END // self-concealment
     LPF patch_add_hla STR_VAR kit_name=~ZS_SHADOWDANCER~ ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow master
+    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL938~ ability=~GA_SPCL938~ num_allowed=~99~ prerequisite=~AP_ZS#SDH08~ END // replace Shadow Form to add the prerequisite
 BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
@@ -60,6 +63,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
 END ELSE BEGIN
     PRINT "Rogue Rebalancing HLA component not installed, skipping..."
 END
+
+COPY_EXISTING ~SPPR505.SPL~ ~override~ // TRUE SIGHT PROTECTION AGAINST SHADOW ILLUSION / DISPELLING
+              ~SPWI609.SPL~ ~override~
+              ~SPCL232.SPL~ ~override~
+              ~SPCL732.SPL~ ~override~
+    LPF ADD_SPL_SELFEFF INT_VAR rd=0 ip=0 STR_VAR effects= ~ip=-1,op=206,p1=-1,rd=3,res=ZS#SDL3A,dur=60;op=321,res=ZS#SDL3A;op=321,res=ZS#SDL3B;op=321,res=ZS#SDL3C;op=321,res=ZS#SDL3D;op=321,res=ZS#SDL3E~ END
+BUT_ONLY
 
 INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
@@ -101,7 +111,7 @@ ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
         LPF ALTER_EFFECT INT_VAR match_globals = 0 header=2 match_duration = 30 duration = 42 END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
-        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 42 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 48 END
     BUT_ONLY
 END ELSE BEGIN
     WARN "Spirit form not found in the game"

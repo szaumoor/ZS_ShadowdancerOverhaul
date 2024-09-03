@@ -5,10 +5,12 @@ BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL1C.SPL~ ~override~ // Shadow Jump planar shift
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@300) END
+    LPF ALTER_EFFECT INT_VAR resist_dispel = 0 END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL1H.SPL~ ~override~ // Shadow Jump teleport
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@301) END
+    LPF ALTER_EFFECT INT_VAR resist_dispel = 0 END
 BUT_ONLY
 
 // Tweak Rod of Shadowstep for consistency
@@ -21,6 +23,7 @@ END
 
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@9) ref_desc = RESOLVE_STR_REF(@10) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@10010) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
@@ -72,7 +75,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
     COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
         LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@11) END
         SET op9_loc_speed = 255 + (20 << 16)
-        LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 STR_VAR effects = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ END
+        LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 STR_VAR effects = ~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255~ END
         LPF ALTER_EFFECT INT_VAR match_opcode=50 parameter1="-784830976" parameter2=op9_loc_speed END
         LPF ALTER_EFFECT INT_VAR match_opcode=215 STR_VAR resource=~PARALH~ END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
@@ -80,9 +83,17 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SPCL938.SPL~ BEGIN
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
         LPF ALTER_EFFECT INT_VAR match_globals = 0 header=2 match_duration = 30 duration = 42 END
         LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
-        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 42 END
+        LPF ALTER_EFFECT INT_VAR match_globals = 0 header=3 match_duration = 30 duration = 48 END
     BUT_ONLY
 END
+
+COPY_EXISTING ~ZS#SDL5A.SPL~ ~override~ // SHADOW EVADE
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@25) ref_desc = RESOLVE_STR_REF(@26) END
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDH08.SPL~ ~override~ // SHADOW EVADE IMPROVE HLA
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@27) ref_desc = RESOLVE_STR_REF(@28) END
+BUT_ONLY
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ BEGIN
     COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
@@ -134,6 +145,7 @@ BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSG.SPL~ ~override~ // Beshadowed Self
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@208) ref_desc = RESOLVE_STR_REF(@209) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@20209) END
 BUT_ONLY
 
 COPY_EXISTING ~ZS#SDSJ.SPL~ ~override~ // Dispel magic shadow
