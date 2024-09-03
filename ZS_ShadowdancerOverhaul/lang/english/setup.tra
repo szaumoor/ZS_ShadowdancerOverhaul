@@ -9,6 +9,7 @@ Advantages:
 – May cast Shadow Jump once per day. A new use is gained every three levels.
 – May cast Shadow Illusion once per day, gaining a single use at level 3, and another one at level 12 and 20.
 – May cast Summon Shade once per day, gaining a single use at level 4.
+– May cast Shadow Evade once per day, gaining an use at level 6, and then again at level 10 and 16.
 – At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
 – May cast Shadow Conjuration once per day at level 12. Another use is gained at level 20 and 28.
 
@@ -39,6 +40,8 @@ This spell has no effect on creatures with very high intelligence (18 or more), 
 However, the spell failure, the susceptibility to sneak attacks, blindness (level 17), and the damage susceptibility (level 14) cannot be resisted once they take hold.
 
 Alternatively, the Shadowdancer may use Shadow Jump to simply instantly teleport to the specified location. The caveat is that teleportation is only possible within a line of sight, but all the benefits described before will apply.
+
+SHADOW  EVADE: This skill allows the Shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make <PRO_HIMHER> invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 1 round to its duration and 5% to damage resistance.
 
 SHADOW  CONJURATION: This skill allow the Shadowdancer to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available: Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.
 
@@ -112,7 +115,7 @@ Duration: 5 rounds + 1 round per 10 levels starting at level 30
 Casting Time: Instant
 Area of Effect: The caster
 
-This ability temporarily transposes some of the user's tissue with shadow-stuff, making the subject partially incorporeal and regenerating 1 HP per second. For the next 5 rounds, gain a +4 AC bonus, and all attacks directed against the Shadowdancer deal 50% less of their normal damage. During this time, the user becomes invisible, receives a +4 bonus to all Saving Throws, and may not be detected by any means until they choose to partially reveal themselves by taking an offensive action, or the effect runs out.
+This ability is a more powerful version of Shadow Evade that temporarily transposes some of the user's tissue with shadow-stuff, making the subject partially incorporeal and regenerating 1 HP per second. For the next 5 rounds, gain a +4 AC bonus, and all attacks directed against the Shadowdancer deal 50% less of their normal damage. During this time, the user becomes invisible, receives a +4 bonus to all Saving Throws, and may not be detected by any means until they choose to partially reveal themselves by taking an offensive action, or the effect runs out.
 
 Requirements: Improved Shadow Evade~
 
@@ -155,7 +158,7 @@ Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibi
 @24 = ~Backstab immunity removal effect wore off~
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make the user invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16.~
+The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make the user invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 1 round to its duration and 5% to damage resistance.~
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
 The Shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form.~

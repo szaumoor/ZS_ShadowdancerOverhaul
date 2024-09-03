@@ -38,7 +38,6 @@ So here's what the mod changes:
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
   - At higher levels it becomes a small AoE, and later makes enemies take 10% more physical damage and get a AC penalty of 4, and the blindness effect is guaranteed when the saving throw fails.
   - Doesn't affect creatures of INT of 18 and above as well as powerful creatures that can't be tricked, like golems, dragons, balors, solars, etc.
-
 - **Summon Shade**: You get this ability at level 4. You can summon a Shadow to fight at your side. It can be summoned once per day for 8 hours and grows in power with you. Here's some common traits at any level:
   - **Neutrally aligned**. It's supposed to have the same alignment as you but I wouldn't know how to build it such that it matches your character's alignment anyway (and there are only a handful of situations where the alignment would be important for the summon anyway).
   - **Summoned invisible**
@@ -54,10 +53,11 @@ So here's what the mod changes:
   - Their attacks can **drain strength** which can be saved against (save vs. death, improves with level), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons**, at least at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
+- **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). Doesn't make you invisible but it does grant Nondetection.
   - **Future plans**: Add the possibility of talking with it to change strategy. It should attack on sight now and you can talk with it, but there's no effect to it.
 
 **HLAS**
-  - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN.
+  - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN. Requires Improved Shadow Evade.
   - **Shadow Artist**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
     - Immunity to Blindness
     - Nondetection and immunity to most divinations
@@ -68,6 +68,7 @@ So here's what the mod changes:
     - Critical chances improve by 5% for 2 rounds after critically hitting (non stackable).
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemy inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
+  - **Improved Shadow Evade**: This upgrades your Shadow Evade permanently to Shadow Form, essentially replacing the 3 casts of Shadow Evade with 3 of Shadow Form. This opens up the Self-Concealment and Shadow Form HLAs. Can be taken once.
   - **Shadow Form**: Same, but:
     - It makes your invisibility undispellable for its duration
     - It makes you resist +50% of ALL damage for 5 rounds, not just physical damage (mimics displacement).
@@ -76,7 +77,7 @@ So here's what the mod changes:
     - Can be taken unlimited times.
 
 **Feats**
-These exist only so they are implemented if ToF or any other Feat mod is installed. The implementation of this depends on the authors of such mods.
+These exist only so they are implemented if ToF or any other Feat mod is installed. The implementation of this would depend on the authors of such mods.
 - **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards. When a feat mod is installed, the rate of gaining uses should be reduced (currently one use every 3 levels: 1, 4, 7...)
 - **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards. By default, an extra use is gained at level 12, and then at level 20.
 - **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Available from level 15 on. Can be taken three times. By default, it's gained at level 12, and another use is gained at level 20 and 28.
