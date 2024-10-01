@@ -29,10 +29,11 @@ So here's what the mod changes:
     - You are able to **ignore effects that can be saved against briefly** (this is interpreted as dodging, which Shadowdancers would be masters at).
     - All attempts at casting spells will fail until the duration of this spell is over.
     - You become **invisible** immediately and **cannot have your invisibility detected** for a few seconds after the effect is done.
+    - +1 Luck
     - You get an **increasing bonus** to **THAC0** (up to +10, on top of invisibility bonuses), **damage** (up to +5), and **critical hit** chances (up to +20%, at level 34) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
     - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
     - Although this ability uses the Time Stop opcode, it's not Time Stop, and therefore, creatures immune to Time Stop will not be allowed to take advantage of their immunity.
-  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. This of course has some differences and caveats compared to the other version: since 7 seconds will not pass, you won't be able to attack instantaneously if you cast this when you have no more attacks in the round, and you won't be able to cast anything immediately after (except Shadow Jump as such, as spell selection castings are not affected by cooldowns). The benefits that extend beyond the time stop are the same and last for 3 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, but be refreshed.
+  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. This of course has some differences and caveats compared to the other version: since 7 seconds will not pass, you won't be able to attack instantaneously if you cast this when you have no more attacks in the round, and you won't be able to cast anything immediately after (except Shadow Jump as such, as spell selection castings are not affected by cooldowns). The benefits that extend beyond the time stop are the same and last for 4 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, but be refreshed.
 - **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and D&D but essentially the idea is that you're able to discombobulate enemies through illusions in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
   - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserk, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
@@ -87,10 +88,11 @@ Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump: Planar
 ### 2. Streamline THAC0 for Thieves
 This component streamlines the THAC0 for Thieves and allows them to attain the more reasonable THAC0 of 6 that priests can attain. Essentially, every even THAC0 level lasts only for one level, and uneven ones persist for 2 levels. 20, 19, 19, 18, 17, 17, 16, 15, 15... This is recommended unless you're using another mod that does the same.
 
-Be warned, however, that it will conflict with the swashbuckler class, since the THAC0 bonuses in the vanilla class rely on Thieves attaining a THAC0 of 10 at most, which means Swashbucklers will attain a THAC0 of -4 instead of 0, like Fighters.
+This does the same as the similar component in ZSTweaks. Prefer that one.
 
 ### 3. Improve the THAC0 of Bards too to match the changes to Thieves
 This simply matches the THAC0 progression of Bards to that of the Thieves as per the previous component.
+This does the same as the similar component in ZSTweaks. Prefer that one.
 
 ### 4. Make Shaman Spirit Form mirror the benefits of Shadow Form
 This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
