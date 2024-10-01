@@ -1,11 +1,13 @@
 DEFINE_PATCH_FUNCTION ADD_EQUIPPED_EFF
-    INT_VAR
-        p1 = 0
-        p2 = 0
-        ip = "-1"
-    STR_VAR
-        effects = ~~
+INT_VAR
+    p1 = 0
+    p2 = 0
+    ip = "-1"
+    spec = 0
+STR_VAR
+    effects = ~~
 BEGIN
+    LPF CHECK_EXTENSION STR_VAR extension = "ITM" END
     LPF a7_auto_apply_spl_effect
         INT_VAR
             def_target = 1
@@ -13,6 +15,7 @@ BEGIN
             def_parameter1 = p1
             def_parameter2 = p2
             def_insertpoint = ip
+            def_special = spec
         STR_VAR
             function_name = ~ADD_ITEM_EQEFFECT~
             effect_codes = ~%effects%~
@@ -20,26 +23,27 @@ BEGIN
 END
 
 DEFINE_PATCH_FUNCTION ADD_ON_HIT_EFF
-    INT_VAR
-        p1 = 0
-        p2 = 0
-        tmg = 0
-        dur = 0
-        rd = 0
-        pwr = 0
-        t = 1
-        stype = 0
-        sbonus = 0
-        pro1 = 100
-        pro2 = 0
-        dsize = 0
-        dnum = 0
-        ip="-1"
-        tgt = 2
-    STR_VAR
-        res = ~~
-        effects = ~~
+INT_VAR
+    p1 = 0
+    p2 = 0
+    tmg = 0
+    dur = 0
+    rd = 0
+    pwr = 0
+    t = 1
+    stype = 0
+    sbonus = 0
+    pro1 = 100
+    pro2 = 0
+    dsize = 0
+    dnum = 0
+    ip="-1"
+    tgt = 2
+STR_VAR
+    res = ~~
+    effects = ~~
 BEGIN
+    LPF CHECK_EXTENSION STR_VAR extension = "ITM" END
     LPF a7_auto_apply_spl_effect
         INT_VAR
             def_target = tgt
@@ -76,6 +80,7 @@ INT_VAR
 STR_VAR
     effects=""
 BEGIN
+    LPF CHECK_EXTENSION STR_VAR extension = "SPL" END
     LPF a7_auto_apply_spl_effect
         INT_VAR
             def_target = 1
@@ -103,14 +108,16 @@ INT_VAR
     rd=1
     pwr=1
     ip="-1"
-    stype=0
-    sbonus=0
+    stype = 0
+    sbonus = 0
+    tgt=2
 STR_VAR
     effects=""
 BEGIN
+    LPF CHECK_EXTENSION STR_VAR extension = "SPL" END
     LPF a7_auto_apply_spl_effect
         INT_VAR
-            def_target = 2
+            def_target = tgt
             def_timing = tmg
             def_parameter1 = p1
             def_parameter2 = p2

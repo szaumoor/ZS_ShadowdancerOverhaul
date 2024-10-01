@@ -18,6 +18,7 @@ SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
 – May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes the Shadowdancer detectable again.
+– +1 Luck
 – +5% critical chance, improved to +10% at level 10, +15% at level 22, and +20% at level 30.
 – +1 THAC0 bonus, +1 every time a new use is gained, up to a bonus of +10.
 – +1 damage bonus, +1 every other time a new use is gained, up to a bonus of +5.
@@ -69,13 +70,14 @@ Instantly step into the Shadow Plane for about 7 seconds, moving faster by a fac
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
 – May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0
+– +1 Luck
 – +5% critical chance, improved to +10% at level 10, 15% at level 22, and 20% at level 34
 – +1 THAC0 bonus, plus 1 extra every time a new use is gained, up to a bonus of +10
 – +1 damage bonus, plus 1 extra every other time a new use is gained, up to a bonus of +5
 
 Additionally, every time you gain another use of Shadow Jump, the total distance you can travel before returning to the Prime increases by a factor of 1.
 
-Alternatively, the Shadowdancer may use Shadow Jump to simply instantly teleport to the specified location. The caveat is that teleportation is only possible within a line of sight, but all the benefits described before will apply for 3 seconds.~
+Alternatively, the Shadowdancer may use Shadow Jump to simply instantly teleport to the specified location. The caveat is that teleportation is only possible within a line of sight, but all the benefits described before will apply for 4 seconds.~
 
 @5 = ~Shadow Illusion~
 @6 = ~Shadow Illusion
