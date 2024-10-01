@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "v1.0.9"
+VERSION "v1.1.0"
 README ~ZS_ShadowdancerOverhaul/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
