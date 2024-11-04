@@ -242,7 +242,7 @@ The shade becomes briefly able to see invisible creatures, revealing them right 
 STATISTICS:
 
 Charge abilities:
-– Shadow Jump 3 times/day
+– Shadow Jump (Dimensional Door) 3 times/day
 
 Weight: 2~
 @5001 = ~Rod of Shadow Jump~
@@ -252,9 +252,9 @@ Weight: 2~
 STATISTICS:
 
 Equipped Abilities:
+- Protects against critical hits
 - Save vs. Necromancy: +2
-- Armor Class during the night: +1
-- THAC0 during the night: +1
+- Armor Class and THAC0 at night: +1
 - For Shadowdancers only: +2 Saves vs. Illusion, +25% cold resistance
 
 
