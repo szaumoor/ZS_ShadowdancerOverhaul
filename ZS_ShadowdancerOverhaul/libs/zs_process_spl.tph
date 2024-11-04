@@ -194,3 +194,7 @@ BUT_ONLY
 COPY_EXISTING ~ZS#SDS40.CRE~ ~override~ // Shadowhaunt
     LPF ALTER_CRE INT_VAR name=RESOLVE_STR_REF(@254) tooltip=RESOLVE_STR_REF(@254) STR_VAR dialog = ~zs_sdshd~ END
 BUT_ONLY
+
+COPY_EXISTING_REGEXP ~ZSSDSW[1234568]A.SPL~ ~override~ // Shadow Weapon
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@300) END
+BUT_ONLY

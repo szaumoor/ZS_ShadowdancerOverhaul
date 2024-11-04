@@ -224,6 +224,8 @@ The shade becomes briefly able to see invisible creatures, revealing them right 
 @254 = ~Nighthaunt~
 // END OF SUMMON SHADOW SPELLS
 
+@300 = ~Strength Drained~
+
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer Kit~
 @1002 = ~Fix vanilla shadowdancer bugs (wrong non-proficient penalty, wrong Shadow Twin duration)~
