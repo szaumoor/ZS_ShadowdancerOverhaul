@@ -88,13 +88,13 @@ Conjure shadowy illusions that surround an enemy and discombobulate them, unless
 – At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4
 – At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects, which may not be resisted during the spell's effect
 
-This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and creatures who don't have the capacity for mental confusion, such as golems. It is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
+This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and creatures who don't have the capacity for mental confusion, such as golems. It is not subject to Magic Resistance or dispelling effects (although True Sight will reveal the illusion), but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
 However, the spell failure, the susceptibility to sneak attacks, blindness (level 17), and the damage susceptibility (level 14) cannot be resisted once they take hold.~
 
 @7 = ~Summon Shade~
 @8 = ~Summon Shade
-Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature is completely immune to turning and spells that destroy summoned creatures, is highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
+Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature is completely immune to turning and spells that destroy summoned creatures, blindness, brain devouring, and is highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
 
 This loyal undead companion is not as powerful initially as the regular counterparts, but it grows in power as more experience is gained, becoming more and more capable and resistant, gaining some innate abilities, and ultimately evolving several times into greater types of creatures:
 
@@ -108,7 +108,7 @@ The HD of the creature is always one less than the Shadowdancer, and it grows up
 
 @9 = ~Hide in plain sight~
 @10 = ~Hide in plain sight
-Unerringly hide, even when in plain sight, for 15 seconds, every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.~
+Unerringly hide, even when in plain sight, for 5/2 rounds, once every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.~
 @10010 = ~Hide in plain sight is available for use.~
 
 @11 = ~Shadow Form
@@ -160,7 +160,7 @@ Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibi
 @24 = ~Backstab immunity removal effect wore off~
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make the user invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 1 round to its duration and 5% to damage resistance.~
+The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make the user invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 5% to damage resistance.~
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
 The Shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form.~
@@ -186,19 +186,19 @@ The Shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form.~
 The shade instantly becomes invisible for 24 hours.~
 @202 = ~Drain Life~
 @203 = ~Drain Life
-The shade drains the life of the victim for 4 + 1d4 magic damage, which is transferred to the shade for 1 turn as healing or extra maximum health.~
+The shade drains the life of the victim, causing 4 + 1d4 magic damage, which is transferred to the shade for 1 turn as healing or extra maximum health.~
 @204 = ~Vampiric Touch~
 @205 = ~Vampiric Touch
 The shade drains health from the victim as per the Vampiric Touch spell.~
 @206 = ~Teleport without error~
 @207 = ~Teleport without error
 Teleport to any point within the field of vision instantly and become invisible for 1 round.~
-@208 = ~Beshadowed Self~
-@209 = ~Beshadowed Self
-The shade temporarily imbues its own body with Shadow magic, making it more difficult to damage, gaining +4 AC and resisting 50% more physical and fire damage resistance for 10 seconds. During this time, it will be under the effects of Improved Invisibility, and regenerate 1 hitpoint per second.
+@208 = ~Beshadow Body~
+@209 = ~Beshadow Body
+The shade temporarily imbues its own body with Shadow magic, making it more difficult to damage, gaining +4 AC and fortifying their existing resistances by 50%, and also adding 50% fire and magic damage resistance for 2 rounds. During this time, it will be under the effects of Improved Invisibility, and regenerate 1 HP per second.
 
-Additionally, after level 16, this ability will protect the shade against the first physical damage directed at it, as if they had the spell Stoneskin cast on them. This ability may be cast once per 20 rounds, which improves to 15 rounds at level 15, 13 rounds at level 19, and 10 rounds at level 24.~
-@20209 = ~The shade's Beshadowed Self ability is available for use.~
+Additionally, after level 16, this ability will protect the shade against the first physical damage directed at it, as if they had the spell Stoneskin cast on them for 4 rounds. This ability may be cast once per 2 turns. This cooldown decreases by 5 rounds at level 15, 2 rounds at level 19, and 3 rounds at level 24.~
+@20209 = ~Beshadow Body is available for use.~
 
 @210 = ~Darkness~
 @211 = ~Darkness
@@ -215,6 +215,12 @@ The nigthaunt points its finger to a living target sending a ray of dark energy.
 @218 = ~See Invisibility~
 @219 = ~See Invisibility
 The shade becomes briefly able to see invisible creatures, revealing them right after, unless protected against divination attacks. The shade can cast this spell once per 3 rounds.~
+@220 = ~Shadow Swap~
+@221 = ~Shadow Swap
+The shade instantly swaps position with an ally through a Shadow Jump. The ally becomes invisible for 2 rounds and stops their offensive actions, while the shade takes their position and becomes ready to attack, gaining a +2 bonus to combat rolls, AC, Saving Throws, 5% to damage resistance and critical hit chances, and 1/2 attacks per round for 3 rounds. This ability may be used once per 5 turns. Every time the shade evolves into a greater being, this cooldown decreases by 5 rounds, up to 3 turns.
+
+Attempting this ability on a non-ally has no effect.~
+@22200 = ~Shadow Swap is available for use.~
 
 // NAMES OF CRE
 @250 = ~Shadow~
@@ -224,7 +230,7 @@ The shade becomes briefly able to see invisible creatures, revealing them right 
 @254 = ~Nighthaunt~
 // END OF SUMMON SHADOW SPELLS
 
-@300 = ~Strength Drained~
+@255 = ~Strength Drained~
 
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer Kit~

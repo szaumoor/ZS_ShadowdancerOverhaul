@@ -51,7 +51,7 @@ So here's what the mod changes:
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
   - Evolves into a **Greater Shadow**, a **Shadowlord**, an **Greater Shadowlord** and a **Nighthaunt**. See ShadowSpells.md for more details.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
-  - Their attacks can **drain strength** which can be saved against (save vs. death, improves with level), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
+  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons**, at least at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
 - **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). Doesn't make you invisible but it does grant Nondetection.
@@ -125,5 +125,6 @@ As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs
 - The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback is welcome.
 
 ## Credits
-- All the community on **Discord** for providing help and helpful code.
+- All the community on **Discord** for providing helpful insights and suggestions
+- zenblack for providing cool icons
 - **BeamDog** for introducing me to the Shadowdancer kit, which is currently my favorite class/kit, conceptually. This mod is really my way of making me like it functionally too.

@@ -1,5 +1,6 @@
+// ATTACK ON SIGHT STRATEGY
 IF
-	Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
+	Global("ZS_SDSHD_STRAT", "LOCALS", 0)
 	Heard([ANYONE],111)
 THEN
 	RESPONSE #100
@@ -7,7 +8,7 @@ THEN
 END
 
 IF
-	Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
+	Global("ZS_SDSHD_STRAT", "LOCALS", 0)
 	ActionListEmpty()
 	See(NearestEnemyOf(Myself))
 THEN
@@ -16,9 +17,7 @@ THEN
 END
 
 IF
-	OR(2)
-		Global("ZS_SDSHD_STRAT", "GLOBAL", 0)
-		Global("ZS_SDSHD_STRAT", "GLOBAL", 1)
+	Global("ZS_SDSHD_STRAT", "LOCALS", 0)
 	ActionListEmpty()
 	AttackedBy([ANYONE],DEFAULT)
 THEN
@@ -26,11 +25,30 @@ THEN
 		Attack(LastAttackerOf(Myself))
 END
 
+// END OF ATTACK ON SIGHT STRATEGY
+
+// ATTACK IF ATTACKED STRATEGY
+
 IF
-	Global("ZS_SDSHD_STRAT", "GLOBAL", 2)
+	Global("ZS_SDSHD_STRAT", "LOCALS", 1)
 	ActionListEmpty()
-//	AttackedBy([ANYONE],DEFAULT)
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+// END OF ATTACK IF ATTACKED STRATEGY
+
+// ATTACK IF CHARNAME IS ATTACKED STRATEGY
+/* NOT WORKING YET
+IF
+	Global("ZS_SDSHD_STRAT", "LOCALS", 2)
+	ActionListEmpty()
+	AttackedBy([ANYONE],DEFAULT)
 THEN
 	RESPONSE #100
 		Attack(LastAttackerOf([PC]))
-END
+END*/
+
+// END ATTACK IF CHARNAME IS ATTACKED STRATEGY

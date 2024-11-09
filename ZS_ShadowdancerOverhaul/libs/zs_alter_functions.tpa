@@ -332,6 +332,10 @@ INT_VAR
     parameter3 = "-1"
     parameter4 = "-1"
     secondary_type = "-1"
+STR_VAR
+    resource = ~none~
+    resource2 = ~none~
+    resource3 = ~none~
 BEGIN
     LPF CHECK_EXTENSION STR_VAR extension = "EFF" END
     PATCH_IF parameter1 > "-999" BEGIN
@@ -369,6 +373,16 @@ BEGIN
             PATCH_WARN "Passed a wrong value to dicenumber: %dicenumber%"
         END
     END
+    PATCH_IF "%resource%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x30 "%resource%" #8
+    END
+    PATCH_IF "%resource2%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x70 "%resource2%" #8
+    END
+    PATCH_IF "%resource3%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x78 "%resource3%" #8
+    END
+
 END
 
 
@@ -500,6 +514,9 @@ INT_VAR
     alignment = "-1"
 STR_VAR
     dialog = ~none~
+    override_script = ~none~
+    general_script = ~none~
+    class_script = ~none~
 BEGIN
     PATCH_IF name > "-2" BEGIN
         WRITE_LONG 0x08 name
@@ -552,7 +569,16 @@ BEGIN
         END
     END
     PATCH_IF "%dialog%" STRING_COMPARE_CASE "none" != 0 BEGIN
-        WRITE_ASCII 0x2cc dialog #8
+        WRITE_ASCII 0x2cc "%dialog%" #8
+    END
+    PATCH_IF "%override_script%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x248 "%override_script%" #8
+    END
+    PATCH_IF "%general_script%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x260 "%general_script%" #8
+    END
+    PATCH_IF "%class_script%" STRING_COMPARE_CASE "none" != 0 BEGIN
+        WRITE_ASCII 0x250 "%class_script%" #8
     END
 END
 

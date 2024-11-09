@@ -1,11 +1,11 @@
-BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
+BACKUP "weidu_external/backup/ZS_ShadowddancerOverhaul"
 AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "v1.1.1"
-README ~ZS_ShadowdancerOverhaul/README.md~
+VERSION "v1.1.2"
+README ~%MOD_FOLDER%/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
 ALWAYS
-    INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_sd_functions.tph"
+    INCLUDE "%MOD_FOLDER%/libs/zs_sd_functions.tph"
 END
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 LANGUAGE
@@ -25,7 +25,6 @@ COPY "%MOD_FOLDER%/spl" ~override~
      "%MOD_FOLDER%/itm" ~override~
      "%MOD_FOLDER%/wav" ~override~
      "%MOD_FOLDER%/vvc" ~override~
-     "%MOD_FOLDER%/bcs" ~override~
      "%MOD_FOLDER%/2da/LUZSSD.2DA" ~override~
      "%MOD_FOLDER%/2da/ZS#SDEVO.2DA" ~override~
      ~%MOD_FOLDER%/2da/ZS#SDSJ.2DA~ ~override~
@@ -38,7 +37,7 @@ LAF ADD_KIT_EX
     STR_VAR
         kit_name = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
-        backstab = ~2 2 2 2 3 3 3 3 4~
+        backstab = ~1 2 2 2 2 3 3 3 3 4~
         thiefskl = ~40 15~
         clswpbon = ~0 0 3~
         clab_path = ~ZS_ShadowdancerOverhaul/2da/ZSSDCLAB.2da~
