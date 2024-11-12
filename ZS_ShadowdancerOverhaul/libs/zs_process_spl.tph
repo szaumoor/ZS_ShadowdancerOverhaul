@@ -21,6 +21,7 @@ BUT_ONLY
 ACTION_IF FILE_EXISTS_IN_GAME ~ohdrod.ITM~ BEGIN
     COPY_EXISTING ~ohdrod.ITM~ ~override~ // Rod of Shadow Jump
         LPF ALTER_ITEM INT_VAR id_ref_name = RESOLVE_STR_REF(@5001) id_ref_desc = RESOLVE_STR_REF(@5000) END
+        LPF ALTER_HEADER INT_VAR match_type = 3 charges = 3 drained = 3 flag_recharge = 1 END
         LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode=146 STR_VAR resource=~ZS#SDL1C~ END
     BUT_ONLY
 END
