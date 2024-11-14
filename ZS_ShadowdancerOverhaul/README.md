@@ -12,7 +12,7 @@ They were several things in the way Shadowdancers were implemented by BeamDog, t
 So here's what the mod changes:
 
 #### PASSIVES
-- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. After 5 rounds, this ability returns to you. This prevents spamming. The Hide in Shadows ability functions identically compared to other Thieves. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic.
+- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. To prevent spamming, this ability, this ability returns to you after 5 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
 - **Innate Infravision**: Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default, and an appropiate icon will appear on your portrait.
 - **Natural evasion**: Start out with a bonus to AC, AC against Missiles, Saves vs. Breath, and movement speed of 2
 - **+20 bonus to Hiding** at the start (up from +10), improves by 5% at level 3, and every three levels thereafter
@@ -23,16 +23,17 @@ So here's what the mod changes:
 
 
 #### SKILLS
-- **Shadow Jump**: You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. It allows you to select two flavors when cast:
+- **Shadow Jump**: You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. This spell is cast instantly, cannot be interrupted and does not take up your action per round. It allows you to select two flavors when cast:
   - **Shadow Jump: Planar Shift:** You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. This ability is essentially vanilla **Shadowstep** but with a more appropriate name. It offers several advantages, for a limited time:
     - You **move faster** as you level up, so you can maneuver for whatever purpose more effectively.
     - You are able to **ignore effects that can be saved against briefly** (this is interpreted as dodging, which Shadowdancers would be masters at).
     - All attempts at casting spells will fail until the duration of this spell is over.
     - You become **invisible** immediately and **cannot have your invisibility detected** for a few seconds after the effect is done.
+    - +1 Luck
     - You get an **increasing bonus** to **THAC0** (up to +10, on top of invisibility bonuses), **damage** (up to +5), and **critical hit** chances (up to +20%, at level 34) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
     - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
     - Although this ability uses the Time Stop opcode, it's not Time Stop, and therefore, creatures immune to Time Stop will not be allowed to take advantage of their immunity.
-  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. This of course has some differences and caveats compared to the other version: since 7 seconds will not pass, you won't be able to attack instantaneously if you cast this when you have no more attacks in the round, and you won't be able to cast anything immediately after (except Shadow Jump as such, as spell selection castings are not affected by cooldowns). The benefits that extend beyond the time stop are the same and last for 3 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, but be refreshed.
+  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. This of course has some differences and caveats compared to the other version: since 7 seconds will not pass, you won't be able to attack instantaneously if you cast this when you have no more attacks in the round, and you won't be able to cast anything immediately after (except Shadow Jump as such, as spell selection castings are not affected by cooldowns). The benefits that extend beyond the time stop are the same and last for 4 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, but be refreshed.
 - **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and D&D but essentially the idea is that you're able to discombobulate enemies through illusions in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
   - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserk, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
@@ -50,7 +51,7 @@ So here's what the mod changes:
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
   - Evolves into a **Greater Shadow**, a **Shadowlord**, an **Greater Shadowlord** and a **Nighthaunt**. See ShadowSpells.md for more details.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
-  - Their attacks can **drain strength** which can be saved against (save vs. death, improves with level), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
+  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons**, at least at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
 - **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). Doesn't make you invisible but it does grant Nondetection.
@@ -75,22 +76,18 @@ So here's what the mod changes:
     - +4 AC is added, mimicking NWN
     - Regenerate 1 HP per second while the effect is active
     - Can be taken unlimited times.
-
-**Feats**
-These exist only so they are implemented if ToF or any other Feat mod is installed. The implementation of this would depend on the authors of such mods.
-- **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards. When a feat mod is installed, the rate of gaining uses should be reduced (currently one use every 3 levels: 1, 4, 7...)
-- **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards. By default, an extra use is gained at level 12, and then at level 20.
-- **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Available from level 15 on. Can be taken three times. By default, it's gained at level 12, and another use is gained at level 20 and 28.
+- **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Gained at level 12, and another use is gained at level 20 and 28.
 
 Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump: Planar Shift, and it's usable **3 times per day**. It does not disappear forever when drained.
 
 ### 2. Streamline THAC0 for Thieves
 This component streamlines the THAC0 for Thieves and allows them to attain the more reasonable THAC0 of 6 that priests can attain. Essentially, every even THAC0 level lasts only for one level, and uneven ones persist for 2 levels. 20, 19, 19, 18, 17, 17, 16, 15, 15... This is recommended unless you're using another mod that does the same.
 
-Be warned, however, that it will conflict with the swashbuckler class, since the THAC0 bonuses in the vanilla class rely on Thieves attaining a THAC0 of 10 at most, which means Swashbucklers will attain a THAC0 of -4 instead of 0, like Fighters.
+This does the same as the similar component in ZSTweaks. Prefer that one.
 
 ### 3. Improve the THAC0 of Bards too to match the changes to Thieves
 This simply matches the THAC0 progression of Bards to that of the Thieves as per the previous component.
+This does the same as the similar component in ZSTweaks. Prefer that one.
 
 ### 4. Make Shaman Spirit Form mirror the benefits of Shadow Form
 This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
@@ -112,6 +109,14 @@ This components gives a selection of gear a few hidden bonuses if wielded by the
 ### 6. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
 This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, if RR is installed first (crucial). RR does not support shadowdancers, and this ensures the new HLAs are provided. The overhauled Shadowdancer already takes advantage of the new HLAs, if RR is installed first.
 
+### 7. Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)
+
+This fixes a fairly nasty bug that the latest update from the ages of yore for Baldur's Gate (and probably IWDEE, not sure) introduced: simulacrum clones can't use Find Traps of Hide in the Shadows.
+
+### 8. Try to patch all elements that affect Shadowdancers specifically
+
+This component will go through every EFF file, SPL file, and ITM file that may target specifically the Shadowdancer kit (vanilla), and if it is found, it will clone it such that it affects my overhauled kit.
+
 ### Compatibility
 As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs when this mod is installed. RR must be installed first.
 
@@ -123,5 +128,6 @@ As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs
 - The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback is welcome.
 
 ## Credits
-- All the community on **Discord** for providing help and helpful code.
+- All the community on **Discord** for providing helpful insights and suggestions
+- zenblack for providing cool icons
 - **BeamDog** for introducing me to the Shadowdancer kit, which is currently my favorite class/kit, conceptually. This mod is really my way of making me like it functionally too.
