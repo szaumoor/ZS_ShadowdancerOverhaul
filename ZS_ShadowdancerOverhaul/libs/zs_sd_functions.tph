@@ -9,3 +9,64 @@ INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_getters.tpa~
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_calculations.tpa~
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_specifics.tpa~
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_searches.tpa~
+
+DEFINE_PATCH_FUNCTION IS_VALID_OPCODE
+INT_VAR
+    opcode = "-1"
+RET
+    result
+BEGIN
+    SET slay             =  55
+    SET prot_vs_cre_type = 100
+    SET paralyze         = 109
+    SET hold_cre         = 175
+    SET use_eff_file     = 177
+    SET dmg_vs_type      = 179
+    SET hold_cre2        = 185
+    SET prot_vs_type     = 219
+    SET eff_curse        = 283
+    SET prot_resource    = 318
+    SET immunity_res_msg = 324
+    SET apply_eff_list   = 326
+    SET ench_vs_cre_type = 344
+
+    PATCH_IF
+        opcode = slay             OR
+        opcode = prot_vs_cre_type OR
+        opcode = paralyze         OR
+        opcode = hold_cre         OR
+        opcode = use_eff_file     OR
+        opcode = dmg_vs_type      OR
+        opcode = hold_cre2        OR
+        opcode = prot_vs_type     OR
+        opcode = eff_curse        OR
+        opcode = prot_resource    OR
+        opcode = immunity_res_msg OR
+        opcode = apply_eff_list   OR
+        opcode = ench_vs_cre_type
+    BEGIN
+        result = 1
+    END ELSE BEGIN
+        result = 0
+    END
+END
+
+DEFINE_PATCH_FUNCTION MODERN_OPCODE
+INT_VAR
+    opcode = "-1"
+RET
+    result
+BEGIN
+    SET prot_resource    = 318
+    SET immunity_res_msg = 324
+    SET apply_eff_list   = 326
+    PATCH_IF
+        opcode = prot_resource    OR
+        opcode = immunity_res_msg OR
+        opcode = apply_eff_list
+    BEGIN
+        result = 1
+    END ELSE BEGIN
+        result = 0
+    END
+END

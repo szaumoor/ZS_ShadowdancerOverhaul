@@ -242,7 +242,7 @@ Attempting this ability on a non-ally has no effect.~
 @1007 = ~Add a variety of new Shadowdancer-inspired items to the game~
 @1010 = ~Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA~
 @1011 = ~Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)~
-// END INSTALLER TEXT1
+// END INSTALLER TEXT
 
 // ITMS
 @5000 = ~This rod seems to writhe and shift in your hand, but you feel no movement. Oily shadows constantly crawl across its surface; their source is a mystery. The rod exudes a dark aura, and when gripped firmly in the correct fashion, it allows the wielder to seemingly "jump" between locations in battle.

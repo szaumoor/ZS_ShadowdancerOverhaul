@@ -73,6 +73,44 @@ BUT_ONLY
 INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
 INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
 
+/*
+// fails because cloning adds effects which is not accounted for in the patch (incorrect number of effects)
+PRINT "Patching Shadowdancer items..."
+PRINT "Parsing ITM files..."
+
+COPY_EXISTING_REGEXP ~.*\.ITM~ ~override~
+    // PARSE THE GLOBAL EFFECTS
+    READ_LONG 0x6a effects_offset
+    READ_SHORT 0x70 effects_num
+
+    SET current_offset = effects_offset
+    SET found = 0
+    FOR ( header = 0; header < effects_num; ++header ) BEGIN
+        READ_SHORT current_offset op
+        LPF IS_VALID_OPCODE INT_VAR opcode = op RET valid = result END
+        PATCH_IF valid BEGIN
+            found = 1
+            LPF MODERN_OPCODE INT_VAR opcode = op RET modern = result END
+
+            SET p2_for_kit = modern ? 109 : 9
+            READ_LONG (current_offset + 0x04) parameter1
+            READ_LONG (current_offset + 0x08) parameter2
+            SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
+            PATCH_IF parameter2=p2_for_kit AND parameter1=shadowdancer BEGIN
+                LPF ADD_ITEM_EQEFFECT
+                    INT_VAR
+
+            END
+
+        END
+        current_offset += 0x30
+    END
+    PATCH_IF found BEGIN
+        PATCH_PRINT "Patched item that targets Shadowdancer: %SOURCE_FILE%"
+    END
+
+BUT_ONLY*/
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1003 DESIGNATED 300 // THAC0 TWEAK THIEVES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000

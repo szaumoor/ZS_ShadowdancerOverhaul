@@ -12,7 +12,7 @@ They were several things in the way Shadowdancers were implemented by BeamDog, t
 So here's what the mod changes:
 
 #### PASSIVES
-- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. After 5 rounds, this ability returns to you. This prevents spamming. The Hide in Shadows ability functions identically compared to other Thieves. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic.
+- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. To prevent spamming, this ability, this ability returns to you after 5 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
 - **Innate Infravision**: Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default, and an appropiate icon will appear on your portrait.
 - **Natural evasion**: Start out with a bonus to AC, AC against Missiles, Saves vs. Breath, and movement speed of 2
 - **+20 bonus to Hiding** at the start (up from +10), improves by 5% at level 3, and every three levels thereafter
@@ -23,7 +23,7 @@ So here's what the mod changes:
 
 
 #### SKILLS
-- **Shadow Jump**: You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. It allows you to select two flavors when cast:
+- **Shadow Jump**: You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. This spell is cast instantly, cannot be interrupted and does not take up your action per round. It allows you to select two flavors when cast:
   - **Shadow Jump: Planar Shift:** You have one use of this immediately at level 1 and get another one at level 4 and every third level henceforth. This ability is essentially vanilla **Shadowstep** but with a more appropriate name. It offers several advantages, for a limited time:
     - You **move faster** as you level up, so you can maneuver for whatever purpose more effectively.
     - You are able to **ignore effects that can be saved against briefly** (this is interpreted as dodging, which Shadowdancers would be masters at).
@@ -76,12 +76,7 @@ So here's what the mod changes:
     - +4 AC is added, mimicking NWN
     - Regenerate 1 HP per second while the effect is active
     - Can be taken unlimited times.
-
-**Feats**
-These exist only so they are implemented if ToF or any other Feat mod is installed. The implementation of this would depend on the authors of such mods.
-- **Extra Shadow Jump**: can cast **Shadow Jump** an additional time. Can be taken unlimited times. Available from level 2 onwards. When a feat mod is installed, the rate of gaining uses should be reduced (currently one use every 3 levels: 1, 4, 7...)
-- **Extra Shadow Illusion**: can cast **Shadow Illusion** an additional time. Can be taken twice at most. Available from level 3 onwards. By default, an extra use is gained at level 12, and then at level 20.
-- **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Available from level 15 on. Can be taken three times. By default, it's gained at level 12, and another use is gained at level 20 and 28.
+- **Shadow Conjuration**: can cast a selection of spells from level 1 to level 5. Gained at level 12, and another use is gained at level 20 and 28.
 
 Also, it changes the **Rod of Shadowstep** such that it uses Shadow Jump: Planar Shift, and it's usable **3 times per day**. It does not disappear forever when drained.
 
@@ -113,6 +108,14 @@ This components gives a selection of gear a few hidden bonuses if wielded by the
 
 ### 6. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
 This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, if RR is installed first (crucial). RR does not support shadowdancers, and this ensures the new HLAs are provided. The overhauled Shadowdancer already takes advantage of the new HLAs, if RR is installed first.
+
+### 7. Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)
+
+This fixes a fairly nasty bug that the latest update from the ages of yore for Baldur's Gate (and probably IWDEE, not sure) introduced: simulacrum clones can't use Find Traps of Hide in the Shadows.
+
+### 8. Try to patch all elements that affect Shadowdancers specifically
+
+This component will go through every EFF file, SPL file, and ITM file that may target specifically the Shadowdancer kit (vanilla), and if it is found, it will clone it such that it affects my overhauled kit.
 
 ### Compatibility
 As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs when this mod is installed. RR must be installed first.
