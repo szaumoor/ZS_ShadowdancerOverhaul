@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowddancerOverhaul"
 AUTHOR "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "v1.1.3a"
+VERSION "v1.1.4"
 README ~%MOD_FOLDER%/README.md~
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 AUTO_EVAL_STRINGS
@@ -70,8 +70,8 @@ COPY_EXISTING ~SPPR505.SPL~ ~override~ // TRUE SIGHT PROTECTION AGAINST SHADOW I
     LPF ADD_SPL_SELFEFF INT_VAR rd=0 ip=0 STR_VAR effects= ~ip=-1,op=206,p1=-1,rd=3,res=ZS#SDL3A,dur=60;op=321,res=ZS#SDL3A;op=321,res=ZS#SDL3B;op=321,res=ZS#SDL3C;op=321,res=ZS#SDL3D;op=321,res=ZS#SDL3E~ END
 BUT_ONLY
 
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_process_spl.tph"
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_remove_sd.tph~
+INCLUDE "%MOD_FOLDER%/libs/zs_process_spl.tph"
+INCLUDE ~%MOD_FOLDER%/libs/zs_remove_sd.tph~
 
 /*
 // fails because cloning adds effects which is not accounted for in the patch (incorrect number of effects)
@@ -246,7 +246,7 @@ BEGIN @1006 DESIGNATED 410 // ITEM TWEAKS
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10001
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/component_scripts/zs_itemtweaks.tph~
+INCLUDE ~%MOD_FOLDER%/libs/component_scripts/zs_itemtweaks.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM TWEAK
@@ -299,7 +299,7 @@ END ELSE BEGIN
     PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
 END
 
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_fix_sd_prof_penalty.tph~
+INCLUDE ~%MOD_FOLDER%/libs/zs_fix_sd_prof_penalty.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1011 DESIGNATED 5003 // SIMULACRUM FIXES FOR 2.6.6

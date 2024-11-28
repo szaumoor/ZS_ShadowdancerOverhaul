@@ -1,14 +1,14 @@
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_a7functions.tpa"
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_ardanis_functions.tpa"
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_cdfunctions.tpa"
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_subtle_functions.tpa~
-INCLUDE "ZS_ShadowdancerOverhaul/libs/zs_add_effects.tpa"
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_alter_functions.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_checks.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_getters.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_calculations.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_specifics.tpa~
-INCLUDE ~ZS_ShadowdancerOverhaul/libs/zs_searches.tpa~
+INCLUDE "%MOD_FOLDER%/libs/zs_a7functions.tpa"
+INCLUDE "%MOD_FOLDER%/libs/zs_ardanis_functions.tpa"
+INCLUDE "%MOD_FOLDER%/libs/zs_cdfunctions.tpa"
+INCLUDE ~%MOD_FOLDER%/libs/zs_subtle_functions.tpa~
+INCLUDE "%MOD_FOLDER%/libs/zs_add_effects.tpa"
+INCLUDE ~%MOD_FOLDER%/libs/zs_alter_functions.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_checks.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_getters.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_calculations.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_specifics.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_searches.tpa~
 
 DEFINE_PATCH_FUNCTION IS_VALID_OPCODE
 INT_VAR

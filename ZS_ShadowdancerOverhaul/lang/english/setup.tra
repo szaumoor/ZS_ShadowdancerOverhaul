@@ -1,60 +1,58 @@
-@0 = ~SHADOWDANCER: Shadowdancers dwell in the border between light and shadow, mastering the art of weaving darkness to become elusive figures of trickery. They embody a diverse array of adventurers who recognize the power and utility of shadow and magic. They have many motivations, and their exceptional stealth, dexterity, and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unmatched skill. Their affinity with darkness, however, does not align them necessarily with evil. To a Shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
+@0 = ~SHADOWDANCER: Shadowdancers dwell in the border between light and shadow, mastering the art of weaving darkness to become elusive figures of trickery. They embody a diverse array of adventurers who recognize the power and utility of shadow and magic. They have many motivations, and their exceptional stealth, dexterity, and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unmatched skill. Their affinity with darkness, however, does not align them necessarily with evil. To a shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
 
 Advantages:
-– +20 points to Hide in the Shadows and Move Silently, improved by +5 at level 3 and every three levels thereafter.
-– Infravision.
-– Natural Evasion: permanent +2 AC, Movement speed, and Saves vs. Breath.
-– Ellusive mind: <PRO_HISHER> mind is difficult to pin down: <PRO_HESHE> has an innate Saving Throw bonus of +1 against Spells and Wands, as well as a +2 against spells in the school of Enchantment and Illusion. This bonus improves by +1 at level 12, and every other 12 levels thereafter.
-– Hide In Plain Sight: <PRO_HESHE> may unerringly hide, even when in plain sight, for 3 rounds, every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.
-– May cast Shadow Jump once per day. A new use is gained every three levels.
-– May cast Shadow Illusion once per day, gaining a single use at level 3, and another one at level 12 and 20.
-– May cast Summon Shade once per day, gaining a single use at level 4.
-– May cast Shadow Evade once per day, gaining an use at level 6, and then again at level 10 and 16.
-– At level 10, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible.
-– May cast Shadow Conjuration once per day at level 12. Another use is gained at level 20 and 28.
+– +20 points to Hide in the Shadows and Move Silently, improved by +5 at level 3 and every three levels thereafter
+– Infravision
+– Natural evasion: permanent +2 bonus to AC (+4 vs. missile), movement speed, and saves vs. Breath
+– Ellusive mind: A shadowdancer's mind is difficult to pin down; as such, <PRO_HESHE> has an innate +1 saving throw bonus against Spells and Wands, as well as a +2 against all spells in the school of Enchantment and Illusion. This bonus improves by +1 at level 12, and every other 12 levels thereafter
+– Hide in plain sight: <PRO_HESHE> may unerringly hide, even when in plain sight, for 20 seconds, every 7 rounds. This cooldown decreases by 1 round at level 8, and very 8 levels thereafter, up to 2 rounds
+– May cast Shadow Jump once per day. A new use is gained every three levels thereafter
+– May cast Shadow Illusion once per day, gaining one use at level 3, 12, and 20
+– May cast Summon Shade once per day, gaining a single use at level 4
+– May cast Shadow Evade once per day, gaining an use at level 6, and then again at level 10 and 16
+– From level 10 on, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate one hit point per round while <PRO_HESHE> is hidden or invisible, and they are permanently under the effects of Nondetection
+– May cast Shadow Conjuration once per day at level 12. Another use is gained at level 20 and 28
 
-SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose.
+SHADOW  JUMP: The Shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster by a factor of 2, and effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest, and for 3 more seconds or until you attack. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose they have, be it defensive or offensive.
 
 Upon returning to the Prime, the following perks are applied for 3 seconds:
 
-– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes the Shadowdancer detectable again.
+– May backstab once from any direction and attacks may not critically miss, with a Speed Factor of 0. Attacking makes the Shadowdancer detectable again
 – +1 Luck
-– +5% critical chance, improved to +10% at level 10, +15% at level 22, and +20% at level 30.
-– +1 THAC0 bonus, +1 every time a new use is gained, up to a bonus of +10.
-– +1 damage bonus, +1 every other time a new use is gained, up to a bonus of +5.
+– +5% critical chance, improved to +10% at level 10, +15% at level 22, and +20% at level 30
+– +1 THAC0 bonus, +1 every time a new use is gained, up to a bonus of +10
+– +1 damage bonus, +1 every other time a new use is gained, up to a bonus of +5
 
 Additionally, every time <PRO_HESHE> gains another use of Shadow Jump, the total distance <PRO_HESHE> can travel before returning to the Prime increases by a factor of 1.
 
-Alternatively, the Shadowdancer may choose to instantly teleport to a place within sight. All the benefits mentioned before are applied.
+Alternatively, the Shadowdancer may choose to instantly teleport to a place within sight. All the benefits mentioned before are applied for a few seconds.
 
-SUMMON  SHADE: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, immune to turning and anti-summon spells, is highly resistant to damage, and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. This undead companion grows in power with the Shadowdancer, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
+SUMMON  SHADE: Once per day, the Shadowdancer may summon an neutrally-aligned invisible shade from the Plane of Shadow for 8 hours. The shadow creature is completely loyal to the Shadowdancer, has all the immunities of an undead creature, and is immune to turning, spells that destroy summoned creatures, and is highly resistant to damage. The shade may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2. They grows in power with the shadowdancer, becoming more and more capable and resistant, ultimately evolving several times into greater types of creatures.
 
-SHADOW  ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
+SHADOW  ILLUSION: Once per day, the Shadowdancer may attempt to conjure shadowy illusions to discombobulate enemies, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks and backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
-– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by.
-– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4.
-– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds.
+– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4
+– At level 12, the spell spreads upon impact, causing chaos among enemies that are close by
+– At level 14, the spell also makes the target more susceptible to damage, increasing the physical damage they take by 10% and applying an AC penalty of 4
+– At level 17, blindness is no longer random, it always applies if the spell is successful, along with any of the other effects. This blindness cannot be resisted against in the following rounds
 
 This spell has no effect on creatures with very high intelligence (18 or more), or that see through this trickery, such as balors and dragons, and is not subject to Magic Resistance or dispelling effects, but enemies will attempt to resist the more insidious mind-altering effects once per round. They may, nonetheless, fall prey to the same effect in the next round if they fail the Saving Throw.
 
 However, the spell failure, the susceptibility to sneak attacks, blindness (level 17), and the damage susceptibility (level 14) cannot be resisted once they take hold.
 
-Alternatively, the Shadowdancer may use Shadow Jump to simply instantly teleport to the specified location. The caveat is that teleportation is only possible within a line of sight, but all the benefits described before will apply.
+SHADOW  EVADE: This skill allows the Shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. During this time, <PRO_HESHE> is under the effects of Invisibility. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 1 round to its duration and 5% to damage resistance.
 
-SHADOW  EVADE: This skill allows the Shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make <PRO_HIMHER> invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 1 round to its duration and 5% to damage resistance.
-
-SHADOW  CONJURATION: This skill allow the Shadowdancer to conjure a shadowy version of a selection of wizard spells. The following wizard spells are available: Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.
+SHADOW  CONJURATION: This skill allow the Shadowdancer to conjure a shadowy version of a selection of spells. The following spells are available: Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibility, Horror, Luck, Strength, Vocalize, Power Word: Sleep, Ray of Enfeeblement, Deafness, Glitterdust, Hold Person, Nondetection, Protection Against Normal Missiles, Dire Charm, Teleport without error, Wizard Eye, Shadow Door.
 
 
 Disadvantages:
-– Alignment restricted to any non-lawful.
+– Alignment restricted to any non-lawful
 – Lesser potential backstab multiplier compared to an unkitted Thief:
   Level 1-4: x2
   Level 5-8: x3
   Level 9+: x4
-– May only distribute 15 skill points per level (40 at level 1) among thieving skills.
-– May not use the Set Snare ability or learn any high-level abilities that introduce traps.
+– May only distribute 15 skill points per level (40 at level 1) among thieving skills
+– May not use the Set Snare ability or learn any high-level abilities that introduce traps
 
 Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
 
@@ -81,7 +79,7 @@ Alternatively, the Shadowdancer may use Shadow Jump to simply instantly teleport
 
 @5 = ~Shadow Illusion~
 @6 = ~Shadow Illusion
-Conjure shadowy illusions that surround an enemy and discombobulate them, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks or backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
+Conjure shadowy illusions that surround an enemy and discombobulate them, unless they save vs. Spell, for 5 rounds, causing either fear, berserk, blindness, or confusion, as well as a 25% chance of spell failure. During this time, the enemy loses immunity to sneak attacks and backstabs, if they had it, due to their confused state of mind. The spell improves at higher levels in the following way:
 
 – Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4
 – At level 12, the spell spreads upon impact, causing chaos among enemies that are close by
@@ -94,7 +92,7 @@ However, the spell failure, the susceptibility to sneak attacks, blindness (leve
 
 @7 = ~Summon Shade~
 @8 = ~Summon Shade
-Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature is completely immune to turning and spells that destroy summoned creatures, blindness, brain devouring, and is highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
+Summon a neutrally-aligned invisible shade from the Plane of Shadow for 8 hours or until it's slain. The shadowy creature has all the immunities of an undead creature while also being immune to turning, spells that destroy summoned creatures, blindness, illithid attacks. It is also highly resistant to damage, regenerates slowly (faster when invisible), and may temporarily drain Strength from its victims with a touch if they fail to Save vs. Death at +2.
 
 This loyal undead companion is not as powerful initially as the regular counterparts, but it grows in power as more experience is gained, becoming more and more capable and resistant, gaining some innate abilities, and ultimately evolving several times into greater types of creatures:
 
@@ -108,7 +106,7 @@ The HD of the creature is always one less than the Shadowdancer, and it grows up
 
 @9 = ~Hide in plain sight~
 @10 = ~Hide in plain sight
-Unerringly hide, even when in plain sight, for 5/2 rounds, once every 5 rounds. This cooldown decreases to 4 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.~
+Unerringly hide, even when in plain sight, for 20 seconds, once every 7 rounds. This cooldown decreases to 6 rounds at level 8, 3 rounds at level 16, and 2 rounds at level 24.~
 @10010 = ~Hide in plain sight is available for use.~
 
 @11 = ~Shadow Form
@@ -136,14 +134,14 @@ After being released, living beings resurface feeling weak for 1 turn, causing t
 Your synergy and skill with the power of shadow deepens. You gain the following perks:
 
 – Immunity to blindness
-– Nondetection and immunity to most divinations, except True Sight
-– At night, +15 health and 35% faster movement
-– Critical hits make the target vulnerable to backstabs for 2 rounds and inflict a -2 weakness when saving against Spell and Death, while your critical hits chances improve by 5% (non-cumulative) and you become unable to critically miss
-– Backstabs inflict 2d6+3 extra cold damage, and blindness for 3 rounds unless a Save vs. Spell at -2 is made
+– No longer detectable, even by creatures that see through invisibility, except by casting True Sight
+– Backstabs no longer require you to be behind the target to be performed
+– Backstabs inflict extra 1d4 cold and magic damage, as well as blindness for 3 rounds unless a save vs. Spell at -4 is made; if the target is blinded already, they take instead 2d4+1 cold/magic damage without a save allowed
+– For two rounds after dealing a critical hit, the target loses their immunity to backstabs, if they had it, and you gain a non-stackable +5% bonus to critical hit chances, and can no longer critically miss for the duration
 
 Requirements: Shadowdancer only.~
-@15 = ~Self Concealment~
-@16 = ~Self Concealment
+@15 = ~Self-Concealment~
+@16 = ~Self-Concealment
 Your very being starts becoming one with the shadow. Gain permanent 5% universal damage resistance, plus +1 AC. May be taken three times.
 
 Requirements: Improved Shadow Evade~
@@ -160,7 +158,7 @@ Blindness, Friends, Shield, Sleep, Drain Life, Conjure Familiar, Detect Invisibi
 @24 = ~Backstab immunity removal effect wore off~
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. This does not make the user invisible, but it provides Nondetection for the 3 rounds the effect lasts. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 5% to damage resistance.~
+The Shadowdancer conceals themselves in shadow, making them harder to hit effectively, providing a +4 AC bonus, +2 to all Saving Throws, and +15% damage resistance. During this time, the user is under the effects of Invisibility. The duration increases by 1 round at level 10 and 16. Additionally, every new use gained adds 5% to damage resistance.~
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
 The Shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form.~
@@ -195,7 +193,7 @@ The shade drains health from the victim as per the Vampiric Touch spell.~
 Teleport to any point within the field of vision instantly and become invisible for 1 round.~
 @208 = ~Beshadow Body~
 @209 = ~Beshadow Body
-The shade temporarily imbues its own body with Shadow magic, making it more difficult to damage, gaining +4 AC and fortifying their existing resistances by 50%, and also adding 50% fire and magic damage resistance for 2 rounds. During this time, it will be under the effects of Improved Invisibility, and regenerate 1 HP per second.
+The shade temporarily imbues its own body with Shadow magic, making it more difficult to damage, gaining +4 AC and increasing their existing resistances by 50% of their current value, while gaining +50% fire and magic damage resistance for 2 rounds. During this time, it will be under the effects of Improved Invisibility, and regenerate 1 HP per second.
 
 Additionally, after level 16, this ability will protect the shade against the first physical damage directed at it, as if they had the spell Stoneskin cast on them for 4 rounds. This ability may be cast once per 2 turns. This cooldown decreases by 5 rounds at level 15, 2 rounds at level 19, and 3 rounds at level 24.~
 @20209 = ~Beshadow Body is available for use.~
@@ -211,10 +209,10 @@ The shade becomes invisible as per the Improved Invisibility spell for 2 turns.~
 The shade attempts to dispel all magic as per the wizard or cleric Dispel Magic spell.~
 @216 = ~Doom the Living~
 @217 = ~Doom the Living
-The nigthaunt points its finger to a living target sending a ray of dark energy. The victim dies unless it succeeds a Save vs. Death at -2. If succeeded, the spell will still inflict 1d10+4 magic damage and affect the target with the effects of the Doom spell for 1 turn, which cannot be resisted.~
+The nigthaunt points its finger to a living target, which sends a ray of dark energy. The victim dies unless it succeeds a Save vs. Death at -2. If the save is made, the spell will still inflict 1d10+4 magic damage and inflict the effects of the Doom spell for 1 turn, which cannot be resisted. This ability only works on the living.~
 @218 = ~See Invisibility~
 @219 = ~See Invisibility
-The shade becomes briefly able to see invisible creatures, revealing them right after, unless protected against divination attacks. The shade can cast this spell once per 3 rounds.~
+The shade becomes briefly able to see invisible creatures, revealing them right after, unless protected against divination attacks. The shade can cast this spell as a free action once per 3 rounds, and cannot be interrupted by any means.~
 @220 = ~Shadow Swap~
 @221 = ~Shadow Swap
 The shade instantly swaps position with an ally through a Shadow Jump. The ally becomes invisible for 2 rounds and stops their offensive actions, while the shade takes their position and becomes ready to attack, gaining a +2 bonus to combat rolls, AC, Saving Throws, 5% to damage resistance and critical hit chances, and 1/2 attacks per round for 3 rounds. This ability may be used once per 5 turns. Every time the shade evolves into a greater being, this cooldown decreases by 5 rounds, up to 3 turns.
