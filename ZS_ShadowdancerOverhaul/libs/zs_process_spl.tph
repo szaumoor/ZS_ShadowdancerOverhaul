@@ -47,14 +47,6 @@ COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Shadow Master
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@13) ref_desc = RESOLVE_STR_REF(@14) END
 BUT_ONLY
 
-COPY_EXISTING ~ZS#SDH03.SPL~ ~override~ // extra shadow jump feat
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@17) ref_desc = RESOLVE_STR_REF(@18) END
-BUT_ONLY
-
-COPY_EXISTING ~ZS#SDH04.SPL~ ~override~ // extra shadow illusion feat
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@19) ref_desc = RESOLVE_STR_REF(@20) END
-BUT_ONLY
-
 COPY_EXISTING ~ZS#SDH05.SPL~ ~override~ // shadow conjuration hla
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@3) ref_desc = RESOLVE_STR_REF(@4) END
 BUT_ONLY
