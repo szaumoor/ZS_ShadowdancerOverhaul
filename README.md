@@ -12,14 +12,13 @@ They were several things in the way Shadowdancers were implemented by BeamDog, t
 So here's what the mod changes:
 
 #### PASSIVES
-- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. To prevent spamming, this ability, this ability returns to you after 5 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
+- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 20 seconds. To prevent spamming, this ability returns to you after 7 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
 - **Innate Infravision**: Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default, and an appropiate icon will appear on your portrait.
 - **Natural evasion**: Start out with a bonus to AC, AC against Missiles, Saves vs. Breath, and movement speed of 2
 - **+20 bonus to Hiding** at the start (up from +10), improves by 5% at level 3, and every three levels thereafter
 - **40** points to distribute **at level 1**, and **15** from that point on.
 - **Ellusive mind**: This is a renamed **Slippery mind** (universal +1 saving throw as per BeamDog's design), which now offers instead a **+1 bonus** against **Spells** and **Wands**, and a **+2 bonus** against the schools of **Enchantment and Illusion**. This bonus improves by +1 at level 12, and every 12 levels thereafter. I did this not just because it is a little closer to how Slippery mind works in Forgotten Realms, but also because I don't want the name to clash with the **Slippery Mind** feat in **ToF** (Talents of Fâerun) by DavidW. I'm happy to consider the Shadowdancer's mind as "especially slippery".
 - At level **10**, regenerate 1 HP per round while invisible, much like your shade companion.
-- At level **13**, it no longer matters what direction a backstab is attempted, it will always succeed as long as the melee attack is done while hidden or invisible
 - **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This makes them combat-wise as feasible as any other thief, which prevents the annoyance of vanilla Shadowdancers who can't backstab anything until level 5, while keeping backstab power progression equally satisfying as with any other thief.
 
 
@@ -56,7 +55,7 @@ So here's what the mod changes:
   - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons** at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
-- **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4 AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). Doesn't make you invisible but it does grant Nondetection.
+- **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4 AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). It grants invisibility during this time.
 
 
 **HLAS**

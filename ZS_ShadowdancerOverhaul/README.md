@@ -12,7 +12,7 @@ They were several things in the way Shadowdancers were implemented by BeamDog, t
 So here's what the mod changes:
 
 #### PASSIVES
-- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 15 seconds. To prevent spamming, this ability, this ability returns to you after 5 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
+- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 20 seconds. To prevent spamming, this ability returns to you after 7 rounds. As you level, the cooldown gets reduced by 1 round, up to 2 rounds of wait. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
 - **Innate Infravision**: Shadowdancers should be able to see in the dark better, so regardless of race, you get Infravision by default, and an appropiate icon will appear on your portrait.
 - **Natural evasion**: Start out with a bonus to AC, AC against Missiles, Saves vs. Breath, and movement speed of 2
 - **+20 bonus to Hiding** at the start (up from +10), improves by 5% at level 3, and every three levels thereafter
@@ -33,40 +33,41 @@ So here's what the mod changes:
     - You get an **increasing bonus** to **THAC0** (up to +10, on top of invisibility bonuses), **damage** (up to +5), and **critical hit** chances (up to +20%, at level 34) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
     - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
     - Although this ability uses the Time Stop opcode, it's not Time Stop, and therefore, creatures immune to Time Stop will not be allowed to take advantage of their immunity.
-  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. This of course has some differences and caveats compared to the other version: since 7 seconds will not pass, you won't be able to attack instantaneously if you cast this when you have no more attacks in the round, and you won't be able to cast anything immediately after (except Shadow Jump as such, as spell selection castings are not affected by cooldowns). The benefits that extend beyond the time stop are the same and last for 4 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, but be refreshed.
-- **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and D&D but essentially the idea is that you're able to discombobulate enemies through illusions in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
+  - **Shadow Jump: Dimensional Door:** This version allows you to teleport instantly, without going through the 7 seconds of Time Stop. The benefits that the Time Stop version grants are the same as the Planar Shift version and last for 4 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies, but the benefits will not stack, only refreshed (don't try to backstab more than one enemy in one round if you're not hasted, and no more than 2 if you're hasted, the engine will kick you out of invisibility before you can succeed).
+- **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and NWN2 but essentially the idea is that you're able to discombobulate enemies through illusions in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
   - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserk, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
   - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
   - At higher levels it becomes a small AoE, and later makes enemies take 10% more physical damage and get a AC penalty of 4, and the blindness effect is guaranteed when the saving throw fails.
   - Doesn't affect creatures of INT of 18 and above as well as powerful creatures that can't be tricked, like golems, dragons, balors, solars, etc.
-- **Summon Shade**: You get this ability at level 4. You can summon a Shadow to fight at your side. It can be summoned once per day for 8 hours and grows in power with you. Here's some common traits at any level:
+- **Summon Shade**: You get this ability at level 4. You can summon a shade to fight at your side. It can be summoned once per day for 8 hours and grows in power with you. Here's some common traits at any level:
   - **Neutrally aligned**. It's supposed to have the same alignment as you but I wouldn't know how to build it such that it matches your character's alignment anyway (and there are only a handful of situations where the alignment would be important for the summon anyway).
   - **Summoned invisible**
   - **Regenerates** very slowly over time. Starts out with 1 HP per 5 rounds, which will improve every tier up to 1 HP per round at level 40. It regenerates faster if invisible (+1 HP per round).
   - **Immune to turning**. Cannot be turned by your party or anyone else.
   - **Immune to anti-summon spells**. Additionally, Horrid Wilting will not affect them.
   - **Immune to blindness**. It's at home in the dark.
+  - **Immune to intelligence drain by illithids**
   - **Immune** to **Acid**, **Cold**, later becomes immune to **Electricity** too, and gains a small amount of Magic Resistance.
   - **Resists 20% of physical damage, 30% for missile**, which increases slowly up to 50% and 60% respectively later on. It starts off with 18 HP and goes up to 100 eventually.
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
   - Evolves into a **Greater Shadow**, a **Shadowlord**, an **Greater Shadowlord** and a **Nighthaunt**. See ShadowSpells.md for more details.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
-  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one level from victims when they attack (subject to probabilities).
-  - Unlike normal shadows, **it can be harmed by normal weapons**, at least at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
+  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
+  - Unlike normal shadows, **it can be harmed by normal weapons** at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
-- **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). Doesn't make you invisible but it does grant Nondetection.
-  - **Future plans**: Add the possibility of talking with it to change strategy. It should attack on sight now and you can talk with it, but there's no effect to it.
+- **Shadow Evade**: you get this at level 4, then again at level 10 and 16. It's essentially a significantly less powerful Shadow Form: +4 AC, +15% damage reduction (+20% at level 10, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). It grants invisibility during this time.
+
 
 **HLAS**
   - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN. Requires Improved Shadow Evade.
   - **Shadow Artist**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
     - Immunity to Blindness
-    - Nondetection and immunity to most divinations
-    - At night: +15 health, 35% faster movement
+    - Immunity to all divinations, may not be detected by any means, even by creatures that normally see through invisibility
+    - Backstabs may be performed from any angle
     - Backstabs inflict blindness for 3 rounds unless a Save vs. Spell at -2 succeeds, as well as 2d6+3 cold damage
-    - Critical hits make the target susceptible to backstabs for 2 rounds (if they had that immunity) and inflict a non-stackable -2 penalty to Save vs. Spell and Death.
+    - Critical hits make the target susceptible to backstabs for 2 rounds
     - Critical hits also cause the Shadowdancer for those two rounds to be incapable of critically missing
-    - Critical chances improve by 5% for 2 rounds after critically hitting (non stackable).
+    - Critical chances improve by 5% for 2 rounds after critically hitting (non stackable)
   - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemy inteligence: the number of rounds it lasts is randomized between 5 to 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
   - **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
   - **Improved Shadow Evade**: This upgrades your Shadow Evade permanently to Shadow Form, essentially replacing the 3 casts of Shadow Evade with 3 of Shadow Form. This opens up the Self-Concealment and Shadow Form HLAs. Can be taken once.
