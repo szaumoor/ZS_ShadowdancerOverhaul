@@ -2,7 +2,6 @@
 ****
                 ResRef      Type
 BLINDNESS       SPWI106     3
-MELF_ARROW      SPWI211     3
+MELF_ARROW      ZSSDMELF    3
 WEB             SPWI215     3
-MINOR_GLOBE     SPWI406     3
-SHADOW_EVAD     ZS#SDL5A    3
+MINOR_GLOBE     ZSSDMIGL    3

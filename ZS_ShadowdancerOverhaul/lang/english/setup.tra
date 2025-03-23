@@ -51,6 +51,7 @@ Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
 
 @300 = ~Planeshift~
 @301 = ~Blink~
+@3 = ~Shadowstep~
 @4 = ~Shadowstep
 This spell may be cast in two ways, Planeshift or Blink. The shadowdancer may choose which version to use at the time of casting:
 
@@ -144,19 +145,18 @@ The spells are always cast at half the shadowdancer's current level. For example
 
 @2102 = ~Greater Shadow Conjuration~
 @2103 = ~Greater Shadow Conjuration
-This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Shadow Monsters, Blindness.
+This skill allow the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
 
 The spells are always cast at half the shadowdancer's current level. For example, to cast Minor Globe of Invulnerability at a wizard level 10, the shadowdancer must attain first level 20.~
 
 @2104 = ~Shades~
 @2105 = ~Shades
-This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available:
+This skill allow the shadowdancer to draw a lot of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available:
 
-– Cone of Cold: As per the wizard spell.
 – Shadow Fireball: A version of the Fireball wizard spell that deals a mix of fire, cold, and magic damage. It functions otherwise identically.
 – Stoneskin: as per the wizard spell. It may produce at most 5 skin layers.
-– Shadow Door: As per the wizard spell.
-– Demishadow Monsters: This ability conjures potent illusory monsters that can attack enemies and defend the shadowdancer.
+– Cone of Cold
+– Shadow Door
 
 All spells are always cast at half the shadowdancer's current level. For example, to cast Shadow Door at a wizard level 10, the shadowdancer must attain first level 20.~
 
@@ -166,14 +166,11 @@ All spells are always cast at half the shadowdancer's current level. For example
 
 @2107 = ~Deep Shades~
 @2108 = ~Deep Shades
-This skill allow the shadowdancer to draw even more energy from the Demiplane of Shadow to conjure a shadow version of a selection of spells. The following spells are available:
+This skill allow the shadowdancer to draw a huge amount of energy from the Demiplane of Shadow to conjure a shadow version of a selection of spells. The following spells are available:
 
 – Delayed Blast Shadow Fireball: A version of the Delayed Blast Fireball wizard spell that deals a mix of fire, cold, and magic damage. It functions otherwise identically.
 – Shadow Shield: A strong illusory protection that makes the user difficult to hit (Blurred, +2 AC, 8 mirror images, immunity to +1 weapons and below and most projectiles), difficult to slay (immunity to necromantic spells and instant-death effects), and more skilled at hiding (+20 points to Hiding in the Shadows and Move Silently).
-– Shadowstep: As per the namesake shadowdancer ability.
-– Shades (summoning spell): this ability conjures very potent illusory monsters that can attack enemies and defend the shadowdancer.
-
-The spells (except Shadowstep) are always cast at half the shadowdancer's current level.~
+– Shadowstep: As per the namesake shadowdancer ability.~
 
 @21080 = ~Delayed Blast Shadow Fireball~
 
@@ -190,12 +187,12 @@ Saving Throw: None
 
 The shadowdancer is shrouded in a cloak of illusive shadows and silent images that protects <PRO_HIMHER> with the following effects:
 
-– +2 Armor Class
+– +2 Armor Class, +4 vs. missile attacks
 – Blurred as per the Blur spell
 – +20% bonus to Hiding in Shadows and Move Silently
 – Surrounded by 8 images as per the spell Mirror Image
-– Immunity to up to +1 weapons and most projectile-based attacks, including Magic Missile
-– Immunity to instant death effects and Necromancy spells
+– Immunity to normal and +1 weapons
+– Immunity Necromancy spells
 
 This spell may be removed with a successful Dispel Magic and spells that remove illusonary protections such as True Sight.~
 

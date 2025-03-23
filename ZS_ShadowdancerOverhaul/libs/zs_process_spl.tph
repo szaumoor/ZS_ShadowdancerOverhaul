@@ -26,14 +26,16 @@ BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@9) ref_desc = RESOLVE_STR_REF(@10) END
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL1M.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@10010) END
 BUT_ONLY
 
 // ensure hide in plain sight complete dispel (mostly just to remove the "invisibility faded" sound at the end) with simple detect invisibility spells
 COPY_EXISTING ~SPPR309.SPL~ ~override~
               ~SPWI203.SPL~ ~override~
-    SET pwr = LONG_AT(0x34) << 16
-    LPF ADD_SPELL_EFFECT INT_VAR power=pwr target=1 opcode = 321 STR_VAR resource = ~ZS#SDL1B~ END
+    LPF ADD_SPELL_EFFECT INT_VAR target=1 opcode=321 STR_VAR resource = ~ZS#SDL1B~ END
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
@@ -80,6 +82,40 @@ BUT_ONLY
 COPY_EXISTING ~ZS#SDH11.SPL~ ~override~ // deep shades
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@2108) END
 BUT_ONLY
+
+ACTION_IF GAME_IS "bgee" BEGIN
+    COPY_EXISTING ~ZSSDCNCL.SPL~ ~override~ // cone of cold
+        LPF ALTER_SPELL INT_VAR ref_name = 26492 END
+    BUT_ONLY
+
+    COPY_EXISTING ~ZSSDMELF.SPL~ ~override~ // melf's acid arrow
+        LPF ALTER_SPELL INT_VAR ref_name = 26393 END
+    BUT_ONLY
+
+    COPY_EXISTING ~ZSSDMIGL.SPL~ ~override~ // minor globe of invulnerability
+        LPF ALTER_SPELL INT_VAR ref_name = 26448 END
+    BUT_ONLY
+
+    COPY_EXISTING ~ZSSDSHDO.SPL~ ~override~ // shadow door
+        LPF ALTER_SPELL INT_VAR ref_name = 26496 END
+    BUT_ONLY
+
+
+END
+
+ACTION_IF GAME_IS "iwdee" BEGIN
+    COPY_EXISTING ~ZSSDSHDO.SPL~ ~override~ // shadow door
+        LPF ALTER_SPELL INT_VAR ref_name = 36602 END
+    BUT_ONLY
+
+    COPY_EXISTING ~ZSSDMGMI.SPL~ ~override~ // magic missile
+        LPF ALTER_SPELL INT_VAR ref_name = 2968 END
+    BUT_ONLY
+
+    COPY_EXISTING ~ZSSDSTNK.SPL~ ~override~ // magic missile
+        LPF ALTER_SPELL INT_VAR ref_name = 25954 END
+    BUT_ONLY
+END
 
 COPY_EXISTING ~ZSSDSDSH.SPL~ ~override~
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2109) ref_desc = RESOLVE_STR_REF(@2103) END
