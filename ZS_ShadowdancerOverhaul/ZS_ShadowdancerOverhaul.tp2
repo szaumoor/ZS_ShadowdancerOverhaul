@@ -216,6 +216,28 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
         END
     BUT_ONLY
 
+ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ ~1~ BEGIN
+    PRINT "Pits of Despair found, updating Shadowdancer kit to Nephetel"
+    ACTION_IF FILE_EXISTS_IN_GAME ~zbneph.cre~ AND FILE_EXISTS_IN_GAME ~zbmes.cre~  BEGIN
+        COPY_EXISTING ~zbneph.cre~ ~override~ // base nephetel
+                      ~zbmes.cre~ ~override~ // messenger version
+            WRITE_LONG 0x244 IDS_OF_SYMBOL(kit ZS_SHADOWDANCER) // change class to Overhauled Shadowdancer
+            LPF DELETE_CRE_EFFECT INT_VAR match_opcode=325 match_parameter1=1 END // remove BeamDog's Slippery Mind effect (saving throws +1)
+            LPF REMOVE_MEMORIZED_SPELLS // this removes all spells, which is currently just Shadowstep so it's safe to use like this
+            // Adds the Natural Evasion effects
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=0 parameter1=2 END // +2 AC
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=0 parameter1=2 parameter2=2 END // +2 missile AC
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=36 parameter1=2 END // +2 saves vs. breath
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=176 parameter1=2 END // +2 movement speed
+            // Adds innate infravision
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=63 parameter1=2 END // infravision
+            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=101 parameter1=64 END // immunity to remove infravision
+        BUT_ONLY
+    END ELSE BEGIN
+        WARN "Nephetel (zbneph.cre & zbmes.cre) not found in the game, despite Pits of Despair being installed, contact the original authors (zenblack, dark0dave, and I aka RoyalProtector) for support"
+    END
+END
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1006 DESIGNATED 410 // ITEM TWEAKS
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10001
