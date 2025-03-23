@@ -111,6 +111,7 @@ INT_VAR
     stype = 0
     sbonus = 0
     tgt=2
+    pro1=100
 STR_VAR
     effects=""
 BEGIN
@@ -124,6 +125,7 @@ BEGIN
             def_duration=dur
             def_resist_dispel = rd
             def_power=pwr
+            def_probability1 = pro1
             def_type=t
             def_insertpoint=ip
             def_savetype = stype
