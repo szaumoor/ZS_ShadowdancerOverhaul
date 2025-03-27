@@ -24,6 +24,23 @@ COPY_EXISTING ~ohdrod.ITM~ ~override~ // Rod of Shadowstep
     LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode=146 parameter1=0 opcode=148 STR_VAR resource=~ZS#SDL1J~ END
 BUT_ONLY IF_EXISTS
 
+COPY_EXISTING ~splprot.2da~ ~override~
+  COUNT_2DA_ROWS 4 new_splprot
+
+APPEND ~splprot.2da~ ~%new_splprot%_STAT(HIDEINSHADOWS)<n       135     -1      2~
+UNLESS ~^.+[ %TAB%]+135[ %TAB%]+(-1)[ %TAB%]2$~
+
+++new_splprot
+
+APPEND ~splprot.2da~ ~%new_splprot%_STAT(HIDEINSHADOWS)>n       135     -1      3~
+UNLESS ~^.+[ %TAB%]+135[ %TAB%]+(-1)[ %TAB%]3$~
+
+COPY_EXISTING ~splprot.2da~ ~override~
+    PRETTY_PRINT_2DA
+
+SET le_hiding = (new_splprot - 1)
+SET g_hiding = new_splprot
+
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@9) ref_desc = RESOLVE_STR_REF(@10) END
 BUT_ONLY
@@ -116,15 +133,11 @@ ACTION_IF GAME_IS "iwdee" BEGIN
     BUT_ONLY
 END
 
-COPY_EXISTING ~ZSSDSDSH.SPL~ ~override~
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2109) ref_desc = RESOLVE_STR_REF(@2103) END
-BUT_ONLY
-
 COPY_EXISTING ~ZS#SDH07.SPL~ ~override~ // shadow shield
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2109) ref_desc = RESOLVE_STR_REF(@2110) END
 BUT_ONLY
 
-COPY_EXISTING ~ZS#SDH2D.SPL~ ~override~ // critical hit effect sw master
+COPY_EXISTING ~ZS#SDH2D.SPL~ ~override~ // critical hit effect artisan shadows
     LPF ALTER_EFFECT INT_VAR check_globals = 0 match_opcode = 139 match_timing = 0 parameter1 = RESOLVE_STR_REF(@23) END
     LPF ALTER_EFFECT INT_VAR check_globals = 0 match_opcode = 139 match_timing = 3 parameter1 = RESOLVE_STR_REF(@24) END
 BUT_ONLY
@@ -302,19 +315,20 @@ COPY_EXISTING_REGEXP ~ZS#SDS[0-9][0-9]\.EFF~ ~override~
 BUT_ONLY
 
 ACTION_IF GAME_IS "bgee" BEGIN
-    COPY_EXISTING_REGEXP ~ZSSDSW8B.SPL~ ~override~ // Shadow Weapon
+
+    COPY_EXISTING ~ZSSDSW8B.SPL~ ~override~ // Shadow Weapon
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = 25803 END
-    BUT_ONLY
-    COPY_EXISTING_REGEXP ~ZSSDSW8C.SPL~ ~override~ // Shadow Weapon
+    COPY_EXISTING ~ZSSDSW8C.SPL~ ~override~ // Shadow Weapon
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = 25802 END
-    BUT_ONLY
+
 END ELSE ACTION_IF GAME_IS "iwdee" BEGIN
-    COPY_EXISTING_REGEXP ~ZSSDSW8B.SPL~ ~override~ // Shadow Weapon
+
+    COPY_EXISTING ~ZSSDSW8B.SPL~ ~override~ // Shadow Weapon
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = 35497 END
-    BUT_ONLY
-    COPY_EXISTING_REGEXP ~ZSSDSW8C.SPL~ ~override~ // Shadow Weapon
+
+    COPY_EXISTING ~ZSSDSW8C.SPL~ ~override~ // Shadow Weapon
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = 35498 END
-    BUT_ONLY
+
 END
 
 COPY_EXISTING_REGEXP ~ZSSDSW[123]B.SPL~ ~override~ // Shadow Weapon

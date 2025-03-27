@@ -216,7 +216,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
         END
     BUT_ONLY
 
-ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ ~1~ BEGIN
+/*ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ ~1~ BEGIN
     PRINT "Pits of Despair found, updating Shadowdancer kit to Nephetel"
     ACTION_IF FILE_EXISTS_IN_GAME ~zbneph.cre~ AND FILE_EXISTS_IN_GAME ~zbmes.cre~  BEGIN
         COPY_EXISTING ~zbneph.cre~ ~override~ // base nephetel
@@ -236,7 +236,7 @@ ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ ~1~ BEGIN
     END ELSE BEGIN
         WARN "Nephetel (zbneph.cre & zbmes.cre) not found in the game, despite Pits of Despair being installed, contact the original authors (zenblack, dark0dave, and I aka RoyalProtector) for support"
     END
-END
+END*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1006 DESIGNATED 410 // ITEM TWEAKS

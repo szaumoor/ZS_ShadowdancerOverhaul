@@ -32,7 +32,7 @@ SHADOW CONJURATION: This skill allows the shadowdancer to draw energy from the D
 – Greater Shadow Conjuration: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Shadow Evade, Blindness.
 – Shades: Cone of Cold, Fireball, Stoneskin, Shadow Door, Demishadow Monsters.
 
-– From level 10 on, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate 1 Hit Point per round while <PRO_HESHE> is hidden or invisible, and may not be detected by any means other than True Sight.
+– Shadow Haven: From level 10 on, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate 1 Hit Point per round while <PRO_HESHE> is hidden or invisible, and may no longer be detected by any means other than True Sight.
 
 Disadvantages:
 – Alignment restricted to any non-lawful
@@ -44,8 +44,6 @@ Disadvantages:
 – May not use the Set Snare ability or learn any high-level abilities that introduce traps
 
 Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
-
-@1 = ~Biography of shadowdancer test~ // no idea what this does in the add kit function
 
   // SHADOWDANCER SPELLS
 
