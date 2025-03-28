@@ -128,6 +128,7 @@ As of now, this mod is compatible with Rogue Rebalancing, importing the new HLAs
 - Planeshift (Shadowstep) is a Time Stop effect, so it would be possible to cast it over and over to make some effect on the enemy wear off with no consequences. So again, it's a matter of your tolerance for cheesiness. As an alternative, Shadow Jump: Dimensional Door, was added. See above for more information on that alternative.
 - The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback is welcome.
 - Shadow Conjuration-type spells cast some spells and the console will log some of the spells twice. It's unavoidable due to how I'm handling the "half the shadowdancer" casting level effect. I'll fix it if I find a solution at some point.
+- Casting Planeshift can sometimes cause the line "Spell Ineffective" if there's a creature immune to everything, like the Sewage Golem. It's a side effect of preventing creatures immune to time stop from traveling around during the "time stop". The problem could be alleviated by making only affect actual enemies, but it won't cause problems either way, it's harmless.
 
 ## Credits
 - All the community on **Discord** for providing helpful insights and suggestions
