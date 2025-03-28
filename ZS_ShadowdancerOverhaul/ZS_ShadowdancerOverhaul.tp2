@@ -29,19 +29,20 @@ REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // COPYING ALL THE RELEVANT FILES
-COPY "%MOD_FOLDER%/spl"              ~override~
-     "%MOD_FOLDER%/cre"              ~override~
-     "%MOD_FOLDER%/bam"              ~override~
-     "%MOD_FOLDER%/eff"              ~override~
-     "%MOD_FOLDER%/itm"              ~override~
-     "%MOD_FOLDER%/wav"              ~override~
-     "%MOD_FOLDER%/vvc"              ~override~
-     "%MOD_FOLDER%/2da/LUZSSD.2DA"   ~override~
-     "%MOD_FOLDER%/2da/ZS#SDEV0.2DA" ~override~
-     "%MOD_FOLDER%/2da/ZS#SDEV1.2DA" ~override~
-     "%MOD_FOLDER%/2da/ZS#SDEV2.2DA" ~override~
-     "%MOD_FOLDER%/2da/ZS#SDEV3.2DA" ~override~
-     ~%MOD_FOLDER%/2da/ZS#SDSJ.2DA~  ~override~
+COPY "%MOD_FOLDER%/abilities/hips"                        ~override~
+     "%MOD_FOLDER%/abilities/sd_bonuses"                  ~override~
+     "%MOD_FOLDER%/abilities/shadow_conjurations"         ~override~
+     "%MOD_FOLDER%/abilities/shadow_evade"                ~override~
+     "%MOD_FOLDER%/abilities/shadow_illusion"             ~override~
+     "%MOD_FOLDER%/abilities/shadowstep"                  ~override~
+     "%MOD_FOLDER%/abilities/summon_shadow"               ~override~
+     "%MOD_FOLDER%/hlas/artisan_shadows"                  ~override~
+     "%MOD_FOLDER%/hlas/deep_shades"                      ~override~
+     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
+     "%MOD_FOLDER%/hlas/self_concealment"                 ~override~
+     "%MOD_FOLDER%/hlas/shadow_maze"                      ~override~
+     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
+     ~%MOD_FOLDER%/hlas/LUZSSD.2DA~                       ~override~
 
 // Kit insertion (BG2EE)
 LAF ADD_KIT_EX
@@ -54,7 +55,7 @@ LAF ADD_KIT_EX
         backstab   = ~1 2 2 2 2 3 3 3 3 4~
         thiefskl   = ~40 15~
         clswpbon   = ~0 0 3~
-        clab_path  = ~%MOD_FOLDER%/2da/ZSSDCLAB.2da~
+        clab_path  = ~%MOD_FOLDER%/abilities/ZSSDCLAB.2da~
         luabbr     = ~ZSSD~
     RET kit_id
 END

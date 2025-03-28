@@ -5,7 +5,7 @@ Advantages:
 – Stealthy: +20 to Hide in the Shadows and Move Silently, improved by +5 at every third level thereafter.
 – Natural Evasion: +2 bonus to Armor Class (+4 vs. missile), movement speed, and saves vs. Breath.
 – Elusive Mind: The shadowdancer's mind is hard to ensnare, granting <PRO_HIMHER> a +1 bonus to saving throws vs. Spell, Wand, and all Enchantment and Illusion spells. These bonuses improve by +1 at level 12 and every 12 levels thereafter.
-– Hide in Plain Sight: <PRO_HESHE> can hide perfectly, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
+– Hide in Plain Sight: <PRO_HESHE> can hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40. The chances of success are tied to your Hide in Shadows ability.
 – May cast Shadowstep (Planeshift / Blink) once per day. A new use is gained every three levels thereafter.
 
 SHADOWSTEP (Planeshift): The shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose they have, be it defensive or offensive. Upon returning to the Prime, the shadowdancer gains temporary enhancements to combat effectiveness, including omnidirectional backstabbing and higher critical hit chances. These benefits scale with the shadowdancer's level.
@@ -94,8 +94,20 @@ This loyal undead companion starts off less powerful than its regular counterpar
 The creature's Hit Dice (HD) are always one less than the shadowdancer's, up to a maximum of 27 HD.~
 
 @9 = ~Hide in plain sight~
+@90 = ~Failed to hide in plain sight~
 @10 = ~Hide in plain sight
-Unerringly hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.~
+Immediately hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
+
+The chances of success are directly tied to the Shadowdancer's Hiding in Shadows ability in the following way:
+
+– 0-30: 50% chance of success
+– 31-50: 65% chance of success
+– 51-75: 80% chance of success
+– 76-100: 90% chance of success
+– 101-150: 95% chance of success
+– 151-200: 99% chance of success
+– 201+: 100% chance of success~
+
 @10010 = ~Hide in plain sight is available for use.~
 
 @11 = ~Shadow Form

@@ -30,7 +30,7 @@ COPY_EXISTING ~splprot.2da~ ~override~
 APPEND ~splprot.2da~ ~%new_splprot%_STAT(HIDEINSHADOWS)<n       135     -1      2~
 UNLESS ~^.+[ %TAB%]+135[ %TAB%]+(-1)[ %TAB%]2$~
 
-++new_splprot
+OUTER_SET new_splprot = new_splprot + 1
 
 APPEND ~splprot.2da~ ~%new_splprot%_STAT(HIDEINSHADOWS)>n       135     -1      3~
 UNLESS ~^.+[ %TAB%]+135[ %TAB%]+(-1)[ %TAB%]3$~
@@ -43,7 +43,28 @@ SET g_hiding = new_splprot
 
 COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@9) ref_desc = RESOLVE_STR_REF(@10) END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1P" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=51 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1Q" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=66 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1R" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=81 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1S" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=101 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1T" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=151 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=le_hiding STR_VAR match_resource = "ZS#SDL1U" END
+    LPF ALTER_EFFECT INT_VAR match_parameter1=201 match_opcode=318 parameter2 = le_hiding END
+    LPF ALTER_EFFECT INT_VAR parameter2=g_hiding  STR_VAR match_resource = "ZS#SDL1V" END
 BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL1P.spl~ ~override~
+              ~ZS#SDL1Q.spl~ ~override~
+              ~ZS#SDL1R.spl~ ~override~
+              ~ZS#SDL1S.spl~ ~override~
+              ~ZS#SDL1T.spl~ ~override~
+              ~ZS#SDL1V.spl~ ~override~
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@90) END
 
 COPY_EXISTING ~ZS#SDL1M.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@10010) END
@@ -52,7 +73,9 @@ BUT_ONLY
 // ensure hide in plain sight complete dispel (mostly just to remove the "invisibility faded" sound at the end) with simple detect invisibility spells
 COPY_EXISTING ~SPPR309.SPL~ ~override~
               ~SPWI203.SPL~ ~override~
-    LPF ADD_SPELL_EFFECT INT_VAR target=1 opcode=321 STR_VAR resource = ~ZS#SDL1B~ END
+    PATCH_FOR_EACH res IN ~ZS#SDL1P~ ~ZS#SDL1Q~ ~ZS#SDL1R~ ~ZS#SDL1S~ ~ZS#SDL1T~ ~ZS#SDL1U~ ~ZS#SDL1V~ BEGIN
+        LPF ADD_SPELL_EFFECT INT_VAR target=1 opcode=321 STR_VAR resource = ~%res%~ END
+    END
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
@@ -71,8 +94,8 @@ COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Artisan of shadows
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@13) ref_desc = RESOLVE_STR_REF(@14) END
 BUT_ONLY
 
-ADD_PROJECTILE ~%MOD_FOLDER%/pro/ZSSDFB0.PRO~
-ADD_PROJECTILE ~%MOD_FOLDER%/pro/ZSSDFB3.PRO~
+ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/ZSSDFB0.PRO~
+ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/ZSSDFB3.PRO~
 
 COPY_EXISTING ~ZSSDFB1.SPL~ ~override~ // Shadow Fireball
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@21050) END
@@ -234,7 +257,7 @@ COPY_EXISTING ~ZS#SDSM.SPL~ ~override~ // See invisibility
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@218) ref_desc = RESOLVE_STR_REF(@219) END
 BUT_ONLY
 
-ADD_PROJECTILE ~%MOD_FOLDER%/pro/ZSSDDARK.PRO~
+ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/ZSSDDARK.PRO~
 
 COPY_EXISTING ~ZS#SDSH.SPL~ ~override~ // Darkness
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@210) ref_desc = RESOLVE_STR_REF(@211) END
@@ -246,8 +269,8 @@ COPY_EXISTING ~ZS#SDSN.SPL~ ~override~ // Shadow Swap
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@22200) END
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d/zs_sdshd.d~
-COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/ZS_SDSHD.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/zs_sdshd.d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/ZS_SDSHD.BAF~
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@250)
 COPY_EXISTING_REGEXP ~ZS#SDS0[4-9].CRE~ ~override~ // Shadow
