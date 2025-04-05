@@ -22,15 +22,15 @@ SUMMON SHADE: Once per day, the shadowdancer can summon an undead shade from the
 
 – May cast Shadow Evade once per day, gaining an use at level 4, and then again at level 8 and 16.
 
-SHADOW EVADE: This skill allows the shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. The duration increases by 1 round at levels 10 and 16. Additionally, each new use gained adds 1 round to its duration and 5% to damage resistance.
+SHADOW EVADE: This skill allows the shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Additionally, each new use gained adds 1 round to its duration and 5% to damage resistance.
 
 – May cast Shadow Conjuration once per day starting at level 6. Gains an additional use at levels 9 and 12. At level 12, gains Greater Shadow Conjuration with an additional use at levels 15 and 18. Finally, at level 18, gains Shades with an additional use at levels 21 and 24.
 
 SHADOW CONJURATION: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure shadow versions of various spells. As the shadowdancer grows in power, the following spells are unlocked:
 
 – Shadow Conjuration: Darkness, Invisibility, Shield, Magic Missile, Sleep.
-– Greater Shadow Conjuration: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Shadow Evade, Blindness.
-– Shades: Cone of Cold, Fireball, Stoneskin, Shadow Door, Demishadow Monsters.
+– Greater Shadow Conjuration: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
+– Shades: Cone of Cold, Shadow Fireball, Stoneskin, Shadow Door.
 
 – Shadow Haven: From level 10 on, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate 1 Hit Point per round while <PRO_HESHE> is hidden or invisible, and may no longer be detected by any means other than True Sight.
 
