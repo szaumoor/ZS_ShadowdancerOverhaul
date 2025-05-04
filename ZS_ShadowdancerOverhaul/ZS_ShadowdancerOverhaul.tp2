@@ -48,7 +48,7 @@ COPY "%MOD_FOLDER%/abilities/hips"                        ~override~
 LAF ADD_KIT_EX
     INT_VAR
         help       = RESOLVE_STR_REF(@0)
-        briefdesc  = RESOLVE_STR_REF(@0)
+        biography  = RESOLVE_STR_REF(@1)
     STR_VAR
         kit_name   = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
