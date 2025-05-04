@@ -1,0 +1,2 @@
+- A new biography tailored to the Shadowdancer kit will be used when creating a new character in BGEE.
+- Fixed a file not found error when installing the item tweaks and the vanilla SD fix component
