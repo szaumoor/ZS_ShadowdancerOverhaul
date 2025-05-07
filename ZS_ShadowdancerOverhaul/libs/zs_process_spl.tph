@@ -58,6 +58,66 @@ COPY_EXISTING ~ZS#SDL1B.SPL~ ~override~ // Hide in plain sight
     LPF ALTER_EFFECT INT_VAR parameter2=g_hiding  STR_VAR match_resource = "ZS#SDL1V" END
 BUT_ONLY
 
+COPY_EXISTING ~ZS#SDL1G.SPL~ ~override~ // stealthy repeating bonus
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@720) END
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL1L.SPL~ ~override~ // ellusive mind repeating bonus
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@721) END
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDL2A.SPL~ ~override~ // shadow haven
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@700) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGA.SPL~ ~override~ // shadowstep new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@710) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGB.SPL~ ~override~ // shadow evade new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@711) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGC.SPL~ ~override~ // shadow conjuration new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@712) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGD.SPL~ ~override~ // greater shadow conjuration new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@713) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGE.SPL~ ~override~ // shades new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@714) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSGF.SPL~ ~override~ // shadow illusion new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@715) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG0.SPL~ ~override~ // gained shadow evade for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@703) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG1.SPL~ ~override~ // gained shadow conjuration for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG2.SPL~ ~override~ // gained greater shadow conjuration for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@705) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG3.SPL~ ~override~ // gained shades for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@706) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG4.SPL~ ~override~ // gained shadow illusion for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@701) END
+BUT_ONLY
+
+COPY_EXISTING ~ZSSDMSG5.SPL~ ~override~ // gained summon shade
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
+BUT_ONLY
+
 COPY_EXISTING ~ZS#SDL1P.spl~ ~override~
               ~ZS#SDL1Q.spl~ ~override~
               ~ZS#SDL1R.spl~ ~override~
@@ -171,13 +231,14 @@ BUT_ONLY
 COPY_EXISTING ~SPCL938.SPL~ ~override~ // Shadow Form, adds the extra effects
     LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@11) END
     SET op9_loc_speed = 255 + (20 << 16)
-    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=ZS#SDL5A;op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p2=155;op=101,p2=116;op=101,p2=70;op=101,p2=193;op=101,p2=47~ END
+    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=ZS#SDL5A;op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p1=0,p2=155;op=101,p1=0,p2=116;op=101,p1=0,p2=70;op=101,p1=0,p2=193;op=101,p1=0,p2=47;op=206,res=ZSSDFB1;op=206,res=ZSSDFB2~ END
+
     PATCH_IF GAME_IS ~iwdee~ BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode=61 opcode=50 duration=30 timing=0 parameter1="-784830976" parameter2=op9_loc_speed END
     END ELSE BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode=50 parameter1="-784830976" parameter2=op9_loc_speed END
     END
-    LPF ALTER_EFFECT INT_VAR match_opcode=215 duration=1 STR_VAR resource=~ZSSDTLPT~ END
+
     LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
     LPF ALTER_EFFECT INT_VAR check_globals = 0 header=1 match_duration = 30 duration = 36 END
     LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
@@ -195,6 +256,7 @@ COPY_EXISTING ~ZS#SDH08.SPL~ ~override~ // SHADOW EVADE IMPROVE HLA
 BUT_ONLY
 
 COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration, feedback in log
+    LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@60) END // new clarifying description
     LPF ALTER_EFFECT INT_VAR silent = 1 match_duration = 60 duration = 120 END
     LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=139 target=1 timing=3 parameter1=RESOLVE_STR_REF(@500) duration=120 END
 BUT_ONLY IF_EXISTS
@@ -210,7 +272,7 @@ COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze
     LPF ALTER_EFFECT INT_VAR header_type=2 match_opcode=215 timing=0 duration=0 probability1=9 resist_dispel=0
     STR_VAR resource = ~BDETHER~ END
     LPF ADD_SPL_TGTEFF INT_VAR t=2 tmg=4 stype=1 sbonus="-4" pro1=9 STR_VAR effects=~op=215,dur=29,res=BDETHER;op=146,res=ZSSDMAZ0,dur=29~ END
-    LPF ADD_SPL_TGTEFF INT_VAR t=2 tmg=4 stype=1 sbonus="-4" STR_VAR effects = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ END
+    LPF ADD_SPL_TGTEFF INT_VAR t=2 tmg=4 stype=1 pwr=0 sbonus="-4" STR_VAR effects = ~op=215,tmg=1,res=BDETHER,pro1=19,pro2=10;op=213,p2=1,tmg=0,dur=36,pro1=19,pro2=10;op=215,res=BDETHER,pro1=19,pro2=10,dur=35;op=146,p2=1,res=ZSSDMAZ0,pro1=19,pro2=10,dur=35;op=215,tmg=1,res=BDETHER,pro1=29,pro2=20;op=213,p2=1,tmg=0,dur=42,pro1=29,pro2=20;op=215,res=BDETHER,pro1=29,pro2=20,dur=41;op=146,p2=1,res=ZSSDMAZ0,pro1=29,pro2=20,dur=41;op=215,tmg=1,res=BDETHER,pro1=39,pro2=30;op=213,p2=1,tmg=0,dur=48,pro1=39,pro2=30;op=215,res=BDETHER,pro1=39,pro2=30,dur=47;op=146,p2=1,res=ZSSDMAZ0,pro1=39,pro2=30,dur=47;op=215,tmg=1,res=BDETHER,pro1=49,pro2=40;op=213,p2=1,tmg=0,dur=54,pro1=49,pro2=40;op=215,res=BDETHER,pro1=49,pro2=40,dur=53;op=146,p2=1,res=ZSSDMAZ0,pro1=49,pro2=40,dur=53;op=215,tmg=1,res=BDETHER,pro1=59,pro2=50;op=213,p2=1,tmg=0,dur=60,pro1=59,pro2=50;op=215,res=BDETHER,pro1=59,pro2=50,dur=59;op=146,p2=1,res=ZSSDMAZ0,pro1=59,pro2=50,dur=59;op=215,tmg=1,res=BDETHER,pro1=69,pro2=60;op=213,p2=1,tmg=0,dur=66,pro1=69,pro2=60;op=215,res=BDETHER,pro1=69,pro2=60,dur=65;op=146,p2=1,res=ZSSDMAZ0,pro1=69,pro2=60,dur=65;op=215,tmg=1,res=BDETHER,pro1=79,pro2=70;op=213,p2=1,tmg=0,dur=72,pro1=79,pro2=70;op=215,res=BDETHER,pro1=79,pro2=70,dur=71;op=146,p2=1,res=ZSSDMAZ0,pro1=79,pro2=70,dur=71;op=215,tmg=1,res=BDETHER,pro1=89,pro2=80;op=213,p2=1,tmg=0,dur=78,pro1=89,pro2=80;op=215,res=BDETHER,pro1=89,pro2=80,dur=77;op=146,p2=1,res=ZSSDMAZ0,pro1=89,pro2=80,dur=77;op=215,tmg=1,res=BDETHER,pro1=99,pro2=90;op=213,p2=1,tmg=0,dur=84,pro1=99,pro2=90;op=215,res=BDETHER,pro1=99,pro2=90,dur=83;op=146,p2=1,res=ZSSDMAZ0,pro1=99,pro2=90,dur=83~ END
     LPF ADD_SPELL_HEADER INT_VAR zs_min_level_for_copy = 28 copy_header = 1 END
     LPF ALTER_EFFECT INT_VAR header = 1 savebonus = "-5" END
     LPF ADD_SPELL_HEADER INT_VAR zs_min_level_for_copy = 36 copy_header = 1 END
@@ -219,7 +281,11 @@ COPY_EXISTING ~SPCL937.SPL~ ~override~ // Shadow Maze
     LPF ALTER_EFFECT INT_VAR header = 3 savebonus = "-7" END
 BUT_ONLY IF_EXISTS
 
-COPY_EXISTING ~ZS#SDSA.SPL~ ~override~ // Fade
+COPY_EXISTING ~ZS#SDSA#.SPL~ ~override~ // shdow Fade
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@198) ref_desc = RESOLVE_STR_REF(@199) END
+BUT_ONLY
+
+COPY_EXISTING ~ZS#SDSA.SPL~ ~override~ // Normal Fade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@200) ref_desc = RESOLVE_STR_REF(@201) END
 BUT_ONLY
 

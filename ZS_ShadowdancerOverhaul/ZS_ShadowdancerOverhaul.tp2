@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "v1.1.7"
+VERSION "v1.1.8"
 README ~%MOD_FOLDER%/README.md~
 AUTO_EVAL_STRINGS
 /*
@@ -29,7 +29,8 @@ REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // COPYING ALL THE RELEVANT FILES
-COPY "%MOD_FOLDER%/abilities/hips"                        ~override~
+COPY "%MOD_FOLDER%/abilities/level_up_messages"           ~override~
+     "%MOD_FOLDER%/abilities/hips"                        ~override~
      "%MOD_FOLDER%/abilities/sd_bonuses"                  ~override~
      "%MOD_FOLDER%/abilities/shadow_conjurations"         ~override~
      "%MOD_FOLDER%/abilities/shadow_evade"                ~override~
