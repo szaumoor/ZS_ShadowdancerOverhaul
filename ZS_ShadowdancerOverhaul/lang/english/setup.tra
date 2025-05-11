@@ -1,51 +1,46 @@
-@0 = ~SHADOWDANCER: Shadowdancers dwell in the border between light and shadow, mastering the art of weaving darkness to become elusive figures of trickery. They embody a diverse array of adventurers who recognize the power and utility of shadow and magic. They have many motivations, and their exceptional stealth, dexterity, and ability to launch unexpected, rapid attacks make them highly valued by adventuring parties. Their skills are particularly prized by groups in need of scouts or spies, capable of infiltrating and gathering information with unmatched skill. Their affinity with darkness, however, does not align them necessarily with evil. To a shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
+@0 = ~SHADOWDANCER: Shadowdancers move with effortless grace along the threshold of light and darkness, innately able to weave the magic of shadows and illusions. They embody a diverse array of adventurers who recognize that shadow is a force to be shaped, not feared. Whether motivated by curiosity, ambition, or necessity, shadowdancers are renowned for their incredible stealth, agility, and the ability to strike swiftly from the shadows. Their talents make them invaluable as scouts and spies, capable of infiltrating and gathering information with skill that other Thieves cannot match. Despite their affinity with darkness, it does not align them necessarily with evil. To a shadowdancer, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
 
 Advantages:
-– Infravision.
-– Stealthy: +20 to Hide in the Shadows and Move Silently, improved by +5 at every third level thereafter.
+– Infravision, even if not normally available to the selected race
+– Stealthy: +20 points to Hide in the Shadows and Move Silently at level 1, improved by +5 at every third level thereafter.
 – Natural Evasion: +2 bonus to Armor Class (+4 vs. missile), movement speed, and saves vs. Breath.
-– Elusive Mind: The shadowdancer's mind is hard to ensnare, granting <PRO_HIMHER> a +1 bonus to saving throws vs. Spell, Wand, and all Enchantment and Illusion spells. These bonuses improve by +1 at level 12 and every 12 levels thereafter.
-– Hide in Plain Sight: <PRO_HESHE> can hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40. The chances of success are tied to your Hide in Shadows ability.
+– Elusive Mind: The shadowdancer gains a +1 bonus to saving throws against Spells, Wands, and all Enchantment and Illusion effects. This bonus increases by +1 at level 12 and every 12 levels after.
+– Hide in Plain Sight: <PRO_HESHE> can become hidden, even while observed, for 20 seconds once per turn. The cooldown is reduced by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds. The chance of success depends on <PRO_HISHER> Hide in Shadows skill, but this ability is separate from the standard thief hiding skill—it functions as a unique, innate power.
 – May cast Shadowstep (Planeshift / Blink) once per day. A new use is gained every three levels thereafter.
 
-SHADOWSTEP (Planeshift): The shadowdancer instantly steps into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells while <PRO_HESHE>'s in this plane, but <PRO_HESHE> may move at will during this time for whatever purpose they have, be it defensive or offensive. Upon returning to the Prime, the shadowdancer gains temporary enhancements to combat effectiveness, including omnidirectional backstabbing and higher critical hit chances. These benefits scale with the shadowdancer's level.
+SHADOWSTEP (Planeshift): Step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells, but <PRO_HESHE> may move at will during this time. Upon returning to the Prime, <PRO_HESHE> gains temporary bonuses to <PRO_HISHER> combat effectiveness, including the ability to backstab from any angle. These benefits scale with the shadowdancer's level.
 
 SHADOWSTEP (Blink): An alternative to the planeshift version, the shadowdancer may choose to instantly teleport to a place within sight, which applies all the benefits of the planeshift version.
 
 – May cast Shadow Illusion once per day, gaining one use at level 3, 12, and 20.
 
-SHADOW ILLUSION: Once per day, the shadowdancer can conjure shadowy illusions to confuse enemies. Unless a save vs. Spell is made, this ability causes one of the following effects: fear, berserk, blindness, or confusion, and a 25% chance of spell failure for 1 round. For the next four rounds, enemies have a chance to resist these effects each round, but may still fall prey to them. During the full 5 rounds, affected enemies also lose immunity to sneak attacks and backstabs, if they had it. The spell improves at higher levels but has no effect on creatures with very high intelligence (18 or more), or those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects.
+SHADOW ILLUSION: Conjure shadowy illusions to confuse enemies. Unless a save vs. Spell is made, it causes one of the following: fear, berserk, blindness, or confusion for 1 round. For the next four rounds, enemies have a chance to resist these effects each round, but may still fall prey to them. During the full 5 rounds, affected enemies also lose immunity to backstabs, if they had it, and suffer a 25% spell failure. The spell improves with level but has no effect on creatures with very high intelligence, or those that innately see through illusions. It is not subject to Magic Resistance or dispelling effects but True Sight can remove it or prevent its effects from taking hold.
 
 – May cast Summon Shade once per day, gaining a single use at level 4.
 
-SUMMON SHADE: Once per day, the shadowdancer can summon an undead shade from the Plane of Shadow for 8 hours. This shade is completely loyal to the shadowdancer, highly resistant to damage, and immune to turning and spells that destroy or banish summoned creatures. The shade can temporarily drain Strength from its victims with a touch if they fail a Save vs. Death at +2. As the shadowdancer gains experience, the shade grows in power, becoming more capable and resistant, and evolving into greater types of shades.
+SUMMON SHADE: Summon a shade from the Plane of Shadow for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and spells that banish summoned creatures. Its touch can temporarily drain Strength from its if a save vs. Death at +2 is failed. As the shadowdancer gains experience, the shade does as well, becoming more capablet, and evolving into greater shades.
 
-– May cast Shadow Evade once per day, gaining an use at level 5, and then again at level 10 and 15.
+– May cast Shadow Evade once per day, gaining one use at level 5, and then again at levels 10 and 15.
 
-SHADOW EVADE: This skill allows the shadowdancer to conceal <PRO_HIMHER>self in shadow, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Additionally, each new use gained adds 1 round to its duration and 5% to damage resistance.
+SHADOW EVADE: The shadowdancer conceals <PRO_HIMHER>self in shadowstuff, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each new use adds 1 round to its duration and 5% to its damage resistance.
 
-– May cast Shadow Conjuration once per day starting at level 6. Gains an additional use at levels 9 and 12. At level 12, gains Greater Shadow Conjuration with an additional use at levels 15 and 18. Finally, at level 18, gains Shades with an additional use at levels 21 and 24.
+– May cast Shadow Conjuration once per day starting at level 6, with additional uses gained at levels 9 and 12.
 
-SHADOW CONJURATION: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure shadow versions of various spells. As the shadowdancer grows in power, the following spells are unlocked:
+SHADOW CONJURATION: This skill allows the shadowdancer to draw various amounts of energy from the Demiplane of Shadow to conjure phantasmal version of one of the following spells: Darkness, Invisibility, Shield, Magic Missile, Sleep. The spells are always cast at half the shadowdancer's current level.
 
-– Shadow Conjuration: Darkness, Invisibility, Shield, Magic Missile, Sleep.
-– Greater Shadow Conjuration: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
-– Shades: Cone of Cold, Shadow Fireball, Stoneskin, Shadow Door.
-
-– Shadow Haven: From level 10 on, <PRO_HIMHER> affinity for shadows allows <PRO_HIMHER> to regenerate 1 Hit Point per round while <PRO_HESHE> is hidden or invisible, and may no longer be detected by any means other than True Sight.
+– Shadow Haven: At level 10, shadows embrace <PRO_HIMHER> while invisible, regenerating 1 Hit Point per round, while protecting <PRO_HIMHER> from detection by all means except True Sight.
+– Greater Shadow Conjuration: At level 12, <PRO_HESHE> learns a more powerful version of Shadow Conjuration which grants access to the following spells: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness. New uses are gained at levels 15 and 18.
+– Shades: At level 18, <PRO_HESHE> learns an even more powerful version of Shadow Conjuration which grants access to the following spells: Cone of Cold, Shadow Fireball, Stoneskin, Shadow Door. New uses are gained at levels 21 and 24.
 
 Disadvantages:
 – Alignment restricted to any non-lawful
-– Lesser potential backstab multiplier compared to an unkitted Thief:
-  Level 1-4: x2
-  Level 5-8: x3
-  Level 9+: x4
+– Backstab multiplier uses the normal progression, but it only grows up to 4x
 – May only distribute 15 skill points per level (40 at level 1) among thieving skills
 – May not use the Set Snare ability or learn any high-level abilities that introduce traps
 
 Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
 
-@1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you've spent your childhood yearning for a life cloaked in shadows and secrecy. While other children played at knights and dragons, you danced unseen through the quiet halls of Candlekeep, imagining yourself a phantom among the blind and complacent. The ambling, preoccupied monks have often played the role of secret lords of Waterdeep in your mind, their purses tempting tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, though rarely with more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you’ve found little satisfaction in pilfering from your caretakers. Instead, your heart yearns for a grander stage—one where your steps vanish in silence and your talents can truly flourish in the dark.~
+@1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you've spent your childhood yearning for a life cloaked in shadows and secrecy. While other children played at knights and dragons, you danced unseen through the quiet halls of Candlekeep, imagining yourself a phantom among the blind and complacent. The ambling, preoccupied monks have often played the role of secret lords of Waterdeep in your mind, their purses tempting tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, though rarely with more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you've found little satisfaction in pilfering from your caretakers. Instead, your heart yearns for a grander stage—one where your steps vanish in silence and your talents can truly flourish in the dark.~
 
   // SHADOWDANCER SPELLS
 
