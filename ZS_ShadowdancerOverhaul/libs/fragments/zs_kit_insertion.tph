@@ -1,0 +1,33 @@
+LAF ADD_KIT_EX
+    INT_VAR
+        help       = RESOLVE_STR_REF(@0)
+        biography  = RESOLVE_STR_REF(@1)
+    STR_VAR
+        kit_name   = ~ZS_SHADOWDANCER~
+        source_kit = ~SHADOWDANCER~
+        backstab   = ~1 2 2 2 2 3 3 3 3 4~
+        thiefskl   = ~40 15~
+        clswpbon   = ~0 0 3~
+        clab_path  = ~%MOD_FOLDER%/abilities/ZSSDCLAB.2da~
+        luabbr     = ~ZSSD~
+    RET kit_id
+END
+
+COPY_EXISTING ~LUZSSD.2DA~ ~override~
+    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
+    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH01~ num_allowed=~3~ END // self-concealment
+    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artist
+    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL938~ ability=~GA_SPCL938~ num_allowed=~99~ prerequisite=~AP_ZS#SDH08~ END // replace Shadow Form to add the prerequisite
+    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shadow artist
+BUT_ONLY
+
+ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
+    COPY_EXISTING ~LUZSSD.2DA~ ~override~
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
+        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
+    BUT_ONLY
+END ELSE BEGIN
+    PRINT "Rogue Rebalancing HLA component not installed, skipping..."
+END

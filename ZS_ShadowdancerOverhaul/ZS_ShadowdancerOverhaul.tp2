@@ -17,6 +17,7 @@ MODDER
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ALWAYS
     INCLUDE "%MOD_FOLDER%/libs/zs_sd_functions.tph"
+    INCLUDE ~%MOD_FOLDER%/libs/components/zs_sd_comp_%COMPONENT_NUMBER%.tph~
 END
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 LANGUAGE
@@ -26,288 +27,34 @@ LANGUAGE
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1000 DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// COPYING ALL THE RELEVANT FILES
-COPY "%MOD_FOLDER%/abilities/level_up_messages"           ~override~
-     "%MOD_FOLDER%/abilities/hips"                        ~override~
-     "%MOD_FOLDER%/abilities/sd_bonuses"                  ~override~
-     "%MOD_FOLDER%/abilities/shadow_conjurations"         ~override~
-     "%MOD_FOLDER%/abilities/shadow_evade"                ~override~
-     "%MOD_FOLDER%/abilities/shadow_illusion"             ~override~
-     "%MOD_FOLDER%/abilities/shadowstep"                  ~override~
-     "%MOD_FOLDER%/abilities/summon_shadow"               ~override~
-     "%MOD_FOLDER%/hlas/artisan_shadows"                  ~override~
-     "%MOD_FOLDER%/hlas/deep_shades"                      ~override~
-     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
-     "%MOD_FOLDER%/hlas/self_concealment"                 ~override~
-     "%MOD_FOLDER%/hlas/shadow_maze"                      ~override~
-     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
-     ~%MOD_FOLDER%/hlas/LUZSSD.2DA~                       ~override~
-
-// Kit insertion (BG2EE)
-LAF ADD_KIT_EX
-    INT_VAR
-        help       = RESOLVE_STR_REF(@0)
-        biography  = RESOLVE_STR_REF(@1)
-    STR_VAR
-        kit_name   = ~ZS_SHADOWDANCER~
-        source_kit = ~SHADOWDANCER~
-        backstab   = ~1 2 2 2 2 3 3 3 3 4~
-        thiefskl   = ~40 15~
-        clswpbon   = ~0 0 3~
-        clab_path  = ~%MOD_FOLDER%/abilities/ZSSDCLAB.2da~
-        luabbr     = ~ZSSD~
-    RET kit_id
-END
-
-COPY_EXISTING ~LUZSSD.2DA~ ~override~
-    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
-    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH01~ num_allowed=~3~ END // self-concealment
-    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artist
-    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL938~ ability=~GA_SPCL938~ num_allowed=~99~ prerequisite=~AP_ZS#SDH08~ END // replace Shadow Form to add the prerequisite
-    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shadow artist
-BUT_ONLY
-
-ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
-    COPY_EXISTING ~LUZSSD.2DA~ ~override~
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
-    BUT_ONLY
-END ELSE BEGIN
-    PRINT "Rogue Rebalancing HLA component not installed, skipping..."
-END
-
-COPY_EXISTING ~SPPR505.SPL~ ~override~ // TRUE SIGHT PROTECTION AGAINST SHADOW ILLUSION / DISPELLING
-              ~SPWI609.SPL~ ~override~
-              ~SPCL232.SPL~ ~override~
-              ~SPCL732.SPL~ ~override~
-    LPF ADD_SPL_SELFEFF INT_VAR rd=0 ip=0 STR_VAR effects= ~ip=-1,op=206,p1=-1,rd=3,res=ZS#SDL3A,dur=60;op=321,res=ZS#SDL3A;op=321,res=ZS#SDL3B;op=321,res=ZS#SDL3C;op=321,res=ZS#SDL3D;op=321,res=ZS#SDL3E~ END
-BUT_ONLY
-
-INCLUDE "%MOD_FOLDER%/libs/zs_process_spl.tph"
-INCLUDE ~%MOD_FOLDER%/libs/zs_remove_sd.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1003 DESIGNATED 300 // THAC0 TWEAK THIEVES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-LAF generate_rogue_thac0 STR_VAR class1 = ~thief~ class2 = ~mage_thief~ END
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-    LPF CRE_CLASS RET cre_class = result END
-    SET thief = IDS_OF_SYMBOL(class THIEF)
-    SET mage_thief = IDS_OF_SYMBOL(class MAGE_THIEF)
-
-    PATCH_IF cre_class = thief OR cre_class = mage_thief BEGIN
-        LPF CRE_THAC0 RET thac0 = result END
-        LPF CRE_FIRST_LEVEL RET first_level = result END
-        LPF CRE_SECOND_LEVEL RET second_level = result END
-        LPF CRE_FLAGS RET cre_flags = result END
-        LPF CRE_IS_FLAG_SET INT_VAR flag = 4 RET dual_classed_to_thief = result END
-        LPF CRE_IS_FLAG_SET INT_VAR flag = 6 RET dual_classed_to_mage = result END
-        PATCH_IF dual_classed_to_thief != 1 AND dual_classed_to_mage != 1 BEGIN
-            PATCH_IF cre_class = thief BEGIN
-                SET the_level = first_level
-            END ELSE BEGIN
-                SET the_level = second_level
-            END
-            PATCH_IF (the_level = 2 OR the_level = 3) AND thac0 = 20 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 19 END
-            END
-            PATCH_IF the_level = 4 AND thac0 > 18 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 18 END
-            END
-            PATCH_IF (the_level = 5 OR the_level = 6) AND thac0 > 17 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 17 END
-            END
-            PATCH_IF the_level = 7 AND thac0 > 16 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 16 END
-            END
-            PATCH_IF (the_level = 8 OR the_level = 9) AND thac0 > 15 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 15 END
-            END
-            PATCH_IF the_level = 10 AND thac0 > 14 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 14 END
-            END
-            PATCH_IF (the_level = 11 OR the_level = 12) AND thac0 > 13 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 13 END
-            END
-            PATCH_IF the_level = 13 AND thac0 > 12 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 12 END
-            END
-            PATCH_IF (the_level = 14 OR the_level = 15) AND thac0 > 11 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 11 END
-            END
-            PATCH_IF the_level = 16 AND thac0 > 10 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 10 END
-            END
-            PATCH_IF (the_level = 17 OR the_level = 18) AND thac0 > 9 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 9 END
-            END
-            PATCH_IF the_level = 19 AND thac0 > 8 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 8 END
-            END
-            PATCH_IF (the_level = 20 OR the_level = 21) AND thac0 > 7 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 7 END
-            END
-            PATCH_IF the_level >= 22 AND thac0 > 6 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 6 END
-            END
-        END
-    END
-BUT_ONLY
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1004 DESIGNATED 400 // THAC0 TWEAK BARDS
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-LAF generate_rogue_thac0 STR_VAR class1 = ~bard~ END
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-        LPF CRE_CLASS RET cre_class = result END
-        SET bard = IDS_OF_SYMBOL(class BARD)
-
-        PATCH_IF cre_class = bard BEGIN
-            LPF CRE_THAC0 RET thac0 = result END
-            LPF CRE_FIRST_LEVEL RET first_level = result END
-            PATCH_IF (first_level = 2 OR first_level = 3) AND thac0 = 20 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 19 END
-            END
-            PATCH_IF first_level = 4 AND thac0 > 18 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 18 END
-            END
-            PATCH_IF (first_level = 5 OR first_level = 6) AND thac0 > 17 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 17 END
-            END
-            PATCH_IF first_level = 7 AND thac0 > 16 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 16 END
-            END
-            PATCH_IF (first_level = 8 OR first_level = 9) AND thac0 > 15 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 15 END
-            END
-            PATCH_IF first_level = 10 AND thac0 > 14 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 14 END
-            END
-            PATCH_IF (first_level = 11 OR first_level = 12) AND thac0 > 13 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 13 END
-            END
-            PATCH_IF first_level = 13 AND thac0 > 12 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 12 END
-            END
-            PATCH_IF (first_level = 14 OR first_level = 15) AND thac0 > 11 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 11 END
-            END
-            PATCH_IF first_level = 16 AND thac0 > 10 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 10 END
-            END
-            PATCH_IF (first_level = 17 OR first_level = 18) AND thac0 > 9 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 9 END
-            END
-            PATCH_IF first_level = 19 AND thac0 > 8 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 8 END
-            END
-            PATCH_IF (first_level = 20 OR first_level = 21) AND thac0 > 7 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 7 END
-            END
-            PATCH_IF first_level >= 22 AND thac0 > 6 BEGIN
-                LPF ALTER_CRE INT_VAR thac0 = 6 END
-            END
-        END
-    BUT_ONLY
-
-/*ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ ~1~ BEGIN
-    PRINT "Pits of Despair found, updating Shadowdancer kit to Nephetel"
-    ACTION_IF FILE_EXISTS_IN_GAME ~zbneph.cre~ AND FILE_EXISTS_IN_GAME ~zbmes.cre~  BEGIN
-        COPY_EXISTING ~zbneph.cre~ ~override~ // base nephetel
-                      ~zbmes.cre~ ~override~ // messenger version
-            WRITE_LONG 0x244 IDS_OF_SYMBOL(kit ZS_SHADOWDANCER) // change class to Overhauled Shadowdancer
-            LPF DELETE_CRE_EFFECT INT_VAR match_opcode=325 match_parameter1=1 END // remove BeamDog's Slippery Mind effect (saving throws +1)
-            LPF REMOVE_MEMORIZED_SPELLS // this removes all spells, which is currently just Shadowstep so it's safe to use like this
-            // Adds the Natural Evasion effects
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=0 parameter1=2 END // +2 AC
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=0 parameter1=2 parameter2=2 END // +2 missile AC
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=36 parameter1=2 END // +2 saves vs. breath
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=176 parameter1=2 END // +2 movement speed
-            // Adds innate infravision
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=63 parameter1=2 END // infravision
-            LPF ADD_CRE_EFFECT INT_VAR timing=9 opcode=101 parameter1=64 END // immunity to remove infravision
-        BUT_ONLY
-    END ELSE BEGIN
-        WARN "Nephetel (zbneph.cre & zbmes.cre) not found in the game, despite Pits of Despair being installed, contact the original authors (zenblack, dark0dave, and I aka RoyalProtector) for support"
-    END
-END*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1006 DESIGNATED 410 // ITEM TWEAKS
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10001
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_itemtweaks.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM TWEAK
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-ACTION_IF FILE_EXISTS_IN_GAME  ~SPCL940.SPL~ BEGIN
-    COPY_EXISTING ~SPCL940.SPL~ ~override~
-        LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@6000) END
-        LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 STR_VAR effects=~op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1~ END
-        LPF ALTER_HEADER INT_VAR match_type = 1 speed = 0 END
-        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
-        LPF ALTER_EFFECT INT_VAR check_globals = 0 header=1 match_duration = 30 duration = 36 END
-        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
-        LPF ALTER_EFFECT INT_VAR check_globals = 0 header=2 match_duration = 30 duration = 42 END
-        LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
-        LPF ALTER_EFFECT INT_VAR check_globals = 0 header=3 match_duration = 30 duration = 48 END
-    BUT_ONLY
-END ELSE BEGIN
-    WARN "Spirit form not found in the game"
-END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1010 DESIGNATED 5001 // RR COMPATIBILITY FOR VANILLA SD
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-ACTION_IF FILE_EXISTS_IN_GAME ~RR#THL01.SPL~ BEGIN
-    COPY_EXISTING ~LUTH4.2DA~ ~override~
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL919~ ability=~GA_RR#THL01~ prerequisite=~GA_SPCL916~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_RR#THL02~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL914~ ability=~GA_RR#THL03~ prerequisite=~GA_RR#THL02~ END
-        LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL918~ ability=~GA_RR#ALCHT~ END
-    BUT_ONLY
-END ELSE BEGIN
-    WARN "Rogue Rebalancing HLA component is not installed"
-END
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1002 DESIGNATED 5002 // SHADOWDANCER VANILLA FIXES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ AND !(MOD_IS_INSTALLED ~ZS_ShadowdancerOverhaul.tp2~ ~100~) BEGIN
-    COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
-        LPF ALTER_EFFECT INT_VAR silent= match_duration = 60 duration = 120 END
-    BUT_ONLY
-END ELSE BEGIN
-    PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
-END
-
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_fix_sd_prof_penalty.tph~
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1011 DESIGNATED 5003 // SIMULACRUM FIXES FOR 2.6.6
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 FORBID_COMPONENT ~ZS_ShadowdancerOverhaul.tp2~ ~100~ @10002
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's disabled Thief buttons
-    LPF DELETE_EFFECT INT_VAR match_opcode=144 END
-BUT_ONLY
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////

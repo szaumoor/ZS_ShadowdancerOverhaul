@@ -1,0 +1,15 @@
+COPY "%MOD_FOLDER%/abilities/level_up_messages"           ~override~
+     "%MOD_FOLDER%/abilities/hips"                        ~override~
+     "%MOD_FOLDER%/abilities/sd_bonuses"                  ~override~
+     "%MOD_FOLDER%/abilities/shadow_conjurations"         ~override~
+     "%MOD_FOLDER%/abilities/shadow_evade"                ~override~
+     "%MOD_FOLDER%/abilities/shadow_illusion"             ~override~
+     "%MOD_FOLDER%/abilities/shadowstep"                  ~override~
+     "%MOD_FOLDER%/abilities/summon_shadow"               ~override~
+     "%MOD_FOLDER%/hlas/artisan_shadows"                  ~override~
+     "%MOD_FOLDER%/hlas/deep_shades"                      ~override~
+     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
+     "%MOD_FOLDER%/hlas/self_concealment"                 ~override~
+     "%MOD_FOLDER%/hlas/shadow_maze"                      ~override~
+     "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
+     ~%MOD_FOLDER%/hlas/LUZSSD.2DA~                       ~override~
