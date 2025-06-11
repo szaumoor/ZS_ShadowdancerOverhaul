@@ -433,3 +433,11 @@ BUT_ONLY
 COPY_EXISTING ~ZSSDSW8D.SPL~ ~override~ // Shadow Weapon
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
 BUT_ONLY
+
+ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
+  PRINT "Patching Kukri of the Eclipse in Royal Protector's Item Pack"
+  OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
+  OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
+  COPY_EXISTING ~ZSIPKRE0.itm~ ~override~
+    LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
+END
