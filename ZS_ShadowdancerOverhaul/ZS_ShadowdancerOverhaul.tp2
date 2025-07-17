@@ -3,6 +3,7 @@ SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/prof
 VERSION "v1.1.9a"
 README ~%MOD_FOLDER%/README.md~
 AUTO_EVAL_STRINGS
+ASK_EVERY_COMPONENT
 /*
 MODDER
 	setup_tra none
