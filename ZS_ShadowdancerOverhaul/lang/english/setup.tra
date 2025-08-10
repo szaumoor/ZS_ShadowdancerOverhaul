@@ -131,12 +131,25 @@ These penalties cannot reduce Strength or Dexterity below 1.~
 @14 = ~Artisan of Shadows
 Your mastery over the elusive power of shadows has now reached incredible heights. As a testament to your profound connection with it, you gain the following abilities:
 
-– Immunity to blindness.
-– Backstabs no longer require you to be behind the target to be successful.
-– Backstabs are infused with shadow magic, dealing an additional 1d4 cold and magic damage, and causing blindness for 3 rounds unless a save vs. Spell at -4 is made. If the target is already blinded, they instead take 2d4+1 cold and magic damage with no save allowed.
-– For two rounds after landing a critical hit, the target loses their immunity to backstabs, if they had it, and the shadowdancer gains a 5% bonus to critical hit chances and cannot critically miss.
+– Immunity to blindness
+– Backstabs no longer require you to be behind the target to be successful
+– For two rounds after landing a critical hit, the target loses their immunity to backstabs, if they had it, and the shadowdancer gains a 5% bonus to critical hit chances and cannot critically miss (does not stack)
 
 Requirements: Shadowdancer only~
+
+@130 = ~Shadostrike~
+@131 = ~Shadowstrike
+The shadowdancer may choose to infuse their backstabs with a bit of shadow magic for 1 turn to achieve various effects:
+
+– Beshadowed Strike: Backstabs have a 30% chance of making the shadowdancer immediately invisible for 2 rounds, and the target is blinded for 3 rounds unless a save vs. Spell at -4 is made.
+– Shadowchill Strike: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal 2d4+1 cold and 2d4+1 magic damage.
+– Enervating Strike: Backstabs halve the victim's Strength for 5 rounds if they fail a Save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
+
+During this time, the critical hit chances are 5% higher. None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.~
+
+@132 = ~Beshadowed Strike~
+@133 = ~Shadowchill Strike~
+@134 = ~Enervating Strike~
 
 @15 = ~Self-Concealment~
 @16 = ~Self-Concealment
@@ -146,24 +159,24 @@ Requirements: Shadowdancer only~
 
 @2100 = ~Shadow Conjuration~
 @2101 = ~Shadow Conjuration
-This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available: Darkness, Invisibility, Shield, Magic Missile, Sleep.
+This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available: Darkness, Invisibility, Shield, Magic Missile, Sleep.
 
 The spells are always cast at half the shadowdancer's current level. For example, to cast four Magic Missiles when casting that spell, the shadowdancer would require to be at level 14 instead of 7.~
 
 @2102 = ~Greater Shadow Conjuration~
 @2103 = ~Greater Shadow Conjuration
-This skill allow the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
+This skill allow the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
 
 The spells are always cast at half the shadowdancer's current level. For example, to cast Minor Globe of Invulnerability at a wizard level 10, the shadowdancer must attain first level 20.~
 
 @2104 = ~Shades~
 @2105 = ~Shades
-This skill allow the shadowdancer to draw a lot of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of spells. The following spells are available:
+This skill allow the shadowdancer to draw a lot of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available:
 
 – Shadow Fireball: A version of the Fireball wizard spell that deals a mix of fire, cold, and magic damage. It functions otherwise identically. It belongs to the Illusion/Phantasm school of magic.
 – Stoneskin: as per the wizard spell. It may produce at most 5 skin layers.
-– Cone of Cold
-– Shadow Door
+– Cone of Cold, as per the wizard spell.
+– Shadow Door, as per the wizard spell.
 
 All spells are always cast at half the shadowdancer's current level. For example, to cast Shadow Door at a wizard level 10, the shadowdancer must attain first level 20.~
 
@@ -174,7 +187,7 @@ All spells are always cast at half the shadowdancer's current level. For example
 This skill allow the shadowdancer to draw a huge amount of energy from the Demiplane of Shadow to conjure a shadow version of a selection of spells. The following spells are available:
 
 – Delayed Blast Shadow Fireball: A shadowy version of the Delayed Blast Fireball spell that deals a combination of fire, cold, and magic damage. It otherwise functions as the original wizard spell. It belongs to the Illusion/Phantasm school of magic.
-– Shadow Shield: Envelops the user in powerful illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, and resistance to most projectiles. The user also becomes immune to necromancy spells and instant-death effects, and gains 20 points of skill in Hide in Shadows and Move Silently.
+– Shadow Shield: Envelops the user in powerful illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, and immunity to normal and +1 weapons. The user also becomes immune to necromancy spells and gains 20 points of skill in Hide in Shadows and Move Silently.
 – Shadowstep: Functions as the shadowdancer's signature ability, allowing the user to briefly step into the Shadow Plane for enhanced mobility and evasion, or to immediately teleport within line of sight.
 
 Requirements: Shadowdancer only~
@@ -202,6 +215,15 @@ The shadowdancer becomes enveloped in a mantle of shifting shadows and silent il
 – Immunity to Necromancy spells
 
 This protection can be removed by Dispel Magic or by spells that dispel illusions, such as True Sight.~
+
+@2120 = ~Shadow Dance~
+@2121 = ~Shadow Dance
+For five rounds, shadowdancers of exceptional skill can perform an agile and disorienting shadow-dance that allows them to automatically avoid the effects of spells and special abilities that can be evaded, such as dragon breath, fireballs, lightning bolts, skull traps, explosive potions, wands of fire, dangerous waves of water, and many others, through a combination of superior reflexes, extraordinary agility and a bit of their innate shadow magic.
+
+During this time, the shadowdancer becomes briefly invisible for 3 seconds once per round, disorienting and disrupting the targetting of the enemies around them. This ability also improves Armor Class by 6 and Saving Throws by 3. In addition, it allows the shadowdancer to move so quickly that <PRO_HISHER> movement rate is increased by 4 (base is 9) and missiles have no chance of striking <PRO_HIMHER>.
+
+This ability cannot be dispelled or Breached, although the invisibility effect can be disrupted by True Sight and other invisibility dispelling effects.~
+@2122 = ~Evaded effect~
 
 @23 = ~Backstab immunity removed~
 @24 = ~Backstab immunity removal effect wore off~
@@ -334,13 +356,10 @@ This ability has no effect if used on a non-ally or on the shade itself.~
 @1003 = ~Make thief THAC0 progression streamlimed, and improve up to 6, like clerics (highly recommended for better rogue gameplay)~
 @1004 = ~Improve the THAC0 of Bards too to match the changes to Thieves~
 @1005 = ~Make Shaman Spirit Form mirror the benefits of Shadow Form~
-@1006 = ~Give a selection of items extra hidden traits if wielded/worn by shadowdancers~
 @1007 = ~Add a variety of new Shadowdancer-inspired items to the game~
 @1010 = ~Allow vanilla shadowdancers to take advantage of Rogue Rebalancing's HLA overhaul~
 @1011 = ~Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)~
 // END INSTALLER TEXT
-
-
 
 
 // ITMS
@@ -352,46 +371,6 @@ Charge abilities:
 – Shadowstep 3 times/day
 
 Weight: 2~
-
-// Lava's Shade of Sword Coast Item
-@5010 = ~This unusual ioun stone was found in the shadow version of the gnoll stronghold. It is cold to the touch and seems to be enchanted with shadow magic or some other source of dark energy. Individuals with affinity to the shadow can extract more benefits from it.
-
-STATISTICS:
-
-Equipped Abilities:
-– Protects against critical hits
-– Save vs. Necromancy: +2
-– Armor Class and THAC0 at night: +1
-– For shadowdancers only: +2 Saves vs. Illusion, +10% Detect Illusions, +25% cold resistance
-
-
-Weight: 1~
-// Lava's Shade of Sword Coast Item
-@5020 = ~This sword was named after Thaxll'ssillyia–an infamous and powerful dragon from the Plane of Shadows. Tales say that his breath can drain life from living things and his wings are powerful enough to destroy walls, causing unresistable fear in those that face him.
-
-The sword itself is covered with an unusual purple flame that does not burn as normal fire, but twist reality, make its vivid colors fade away. Characters with affinity for the shadow can extract more benefits from it.
-
-STATISTICS:
-
-Equipped Abilities:
-– Saves vs. Death: +2
-– Saves vs. Illusion: +2 (shadowdancers only)
-
-Combat Abilities:
-– Has a 10% chance to cause additional 1d4 acid damage
-– 50% chance of causing 1d2 magic damage (shadowdancers only)
-– If a save vs. Death at -1 is failed, THAC0 is reduced by 2 for 3 rounds (shadowdancers only)
-
-THAC0: +2, +4 vs. good characters
-Damage: 1d8+2, +4 vs. good characters
-Damage type: Slashing
-Speed Factor: 2
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 5 Strength
-
-Weight: 3~
 
 // OTHER TWEAKS
 @6000 = ~Spirit Form
