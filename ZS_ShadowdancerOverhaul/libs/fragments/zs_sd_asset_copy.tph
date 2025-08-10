@@ -12,4 +12,6 @@ COPY "%MOD_FOLDER%/abilities/level_up_messages"           ~override~
      "%MOD_FOLDER%/hlas/self_concealment"                 ~override~
      "%MOD_FOLDER%/hlas/shadow_maze"                      ~override~
      "%MOD_FOLDER%/hlas/improved_shadow_evade"            ~override~
+     "%MOD_FOLDER%/hlas/shadow_dance"                     ~override~
+     "%MOD_FOLDER%/hlas/shadow_strike"                    ~override~
      ~%MOD_FOLDER%/hlas/LUZSSD.2DA~                       ~override~
