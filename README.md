@@ -52,7 +52,7 @@ So here's what the mod changes:
   - **Immune** to **Acid**, **Cold**, later becomes immune to **Electricity** too, and gains a small amount of Magic Resistance.
   - **Resists 20% of physical damage, 30% for missile**, which increases slowly up to 50% and 60% respectively later on. It starts off with 18 HP and goes up to 100 eventually.
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
-  - Evolves into a **Greater Shadow**, a **Shadowlord**, a **Greater Shadowlord** and a **Nighthaunt**. S
+  - Evolves into a **Greater Shadow**, a **Shadowlord**, a **Greater Shadowlord** and a **Nighthaunt**.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
   - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons** at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
