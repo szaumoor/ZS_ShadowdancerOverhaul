@@ -52,9 +52,9 @@ So here's what the mod changes:
   - **Immune** to **Acid**, **Cold**, later becomes immune to **Electricity** too, and gains a small amount of Magic Resistance.
   - **Resists 20% of physical damage, 30% for missile**, which increases slowly up to 50% and 60% respectively later on. It starts off with 18 HP and goes up to 100 eventually.
   - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
-  - Evolves into a **Greater Shadow**, a **Shadowlord**, a **Greater Shadowlord** and a **Nighthaunt**. S
+  - Evolves into a **Greater Shadow**, a **Shadowlord**, a **Greater Shadowlord** and a **Nighthaunt**.
   - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
-  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2 improves with level up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
+  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2, which improves with level, up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
   - Unlike normal shadows, **it can be harmed by normal weapons** at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
   - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
 - **Shadow Evade**: you get this at level 4, then again at level 8 and 16. It's essentially a significantly less powerful Shadow Form: +4 AC, +15% damage reduction (+20% at level 8, +25% at level 16) for 3 rounds (4 rounds at level 10, 5 rounds at level 16). It grants invisibility during this time.
@@ -67,12 +67,12 @@ So here's what the mod changes:
 
 - **Alchemy** is completely removed
 - **Assassination** and **Avoid Death** are kept exactly as is
-- **Evasion and Improved evasion** are **replaced** by a new one called **Shadow Dance**. This ability allows the shadowdancer to move with agility and grace, dodging most AoE effect that can be dodged, and other aimed effects (dragon breath, fireballs, cone of cold, etc, but not things like Horrid Wilting), becoming immune to projectiles, getting +6 Armor Class and +3 to saving throws. Additionally, every round, the Shadowdancer becomes invisible for 3 rounds, which messes with the targetting of enemies, and may help backstabbing, if the timing is right.
+- **Evasion and Improved evasion** are **replaced** by a new one called **Shadow Dance**. This ability allows the shadowdancer to move with agility and grace, dodging most AoE effect that can be dodged, and other aimed effects (dragon breath, fireballs, cone of cold, etc, but not things like Horrid Wilting), becoming immune to projectiles, getting +6 Armor Class and +3 to saving throws. Additionally, every round, the Shadowdancer becomes invisible for half a round, which messes with the targeting of enemies, and may help with backstabbing, if the timing is right.
 - **Scribe Scrolls** is replaced by a new ability called **Shadowstrike**. This ability allows the shadowdancer to imbue their attacks with shadow magic, increasing their critical hit chances by 5% and adding the following effects to backstabs for 1 turn:
-  - **Beshadowed Strike**: 30% chance of becoming invisible when succesfully backstabbing, making target invisible for 3 rounds if they fail a save vs. Spell at -4
-  - **Shadowchill Strike**: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal 2d4+1 cold and 2d4+1 magic damage.
+  - **Beshadowed Strike**: 30% chance of becoming invisible when successfully backstabbing, making target blind for 3 rounds if they fail a save vs. Spell at -4
+  - **Shadowchill Strike**: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal extra 2d4+1 cold and 2d4+1 magic damage instead.
   - **Enervating Strike**: Backstabs halve the victim's Strength for 5 rounds if they fail a Save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
-- **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN. Requires Improved Shadow Evade.
+- **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN.
 - **Artisan of Shadows**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
   - Immunity to blindness
   - Backstabs may be performed from any angle
