@@ -65,13 +65,13 @@ So here's what the mod changes:
 
 ### HLAs
 
-- **Alchemy** is completely removed
-- **Assassination** and **Avoid Death** are kept exactly as is
-- **Evasion and Improved evasion** are **replaced** by a new one called **Shadow Dance**. This ability allows the shadowdancer to move with agility and grace, dodging most AoE effect that can be dodged, and other aimed effects (dragon breath, fireballs, cone of cold, etc, but not things like Horrid Wilting), becoming immune to projectiles, getting +6 Armor Class and +3 to saving throws. Additionally, every round, the Shadowdancer becomes invisible for half a round, which messes with the targeting of enemies, and may help with backstabbing, if the timing is right.
-- **Scribe Scrolls** is replaced by a new ability called **Shadowstrike**. This ability allows the shadowdancer to imbue their attacks with shadow magic, increasing their critical hit chances by 5% and adding the following effects to backstabs for 1 turn:
+- **Alchemy** are **Scribe Scrolls** are removed
+- **Assassination** and **Avoid Death** are kept exactly as is (I recommend using my ZSTweaks mod to improve them, regardless)
+- **Evasion and Improved evasion** are **replaced** by a new one called **Shadow Dance**: This ability allows the shadowdancer to move with agility and grace, dodging most AoE effects that can be dodged, and other aimed effects (dragon breath, fireballs, cone of cold, etc, but not things like Horrid Wilting), becoming immune to projectiles, getting +6 to Armor Class and +3 to saving throws. Additionally, every round, the shadowdancer becomes invisible for half a round, which messes with the targeting of enemies, and may help with backstabbing, if the timing is right.
+- **Shadowstrike**: This ability allows the shadowdancer to imbue their attacks with shadow magic, increasing their critical hit chances by 5% and adding the following effects to backstabs for 1 turn:
   - **Beshadowed Strike**: 30% chance of becoming invisible when successfully backstabbing, making target blind for 3 rounds if they fail a save vs. Spell at -4
   - **Shadowchill Strike**: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal extra 2d4+1 cold and 2d4+1 magic damage instead.
-  - **Enervating Strike**: Backstabs halve the victim's Strength for 5 rounds if they fail a Save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
+  - **Enervating Strike**: Backstabs halve the victim's Strength for 5 rounds if they fail a save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
 - **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN.
 - **Artisan of Shadows**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
   - Immunity to blindness
@@ -80,14 +80,15 @@ So here's what the mod changes:
   - Critical hits also cause the shadowdancer for those two rounds to be incapable of critically missing (non-stackable)
   - Critical chances improve by 5% for 2 rounds after critically hitting (non-stackable)
 - **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemy intelligence: the number of rounds it lasts is randomized between 5 and 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
-- **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
-- **Improved Shadow Evade**: This upgrades your Shadow Evade permanently to Shadow Form, essentially replacing the 3 casts of Shadow Evade with 3 of Shadow Form. This opens up the Shadow Form HLA. Can be taken once.
-- **Shadow Form**: Same, but:
-  - It makes your invisibility undispellable for its duration. Note that you will appear partially visible when performing an offensive action, same as always, but it will not be dispelled by any effects.
-  - It makes you resist +50% of ALL damage for 5 rounds, not just physical damage (mimics displacement).
-  - +4 AC is added, similar to how it's done in NWN
-  - Regenerate 1 HP per second while the effect is active
+- **Shadow Twin**: Vanilla, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
+- **Improved Shadow Evade**: This upgrades your Shadow Evade permanently to Shadow Form, essentially replacing the 3 casts of Shadow Evade with 3 of Shadow Form. This opens up the Shadow Form HLA, to effectively get more than three uses. Can be taken once.
+- **Shadow Form**: Same, with some improvements
+  - It makes your invisibility undispellable for its duration. Note that you will appear partially visible when performing an offensive action, same as always, but it will not be dispelled by any effects such as True Sight or Dispel Magic.
+  - It makes you resist +50% of ALL damage for the duration, including magical, elemental, and poison damage, not just physical damage (mimics displacement more closely).
+  - +4 Armor Class is added, similar to how it's done in NWN
+  - Regenerate 1 Hit Point per second while the effect is active
   - Can be taken unlimited times.
+  - Duration increases by 1 round at level 30 and 40 (6 and 7 rounds)
 - **Deep Shades**: This new HLA is the continuation of the shadow conjuration line. It may be chosen three times, and allows the caster to cast one of the following:
   - **Shadow Shield**: A defensive spell roughly inspired by the NWN/NWN2 spell, which grants Blur, +2 AC (+4 vs. missile), 8 Mirror Images, a shadow-like appearance, +20 ability in hiding, immunity to weapons under +2 enchantment, and immunity to necromantic effects. It lasts for 2 turns.
   - **Delayed Blast Shadow Fireball**: Similar to Shadow Fireball, but based on the Delayed Blast Fireball.

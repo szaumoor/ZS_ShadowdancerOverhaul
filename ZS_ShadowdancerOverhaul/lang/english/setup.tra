@@ -95,7 +95,7 @@ The creature's Hit Dice (HD) are always one less than the shadowdancer's, up to 
 @10 = ~Hide in plain sight
 Immediately hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
 
-The chances of success are directly tied to the Shadowdancer's Hiding in Shadows ability in the following way:
+The chances of success are directly tied to the shadowdancer's Hiding in Shadows ability in the following way:
 
 – 0-30: 50% chance of success
 – 31-50: 65% chance of success
@@ -103,7 +103,9 @@ The chances of success are directly tied to the Shadowdancer's Hiding in Shadows
 – 76-100: 90% chance of success
 – 101-150: 95% chance of success
 – 151-200: 99% chance of success
-– 201+: 100% chance of success~
+– 201+: 100% chance of success
+
+Note that the success chance is also affected by any penalties or bonuses to the shadowdancer's Hiding in Shadows ability, such as through magical effects or gear. For example, if the shadowdancer has exactly 70 points in the ability, they would have 80% chance of success, but if they had magical boots that granted 40 point bonus to the ability, they would have 95% chance of success.~
 
 @10010 = ~Hide in plain sight is available for use.~
 
@@ -112,7 +114,7 @@ Duration: 5 rounds + 1 round/10 levels starting at level 30
 Casting Time: Instant
 Area of Effect: The caster
 
-This ability is a more powerful version of Shadow Evade that temporarily transposes some of the user's tissue with shadow-stuff, making the subject partially incorporeal and regenerating 1 HP per second. For its duration, gain a +4 Armor Class bonus, and all attacks directed against the shadowdancer deal 50% less of their normal damage. During this time, the user becomes invisible, receives a +4 bonus to all Saving Throws, and may not be detected by any divinations until they choose to partially reveal themselves by taking certain actions, or the effect runs out.
+This ability is a more powerful version of Shadow Evade that temporarily transposes some of the user's tissue with shadow-stuff, making the subject partially incorporeal and regenerating 1 Hit Point per second. For its duration, gain a +4 Armor Class bonus, and all attacks directed against the shadowdancer deal 50% less of their normal damage. Additionally, the user is under the effects of Improved Invisibility, receives a +4 bonus to all Saving Throws, and may not be detected by any divinations until they choose to partially reveal themselves by taking certain actions, or the effect runs out. This, however, will not prevent creatures that naturally see through invisibility from detecting the shadowdancer.
 
 Requirements: Improved Shadow Evade~
 
@@ -127,8 +129,8 @@ After being released, living beings resurface feeling weakened for 1 turn, suffe
 
 These penalties cannot reduce Strength or Dexterity below 1.~
 
-@13 = ~Artisan of Shadows~
-@14 = ~Artisan of Shadows
+@13 = ~Shadow Artisan~
+@14 = ~Shadow Artisan
 Your mastery over the elusive power of shadows has now reached incredible heights. As a testament to your profound connection with it, you gain the following abilities:
 
 – Immunity to blindness
@@ -230,7 +232,7 @@ This ability cannot be dispelled or Breached, although the invisibility effect c
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-The shadowdancer cloaks <PRO_HIMHER>self in shadows, making <PRO_HIMHER> harder to hit. This grants a +4 bonus to Armor Class, +2 to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each additional use of this ability increases damage resistance by 5% (up to a maximum of 25%) and extends the duration by 1 round (up to a maximum of 5 rounds). This effect also provides immunity vs. the Shadow Fireball and Delayed Blast Shadow Fireball spells accessed through Shadow Conjurations.~
+The shadowdancer cloaks <PRO_HIMHER>self in shadows, making <PRO_HIMHER> harder to hit. This grants a +4 bonus to Armor Class, +2 to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each additional use of this ability increases damage resistance by 5% (up to a maximum of 25%) and extends the duration by 1 round (up to a maximum of 5 rounds). This effect also provides immunity to Shadow Fireball and Delayed Blast Shadow Fireball spells accessed through Shadow Conjurations.~
 
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
