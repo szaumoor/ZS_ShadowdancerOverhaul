@@ -124,6 +124,8 @@ Should be compatible with anything that doesn't modify the shadowdancer kit dire
 
 I would suggest installing my tweaks in ZSTweaks for Avoid Death and Assassination to make all the HLAs all the more rewarding, since those are kept intact. Finally, I would highly recommend installing something that enables the Evasion ability from IWD, to make thieves truly more powerful than they are (and they should be).
 
+It's currently compatible with PoD (Pits of Despair), as it is the only mod that I know of that introduces joinable NPC shadowdancers. That mod is not yet available, but compatibility is given nevertheless. It is highly recommended in any event because vanilla shadowdancer is largely unremarkable comparatively.
+
 ## Notes for users & issues
 
 - Using **CTRL+R** on the shadowdancer will bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within the cooldown's duration seconds, the effect that returns the ability to you will be cancelled. This also applies to other abilities that have a cooldown, such as the summoned shadow's abilities of Shadow Swap or See Invisibility. CTRL+R is harmless outside of that. Be cautious however whenever a spell mentions having a "cooldown" or being able to use "once per x rounds or turns". If it bugs out, and you don't have a backup, you will have to re-add those abilities with NearInfinity, or EEKeeper (latter is not recommended).

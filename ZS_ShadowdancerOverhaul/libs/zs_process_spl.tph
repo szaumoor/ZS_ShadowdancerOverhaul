@@ -141,17 +141,17 @@ COPY_EXISTING ~ZS#SDH10.SPL~ ~override~ // shades
 COPY_EXISTING ~ZS#SDH11.SPL~ ~override~ // deep shades
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@2108) END
 
-COPY_EXISTING ~ZS#SDH12.SPL~ ~override~ // Shadow Dance
+COPY_EXISTING ~ZS#SDH12.SPL~ ~override~ // shadow Dance
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2120) ref_desc = RESOLVE_STR_REF(@2121) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF(@2122) END
 
-COPY_EXISTING ~ZSSDH14B.SPL~ ~override~ // Shadowstrike
+COPY_EXISTING ~ZSSDH14B.SPL~ ~override~ // shadowstrike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
 
-COPY_EXISTING ~ZSSDH14J.SPL~ ~override~ // ennervating
+COPY_EXISTING ~ZSSDH14J.SPL~ ~override~ // enervating
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@134) END
 
-COPY_EXISTING ~ZSSDH14C.SPL~ ~override~ // shadowchill
+COPY_EXISTING ~ZSSDH14C.SPL~ ~override~ // chilling
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@133) END
 
 COPY_EXISTING ~ZSSDH14H.SPL~ ~override~ // beshadow
@@ -293,14 +293,12 @@ COPY_EXISTING_REGEXP ~^ZS#SDS0[4-9]\.cre$~ ~override~ // Shadow
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 COPY_EXISTING_REGEXP ~^ZS#SDS1[0-1]\.cre$~ ~override~ // Shadow
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@251)
 COPY_EXISTING_REGEXP ~^ZS#SDS1[2-9]\.cre$~ ~override~ // Greater Shadow
@@ -308,7 +306,6 @@ COPY_EXISTING_REGEXP ~^ZS#SDS1[2-9]\.cre$~ ~override~ // Greater Shadow
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@252)
 COPY_EXISTING_REGEXP ~^ZS#SDS2[0-7]\.cre$~ ~override~ // Shadowlord
@@ -316,7 +313,6 @@ COPY_EXISTING_REGEXP ~^ZS#SDS2[0-7]\.cre$~ ~override~ // Shadowlord
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@253)
 COPY_EXISTING_REGEXP ~^ZS#SDS2[89]\.cre$~ ~override~ // Greater shadowlord
@@ -324,14 +320,12 @@ COPY_EXISTING_REGEXP ~^ZS#SDS2[89]\.cre$~ ~override~ // Greater shadowlord
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 COPY_EXISTING_REGEXP ~^ZS#SDS3[0-5]\.cre$~ ~override~ // Greater shadowlord
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@254)
 COPY_EXISTING_REGEXP ~^ZS#SDS3[68]\.cre$~ ~override~ // Shadowhaunt
@@ -339,7 +333,6 @@ COPY_EXISTING_REGEXP ~^ZS#SDS3[68]\.cre$~ ~override~ // Shadowhaunt
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
 
 COPY_EXISTING ~ZS#SDS40.CRE~ ~override~ // Shadowhaunt
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
@@ -373,9 +366,9 @@ COPY_EXISTING ~ZSSDSW8D.SPL~ ~override~ // Shadow Weapon
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
 
 ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
-  PRINT "Patching Kukri of the Eclipse in Royal Protector's Item Pack"
-  OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
-  OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
-  COPY_EXISTING ~ZSIPKRE0.itm~ ~override~
-    LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
+    PRINT "Patching Kukri of the Eclipse in Royal Protector's Item Pack"
+    OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
+    OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
+    COPY_EXISTING ~ZSIPKRE0.itm~ ~override~
+        LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
 END
