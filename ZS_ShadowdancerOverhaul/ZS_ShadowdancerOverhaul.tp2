@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "1.2.0"
+VERSION "1.2.1"
 README ~%MOD_FOLDER%/README.md~
 AUTO_EVAL_STRINGS
 ASK_EVERY_COMPONENT
@@ -28,28 +28,22 @@ LANGUAGE
 BEGIN @1000 DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1003 DESIGNATED 300 // THAC0 TWEAK THIEVES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1004 DESIGNATED 400 // THAC0 TWEAK BARDS
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM TWEAK
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1010 DESIGNATED 5001 // RR COMPATIBILITY FOR VANILLA SD
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1002 DESIGNATED 5002 // SHADOWDANCER VANILLA FIXES
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @1011 DESIGNATED 5003 // SIMULACRUM FIXES FOR 2.6.6
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 FORBID_COMPONENT ~ZS_ShadowdancerOverhaul.tp2~ ~100~ @10002
