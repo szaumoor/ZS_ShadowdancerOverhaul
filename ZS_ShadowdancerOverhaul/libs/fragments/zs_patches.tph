@@ -29,8 +29,13 @@ END
 ACTION_IF MOD_IS_INSTALLED ~Setup-Fade.tp2~ "93" BEGIN
     PRINT "Patching Fade NPC..."
     COPY_EXISTING ~E3FADE13.cre~ ~override~
+                  ~E3FADE25.cre~ ~override~
         WRITE_SHORT 0x244 ((kit_id >> 16) & 0xFFFF)
         WRITE_SHORT 0x246 (kit_id & 0xFFFF)
 
+        WRITE_BYTE 0x45 45
+        WRITE_BYTE 0x67 65
+        WRITE_BYTE 0x68 45
+        WRITE_BYTE 0x69 65
 END
 
