@@ -112,7 +112,18 @@ COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
 COPY_EXISTING ~ZS#SDL4A.SPL~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
+PATCH_IF zs_sd_selfconcealment_dr < 1 BEGIN
+
+END
+
 COPY_EXISTING ~ZS#SDH01.SPL~ ~override~ // Self concealment
+    PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
+        PATCH_IF zs_sd_selfconcealment_dr < 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN
+            PATCH_FOR_EACH opcode IN 86 87 88 89 27 28 29 30 31 173 BEGIN
+                LPF ALTER_EFFECT INT_VAR match_opcode = opcode parameter1 = zs_sd_selfconcealment_dr END
+            END
+        END ELSE BEGIN FAIL "zs_sd_selfconcealment_dr must be between 0 and 10" END
+    END
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@15) ref_desc = RESOLVE_STR_REF(@16) END
 
 COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Artisan of shadows

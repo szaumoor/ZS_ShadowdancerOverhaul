@@ -1,0 +1,2 @@
+// Controls how much damage resistance is gained with each rank. You may change this if you think it's too much or too little, like for setups with conservative sources of DR. Values below 1 or outside of boundaries will make it default back to 5
+OUTER_SET zs_sd_selfconcealment_dr = "5"

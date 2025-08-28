@@ -2,13 +2,11 @@
 
 ## Fixes
 
-- Many readme and description improvements, typos fixed
+- Miscellaneous fixes in files
+- Removed needless files
 
 ## Modifications
 
-- Rewrite of many descriptions to various degrees
-- Renamed Artisan of Shadows to Shadow Artisan
-- Renamed Shadowchill Strike to Chilling Strike
-- Renamed Elusive Mind to Slippery Mind, as compatibility with ToF is no longer a concern I have at the moment.
-- Shadow Swap, the ability from your shade, now starts off with a cooldown of 2 turns, instead of 5, and the cooldown is reduced by 4 rounds with each Shade tier, down to 4 rounds when Nighthaunt tier is reached.
-- Compatibility with Pits of Despair (ongoing) added. Nephetel is updated to use my kit instead of the vanilla shadowdancer.
+- Added compatibility for Fade NPC, if the Shadowdancer component is installed. She will use my kit
+- Changed the implementation of the instances of omnidirectional backstabbing (a.k.a. face-stabbing) to use a much cleaner and leaner approach, which should avoid any and all potential issues with the previous implementation using timers. Instances of this include Shadowstep and Shadow Artisan HLAs
+- Added a config option to change how much damage resistance is gained through self concealment. Valid values are 1-10 (3-30 with three ranks). Default is 5.

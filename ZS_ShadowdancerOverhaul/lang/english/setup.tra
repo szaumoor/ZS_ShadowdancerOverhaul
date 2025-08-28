@@ -156,7 +156,7 @@ During this time, the critical hit chances are 5% higher. None of these effects 
 
 @15 = ~Self-Concealment~
 @16 = ~Self-Concealment
-Your essence merges further with the shadows, granting you a permanent +5% resistance to all damage types and a +1 bonus to Armor Class. This ability can be selected up to three times.
+Your essence merges further with the shadows, granting you a permanent +%zs_sd_selfconcealment_dr%% resistance to all damage types and a +1 bonus to Armor Class. This ability can be selected up to three times.
 
 Requirements: Shadowdancer only~
 
