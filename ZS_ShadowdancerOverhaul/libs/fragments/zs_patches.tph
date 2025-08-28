@@ -39,3 +39,68 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-Fade.tp2~ "93" BEGIN
         WRITE_BYTE 0x69 65
 END
 
+ACTION_IF GAME_IS "bg2ee eet" AND MOD_IS_INSTALLED ~A7-ConvenientEENPCs.tp2~ "663" BEGIN
+
+    COPY_EXISTING_REGEXP ~^ohhex[0-9]+\.cre$~ ~override~
+       WRITE_SHORT 0x244 ((kit_id >> 16) & 0xFFFF)
+       WRITE_SHORT 0x246 (kit_id & 0xFFFF)
+    BUT_ONLY
+
+
+    COPY_EXISTING ~ohhex8.cre~ ~override~
+        WRITE_BYTE 0x45 30
+        WRITE_BYTE 0x64 10
+        WRITE_BYTE 0x67 45
+        WRITE_BYTE 0x68 20
+        WRITE_BYTE 0x69 45
+        WRITE_BYTE 0x6a 10
+
+    COPY_EXISTING ~ohhex9.cre~ ~override~
+        WRITE_BYTE 0x45 30
+        WRITE_BYTE 0x64 10
+        WRITE_BYTE 0x67 50
+        WRITE_BYTE 0x68 25
+        WRITE_BYTE 0x69 50
+        WRITE_BYTE 0x6a 10
+
+    COPY_EXISTING ~ohhex10.cre~ ~override~
+        WRITE_BYTE 0x45 30
+        WRITE_BYTE 0x64 10
+        WRITE_BYTE 0x67 55
+        WRITE_BYTE 0x68 30
+        WRITE_BYTE 0x69 55
+        WRITE_BYTE 0x6a 10
+
+    COPY_EXISTING ~ohhex11.cre~ ~override~
+        WRITE_BYTE 0x45 30
+        WRITE_BYTE 0x64 10
+        WRITE_BYTE 0x67 60
+        WRITE_BYTE 0x68 30
+        WRITE_BYTE 0x69 60
+        WRITE_BYTE 0x6a 15
+
+    COPY_EXISTING ~ohhex13.cre~ ~override~
+        WRITE_BYTE 0x45 30
+        WRITE_BYTE 0x64 20
+        WRITE_BYTE 0x67 70
+        WRITE_BYTE 0x68 30
+        WRITE_BYTE 0x69 70
+        WRITE_BYTE 0x6a 15
+
+    COPY_EXISTING ~ohhex15.cre~ ~override~
+        WRITE_BYTE 0x45 40
+        WRITE_BYTE 0x64 25
+        WRITE_BYTE 0x67 70
+        WRITE_BYTE 0x68 40
+        WRITE_BYTE 0x69 70
+        WRITE_BYTE 0x6a 20
+
+    COPY_EXISTING ~ohhex25.cre~ ~override~
+        WRITE_BYTE 0x45 70
+        WRITE_BYTE 0x64 50
+        WRITE_BYTE 0x67 90
+        WRITE_BYTE 0x68 70
+        WRITE_BYTE 0x69 90
+        WRITE_BYTE 0x6a 45
+
+END
