@@ -1,0 +1,10 @@
+ACTION_IF MOD_IS_INSTALLED ~Vienxay.tp2~ ~0~ BEGIN
+
+
+END
+
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-SkitiaNPCs.tp2~ ~0~ BEGIN
+
+
+END

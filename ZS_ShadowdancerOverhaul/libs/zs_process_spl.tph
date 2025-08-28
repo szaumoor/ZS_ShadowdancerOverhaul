@@ -112,10 +112,6 @@ COPY_EXISTING ~ZS#SDL3A.SPL~ ~override~ // Shadow Illusion
 COPY_EXISTING ~ZS#SDL4A.SPL~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
-PATCH_IF zs_sd_selfconcealment_dr < 1 BEGIN
-
-END
-
 COPY_EXISTING ~ZS#SDH01.SPL~ ~override~ // Self concealment
     PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
         PATCH_IF zs_sd_selfconcealment_dr < 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN

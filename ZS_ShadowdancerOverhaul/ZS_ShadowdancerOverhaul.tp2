@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
-VERSION "1.2.1"
+VERSION "1.2.2"
 README ~%MOD_FOLDER%/README.md~
 AUTO_EVAL_STRINGS
 ASK_EVERY_COMPONENT
@@ -47,3 +47,7 @@ REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 BEGIN @1011 DESIGNATED 5003 // SIMULACRUM FIXES FOR 2.6.6
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 FORBID_COMPONENT ~ZS_ShadowdancerOverhaul.tp2~ ~100~ @10002
+
+// BEGIN @1020 DESIGNATED 5004 // VIENXAY TWEAK
+// REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @10000
+// REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
