@@ -49,7 +49,7 @@ Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
 @301 = ~Blink~
 @3 = ~Shadowstep~
 @4 = ~Shadowstep
-This spell can be cast in two ways: Planeshift or Blink. The shadowdancer chooses which version to use at the moment of casting.
+This spell can be cast in two ways: Planeshift or Blink. The shadowdancer chooses which version to use at the moment of the casting.
 
 Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (with each additional use further increasing speed by a factor of 1). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but can move freely for tactical positioning.
 
@@ -64,7 +64,9 @@ Upon returning to the Prime Material Plane, the shadowdancer gains the following
 
 These benefits are consumed after the first successful attack (a hit that is not blocked by weapon immunities) following shadowstep. For the remainder of the effect's duration, the shadowdancer retains a +6 bonus to saving throws and Armor Class.
 
-Blink: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.~
+Blink: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
+
+This spell does not break the user out of invisibility.~
 
 @5 = ~Shadow Illusion~
 @6 = ~Shadow Illusion
@@ -362,7 +364,7 @@ This ability has no effect if used on a non-ally or on the shade itself.~
 @1011 = ~Fix bugged Simulacrum effect in version 2.6.6 (can't detect traps or hide)~
 // @1020 = ~Tweak Vienxay's shadowmage kit to adapt to and incorporate elements from this kit~
 // END INSTALLER TEXT
-@1030 = ~Add new Monk Kit: Way of the Shadow Monk (Shadow Monk)~
+@1030 = ~Add new Monk Kit: Way of Shadow Monk (Shadow Monk)~
 
 
 // ITMS
@@ -390,7 +392,7 @@ The shaman slips into a space between the spirit world and the material plane, r
 @10002 = ~Fix is already included in the main component~
 @10003 = ~This component requires the Shadowdancer Overhaul component~
 
-@25000 = ~The Order of the Dark Moon is a secretive monastic order that follows the teachings of the dark goddess Shar. Monks of the Dark Moon use physical prowess, dark magic, and many different forms of deception to mask their activities and strike with deadly precision.
+@25000 = ~WAY OF SHADOW MONK: Also known as shadow monks and shadowdancers, these monks' particular training allows them to weave the magic of shadows and illusions to befuddle, hide, and deceive their foes. Despite their affinity with darkness, it does not align them necessarily with evil. To them, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
 
 Advantages:
 – Infravision
@@ -411,7 +413,7 @@ SHADOW FIST: When this ability is activated, the monk's fists become wreathed in
 
 – May cast Shadow Evade once per day, gaining one use at level 4, and then again at levels 8 and 12.
 
-SHADOW EVADE: The shadow monk conceals <PRO_HIMHER>self in shadowstuff for 5 rounds, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and 15% universal damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each new use adds 5% to its damage resistance.
+SHADOW EVADE: The shadow monk conceals <PRO_HIMHER>self in shadowstuff for 5 rounds, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +1 bonus to all Saving Throws, and 15% universal damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each new use adds 5% to its damage resistance.
 
 – May cast Shadow Conjuration once per day starting at level 6, with additional uses gained at levels 9 and 12.
 
@@ -428,15 +430,19 @@ Disadvantages:
 – May not summon a shadow companion, unlike other shadowdancers
 – May not have access to the Hardiness or Shadow Twin High-Level Abilities~
 
+@1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you've spent your childhood yearning for a life cloaked in shadows and secrecy. While other children played at knights and dragons, you danced unseen through the quiet halls of Candlekeep, imagining yourself a phantom among the blind and complacent. The ambling, preoccupied monks have often played the role of secret lords of Waterdeep in your mind, their purses tempting tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, though rarely with more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you've found little satisfaction in pilfering from your caretakers. Instead, your heart yearns for a grander stage—one where your steps vanish in silence and your talents can truly flourish in the dark.~
+
+@25001 = ~Your youth was shaped by two major influences: your foster father Gorion and a group of monks in service to Mystra who spent several years in Candlekeep. While Gorion worked to grow your intelligence and kindness, the Mystran monks helped you develop the innate abilities to control shadow magic. After the monks departed, you adopted and continued practicing their teachings, and can now rightfully call yourself a monk skilled in the Shadow Ways. While you treasure the years spent in Candlekeep, you feel you must pursue your own destiny in the haven that the shadows provide, to attain spiritual enlightenment.~
+
 @25015 = ~Self-Concealment~
 @25016 = ~Self-Concealment
 Your essence merges further with the shadows, granting you a permanent +10% resistance to all damage types.
 
-Requirements: Way of the Shadow Monk only~
+Requirements: Way of Shadow Monk only~
 
 @25003 = ~Shadowstep~
 @25004 = ~Shadowstep
-This spell can be cast in two ways: Planeshift or Blink. The shadow monk chooses which version to use at the moment of casting.
+This spell can be cast in two ways: Planeshift or Blink. The shadow monk chooses which version to use at the moment of the casting.
 
 Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2. While in the Shadow Plane, the shadow monk is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but can move freely for tactical positioning.
 
@@ -450,4 +456,6 @@ Upon returning to the Prime Material Plane, the shadow monk gains the following 
 
 These benefits are consumed after the first successful attack (a hit that is not blocked by weapon immunities) following shadowstep. For the remainder of the effect's duration, the shadow monk retains a +6 bonus to saving throws and Armor Class.
 
-Blink: Alternatively, the shadow monk may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.~
+Blink: Alternatively, the shadow monk may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
+
+This spell does not break the user out of invisibility.~

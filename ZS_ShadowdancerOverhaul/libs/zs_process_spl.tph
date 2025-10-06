@@ -114,15 +114,15 @@ COPY_EXISTING ~ZS#SDL4A.SPL~ ~override~ // Summon Shade
 
 COPY_EXISTING ~ZS#SDH01.SPL~ ~override~ // Self concealment
     PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
-        PATCH_IF zs_sd_selfconcealment_dr < 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN
+        PATCH_IF zs_sd_selfconcealment_dr > 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN
             PATCH_FOR_EACH opcode IN 86 87 88 89 27 28 29 30 31 173 BEGIN
                 LPF ALTER_EFFECT INT_VAR match_opcode = opcode parameter1 = zs_sd_selfconcealment_dr END
             END
-        END ELSE BEGIN FAIL "zs_sd_selfconcealment_dr must be between 0 and 10" END
+        END ELSE BEGIN FAIL "zs_sd_selfconcealment_dr must be higher than 0 and lower or equal to 10" END
     END
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@15) ref_desc = RESOLVE_STR_REF(@16) END
 
-COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Artisan of shadows
+COPY_EXISTING ~ZS#SDH02.SPL~ ~override~ // Shadow artisan
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@13) ref_desc = RESOLVE_STR_REF(@14) END
 
 ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/ZSSDFB0.PRO~
@@ -220,7 +220,7 @@ BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~ZS#SDL5A.SPL~ ~override~ // SHADOW EVADE
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@25) ref_desc = RESOLVE_STR_REF(@26) END
-    LPF ALTER_EFFECT_EX INT_VAR duration = 30 STR_VAR match_duration_ex = "(o_duration < 30)" END
+    LPF ALTER_EFFECT_EX INT_VAR duration = 30 STR_VAR match_duration_ex = "(o_duration = 18 OR o_duration = 24)" END
 
 COPY_EXISTING ~ZS#SDH08.SPL~ ~override~ // SHADOW EVADE IMPROVE HLA
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@27) ref_desc = RESOLVE_STR_REF(@28) END
@@ -374,9 +374,12 @@ COPY_EXISTING ~ZSSDSW8D.SPL~ ~override~ // Shadow Weapon
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
 
 ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
+
     PRINT "Patching Kukri of the Eclipse in Royal Protector's Item Pack"
     OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
     OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
     COPY_EXISTING ~ZSIPKRE0.itm~ ~override~
+                  ~ZSIPKRE2.itm~ ~override~
         LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
+
 END

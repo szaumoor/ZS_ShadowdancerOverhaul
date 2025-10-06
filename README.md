@@ -28,7 +28,7 @@ So here's what the mod changes:
 - **Shadowstep**: You have one use of this immediately at level 1 and get another one at level 3 and every second level henceforth (20 uses at level 40 -- 25 at level 50 if there's no spell cap). This spell is cast instantly, cannot be interrupted and does not take up your action per round. It allows you to select two flavors when cast:
   - **Planeshift:** This ability is essentially vanilla **Shadowstep**. It offers several advantages, for a limited time for its duration, and 1-3 seconds after it:
     - You **move faster** as you level up, so you can maneuver for whatever purpose more effectively.
-    - You are able to **ignore effects that can be saved against briefly** (this is interpreted as dodging, which shadowdancers would be masters at).
+    - You are able to **ignore effects that can be saved against briefly** (this is interpreted as evasion, which shadowdancers would be masters at).
     - All attempts at casting spells will fail until the duration of this spell is over.
     - You become **invisible** immediately and **cannot have your invisibility detected**
     - +1 Luck
@@ -95,26 +95,15 @@ So here's what the mod changes:
 
 Also, it changes the **Rod of Shadowstep** such that it uses the new Shadowstep effects, it's usable **3 times per day**, and the usage is completely instant, unlike other consumable effects. It does not disappear forever when drained, it recharges after a rest.
 
-## 2. Streamline THAC0 for Thieves
-
-This component streamlines the THAC0 for Thieves and allows them to attain the more reasonable THAC0 of 6 that priests can attain. Essentially, every even THAC0 level lasts only for one level, and uneven ones persist for 2 levels. 20, 19, 19, 18, 17, 17, 16, 15, 15... This is recommended unless you're using another mod that does the same.
-
-This does the same as the similar component in ZSTweaks. Prefer that one.
-
-## 3. Improve the THAC0 of Bards too to match the changes to Thieves
-
-This simply matches the THAC0 progression of Bards to that of the Thieves as per the previous component.
-This does the same as the similar component in ZSTweaks. Prefer that one.
-
-## 4. Make Shaman Spirit Form mirror the benefits of Shadow Form
+## 2. Make Shaman Spirit Form mirror the benefits of Shadow Form
 
 This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
 
-## 5. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
+## 3. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
 
 This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, if RR is installed first (crucial). RR does not support shadowdancers, and this ensures the new HLAs are provided. The overhauled Shadowdancer does not take advantage of RR, this component exists only for the purpose of those that are not interested in the overhaul, just on making the kit "feel included" in RR.
 
-## 6. Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)
+## 4. Fix bugged Simulacrum effect in BG v.2.6.6 (can't detect traps or hide)
 
 This fixes a fairly nasty bug that the latest update from the ages of yore for Baldur's Gate (and probably IWDEE, not sure) introduced: simulacrum clones can't use Find Traps of Hide in the Shadows. This is already included in the main component and exists only for those that want to fix this without installing the kit overhaul.
 

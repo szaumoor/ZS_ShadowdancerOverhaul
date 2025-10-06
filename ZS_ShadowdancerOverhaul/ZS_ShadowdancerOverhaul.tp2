@@ -1,5 +1,5 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
-SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
+SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/ or at royalprotector@keemail.me"
 VERSION "1.2.2"
 README ~%MOD_FOLDER%/README.md~
 AUTO_EVAL_STRINGS
@@ -21,20 +21,14 @@ ALWAYS
     INCLUDE ~%MOD_FOLDER%/libs/components/zs_sd_comp_%COMPONENT_NUMBER%.tph~
 END
 LANGUAGE
-"English"
-"english"
-"ZS_ShadowdancerOverhaul/lang/english/setup.tra"
+	"English"
+	"english"
+	"ZS_ShadowdancerOverhaul/lang/english/setup.tra"
 
 BEGIN @1000 DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 
-BEGIN @1003 DESIGNATED 300 // THAC0 TWEAK THIEVES
-REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-
-BEGIN @1004 DESIGNATED 400 // THAC0 TWEAK BARDS
-REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-
-BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM TWEAK
+BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM CONSISTENCY TWEAK
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
 REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
 
