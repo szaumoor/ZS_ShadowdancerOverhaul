@@ -19,7 +19,7 @@ COPY_EXISTING ~LUZSSD.2DA~ ~override~
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artisan
     LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL919~ ability=~GA_ZSSDH14B~ num_allowed=~99~ END // shadowstrike
     LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL938~ ability=~GA_SPCL938~ num_allowed=~99~ prerequisite=~AP_ZS#SDH08~ END // replace Shadow Form to add the prerequisite
-    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shadow artist
+    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shades hla
     LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL914~ END // remove improved evasion
     LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL918~ END // remove alchemy
     LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_ZS#SDH12~ END // shadow dance

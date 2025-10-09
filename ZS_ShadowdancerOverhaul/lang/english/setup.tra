@@ -390,9 +390,11 @@ The shaman slips into a space between the spirit world and the material plane, r
 @10000 = ~This component is only allowed in BGEE, BG2EE, IWDEE and EET~
 @10001 = ~This component is only allowed in BGEE, BG2EE and EET~
 @10002 = ~Fix is already included in the main component~
-@10003 = ~This component requires the Shadowdancer Overhaul component~
+@10003 = ~This component requires the Shadowdancer Overhaul main component~
 
-@25000 = ~WAY OF SHADOW MONK: Also known as shadow monks and shadowdancers, these monks' particular training allows them to weave the magic of shadows and illusions to befuddle, hide, and deceive their foes. Despite their affinity with darkness, it does not align them necessarily with evil. To them, darkness is merely a tool, devoid of the moral judgments typically imposed by others.
+@24998 = ~way of shadow monk~
+@24999 = ~Way of Shadow Monk~
+@25000 = ~WAY OF SHADOW MONK: Also called shadow monks, shadowdancers, and in some places, ninjas or shinobis, these practitioners weave shadow and illusion to conceal, mislead, and strike unseen. Unbound by strict orders or dogma, they regard darkness as a neutral instrument rather than a mark of evil, shaping it with discipline and subtlety to confound foes and slip beyond ordinary sight.
 
 Advantages:
 – Infravision

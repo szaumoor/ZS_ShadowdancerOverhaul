@@ -1,0 +1,9 @@
+PRINT "Copying all needed assets..."
+INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_sd_asset_copy.tph~
+PRINT "Inserting the kit..."
+INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_kit_insertion.tph~
+INCLUDE "%MOD_FOLDER%/libs/zs_process_spl.tph"
+PRINT "Removing the original shadowdancer from the kit selection in the character creation screen..."
+INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_remove_sd.tph~
+PRINT "Done."
+INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_patches.tph~
