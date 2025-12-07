@@ -2,6 +2,7 @@
 
 Advantages:
 – Infravision, even if not normally available to the selected race
+– Immunity to magical Darkness spells
 – Stealthy: +20 points to Hide in the Shadows and Move Silently at level 1, improved by +5 at every third level thereafter.
 – Natural Evasion: +2 bonus to Armor Class (+4 vs. missile), movement speed, and saves vs. Breath.
 – Slippery Mind: The shadowdancer gains a +1 bonus to saving throws against Spells, Wands, and all Enchantment and Illusion effects. This bonus increases by +1 at level 12 and every 12 levels after.
@@ -11,6 +12,10 @@ Advantages:
 SHADOWSTEP (Planeshift): Step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells, but <PRO_HESHE> may move at will during this time. Upon returning to the Prime, <PRO_HESHE> gains temporary bonuses to <PRO_HISHER> combat effectiveness, including the ability to backstab from any angle. These benefits scale with the shadowdancer's level.
 
 SHADOWSTEP (Blink): An alternative to the planeshift version, the shadowdancer may choose instead to instantly teleport to a place within sight, which applies all the benefits of the planeshift version.
+
+– May cast Shadow Leap once every three rounds.
+
+SHADOW LEAP: This is a lesser version of Shadowstep that allows the shadowdancer to teleport a short distance. Unlike Shadowstep, it grants no other benefits and requires concentration to perform it, but it can be cast at will once every three rounds and does not interrupt invisibility. The shadowdancer may use this, for example, to tatically reposition while invisible quickly without spending a Shadowstep use.
 
 – May cast Shadow Illusion once per day, gaining one use at level 3, 12, and 20.
 
@@ -132,11 +137,12 @@ After being released, living beings resurface feeling weakened for 1 turn, suffe
 
 These penalties cannot reduce Strength or Dexterity below 1.~
 
-@13 = ~Shadow Artisan~
-@14 = ~Shadow Artisan
+@13 = ~Shadow Weaver~
+@14 = ~Shadow Weaver
 Your mastery over the elusive power of shadows has now reached incredible heights. As a testament to your profound connection with it, you gain the following abilities:
 
 – Immunity to blindness
+– Casting, movement, and weapon speed factor are permanently increased by 2
 – Backstabs no longer require you to be behind the target to be successful
 – For two rounds after landing a critical hit, the target loses their immunity to backstabs, if they had it, and the shadowdancer gains a 5% bonus to critical hit chances and cannot critically miss (does not stack)
 
@@ -150,7 +156,7 @@ The shadowdancer may choose to infuse their backstabs with a bit of shadow magic
 – Chilling Strike: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal 2d4+1 cold and 2d4+1 magic damage.
 – Enervating Strike: Backstabs halve the victim's Strength for 5 rounds if they fail a save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
 
-During this time, the critical hit chances are 5% higher. None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.~
+During this time, the critical hit chances are +5% greater, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance of removing their immunity for 10 seconds (this may not happen more than once every 5 rounds). None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.~
 
 @132 = ~Beshadowed Strike~
 @133 = ~Chilling Strike~
@@ -234,11 +240,11 @@ This ability cannot be dispelled or Breached, although the invisibility effect c
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-The shadowdancer cloaks <PRO_HIMHER>self in shadows, making <PRO_HIMHER> harder to hit. This grants a +4 bonus to Armor Class, +2 to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each additional use of this ability increases damage resistance by 5% (up to a maximum of 25%) and extends the duration by 1 round (up to a maximum of 5 rounds). This effect also provides immunity to Shadow Fireball and Delayed Blast Shadow Fireball spells accessed through Shadow Conjurations.~
+For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadows, making <PRO_HIMHER> harder to hit. This grants a +4 bonus to Armor Class, +2 to all Saving Throws, and 15% damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each additional use of this ability increases damage resistance by 5% (up to a maximum of 25%). This effect also provides immunity to Shadow Fireball and Delayed Blast Shadow Fireball spells accessed through Shadow Conjurations.~
 
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
-The shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form. In this new form, damage resistance increases to 50%, the invisibility becomes Improved, the shadowdancer regenerates 1 HP per second, and becomes immune to all divination spells during the 5 rounds it lasts.~
+The shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form. In this new form, damage resistance increases to 50%, the invisibility becomes Improved, the shadowdancer regenerates 1 Hit Point per second, and becomes immune to all divination spells during the 5 rounds it lasts.~
 
 @50 = ~Weakened by Shadow Maze~
 
@@ -284,9 +290,9 @@ Teleport to any point within the field of vision instantly and become invisible 
 
 @208 = ~Beshadow Body~
 @209 = ~Beshadow Body
-The shade envelops itself in shadow magic, greatly increasing its defenses for 2 rounds. While this effect is active, the shade gains +4 Armor Class, +50% fire resistance, +50% magic damage resistance, and all of its existing resistances are increased by 50% of their current value. The shade also becomes Improved Invisible and regenerates 1 HP per second.
+The shade envelops itself in shadow magic, greatly increasing its defenses for 2 rounds. While this effect is active, the shade gains +4 Armor Class, +50% fire resistance, +50% magic damage resistance, and all of its existing resistances are increased by 50% of their current value. The shade also becomes Improved Invisible and regenerates 1 Hit Point per second.
 
-Starting at level 16, this ability also protects the shade from the first physical attack it receives, as if under the effects of Stoneskin for 4 rounds.
+Starting at level 16, this ability also protects the shade from the first physical attack it takes, as if under the effects of Stoneskin for 4 rounds.
 
 This ability can be used once every 2 turns. The cooldown is reduced by 5 rounds at level 15, by 2 rounds at level 19, and by 3 rounds at level 24.~
 @20209 = ~Beshadow Body is available for use.~
@@ -356,12 +362,8 @@ This ability has no effect if used on a non-ally or on the shade itself.~
 
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer Kit~
-@1002 = ~Fix vanilla shadowdancer bugs (wrong non-proficient penalty, wrong Shadow Twin duration)~
-@1003 = ~Make thief THAC0 progression streamlimed, and improve up to 6, like clerics (highly recommended for better rogue gameplay)~
-@1004 = ~Improve the THAC0 of Bards too to match the changes to Thieves~
 @1005 = ~Make Shaman Spirit Form mirror the benefits of Shadow Form~
 @1010 = ~Allow vanilla shadowdancers to take advantage of Rogue Rebalancing's HLA overhaul~
-@1011 = ~Fix bugged Simulacrum effect in version 2.6.6 (can't detect traps or hide)~
 // @1020 = ~Tweak Vienxay's shadowmage kit to adapt to and incorporate elements from this kit~
 // END INSTALLER TEXT
 @1030 = ~Add new Monk Kit: Way of Shadow Monk (Shadow Monk)~

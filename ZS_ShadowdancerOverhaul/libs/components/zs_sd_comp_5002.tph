@@ -1,9 +1,0 @@
-ACTION_IF FILE_EXISTS_IN_GAME ~SPCL936.SPL~ AND !(MOD_IS_INSTALLED ~ZS_ShadowdancerOverhaul.tp2~ ~100~) BEGIN
-    COPY_EXISTING ~SPCL936.spl~ ~override~ // Shadow Twin, fixed wrong duration
-        LPF ALTER_EFFECT INT_VAR silent= match_duration = 60 duration = 120 END
-    BUT_ONLY
-END ELSE BEGIN
-    PRINT "Shadow twin doesn't exist in game or fix was installed already through main component"
-END
-
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_fix_sd_prof_penalty.tph~

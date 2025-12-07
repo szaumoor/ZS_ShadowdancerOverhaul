@@ -1,3 +1,0 @@
-COPY_EXISTING ~SIMULACR.spl~ ~override~ // fixes issue in 2.6.6 of simulacra's disabled Thief buttons
-    LPF DELETE_EFFECT INT_VAR match_opcode=144 END
-BUT_ONLY
