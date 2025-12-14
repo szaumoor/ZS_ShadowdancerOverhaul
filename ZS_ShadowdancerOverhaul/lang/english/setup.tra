@@ -13,10 +13,7 @@ SHADOWSTEP (Planeshift): Step into the Shadow Plane for about 7 seconds, moving 
 
 SHADOWSTEP (Blink): An alternative to the planeshift version, the shadowdancer may choose instead to instantly teleport to a place within sight, which applies all the benefits of the planeshift version.
 
-– May cast Shadow Leap once every three rounds.
-
-SHADOW LEAP: This is a lesser version of Shadowstep that allows the shadowdancer to teleport a short distance. Unlike Shadowstep, it grants no other benefits and requires concentration to perform it, but it can be cast at will once every three rounds and does not interrupt invisibility. The shadowdancer may use this, for example, to tatically reposition while invisible quickly without spending a Shadowstep use.
-
+– May cast Shadow Leap once every three rounds. This is a lesser version of Shadowstep that allows the shadowdancer to teleport a short distance while granting subtle defensive and offensive bonuses for one round, and unlike Shadowstep, can be interrupted.
 – May cast Shadow Illusion once per day, gaining one use at level 3, 12, and 20.
 
 SHADOW ILLUSION: Conjure shadowy illusions to confuse enemies. Unless a save vs. Spell is made, it causes one of the following: fear, berserk, blindness, or confusion for 1 round. For the next four rounds, enemies have a chance to resist these effects each round, but may still fall prey to them. During the full 5 rounds, affected enemies also lose immunity to backstabs, if they had it, and suffer a 25% spell failure. The spell improves with level but has no effect on creatures with very high intelligence, or those that innately see through illusions. It is not subject to Magic Resistance or dispelling effects but True Sight can remove it or prevent its effects from taking hold.
@@ -250,6 +247,19 @@ The shadowdancer's Shadow Evade ability is upgraded permanently to Shadow Form. 
 
 @60 = ~Shadow Twin
 This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the level at which the shadowdancer is currently on. It has all the abilities that the shadowdancer would have at that level. It also has 60% of the Hit Points of the shadowdancer. The duplicate is fully under the control of the shadowdancer. This ability may only used once every 2 turns, and attempts to cast it before this time will fail.~
+
+@70 = ~Shadow Leap~
+@71 = ~Shadow Leap
+This is a lesser version of Shadowstep that allows the shadowdancer to teleport a short distance. Unlike Shadowstep, it requires concentration to perform it, but it can be cast at will once every three rounds and does not interrupt invisibility. The shadowdancer may use this, for example, to tactically reposition while invisible quickly without spending a Shadowstep use. The following benefits are applied for 1 round:
+
+– THAC0: +1
+– Speed Factor: +3
+– Armor Class: +1
+– All saving throws: +1
+
+Note that after the casting, the shadowdancer requires one second of concentration to complete the teleportation and may not move for that duration.
+
+These benefits do not stack with themselves or with those granted by Shadowstep.~
 
 // END OF SHADOWDANCER SPELLS
 
