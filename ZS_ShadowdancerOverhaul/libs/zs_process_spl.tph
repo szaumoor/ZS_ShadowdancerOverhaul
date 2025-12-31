@@ -7,6 +7,7 @@ COPY_EXISTING ~zs#sdl1c.spl~ ~override~ // Shadowstep planeshift
     LPF ALTER_EFFECT INT_VAR match_opcode = 325 duration = 11 END
     LPF ALTER_EFFECT INT_VAR match_opcode = 66 duration = 11 END
     LPF ALTER_EFFECT INT_VAR match_opcode = 310 duration = 8 END
+    LPF ALTER_EFFECT INT_VAR power = 100 END
 
 COPY_EXISTING ~zs#sdl1h.spl~ ~override~ // Shadowstep blink
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@301) END
