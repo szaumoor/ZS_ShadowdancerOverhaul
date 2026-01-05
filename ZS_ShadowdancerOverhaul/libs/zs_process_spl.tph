@@ -7,6 +7,7 @@ COPY_EXISTING ~zs#sdl1c.spl~ ~override~ // Shadowstep planeshift
     LPF ALTER_EFFECT INT_VAR match_opcode = 325 duration = 11 END
     LPF ALTER_EFFECT INT_VAR match_opcode = 66 duration = 11 END
     LPF ALTER_EFFECT INT_VAR match_opcode = 310 duration = 8 END
+    LPF ALTER_EFFECT INT_VAR power = 100 END
 
 COPY_EXISTING ~zs#sdl1h.spl~ ~override~ // Shadowstep blink
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@301) END
@@ -157,9 +158,79 @@ COPY_EXISTING ~zs#sdh10.spl~ ~override~ // shades
 COPY_EXISTING ~zs#sdh11.spl~ ~override~ // deep shades
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@2108) END
 
-COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow Dance
+OUTER_SET spell_cloudburst               = IDS_OF_SYMBOL (spell CLERIC_CLOUDBURST)
+OUTER_SET spell_otilukes_freezing_sphere = IDS_OF_SYMBOL (spell WIZARD_OTILUKES_FREEZING_SPHERE)
+OUTER_SET spell_produce_fire             = IDS_OF_SYMBOL (spell CLERIC_PRODUCE_FIRE)
+OUTER_SET spell_shroud_of_flame          = IDS_OF_SYMBOL (spell WIZARD_SHROUD_OF_FLAME)
+OUTER_SET spell_smashing_wave            = IDS_OF_SYMBOL (spell CLERIC_SMASHING_WAVE)
+OUTER_SET spell_thorn_spray              = IDS_OF_SYMBOL (spell CLERIC_THORN_SPRAY)
+OUTER_SET spell_whirlwind                = IDS_OF_SYMBOL (spell CLERIC_WHIRLWIND)
+
+OUTER_SET spell_vitriolic_sphere         = IDS_OF_SYMBOL (spell WIZARD_VITRIOLIC_SPHERE)
+OUTER_SET spell_snillock_snowball_swarm  = IDS_OF_SYMBOL (spell WIZARD_SNILLOCS_SNOWBALL_SWARM)
+
+COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2120) ref_desc = RESOLVE_STR_REF(@2121) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF(@2122) END
+
+    PATCH_IF GAME_IS ~iwdee~ AND (MOD_IS_INSTALLED "TheWarOfBloomAndRot.tp2" "0" OR MOD_IS_INSTALLED "TheWarOfBloomAndRot.tp2" "1") BEGIN
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "l#mcbre" END // lava's brown breath weapon
+    END
+
+    PATCH_IF spell_cloudburst > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_CLOUDBURST" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_otilukes_freezing_sphere > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_OTILUKES_FREEZING_SPHERE" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_produce_fire > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_PRODUCE_FIRE" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_shroud_of_flame > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_SHROUD_OF_FLAME" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%b" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%c" END
+    END
+
+    PATCH_IF spell_smashing_wave > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_SMASHING_WAVE" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%a" END
+    END
+
+    PATCH_IF spell_thorn_spray > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_THORN_SPRAY" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_whirlwind > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_WHIRLWIND" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%a" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%b" END
+    END
+
+    PATCH_IF spell_vitriolic_sphere > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_VITRIOLIC_SPHERE" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%y" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%z" END
+    END
+
+    PATCH_IF spell_snillock_snowball_swarm > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_SNILLOCS_SNOWBALL_SWARM" RET spell_res END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%b" END
+        LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%c" END
+    END
+
 
 COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadowstrike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
@@ -233,7 +304,6 @@ BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~zs#sdl5a.spl~ ~override~ // SHADOW EVADE
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@25) ref_desc = RESOLVE_STR_REF(@26) END
-    LPF ALTER_EFFECT_EX INT_VAR duration = 30 STR_VAR match_duration_ex = "(o_duration = 18 OR o_duration = 24)" END
 
 COPY_EXISTING ~zs#sdh08.spl~ ~override~ // SHADOW EVADE IMPROVE HLA
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@27) ref_desc = RESOLVE_STR_REF(@28) END
