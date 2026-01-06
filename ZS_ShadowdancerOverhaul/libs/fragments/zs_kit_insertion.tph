@@ -1,7 +1,14 @@
+ACTION_IF GAME_IS "iwdee" BEGIN
+    OUTER_SPRINT bio @2
+END ELSE BEGIN
+    OUTER_SPRINT bio @1
+END
+
+
 LAF ADD_KIT_EX
     INT_VAR
         help       = RESOLVE_STR_REF(@0)
-        biography  = RESOLVE_STR_REF(@1)
+        biography  = RESOLVE_STR_REF(bio)
     STR_VAR
         kit_name   = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
