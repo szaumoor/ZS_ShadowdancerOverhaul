@@ -93,13 +93,6 @@ COPY_EXISTING ~zssdmsg4.spl~ ~override~ // gained shadow illusion for the first 
 COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shade
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
 
-COPY_EXISTING ~zs#sdl1p.spl~ ~override~
-              ~zs#sdl1q.spl~ ~override~
-              ~zs#sdl1r.spl~ ~override~
-              ~zs#sdl1s.spl~ ~override~
-              ~zs#sdl1t.spl~ ~override~
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@90) END
-
 COPY_EXISTING ~zs#sdl1m.spl~ ~override~ // Hide in plain sight
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@10010) END
 
