@@ -224,6 +224,10 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
         LPF CLONE_EFFECT STR_VAR match_resource = "spwi001" resource = "%spell_res%c" END
     END
 
+    PATCH_IF NOT GAME_IS "iwdee" BEGIN
+        LPF DELETE_EFFECT STR_VAR match_resource = "spin134" END
+    END
+
 
 COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadowstrike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
