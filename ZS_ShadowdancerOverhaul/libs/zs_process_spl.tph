@@ -17,6 +17,7 @@ COPY_EXISTING ~zs#sdl1h.spl~ ~override~ // Shadowstep blink
 
 COPY_EXISTING ~zsdleap0.spl~ ~override~ // Shadow leap
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@70) ref_desc = RESOLVE_STR_REF(@71) END
+    LPF ALTER_EFFECT INT_VAR check_headers=0 match_opcode = 139 parameter1 = RESOLVE_STR_REF(@7100) END
 
 // Tweak Rod of Shadowstep for consistency
 COPY_EXISTING ~ohdrod.itm~ ~override~ // Rod of Shadowstep
