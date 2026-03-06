@@ -229,7 +229,6 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
         LPF DELETE_EFFECT STR_VAR match_resource = "spin134" END
     END
 
-
 COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadowstrike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
 
@@ -241,6 +240,15 @@ COPY_EXISTING ~zssdh14c.spl~ ~override~ // chilling
 
 COPY_EXISTING ~zssdh14h.spl~ ~override~ // beshadow
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@132) END
+
+COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // stoneskin
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
+    LPF CLONE_HEADER INT_VAR level=16 STR_VAR match_icon = "spwi408b" END
+    LPF CLONE_HEADER INT_VAR match_level=16 level=20 STR_VAR match_icon = "spwi408b" END
+    LPF ALTER_EFFECT INT_VAR header=1 match_opcode = 218 parameter1=4 END
+    LPF ALTER_EFFECT INT_VAR header=2 match_opcode = 218 parameter1=5 END
+    LPF ALTER_EFFECT_EX INT_VAR duration = 1800 STR_VAR match_duration_ex = "(o_duration > 1800)" END
 
 ACTION_IF GAME_IS "bgee" BEGIN
 
@@ -255,9 +263,6 @@ ACTION_IF GAME_IS "bgee" BEGIN
 
     COPY_EXISTING ~zssdshdo.spl~ ~override~ // shadow door
         LPF ALTER_SPELL INT_VAR ref_name = 26496 END
-
-    COPY_EXISTING ~zssdstnk.spl~ ~override~ // stoneskin
-        LPF ALTER_SPELL INT_VAR ref_name = 25954 END
 
 END
 
@@ -417,13 +422,13 @@ COPY_EXISTING_REGEXP ~^zs#sds3[0-5]\.cre$~ ~override~ // Greater shadowlord
     END
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@254)
-COPY_EXISTING_REGEXP ~^zs#sds3[68]\.cre$~ ~override~ // Shadowhaunt
+COPY_EXISTING_REGEXP ~^zs#sds3[68]\.cre$~ ~override~ // Nighthaunt
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
 
-COPY_EXISTING ~zs#sds40.cre~ ~override~ // Shadowhaunt
+COPY_EXISTING ~zs#sds40.cre~ ~override~ // Nighthaunt
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
@@ -459,7 +464,7 @@ COPY_EXISTING ~zssdsw8d.spl~ ~override~ // Shadow Weapon
 
 ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
 
-    PRINT "Patching Kukri of the Eclipse in Royal Protector's Item Pack"
+    PRINT "Patching Kukri of the Eclipse in Kaelyn's Item Pack"
     OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
     OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
     COPY_EXISTING ~zsipkre0.itm~ ~override~

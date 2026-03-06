@@ -4,15 +4,15 @@ END ELSE BEGIN
     OUTER_SPRINT bio @1
 END
 
-
 LAF ADD_KIT_EX
     INT_VAR
         help       = RESOLVE_STR_REF(@0)
-        biography  = RESOLVE_STR_REF(bio)
+        biography  = RESOLVE_STR_REF("%bio%")
     STR_VAR
         kit_name   = ~ZS_SHADOWDANCER~
         source_kit = ~SHADOWDANCER~
         backstab   = ~1 2 2 2 2 3 3 3 3 4~
+        dualclas   = ~0 0 0 0 0 0~
         thiefskl   = ~40 15~
         clswpbon   = ~0 0 3~
         clab_path  = ~%MOD_FOLDER%/abilities/ZSSDCLAB.2da~
@@ -20,7 +20,7 @@ LAF ADD_KIT_EX
     RET kit_id
 END
 
-COPY_EXISTING ~LUZSSD.2DA~ ~override~
+COPY_EXISTING ~luzssd.2da~ ~override~
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH01~ num_allowed=~3~ END // self-concealment
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artisan
