@@ -102,22 +102,12 @@ The creature's Hit Dice (HD) are always one fewer than the shadowdancer's, up to
 @700000 = ~Summon Nighthaunt~
 @700001 = ~Summon Nighthaunt
 
-Summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include:
+Upgrade your shadow summon permanently. Now summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities.
 
-– Armor Class: +4
-– THAC0: +2
-– +10 HP (100 in total)
-– Magic Resistance: +5% (30% in total)
-– Strength and Dexterity gain a +1 bonus, whereas Intelligence gets a +3 bonus
-– Dexterity: +1
-– Intelligence: +3
-– Immunity to +1 weapons and Slow
-– Casting speed increases by 2
-– Deals more damage, absorbs more health, and has a slight chance of draining one or two levels on contact
-– May cast the arcane spells Ice Storm, Contagion, and Hold Monster once per summoning
-– May cast the unique ability Doom the Living once per summoning, which forces a living creature to die unless they save vs. Death at -2, causing minor magic damage and the effects of Doom if resisted
 
-The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.~
+The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.
+
+Requirements: Level 28, Shadowdancer only~
 
 @9 = ~Hide in plain sight~
 @90 = ~Failed to hide in plain sight~
