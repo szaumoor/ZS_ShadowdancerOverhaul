@@ -36,10 +36,10 @@ SHADOW CONJURATION: This skill allows the shadowdancer to draw various amounts o
 
 Disadvantages:
 – Alignment restricted to any non-lawful
-– Backstab multiplier uses the normal Thief progression, but it stops at 4x
+– Backstab multiplier uses the normal progression, but it stops at 4x
 – May only distribute 15 skill points per level (40 at level 1) among thieving skills
-– May not use the Set Snare ability or learn any High-Level Abilities that introduce traps
-– May not have access to the Alchemy and Scribe Scrolls High-Level Abilities
+– May not use the Set Snare ability or learn High-Level Abilities that introduce traps
+– May not access the Alchemy and Scribe Scrolls High-Level Abilities
 – May not dual-class~
 
 @1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you've spent your childhood yearning for a life cloaked in shadows and secrecy. While other children played at knights and dragons, you danced unseen through the quiet halls of Candlekeep, imagining yourself a phantom among the blind and complacent. The ambling, preoccupied monks have often played the role of secret lords of Waterdeep in your mind, their purses tempting tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, though rarely with more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you've found little satisfaction in pilfering from your caretakers. Instead, your heart yearns for a grander stage—one where your steps vanish in silence and your talents can truly flourish in the dark.~
@@ -197,7 +197,7 @@ This skill allow the shadowdancer to draw a lot of energy from the Demiplane of 
 
 SHADOW FIREBALL: An illusive version of the Fireball spell that deals a mix of fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer is immune to <PRO_HISHER> own Shadow Fireball.
 
-STONESKIN: Drawing from the shade, the shadowdancer emulates a lesser version of the arcane spell of the same name, completely covering <PRO_HIMHER> with a number layer of skins (up to 5) that protect them from physical attacks such as melee weapons and projectiles for 6 hours.
+STONESKIN: Drawing from the shade, the shadowdancer emulates a lesser shadow version of the arcane spell of the same name, completely covering <PRO_HIMHER> with 3 layers of skins (increased by 1 at levels 16 and 20) that protect them from physical attacks such as melee weapons and projectiles for 3 hours.
 
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door, which allows them to appear to step through it and disappear. In reality, <PRO_HESHE> has darted aside and can flee, totally invisible (as per the Improved Invisibility spell), for the spell's duration.
 
@@ -211,7 +211,7 @@ This skill allow the shadowdancer to draw a huge amount of energy from the Demip
 
 DELAYED BLAST SHADOW FIREBALL: An illusive version of the Delayed Blast Fireball spell that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer is immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
 
-SHADOW SHIELD: Envelops the user in powerful illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, and immunity to normal and +1 weapons. The user also becomes immune to necromancy spells and gains 20 points of skill in Hide in Shadows and Move Silently. This spell can be dispelled with Dispel Magic, as well as True Sight.
+SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and it grants gains 20 points of skill in Hide in Shadows and Move Silently. This spell can be dispelled with Dispel Magic, as well as True Sight.
 
 SHADOWSTEP: As per the shadowdancer ability.
 
@@ -276,7 +276,7 @@ This is a lesser version of shadowstep that allows the shadowdancer to teleport 
 – THAC0: +1
 – Speed Factor: +3
 – Armor Class: +1
-– All saving throws: +1
+– Saving Throws: +1
 
 These benefits do not stack with themselves or with those granted by Shadowstep. Note that after the casting, the shadowdancer requires one second of concentration to complete the teleportation and may not move for that duration.~
 
@@ -364,15 +364,15 @@ This ability can be used once every 2 turns and has no effect if used on a non-a
 @22500 = ~Deadly Shadows
 The shadowdancer's mastery of their innate shadow arts, allows them to unlock more bonuses. 
 
-When casting shadowstep:
+When casting Shadowstep:
 
 – Damage bonus becomes +5 (from +3)
 – THAC0 bonus becomes +10 (from +6)
-– Critical hit chance bonus becomes +20%
+– Critical hit chance bonus becomes +20% (from 15%)
 
-When casting shadow evade:
+When casting Shadow Leap:
 
-– Damage: +1 
+– Damage: +1 (from none) 
 – THAC0 bonus becomes +2 (from +1)
 
 

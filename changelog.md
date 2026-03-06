@@ -8,8 +8,8 @@
 ## Modifications
 
 - Improved some descriptions
-- In addition to the default nerfs to the Stoneskin provided by the Shades spell, nerfed it further such that it lasts half as much as the wizard version (6 hours as opposed to 12 or half an hour in real time instead of one whole hour)
+- In addition to the default nerfs to the Stoneskin provided by the Shades spell, I nerfed it further such that it lasts a third compared to the wizard version (3 hours as opposed to 12 or 15 minutes in real time instead of 60)
 - Shadow Leap cooldown increased to 1 turn from 3 rounds
-- Shadow summon now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Level 28 must be attained to get the new HLA. This is the new way to permanently upgrade the shade.
+- Summon Shade now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Otherwise, the shadow summon stays at what it would be at level 28 (greater shadowlord). The HLA unlocks at level 28. This is the new way to permanently upgrade the shade, which will become now what you would have got at level 36 before. The nighthaunt slightly improves at levels 38 and 40, much like before.
 - New HLA added, "Deadly Shadows", which improves the offensive capabilities derived from shadowstep and shadow leap
 - Can no longer dual-class from this kit

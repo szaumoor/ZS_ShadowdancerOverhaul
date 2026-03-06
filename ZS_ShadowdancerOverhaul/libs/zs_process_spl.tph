@@ -111,7 +111,7 @@ COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
-COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
+COPY_EXISTING ~zs#sdl4b.spl~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700001) END
 
 COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self concealment
@@ -251,7 +251,7 @@ COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // stoneskin
     LPF CLONE_HEADER INT_VAR match_level=16 level=20 STR_VAR match_icon = "spwi408b" END
     LPF ALTER_EFFECT INT_VAR header=1 match_opcode = 218 parameter1=4 END
     LPF ALTER_EFFECT INT_VAR header=2 match_opcode = 218 parameter1=5 END
-    LPF ALTER_EFFECT_EX INT_VAR duration = 1800 STR_VAR match_duration_ex = "(o_duration > 1800)" END
+    LPF ALTER_EFFECT_EX INT_VAR duration = 900 STR_VAR match_duration_ex = "(o_duration > 1800)" END
 
 ACTION_IF GAME_IS "bgee" BEGIN
 
@@ -412,13 +412,7 @@ COPY_EXISTING_REGEXP ~^zs#sds2[0-7]\.cre$~ ~override~ // Shadowlord
     END
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@253)
-COPY_EXISTING_REGEXP ~^zs#sds2[89]\.cre$~ ~override~ // Greater shadowlord
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
-
-COPY_EXISTING_REGEXP ~^zs#sds3[0-5]\.cre$~ ~override~ // Greater shadowlord
+COPY_EXISTING ~zs#sds28.cre~ ~override~ // Greater shadowlord
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
