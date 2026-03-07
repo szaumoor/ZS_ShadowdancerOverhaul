@@ -24,11 +24,13 @@ COPY_EXISTING ~luzssd.2da~ ~override~
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH01~ num_allowed=~3~ END // self-concealment
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artisan
-    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH20~ num_allowed=~1~ min_lev=~28~ END // summon nighthaunt
+    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH30~ num_allowed=~1~ min_lev=~28~ END // deadly shadows
+    
+    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH20~ num_allowed=~1~ min_lev=~28~ END // summon nighthaunt
     LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shades hla
 
     LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_ZS#SDH12~ END // replace evasion for shadow dance
-    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL919~ ability=~GA_ZSSDH14B~ num_allowed=~99~ END // replace scribe scrolls for shadowstrike
+    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL919~ ability=~GA_ZSSDH14B~ num_allowed=~99~ prerequisite=~AP_ZS#SDH30~ END // replace scribe scrolls for shadowstrike
     LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL938~ ability=~GA_SPCL938~ num_allowed=~99~ prerequisite=~AP_ZS#SDH08~ END // replace Shadow Form to add the prerequisite
     
     LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL914~ END // remove improved evasion

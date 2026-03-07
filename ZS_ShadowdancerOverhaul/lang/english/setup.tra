@@ -102,16 +102,19 @@ The creature's Hit Dice (HD) are always one fewer than the shadowdancer's, up to
 @700000 = ~Summon Nighthaunt~
 @700001 = ~Summon Nighthaunt
 
-Upgrade your shadow summon permanently. Now summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities.
-
+Upgrade your shadow summon permanently. Now summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities. Additionally, their touch has a small chance of draining one or two levels.
 
 The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.
 
 Requirements: Level 28, Shadowdancer only~
 
-@9 = ~Hide in plain sight~
+@700002 = ~Summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities. Additionally, their touch has a small chance of draining one or two levels.
+
+The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.~
+
+@9 = ~Hide in Plain Sight~
 @90 = ~Failed to hide in plain sight~
-@10 = ~Hide in plain sight
+@10 = ~Hide in Plain Sight
 Immediately hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
 
 The chances of success are directly tied to the shadowdancer's Hiding in Shadows ability in the following way:
@@ -126,7 +129,7 @@ The chances of success are directly tied to the shadowdancer's Hiding in Shadows
 
 Note that the success chance is also affected by any penalties or bonuses to the shadowdancer's Hiding in Shadows ability, such as through magical effects or gear. For example, if the shadowdancer has exactly 70 points in the ability, they would have 80% chance of success, but if they had magical boots that granted 40 point bonus to the ability, they would have 95% chance of success.~
 
-@10010 = ~Hide in plain sight is available for use.~
+@10010 = ~Hide in Plain Sight is available for use.~
 
 @11 = ~Shadow Form
 Duration: 5 rounds + 1 round/10 levels starting at level 30
@@ -150,24 +153,26 @@ These penalties cannot reduce Strength or Dexterity below 1.~
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
-Your mastery over the elusive power of shadows has now reached incredible heights. As a testament to your profound connection with it, you gain the following abilities:
+You weave your intuitive command over the shadows with increased grace and precision. As a testament to your profound connection with it, you gain the following abilities:
 
-– Immunity to blindness
-– Casting, movement, and weapon speed factor are permanently increased by 2
-– Backstabs no longer require you to be behind the target to be successful
-– For two rounds after landing a critical hit, the target loses their immunity to backstabs, if they had it, and the shadowdancer gains a 5% bonus to critical hit chances and cannot critically miss (does not stack)
+– Immunity to Blindness
+– Casting speed, movement speed rate, and weapon speed factor are permanently increased by 2
+– May perform backstabs from any angle
+– For two rounds after landing a critical hit, the target loses their immunity to backstabs, if they had it, and the shadowdancer gains a +5% bonus to critical hit chances and cannot critically miss (does not stack)
 
 Requirements: Shadowdancer only~
 
 @130 = ~Shadowstrike~
 @131 = ~Shadowstrike
-The shadowdancer may choose to infuse their backstabs with a bit of shadow magic for 1 turn to achieve various effects:
+The shadowdancer may choose to infuse their attacks with a bit of shadow magic, allowing their strikes to deal maximum damage during the first round, and for 1 turn, their backstabs are granted new effects:
 
-– Beshadowed Strike: Backstabs have a 30% chance of making the shadowdancer immediately invisible for 2 rounds, and the target is blinded for 3 rounds unless a save vs. Spell at -4 is made.
-– Chilling Strike: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal 2d4+1 cold and 2d4+1 magic damage.
-– Enervating Strike: Backstabs halve the victim's Strength for 5 rounds if they fail a save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
+– Beshadowed Strike: 30% chance of making the shadowdancer immediately invisible for 2 rounds, and the target blinded for 4 rounds (save vs. Spell at -4)
+– Chilling Strike: Deal extra 1d6+1 cold and 1d6+1 magic damage. If the target is blinded, the damage is doubled
+– Enervating Strike: Halve the victim's Strength for 5 rounds if they fail a save vs. Death at -2. If the target's is already enervated, it reduces THAC0 by 6, Luck by 4. 
 
-During this time, the critical hit chances are +5% greater, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance of removing their immunity for 10 seconds (this may not happen more than once every 5 rounds). None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.~
+Additionally, during this time, the critical hit chances are +5% greater, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance of removing their immunity for 10 seconds (this may not happen more than once every 5 rounds). None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.
+
+Requirements: Deadly Shadows~
 
 @132 = ~Beshadowed Strike~
 @133 = ~Chilling Strike~
@@ -181,35 +186,45 @@ Requirements: Shadowdancer only~
 
 @2100 = ~Shadow Conjuration~
 @2101 = ~Shadow Conjuration
-This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available: Darkness, Invisibility, Shield, Magic Missile, Sleep.
+This skill allow the shadowdancer to draw small amounts of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells, which the shadowdancer casts at half <PRO_HISHER> level. The following spells are available: 
 
-The spells are always cast at half the shadowdancer's current level. For example, to cast four Magic Missiles, the shadowdancer would require to be at level 14, instead of level 7.~
+DARKNESS: Pull a mass of magical darkness that covers a 15 ft. area, which blinds anyone inside as long as they remain inside. After getting out of that area, the victim may remain blinded for up to 1 round.
+
+INVISIBILITY: Becomes completely invisible for 24 hours as per the arcane spell of the same name.
+
+MAGIC MISSILE: Conjure illusive magic missiles that unerringly hit the target, dealing 1d4+1 magic damage each. Every four levels, the shadowdancer adds one extra magic missile to the spell, up to 5 missiles.
+
+SLEEP: Lull all victims in a 15 ft. area of effect around the point of impact into a comatose slumber. Targets with more than 4 HD are unaffected.~
 
 @2102 = ~Greater Shadow Conjuration~
 @2103 = ~Greater Shadow Conjuration
-This skill allow the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness.
+This skill allow the shadowdancer to draw energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells, which the shadowdancer casts at half <PRO_HISHER> level. The following spells are available:
 
-The spells are always cast at half the shadowdancer's current level. For example, to cast Minor Globe of Invulnerability at level 10, the shadowdancer must attain first level 20.~
+MELF'S ACID ARROW: Conjure a magical arrow that speeds to its target unerringly. The arrow inflicts 2d4 points of acid damage, and for every 6 levels of the shadowdancer, the acid lasts for another round, unless somehow dispelled, inflicting another 2d4 points of damage each round.
+
+WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering a  area of about 15 ft. in radius. Anyone in the area when the spell is cast must roll a succeed at a saving throw or be Held by it. Each round that a creature remains in the web, it must make a saving throw or be unable to move.
+
+MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere around the shadowdancer that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating. It lasts for 1 round per 2 levels of the shadowdancer.
+
+BLINDNESS: Temporarily blinds its target if a saving throw is failed for 2 hours, and receives a -4 penalty to <PRO_HISHER> attack rolls and Armor Class.~
 
 @2104 = ~Shades~
 @2105 = ~Shades
-This skill allow the shadowdancer to draw a lot of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available:
+This skill allow the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells, which the shadowdancer casts at half <PRO_HISHER> level. The following spells are available:
 
-SHADOW FIREBALL: An illusive version of the Fireball spell that deals a mix of fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer is immune to <PRO_HISHER> own Shadow Fireball.
+SHADOW FIREBALL: An illusive version of the Fireball spell that deals a mix of fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
 
-STONESKIN: Drawing from the shade, the shadowdancer emulates a lesser shadow version of the arcane spell of the same name, completely covering <PRO_HIMHER> with 3 layers of skins (increased by 1 at levels 16 and 20) that protect them from physical attacks such as melee weapons and projectiles for 3 hours.
+STONESKIN: Drawing from the shade, the shadowdancer emulates a lesser shadow version of the arcane spell of the same name, completely covering <PRO_HIMHER> with 3 layers of skins (increased by 1 at levels 21 and 24) that protect them from physical attacks such as melee weapons and projectiles for 3 hours.
 
-SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door, which allows them to appear to step through it and disappear. In reality, <PRO_HESHE> has darted aside and can flee, totally invisible (as per the Improved Invisibility spell), for the spell's duration.
-
-All spells are always cast at half the shadowdancer's current level with respect to their arcane counterparts.~
+SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door, which allows them to appear to step through it and disappear. In reality, <PRO_HESHE> has darted aside and can flee, totally invisible (as per the Improved Invisibility spell), for the spell's duration, which is 9 rounds plus 1 round every 2 levels of the shadowdancer.~
 
 @21050 = ~Shadow Fireball~
 
 @2107 = ~Deep Shades~
 @2108 = ~Deep Shades
-This skill allow the shadowdancer to draw a huge amount of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells. The following spells are available: 
+This skill allow the shadowdancer to draw a great amount of energy from the Demiplane of Shadow to conjure a shadowy version of a selection of arcane spells, which the shadowdancer casts at half <PRO_HISHER> level. The following spells are available: 
 
-DELAYED BLAST SHADOW FIREBALL: An illusive version of the Delayed Blast Fireball spell that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer is immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
+DELAYED BLAST SHADOW FIREBALL: An illusive version of the Delayed Blast Fireball spell that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It functions otherwise identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
 
 SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and it grants gains 20 points of skill in Hide in Shadows and Move Silently. This spell can be dispelled with Dispel Magic, as well as True Sight.
 
@@ -361,7 +376,8 @@ This ability can be used once every 2 turns and has no effect if used on a non-a
 
 @22200 = ~Shadow Swap is available for use.~
 
-@22500 = ~Deadly Shadows
+@22500 = ~Deadly Shadows~
+@22501 = ~Deadly Shadows
 The shadowdancer's mastery of their innate shadow arts, allows them to unlock more bonuses. 
 
 When casting Shadowstep:

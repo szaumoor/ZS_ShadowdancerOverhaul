@@ -111,8 +111,14 @@ COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
-COPY_EXISTING ~zs#sdl4b.spl~ ~override~ // Summon Shade
+COPY_EXISTING ~zs#sdh20.spl~ ~override~
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700001) END
+
+COPY_EXISTING ~zs#sdl4b.spl~ ~override~ // Summon Nighthaunt (HLA)
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700002) END
+
+COPY_EXISTING ~zs#sdh30.spl~ ~override~ // Deadly Shadows (HLA)
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@22500) ref_desc = RESOLVE_STR_REF(@22501) END
 
 COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self concealment
     PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
@@ -162,7 +168,6 @@ OUTER_SET spell_shroud_of_flame          = IDS_OF_SYMBOL (spell WIZARD_SHROUD_OF
 OUTER_SET spell_smashing_wave            = IDS_OF_SYMBOL (spell CLERIC_SMASHING_WAVE)
 OUTER_SET spell_thorn_spray              = IDS_OF_SYMBOL (spell CLERIC_THORN_SPRAY)
 OUTER_SET spell_whirlwind                = IDS_OF_SYMBOL (spell CLERIC_WHIRLWIND)
-
 OUTER_SET spell_vitriolic_sphere         = IDS_OF_SYMBOL (spell WIZARD_VITRIOLIC_SPHERE)
 OUTER_SET spell_snillock_snowball_swarm  = IDS_OF_SYMBOL (spell WIZARD_SNILLOCS_SNOWBALL_SWARM)
 
@@ -247,8 +252,8 @@ COPY_EXISTING ~zssdh14h.spl~ ~override~ // beshadow
 COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // stoneskin
     LPM CONVERT_SPL_TO_INNATE
     LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
-    LPF CLONE_HEADER INT_VAR level=16 STR_VAR match_icon = "spwi408b" END
-    LPF CLONE_HEADER INT_VAR match_level=16 level=20 STR_VAR match_icon = "spwi408b" END
+    LPF CLONE_HEADER INT_VAR level=21 STR_VAR match_icon = "spwi408b" END
+    LPF CLONE_HEADER INT_VAR match_level=21 level=24 STR_VAR match_icon = "spwi408b" END
     LPF ALTER_EFFECT INT_VAR header=1 match_opcode = 218 parameter1=4 END
     LPF ALTER_EFFECT INT_VAR header=2 match_opcode = 218 parameter1=5 END
     LPF ALTER_EFFECT_EX INT_VAR duration = 900 STR_VAR match_duration_ex = "(o_duration > 1800)" END
