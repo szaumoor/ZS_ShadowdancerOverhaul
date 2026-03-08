@@ -26,7 +26,7 @@ COPY_EXISTING ~luzssd.2da~ ~override~
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artisan
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH30~ num_allowed=~1~ END // deadly shadows
     
-    LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH20~ num_allowed=~1~ min_lev=~28~ END // summon nighthaunt
+    LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH20~ num_allowed=~1~ prerequisite=~AP_ZS#SDH22~ END // summon nighthaunt
     LPF patch_add_hla STR_VAR ability=~GA_ZS#SDH11~ num_allowed=~3~ END // shades hla
 
     LPF patch_replace_hla STR_VAR num_allowed=~99~ remove_ability=~GA_SPCL913~ ability=~GA_ZS#SDH12~ END // replace evasion for shadow dance

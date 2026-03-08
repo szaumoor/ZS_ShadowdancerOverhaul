@@ -104,13 +104,13 @@ The creature's Hit Dice (HD) are always one fewer than the shadowdancer's, up to
 
 Upgrade your shadow summon permanently. Now summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities. Additionally, their touch has a small chance of draining one or two levels.
 
-The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.
+The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.
 
-Requirements: Level 28, Shadowdancer only~
+Requirements: Level 30 or higher, Shadowdancer only~
 
 @700002 = ~Summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. The nightshade possesses all the immunities of an undead being, and all the traits of the shadowdancer's lesser shades. Their distinct characteristics, compared to the highest tier of shadow under it include higher resistances, stats, hit points, and offensive and defensive capabilities, as well as new spells and special abilities. Additionally, their touch has a small chance of draining one or two levels.
 
-The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 38 and 40.~
+The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.~
 
 @9 = ~Hide in Plain Sight~
 @90 = ~Failed to hide in plain sight~
@@ -153,7 +153,7 @@ These penalties cannot reduce Strength or Dexterity below 1.~
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
-You weave your intuitive command over the shadows with increased grace and precision. As a testament to your profound connection with it, you gain the following abilities:
+You intuitive command over the shadows allows you to weave shadows with increased grace and precision. As a testament to your profound connection with it, you gain the following abilities:
 
 – Immunity to Blindness
 – Casting speed, movement speed rate, and weapon speed factor are permanently increased by 2
