@@ -22,3 +22,4 @@
   - All: Attacks always cause maximum damage within the first round of the mode (before: only for enervating strike)
 - Shadowstrike now requires the new Deadly Shadows HLA
 - Summoned shades are now always immune to Shadow Fireball and Delayed Blast Shadow Fireball (TODO)
+- Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
