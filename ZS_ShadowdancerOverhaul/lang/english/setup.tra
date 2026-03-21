@@ -58,7 +58,7 @@ So, with a heavy heart, you have left the familiar rooftops and lamplit streets 
 @4 = ~Shadowstep
 This spell can be cast in two ways: Planeshift or Blink. The shadowdancer chooses which version to use at the moment of the casting. If none are chosen, the spell is lost.
 
-Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (with each additional use further increasing speed by a factor of 1). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but can move freely for tactical positioning.
+Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but can move freely for tactical positioning.
 
 Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for roughly half a round:
 
@@ -141,15 +141,7 @@ This ability is a more powerful version of Shadow Evade that temporarily transpo
 Requirements: Improved Shadow Evade~
 
 @12 = ~Shadow Maze
-This ability opens a temporary gateway to a small pocket within the Plane of Shadow. All enemies within 7 feet of the shadowdancer must make a Save vs. Spell at a -4 penalty or become trapped inside that space between 5 to 14 rounds. This spell becomes increasingly difficult to resist as the shadowdancer becomes more experienced: at level 28, the penalty becomes -5, and at 36, -6.
-
-After being released, living beings resurface feeling weakened for 1 turn, suffering the following non-stackable effects:
-
-– Strength, Dexterity, Armor Class, THAC0, damage, saving throws, and casting speed: -2 penalty
-– Movement speed reduced by 25%
-– 5% increased chance to critically miss when attacking
-
-These penalties cannot reduce Strength or Dexterity below 1.~
+This ability opens a temporary gateway to a small pocket within the Plane of Shadow. All enemies within 7 feet of the shadowdancer must make a Save vs. Spell at a -4 penalty or become trapped inside that space between 5 to 14 rounds. This spell becomes increasingly difficult to resist as the shadowdancer becomes more experienced: at level 28, the penalty becomes -5, and at 36, -6.~
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
@@ -168,7 +160,7 @@ The shadowdancer may choose to infuse their attacks with a bit of shadow magic, 
 
 – Beshadowed Strike: 30% chance of making the shadowdancer immediately invisible for 2 rounds, and the target blinded for 4 rounds (save vs. Spell at -4)
 – Chilling Strike: Deal extra 1d6+1 cold and 1d6+1 magic damage. If the target is blinded, the damage is doubled
-– Enervating Strike: Halve the victim's Strength for 5 rounds if they fail a save vs. Death at -2. If the target's is already enervated, it reduces THAC0 by 6, Luck by 4. 
+– Enervating Strike: Halve the victim's Strength for 8 rounds if they fail a save vs. Death at -2. If the target's is already enervated, the backstab reduces their THAC0 by 5, and they're forced to inflict minimum damage with their physical attacks. After 8 rounds, all effects are dispelled. 
 
 Additionally, during this time, the critical hit chances are +5% greater, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance of removing their immunity for 10 seconds (this may not happen more than once every 5 rounds). None of these effects are affected by Magic Resistance and they do not stack with each other. Each application replaces the other.
 
@@ -460,75 +452,3 @@ The shaman slips into a space between the spirit world and the material plane, r
 @10001 = ~This component is only allowed in BGEE, BG2EE and EET~
 @10002 = ~Fix is already included in the main component~
 @10003 = ~This component requires the Shadowdancer Overhaul main component~
-
-/*
-@24998 = ~way of shadow monk~
-@24999 = ~Way of Shadow Monk~
-@25000 = ~WAY OF SHADOW MONK: Also called shadow monks, shadowdancers, and in some places, ninjas or shinobis, these practitioners weave shadow and illusion to conceal, mislead, and strike unseen. Unbound by strict orders or dogma, they regard darkness as a neutral instrument rather than a mark of evil, shaping it with discipline and subtlety to confound foes and slip beyond ordinary sight.
-
-Advantages:
-– Infravision
-– Stealthy: +20 points to Hide in the Shadows and Move Silently at level 1, improved by +5 at every third level thereafter.
-– May invest points into the Detect Illusion skill, starting with a +10 point bonus.
-– Slippery Mind: +2 bonus to saving throws vs. Enchantment and Illusion effects.
-– May backstab with a 2x multiplier from any angle.
-– Hide in Plain Sight: <PRO_HESHE> can become hidden, even while observed, for 20 seconds once per turn. The cooldown is reduced by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds. The chance of success depends on <PRO_HISHER> Hide in Shadows skill, but this ability is separate from the standard hiding skill—it functions as a unique, innate power.
-– May cast Shadowstep (Planeshift / Blink) once per day. A new use is gained every two levels thereafter.
-
-SHADOWSTEP (Planeshift): Step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable for the duration while time stands still for the rest. During this time, <PRO_HESHE> cannot damage others, be targeted by others, or cast spells, but <PRO_HESHE> may move at will during this time. Upon returning to the Prime, <PRO_HESHE> gains temporary bonuses to <PRO_HISHER> combat effectiveness.
-
-SHADOWSTEP (Blink): An alternative to the planeshift version, the shadow monk may choose instead to instantly teleport to a place within sight, which applies all the benefits of the planeshift version.
-
-– May cast Shadow Fist once per day, gaining one use at level 3, and again every 2 levels thereafter.
-
-SHADOW FIST: When this ability is activated, the monk's fists become wreathed in shadowstuff for 3 rounds
-
-– May cast Shadow Evade once per day, gaining one use at level 4, and then again at levels 8 and 12.
-
-SHADOW EVADE: The shadow monk conceals <PRO_HIMHER>self in shadowstuff for 5 rounds, making <PRO_HIMHER> harder to hit. It provides a +4 bonus to Armor Class, a +1 bonus to all Saving Throws, and 15% universal damage resistance. During this time, <PRO_HESHE> is also under the effects of Invisibility. Each new use adds 5% to its damage resistance.
-
-– May cast Shadow Conjuration once per day starting at level 6, with additional uses gained at levels 9 and 12.
-
-SHADOW CONJURATION: This skill allows the monk to draw various amounts of energy from the Demiplane of Shadow to conjure phantasmal version of one of the following spells: Darkness, Invisibility, Shield, Magic Missile, Sleep. The spells are always cast at half the monk's current level.
-
-– Shadow Haven: At level 10, shadows embrace <PRO_HIMHER> while invisible, regenerating 1 Hit Point per round, while protecting <PRO_HIMHER> from detection by all means except True Sight.
-– Greater Shadow Conjuration: At level 12, <PRO_HESHE> learns a more powerful version of Shadow Conjuration which grants access to the following spells: Melf's Acid Arrow, Web, Minor Globe of Invulnerability, Blindness. New uses are gained at levels 15 and 18.
-– Shades: At level 18, <PRO_HESHE> learns an even more powerful version of Shadow Conjuration which grants access to the following spells: Cone of Cold, Shadow Fireball, Stoneskin, Shadow Door. New uses are gained at levels 21 and 24.
-
-Disadvantages:
-– May not use the Lay On Hands ability.
-– May not use the Stunning Blow ability.
-– Backstab multiplier does not improve beyond 2x
-– May not summon a shadow companion, unlike other shadowdancers
-– May not have access to the Hardiness or Shadow Twin High-Level Abilities~
-
-@1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you've spent your childhood yearning for a life cloaked in shadows and secrecy. While other children played at knights and dragons, you danced unseen through the quiet halls of Candlekeep, imagining yourself a phantom among the blind and complacent. The ambling, preoccupied monks have often played the role of secret lords of Waterdeep in your mind, their purses tempting tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, though rarely with more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you've found little satisfaction in pilfering from your caretakers. Instead, your heart yearns for a grander stage—one where your steps vanish in silence and your talents can truly flourish in the dark.~
-
-@25001 = ~Your youth was shaped by two major influences: your foster father Gorion and a group of monks in service to Mystra who spent several years in Candlekeep. While Gorion worked to grow your intelligence and kindness, the Mystran monks helped you develop the innate abilities to control shadow magic. After the monks departed, you adopted and continued practicing their teachings, and can now rightfully call yourself a monk skilled in the Shadow Ways. While you treasure the years spent in Candlekeep, you feel you must pursue your own destiny in the haven that the shadows provide, to attain spiritual enlightenment.~
-
-@25015 = ~Self-Concealment~
-@25016 = ~Self-Concealment
-Your essence merges further with the shadows, granting you a permanent +10% resistance to all damage types.
-
-Requirements: Way of Shadow Monk only~
-
-@25003 = ~Shadowstep~
-@25004 = ~Shadowstep
-This spell can be cast in two ways: Planeshift or Blink. The shadow monk chooses which version to use at the moment of the casting.
-
-Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2. While in the Shadow Plane, the shadow monk is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but can move freely for tactical positioning.
-
-Upon returning to the Prime Material Plane, the shadow monk gains the following benefits for roughly half a round:
-
-– Damage: +2
-– THAC0: +2
-– Backstab multiplier: +1
-– Critical hit chances: +5%
-– Attacks cannot critically miss and ignore weapon speed factor delays
-
-These benefits are consumed after the first successful attack (a hit that is not blocked by weapon immunities) following shadowstep. For the remainder of the effect's duration, the shadow monk retains a +6 bonus to saving throws and Armor Class.
-
-Blink: Alternatively, the shadow monk may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
-
-This spell does not break the user out of invisibility.~
-*/

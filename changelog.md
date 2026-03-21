@@ -26,3 +26,5 @@
 - Shadowstrike now requires the new Deadly Shadows HLA
 - Summoned shades are now always immune to Shadow Fireball and Delayed Blast Shadow Fireball
 - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
+- Overhauled some visual effects in the Shadow Strike HLA (TODO)
+- Shadow Maze no longer weakens living targets
