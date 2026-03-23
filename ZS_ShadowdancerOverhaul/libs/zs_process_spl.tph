@@ -322,7 +322,7 @@ COPY_EXISTING ~spcl936.spl~ ~override~ // Shadow Twin, fixed wrong duration, fee
     LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=139 target=1 timing=3 parameter1=RESOLVE_STR_REF(@500) duration=120 END
 BUT_ONLY IF_EXISTS
 
-COPY_EXISTING ~simulacr.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shade in abilities
+COPY_EXISTING ~simulacr.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shade and Shadow Twin in abilities
     LPF DELETE_EFFECT INT_VAR match_opcode = 144 END
     LPF ADD_SPL_SELFEFF STR_VAR effects = ~op=172,res=zs#sdl4a;op=172,res=spcl936~ END
 BUT_ONLY
@@ -386,58 +386,60 @@ COPY_EXISTING ~zs#sdsn.spl~ ~override~ // Shadow Swap
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/zs_sdshd.d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/zs_sdshd.baf~
 
-OUTER_SET shade_name = RESOLVE_STR_REF(@250)
-COPY_EXISTING_REGEXP ~^zs#sds0[4-9]\.cre$~ ~override~ // Shadow
+DEFINE_PATCH_MACRO apply_spl_code BEGIN
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
-BUT_ONLY
+END
 
-COPY_EXISTING_REGEXP ~^zs#sds1[0-1]\.cre$~ ~override~ // Shadow
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
+OUTER_SET shade_name = RESOLVE_STR_REF(@250)
+COPY_EXISTING ~zs#sds04.cre~ ~override~ // Shadow
+              ~zs#sds05.cre~ ~override~
+              ~zs#sds06.cre~ ~override~
+              ~zs#sds07.cre~ ~override~
+              ~zs#sds08.cre~ ~override~
+              ~zs#sds09.cre~ ~override~
+              ~zs#sds10.cre~ ~override~
+              ~zs#sds11.cre~ ~override~
+    LPM apply_spl_code
 BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@251)
-COPY_EXISTING_REGEXP ~^zs#sds1[2-9]\.cre$~ ~override~ // Greater Shadow
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
+COPY_EXISTING ~zs#sds12.cre~ ~override~ // Greater Shadow
+              ~zs#sds13.cre~ ~override~
+              ~zs#sds14.cre~ ~override~
+              ~zs#sds15.cre~ ~override~
+              ~zs#sds16.cre~ ~override~
+              ~zs#sds17.cre~ ~override~
+              ~zs#sds18.cre~ ~override~
+              ~zs#sds19.cre~ ~override~
+    LPM apply_spl_code
 BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@252)
-COPY_EXISTING_REGEXP ~^zs#sds2[0-7]\.cre$~ ~override~ // Shadowlord
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
+COPY_EXISTING ~zs#sds20.cre~ ~override~ // Shadowlord
+              ~zs#sds21.cre~ ~override~
+              ~zs#sds22.cre~ ~override~
+              ~zs#sds23.cre~ ~override~
+              ~zs#sds24.cre~ ~override~
+              ~zs#sds25.cre~ ~override~
+              ~zs#sds26.cre~ ~override~
+              ~zs#sds27.cre~ ~override~
+    LPM apply_spl_code
 BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@253)
 COPY_EXISTING ~zs#sds28.cre~ ~override~ // Greater shadowlord
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
+    LPM apply_spl_code
 BUT_ONLY
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@254)
-COPY_EXISTING_REGEXP ~^zs#sds3[68]\.cre$~ ~override~ // Nighthaunt
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
+COPY_EXISTING ~zs#sds36.cre~ ~override~ // Nighthaunt
+              ~zs#sds38.cre~ ~override~
+              ~zs#sds40.cre~ ~override~
+    LPM apply_spl_code
 BUT_ONLY
-
-COPY_EXISTING ~zs#sds40.cre~ ~override~ // Nighthaunt
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
 
 COPY_EXISTING_REGEXP ~^zs#sds[0-9][0-9]\.eff$~ ~override~
     LPF ALTER_EFF_FILE STR_VAR resource2=~bdether~ END
@@ -460,9 +462,10 @@ END ELSE ACTION_IF GAME_IS "iwdee" BEGIN
 
 END
 
-COPY_EXISTING_REGEXP ~^zssdsw[123]b\.spl$~ ~override~ // Shadow Weapon
+COPY_EXISTING ~zssdsw1b.spl~ ~override~ // Shadow Weapon
+              ~zssdsw2b.spl~ ~override~ 
+              ~zssdsw3b.spl~ ~override~ 
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
-BUT_ONLY
 
 COPY_EXISTING ~zssdsw8d.spl~ ~override~ // Shadow Weapon
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
@@ -475,5 +478,6 @@ ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
     COPY_EXISTING ~zsipkre0.itm~ ~override~
                   ~zsipkre2.itm~ ~override~
         LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
+    BUT_ONLY
 
 END
