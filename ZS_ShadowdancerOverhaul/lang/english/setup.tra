@@ -18,9 +18,9 @@ SHADOWSTEP (Blink): As an alternative to Planeshift, the shadowdancer may instan
 
 SHADOW ILLUSION: Conjure shadowy illusions to confuse enemies. Unless a save vs. Spell is made, the ability causes one of the following: fear, berserk, blindness, or confusion for 1 round. For the next four rounds, enemies have a chance to resist these effects each round, but may still succumb to them. For the full 5 rounds, affected enemies also lose immunity to backstabs, if they had it, and suffer 25% spell failure. The spell improves with level but has no effect on creatures with very high intelligence or on those that innately see through illusions. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.
 
-– May cast Summon Shade once per day, gaining a single use at level 4.
+– May cast Summon Shadow once per day, gaining a single use at level 4.
 
-SUMMON SHADE: Summon a shade from the Plane of Shadow for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and spells that banish summoned creatures. Its touch can temporarily drain Strength from its victims if a save vs. Death at +2 is failed. As the shadowdancer gains experience, the shade grows as well, becoming more capable and eventually evolving into greater shades.
+SUMMON SHADOW: Bring forth an undead shadow from the Shadowfell for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and spells that banish summoned creatures. Its touch can temporarily drain Strength from its victims, and as the shadowdancer gains experience, the shade grows as well, becoming more capable and eventually evolving into greater shades.
 
 – May cast Shadow Evade once per day, gaining one use at level 5 and additional uses at levels 10 and 15.
 
@@ -58,7 +58,7 @@ So, with a heavy heart, you left the familiar rooftops and lamplit streets of yo
 @4 = ~Shadowstep
 This spell can be cast in two ways: Planeshift or Blink. The shadowdancer chooses the version at the moment of casting. If none is chosen, the spell is lost.
 
-Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
+PLANESHIFT: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
 
 Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for roughly half a round:
 
@@ -71,7 +71,7 @@ Upon returning to the Prime Material Plane, the shadowdancer gains the following
 
 These benefits are consumed after the first successful attack that is not blocked by weapon immunities. For the rest of the effect's duration, the shadowdancer retains +6 to Saving Throws and Armor Class.
 
-Blink: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
+BLINK: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
 
 This spell does not break invisibility.~
 
@@ -86,11 +86,11 @@ Conjure shadowy illusions that disorient an enemy. Unless a save vs. Spell is ma
 
 This spell has no effect on creatures with very high intelligence (18 or more) or on those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.~
 
-@7 = ~Summon Shade~
-@8 = ~Summon Shade
-Summon an invisible, neutrally aligned shade from the Plane of Shadow for 8 hours or until it is slain. This shadowy creature possesses all the immunities of an undead being, including immunity to turning, spells that destroy or banish summoned creatures, blindness, and illithid attacks. It is highly resistant to damage, regenerates slowly (faster while invisible), and can temporarily drain Strength from its victims with a touch if they fail a save vs. Death at +2.
+@7 = ~Summon Shadow~
+@8 = ~Summon Shadow
+Call forth an invisible, undead shadow from the Shadowfell for 8 hours or until it is slain. This creature can't be blinded, and possesses all the immunities of an spectral undead being, but can't be turned or destroyed by banishing effects. It is resistant to damage, regenerates slowly–especially while invisible–and can temporarily drain Strength from its victims with a touch if they fail a save vs. Death.
 
-This loyal undead companion begins less powerful than its ordinary counterparts, but grows stronger as the shadowdancer gains experience. It evolves into more capable and resilient forms, gains innate abilities, and ultimately transforms into greater kinds of shades:
+This loyal undead companion is less powerful than its ordinary counterparts, but grows stronger as the shadowdancer gains experience. It evolves into more capable and resilient forms, gains innate abilities, and ultimately transforms into greater kinds of shades:
 
 – Shadow from levels 4 to 11
 – Greater Shadow from levels 12 to 19
@@ -101,19 +101,15 @@ The creature's Hit Dice (HD) are always one lower than the shadowdancer's, up to
 
 @700000 = ~Summon Nighthaunt~
 @700001 = ~Summon Nighthaunt
-
-Upgrade your shadow summon permanently. You now summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. This nighthaunt possesses all the immunities of an undead being and all the traits of the shadowdancer's lesser shades. Compared to the highest tier beneath it, it has greater resistances, better stats, more hit points, stronger offensive and defensive capabilities, and new spells and special abilities. In addition, its touch has a small chance of draining one or two levels.
-
-The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.
+Permanently upgrade your shadow summon, gaining the ability to call forth a nighthaunt from the Shadowfell instead. This more powerful type of shadow is tougher, more resistant to damage, gains new abilities, and its touch becomes far deadlier. The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.
 
 Requirements: Level 30 or higher, Shadowdancer only~
 
-@700002 = ~Summon a nighthaunt from the Plane of Shadow for 8 hours or until it is slain. This nighthaunt possesses all the immunities of an undead being and all the traits of the shadowdancer's lesser shades. Compared to the highest tier beneath it, it has greater resistances, better stats, more hit points, stronger offensive and defensive capabilities, and new spells and special abilities. In addition, its touch has a small chance of draining one or two levels.
-
-The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.~
+@700002 = ~Summon Nighthaunt
+Call forth an invisible nighthaunt from the Shadowfell for 8 hours, or until it is slain. This nighthaunt possesses all the immunities of lesser shades, but is stronger, more resistant to damage, and can occasionally drain one or two levels with its attacks. The nighthaunt's abilities and statistics improve slightly at shadowdancer levels 35 and 40.~
 
 @9 = ~Hide in Plain Sight~
-@90 = ~Failed to hide in plain sight~
+@90 = ~Failed to Hide in Plain Sight~
 @10 = ~Hide in Plain Sight
 Immediately hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
 
@@ -154,8 +150,8 @@ Your intuitive command of shadow allows you to weave it with greater grace and p
 
 Requirements: Shadowdancer only~
 
-@130 = ~Shadowstrike~
-@131 = ~Shadowstrike
+@130 = ~Shadow Strike~
+@131 = ~Shadow Strike
 The shadowdancer may infuse <PRO_HISHER> attacks with shadow magic, causing them to deal maximum damage during the first round. For 1 turn, <PRO_HISHER> backstabs also gain the following effects:
 
 – Beshadowed Strike: 30% chance to make the shadowdancer immediately invisible for 2 rounds and blind the target for 4 rounds (save vs. Spell at -4)
@@ -236,7 +232,7 @@ Level: 7
 Range: 0
 Duration: 2 turns
 Casting time: 6
-Area of Effect: The caster
+Area of Effect: The shadowdancer
 Saving Throw: None
 
 The shadowdancer becomes enveloped in a mantle of shifting shadows and silent illusions, gaining the following benefits:
@@ -308,8 +304,8 @@ These benefits do not stack with themselves or with those granted by Shadowstep,
 @199 = ~Shadow Fade
 This ability allows the shade to vanish from sight. The shade can instantly become invisible for 24 hours, and the effect cannot be interrupted. Upon reaching level 16, the shade also gains the option to use Improved Invisibility instead, which lasts for 2 turns.~
 
-@200 = ~Normal Fade~
-@201 = ~Normal Fade
+@200 = ~Fade~
+@201 = ~Fade
 The shade instantly becomes invisible for 24 hours. This effect cannot be interrupted.~
 
 @202 = ~Drain Life~
@@ -336,8 +332,8 @@ This ability can be used once every 2 turns. The cooldown is reduced by 5 rounds
 @211 = ~Darkness
 The shade causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; any hostile creature caught in the area is, for all practical purposes, blinded as per the 1st-level wizard spell. Creatures that leave the area regain normal vision after 1 round.~
 
-@212 = ~Improved Fade~
-@213 = ~Improved Fade
+@212 = ~Deep Fade~
+@213 = ~Deep Fade
 The shade becomes invisible as per the Improved Invisibility spell for 2 turns.~
 
 @214 = ~Dispel Magic~
@@ -352,8 +348,8 @@ The nighthaunt points at a living target and releases a ray of shadowy energy. T
 @219 = ~See Invisibility
 The shade briefly gains the ability to see invisible creatures, revealing them unless they are protected from divination. This spell is cast instantly as a free action once every 3 rounds and cannot be interrupted.~
 
-@220 = ~Shadow Swap~
-@221 = ~Shadow Swap
+@220 = ~Umbral Swap~
+@221 = ~Umbral Swap
 The shade instantly swaps places with an allied creature using a Shadowstep. The ally becomes invisible for 2 rounds and stops all offensive actions. The shade appears at the ally's former location, ready to fight, and gains the following benefits for 3 rounds:
 
 – Armor Class: +2
@@ -366,7 +362,7 @@ The shade instantly swaps places with an allied creature using a Shadowstep. The
 
 This ability can be used once every 2 turns and has no effect if used on a non-ally or on the shade itself. Each time the shade evolves into a stronger form, the cooldown is reduced, reaching a minimum of 5 rounds once the shade becomes a Nighthaunt.~
 
-@22200 = ~Shadow Swap is available for use.~
+@22200 = ~Umbral Swap is available for use.~
 
 @22500 = ~Deadly Shadows~
 @22501 = ~Deadly Shadows
@@ -399,7 +395,7 @@ Requirements: Shadowdancer only~
 
 @700 = ~New passive ability gained: Shadow Haven~
 @701 = ~New active ability gained: Shadow Illusion~
-@702 = ~New active ability gained: Summon Shade~
+@702 = ~New active ability gained: Summon Shadow~
 @703 = ~New active ability gained: Shadow Evade~
 @704 = ~New active ability gained: Shadow Conjuration~
 @705 = ~New active ability gained: Greater Shadow Conjuration~
@@ -425,8 +421,6 @@ Requirements: Shadowdancer only~
 @1010 = ~Allow vanilla shadowdancers to use Rogue Rebalancing's HLA overhaul~
 // @1020 = ~Tweak Vienxay's shadowmage kit to adapt to and incorporate elements from this kit~
 // END INSTALLER TEXT
-@1030 = ~Add new Monk Kit: Way of Shadow Monk (Shadow Monk)~
-
 
 // ITMS
 @5000 = ~This rod seems to writhe and shift in your hand, yet you feel no movement. Oily shadows constantly crawl across its surface, though their source is a mystery. The rod exudes a dark aura, and when gripped in the proper way, it allows the wielder to seemingly "jump" between locations in battle.
