@@ -294,7 +294,7 @@ COPY_EXISTING ~zs#sdh2d.spl~ ~override~ // critical hit effect artisan shadows
 COPY_EXISTING ~spcl938.spl~ ~override~ // Shadow Form, adds the extra effects
     LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@11) END
     SET op9_loc_speed = 255 + (20 << 16)
-    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=zs#sdl5a;op=291,p2=1,p1=0;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p1=0,p2=155;op=101,p1=0,p2=116;op=101,p1=0,p2=70;op=101,p1=0,p2=193;op=101,p1=0,p2=47;op=206,res=zssdfb1;op=206,res=zssdfb2~ END
+    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=zs#sdl5a;op=291,p2=1,p1=0,ip=3;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3,ip=4;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p1=0,p2=155;op=101,p1=0,p2=116;op=101,p1=0,p2=70;op=101,p1=0,p2=193;op=101,p1=0,p2=47;op=206,p1=0,res=zssdfb1;op=206,p1=0,res=zssdfb2~ END
 
     PATCH_IF GAME_IS ~iwdee~ BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode=61 opcode=50 duration=30 timing=0 parameter1="-784830976" parameter2=op9_loc_speed END

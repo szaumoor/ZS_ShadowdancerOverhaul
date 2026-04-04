@@ -5,8 +5,10 @@
 - Fixed small issue where the possible level drain spell of nighthaunt attacks was not fully protecting characters under barbarian rage or berserker rage from being affected by part of its effects.
 - Fixed possible problem when summoning the level 40 version of the Nighthaunt
 - Fixed Chilling Strike forcing a save vs. Spell for some FX to trigger, despite its effects not being subject to saving throws
-- Fixed shadowstrike not allowing a small chance of briefly stripping the target's backstab immunity away as intended (TODO)
+- Fixed shadow strike not allowing a small chance of briefly stripping the target's backstab immunity away as intended (TODO)
 - Fixed shadow summons not being protected from the wish version of Horrid Wilting as they should
+- Fixed other small issues in shadow strike
+- Tightened Shadow Form's implementation so there's no chance the invisibility can fail or be dispelled, as that was the intention
 
 ## Modifications
 
@@ -15,16 +17,16 @@
 - Shadow Leap cooldown increased to 1 turn from 3 rounds
 - Nighthaunt now improves at level 35 and 40 instead of 38 and 40. Reason below.
 - Summon Shade now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Otherwise, the shadow summon stays at what it would be at level 28 (greater shadowlord). The HLA unlocks at level 30. The nighthaunt slightly improves at levels 35 and 40.
-- New HLA added, "Deadly Shadows", which improves the offensive capabilities derived from shadowstep and shadow leap
+- New HLA added, "Shadow Warrior", which improves the offensive capabilities derived from shadowstep and shadow leap
 - Can no longer dual-class from this kit
-- Added an "able to poison weapons" portrait icon as a placeholder when using the shadowstrike HLA ability.
-- Slightly buffed the shadowstrike HLA:
+- Added an "able to poison weapons" portrait icon as a placeholder when using the shadow strike HLA ability.
+- Slightly buffed the Shadow Strike HLA:
   - Chilling strike: Increased damage to 1d6 cold and magic damage, 2d6+1 cold and magic damage to blinded targets
-  - Beshadowed strike: Increased duration of blindness dealt from 3 to 4 rounds
-  - Enervating strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and if the target's strength is already halved, it reduces THAC0 by 5 and forces them to deal minimum damage if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects are removed. (TODO)
+  - Beshadowed strike: Increased duration of blindness from 3 to 4 rounds
+  - Enervating strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and applies a 40% movement speed reduction, and if the target's strength is already halved, it reduces THAC0 by 5, forces them to deal minimum damage, saving throws are decreased by 1, and Armor Class by 2, if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects above are removed.
   - All: Attacks always cause maximum damage within the first round of the mode (before: only for enervating strike)
-- Shadowstrike now requires the new Deadly Shadows HLA
+- Shadowstrike now requires the new Shadow Warrior HLA
 - Summoned shades are now always immune to Shadow Fireball and Delayed Blast Shadow Fireball
 - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
-- Overhauled some visual effects in the Shadow Strike HLA (TODO)
 - Shadow Maze no longer weakens living targets
+- Allowed HiPs and the invisibility associated with Shadow Evade to be affected by the spell state CANNOT_TURN_INVISIBLE if using a mod that takes advantage of that (like my tweak pack True Sight improvement component)

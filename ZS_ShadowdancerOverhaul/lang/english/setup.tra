@@ -141,7 +141,7 @@ This ability opens a temporary gateway to a small pocket of the Plane of Shadow.
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
-Your intuitive command of shadow allows you to weave it with greater grace and precision. As a testament to your profound connection to it, you gain the following abilities:
+Your intuitive command of shadow allows you to weave it with greater grace and precision. As a testament to your profound connection to it, you gain the following passive benefits permanently:
 
 – Immunity to Blindness
 – Casting speed, movement rate, and weapon speed factor are permanently increased by 2
@@ -154,13 +154,15 @@ Requirements: Shadowdancer only~
 @131 = ~Shadow Strike
 The shadowdancer may infuse <PRO_HISHER> attacks with shadow magic, causing them to deal maximum damage during the first round. For 1 turn, <PRO_HISHER> backstabs also gain the following effects:
 
-– Beshadowed Strike: 30% chance to make the shadowdancer immediately invisible for 2 rounds and blind the target for 4 rounds (save vs. Spell at -4)
+– Beshadowed Strike: 30% chance to make the shadowdancer immediately invisible for 2 rounds, and blind the target for 4 rounds (save vs. Spell at -4)
 – Chilling Strike: Deals an extra 1d6+1 cold damage and 1d6+1 magic damage. If the target is blinded, this damage is doubled
-– Enervating Strike: Halves the victim's Strength for 8 rounds if a save vs. Death at -2 is failed. If the target is already enervated, the backstab instead reduces THAC0 by 5 and forces the target to inflict minimum damage with physical attacks. After 8 rounds, all effects are dispelled.
+– Enervating Strike: Halves the victim's Strength for 8 rounds and reduces their movement rate by 40% if a save vs. Death at -2 is failed. If the target is already enervated, the backstab instead reduces THAC0 by 5, Armor Class by 2, Saving Throws by 1, and forces the target to inflict minimum damage with physical attacks. After 8 rounds, all effects are dispelled.
 
 In addition, critical hit chance is increased by 5%, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance to remove that immunity for 10 seconds (this may not happen more than once every 5 rounds). None of these effects are affected by Magic Resistance, and they do not stack with each other. Each new application replaces the previous one.
 
-Requirements: Deadly Shadows~
+Requirements: Shadow Warrior~
+
+@13100 = ~Backstab Immunity Stripped~
 
 @132 = ~Beshadowed Strike~
 @133 = ~Chilling Strike~
@@ -364,9 +366,9 @@ This ability can be used once every 2 turns and has no effect if used on a non-a
 
 @22200 = ~Umbral Swap is available for use.~
 
-@22500 = ~Deadly Shadows~
-@22501 = ~Deadly Shadows
-The shadowdancer's mastery of <PRO_HISHER> innate shadow arts unlocks further bonuses.
+@22500 = ~Shadow Warrior~
+@22501 = ~Shadow Warrior
+The shadowdancer's mastery of <PRO_HISHER> innate shadow arts becomes more powerful.
 
 When casting Shadowstep:
 
