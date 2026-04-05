@@ -42,12 +42,13 @@ There were several things about BeamDog's implementation of shadowdancers that I
 - **Alchemy**, **Scribe Scrolls**, **Evasion**, and **Improved Evasion** are removed
 - **Assassination** and **Avoid Death** are kept exactly as is
 - **Shadow Dance**: Allows the shadowdancer to move with agility and grace, dodging most AoE effects that can be dodged and other aimed effects (dragon breath, fireballs, cone of cold, etc., but not things like Horrid Wilting), becoming immune to projectiles, and gaining +6 Armor Class and +3 saving throws. Additionally, every round the Shadowdancer becomes invisible for half a round, which disrupts enemy targeting and may help with backstabbing if the timing is right.
-- **Shadowstrike**: This ability lets the shadowdancer imbue their attacks with shadow magic, giving a 10% chance to disable a target's backstab immunity for 10 seconds if they fail a save vs. Spell at -2 (only once every 5 rounds), increasing critical hit chance by 5%, and adding the following effects to backstabs for 1 turn:
-  - **Beshadowed Strike**: 30% chance of becoming invisible when successfully backstabbing, making target blind for 3 rounds if they fail a save vs. Spell at -4
-  - **Chilling Strike**: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal extra 2d4+1 cold and 2d4+1 magic damage instead.
-  - **Enervating Strike**: Backstabs halve the victim's Strength for 5 rounds if they fail a Save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
+- **Shadow Warrior**: This ability unlocks further offensive bonuses for your basic shadow abilities: shadowstep gains an extra +2 damage and +4 THAC0, whereas Shadow Leap adds a +1 damage and THAC0 bonus. This unlocks the next HLA.
+- **Shadow Strike**: This ability lets the shadowdancer imbue their attacks with shadow magic, giving all their attacks a 10% chance to disable a target's backstab immunity for 10 seconds (only once every 5 rounds per target), increasing critical hit chance by 5%, and maximizing damage output for the first 7 seconds. Each adds a different flavor to backstabs for 1 turn:
+  - **Beshadowed Strike**: 30% chance of becoming invisible when successfully backstabbing, making target blind for 4 rounds if they fail a save vs. Spell at -4
+  - **Chilling Strike**: Backstabs deal extra 1d6+1 cold and 1d6+1 magic damage. If the target is blinded, they deal double that amount.
+  - **Enervating Strike**: Backstabs halve the victim's Strength and movement rate for 8 rounds if they fail a Save vs. Death at -2 (does not stack, cannot reduce Strength below 1, cannot be re-applied while it's affecting the enemy). A subsequent backstab reduces THAC0 by 5, Saving Throws by 1, Armor Class by 2, and forces the target to deal minimum damage. Once the strength halving effect runs out, the secondary effects are also dispelled.
 - **Self-concealment**: 5% universal damage resistance and +1 AC. Can be taken three times. Inspired by NWN. Damage resistance is configurable in the preferences file.
-- **Shadow Weaver**: The following traits are permanently gained:
+- **Shadow Weaver**: The following passive benefits are permanently gained:
   - Immunity to blindness
   - Backstabs may be performed from any angle
   - Movement speed, casting speed, and speed factor permanently increase by 2
@@ -61,7 +62,7 @@ There were several things about BeamDog's implementation of shadowdancers that I
   - Resist +50% of ALL damage for 5 rounds, not just physical damage
   - +4 Armor Class
   - Regenerate 1 HP per second while the effect is active
-- **Deep Shades**: This new HLA continues the shadow conjuration line. It may be chosen three times and allows the caster to cast one of the following:
+- **Umbral Shades**: This new HLA continues the shadow conjuration line. It may be chosen three times and allows the caster to cast one of the following:
   - **Shadow Shield**: A spell inspired by the NWN/NWN2 spell, which grants Blur for 2 turns, +2 Armor Class (+4 vs. missile), 8 Mirror Images, a shadow-like appearance, +20 points in hiding skills, and immunity to weapons under +2 enchantment and necromancy.
   - **Delayed Blast Shadow Fireball**: Similar to Shadow Fireball, but based on the Delayed Blast Fireball.
   - **Shadowstep**: Simply extra uses of the shadowdancer ability
