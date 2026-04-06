@@ -425,20 +425,15 @@ Requirements: Shadowdancer only~
 @701 = ~New active ability gained: Shadow Illusion~
 @702 = ~New active ability gained: Summon Shadow~
 @703 = ~New active ability gained: Shadow Evade~
-@704 = ~New active ability gained: Shadow Conjuration~
-@705 = ~New active ability gained: Greater Shadow Conjuration~
-@706 = ~New active ability gained: Shades~
+@704 = ~New active ability gained: Shadow Call~
 
-@707 = ~Shadow summon improves to Greater Shadow~
-@708 = ~Shadow summon improves to Shadowlord~
-@709 = ~Shadow summon improves to Greater Shadowlord~
+@707 = ~Shadow improves to Greater Shadow~
+@708 = ~Greater Shadow improves to Shadowlord~
+@709 = ~Shadowlord improves to Greater Shadowlord~
 
 @710 = ~Gained new use of Shadowstep~
 @711 = ~Gained new use of Shadow Evade~
-@712 = ~Gained new use of Shadow Conjuration~
-@713 = ~Gained new use of Greater Shadow Conjuration~
-@714 = ~Gained new use of Shades~
-@715 = ~Gained a new use of Shadow Illusion~
+@712 = ~Gained a new use of Shadow Call~
 
 @720 = ~Stealthy bonus gained~
 @721 = ~Slippery Mind bonus gained~

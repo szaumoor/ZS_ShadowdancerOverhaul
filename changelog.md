@@ -10,6 +10,7 @@
 - Fixed other small issues in shadow strike
 - Tightened Shadow Form's implementation so there's no chance the invisibility can fail or be dispelled, as that was the intention
 - Fixed the invisibility after Teleport Without Error from the shadow summons being permanent instead of lasting only 7 seconds as intended
+- The leveling up process was not reporting accurately when shadowstep uses are gained in the game console
 
 ## Modifications
 

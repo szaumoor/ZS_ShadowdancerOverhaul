@@ -79,7 +79,7 @@ BUT_ONLY IF_EXISTS
 COPY_EXISTING ~zssdmsg0.spl~ ~override~ // gained shadow evade for the first time
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@703) END
 
-COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow conjuration for the first time
+COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow call (first time)
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
 
 COPY_EXISTING ~zssdmsg2.spl~ ~override~ // gained greater shadow conjuration for the first time
