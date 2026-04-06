@@ -211,15 +211,13 @@ SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a 
 
 @2107 = ~Umbral Shades~
 @2108 = ~Umbral Shades
-This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilities in order to cast even more spells at half <PRO_HISHER> level. Each time this skill is picked, another usage is gained, as well. The following spells are added to <PRO_HISHER> pool of Shadow Conjurations:
+This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilities in order to cast even more spells at half <PRO_HISHER> level. This will also add one more use of Shadow Call. The following spells are added to <PRO_HISHER> pool of spells:
 
 DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
 
 SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
 
 SHADOWSTEP: As per the shadowdancer ability.
-
-This skill may be taken at most three times.
 
 Requirements: Shadowdancer only~
 

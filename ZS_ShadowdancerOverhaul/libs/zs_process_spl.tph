@@ -45,7 +45,7 @@ COPY_EXISTING ~zs#sdl1b.spl~ ~override~ // Hide in plain sight
 COPY_EXISTING ~zs#sdl1g.spl~ ~override~ // stealthy repeating bonus
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@720) END
 
-COPY_EXISTING ~zs#sdl1l.spl~ ~override~ // ellusive mind repeating bonus
+COPY_EXISTING ~zs#sdl1l.spl~ ~override~ // slippery mind repeating bonus
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@721) END
 
 COPY_EXISTING ~zs#sdl2a.spl~ ~override~ // shadow haven
@@ -57,17 +57,8 @@ COPY_EXISTING ~zssdmsga.spl~ ~override~ // shadowstep new use
 COPY_EXISTING ~zssdmsgb.spl~ ~override~ // shadow evade new use
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@711) END
 
-COPY_EXISTING ~zssdmsgc.spl~ ~override~ // shadow conjuration new use
+COPY_EXISTING ~zssdmsgc.spl~ ~override~ // shadow call new use
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@712) END
-
-COPY_EXISTING ~zssdmsgd.spl~ ~override~ // greater shadow conjuration new use
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@713) END
-
-COPY_EXISTING ~zssdmsge.spl~ ~override~ // shades new use
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@714) END
-
-COPY_EXISTING ~zssdmsgf.spl~ ~override~ // shadow illusion new use
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@715) END
 
 COPY_EXISTING ~sppr505.spl~ ~override~ // true sight protection against shadow illusion / dispelling
               ~spwi609.spl~ ~override~
@@ -81,15 +72,6 @@ COPY_EXISTING ~zssdmsg0.spl~ ~override~ // gained shadow evade for the first tim
 
 COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow call (first time)
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
-
-COPY_EXISTING ~zssdmsg2.spl~ ~override~ // gained greater shadow conjuration for the first time
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@705) END
-
-COPY_EXISTING ~zssdmsg3.spl~ ~override~ // gained shades for the first time
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@706) END
-
-COPY_EXISTING ~zssdmsg4.spl~ ~override~ // gained shadow illusion for the first time
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@701) END
 
 COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shade
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
@@ -149,16 +131,10 @@ COPY_EXISTING ~zssdfb2.spl~ ~override~ // delayed blast Shadow Fireball
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@21080) END
     LPF ALTER_HEADER INT_VAR projectile = %zssdfb3% END
 
-COPY_EXISTING ~zs#sdh06.spl~ ~override~ // shadow conjuration
+COPY_EXISTING ~zs#sdh06.spl~ ~override~ // shadow call
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2100) ref_desc = RESOLVE_STR_REF(@2101) END
 
-COPY_EXISTING ~zs#sdh09.spl~ ~override~ // greater shadow conjuration
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2102) ref_desc = RESOLVE_STR_REF(@2103) END
-
-COPY_EXISTING ~zs#sdh10.spl~ ~override~ // shades
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2104) ref_desc = RESOLVE_STR_REF(@2105) END
-
-COPY_EXISTING ~zs#sdh11.spl~ ~override~ // deep shades
+COPY_EXISTING ~zs#sdh11.spl~ ~override~ // umbral shades
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@2108) END
 
 OUTER_SET spell_cloudburst               = IDS_OF_SYMBOL (spell CLERIC_CLOUDBURST)
@@ -237,7 +213,7 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
         LPF DELETE_EFFECT STR_VAR match_resource = "spin134" END
     END
 
-COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadowstrike
+COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadow strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
 
 COPY_EXISTING ~zssdh14j.spl~ ~override~ // enervating
@@ -249,7 +225,7 @@ COPY_EXISTING ~zssdh14c.spl~ ~override~ // chilling
 COPY_EXISTING ~zssdh14h.spl~ ~override~ // beshadow
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@132) END
 
-COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // stoneskin
+COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // shadeskih
     LPM CONVERT_SPL_TO_INNATE
     LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
     LPF CLONE_HEADER INT_VAR level=21 STR_VAR match_icon = "spwi408b" END
@@ -287,7 +263,7 @@ END
 COPY_EXISTING ~zs#sdh07.spl~ ~override~ // shadow shield
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2109) ref_desc = RESOLVE_STR_REF(@2110) END
 
-COPY_EXISTING ~zs#sdh2d.spl~ ~override~ // critical hit effect artisan shadows
+COPY_EXISTING ~zs#sdh2d.spl~ ~override~ // critical hit effect shadow weaver
     LPF ALTER_EFFECT INT_VAR check_globals = 0 match_opcode = 139 match_timing = 0 parameter1 = RESOLVE_STR_REF(@23) END
     LPF ALTER_EFFECT INT_VAR check_globals = 0 match_opcode = 139 match_timing = 3 parameter1 = RESOLVE_STR_REF(@24) END
 
@@ -379,7 +355,7 @@ COPY_EXISTING ~zs#sdsh.spl~ ~override~ // Darkness
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@210) ref_desc = RESOLVE_STR_REF(@211) END
     LPF ALTER_HEADER INT_VAR match_type = 1 projectile = %zssddark% END
 
-COPY_EXISTING ~zs#sdsn.spl~ ~override~ // Shadow Swap
+COPY_EXISTING ~zs#sdsn.spl~ ~override~ // Umbral Swap
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@220) ref_desc = RESOLVE_STR_REF(@221) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1=RESOLVE_STR_REF(@22200) END
 

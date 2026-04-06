@@ -18,16 +18,16 @@
 - In addition to the default nerfs to the Stoneskin provided by the Shades spell, I nerfed it further such that it lasts a third compared to the wizard version (3 hours as opposed to 12 or 15 minutes in real time instead of 60)
 - Shadow Leap cooldown increased to 1 turn from 3 rounds
 - Summon Shade now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Otherwise, the shadow summon stays at what it would be at level 28 (greater shadowlord). The HLA unlocks at level 30.
-- - Nighthaunt now improves at level 35 and 40 instead of 38 and 40
+- Nighthaunt now improves at level 35 and 40 instead of 38 and 40
 - New HLA added, "Shadow Warrior", which improves the offensive capabilities derived from shadowstep and shadow leap slightly and is now a prerequisite for shadow strike
 - Can no longer dual-class from this kit
-- Added an "able to poison weapons" portrait icon as a placeholder when using the shadow strike HLA ability.
+- Added an "able to poison weapons" portrait icon as a placeholder when using the Shadow Strike HLA ability.
 - Slightly buffed the Shadow Strike HLA:
-  - Chilling strike: Increased damage to 1d6 cold and magic damage, 2d6+1 cold and magic damage to blinded targets
-  - Beshadowed strike: Increased duration of blindness from 3 to 4 rounds
-  - Enervating strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and applies a 40% movement speed reduction, and if the target's strength is already halved, it reduces THAC0 by 5, forces them to deal minimum damage, saving throws are decreased by 1, and Armor Class by 2, if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects above are removed.
+  - Chilling Strike: Increased damage to 1d6 cold and magic damage, 2d6+1 cold and magic damage to blinded targets
+  - Beshadowed Strike: Increased duration of blindness from 3 to 4 rounds
+  - Enervating Strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and applies a 40% movement speed reduction, and if the target's strength is already halved, it reduces THAC0 by 5, forces them to deal minimum damage, saving throws are decreased by 1, and Armor Class by 2, if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects above are removed.
   - All: Attacks always cause maximum damage within the first round of the mode (before: only for enervating strike)
-- Shadowstrike now requires the new Shadow Warrior HLA
+- Shadow Strike now requires the new Shadow Warrior HLA
 - Summoned shades are now always immune to Shadow Fireball and Delayed Blast Shadow Fireball
 - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
 - Shadow Maze no longer weakens living targets as I no longer think that is in theme. An area maze effect with increasing saving throw penalty is already quite nice.
