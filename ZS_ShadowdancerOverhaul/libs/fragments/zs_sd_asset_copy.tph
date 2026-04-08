@@ -8,7 +8,7 @@ COPY "%MOD_FOLDER%/abilities/level_up_messages" ~override~
      "%MOD_FOLDER%/abilities/summon_shadow"     ~override~
      "%MOD_FOLDER%/abilities/shadow_leap"       ~override~
      "%MOD_FOLDER%/hlas/shadow_weaver"          ~override~
-     "%MOD_FOLDER%/hlas/deep_shades"            ~override~
+     "%MOD_FOLDER%/hlas/umbral_shades"          ~override~
      "%MOD_FOLDER%/hlas/improved_shadow_evade"  ~override~
      "%MOD_FOLDER%/hlas/self_concealment"       ~override~
      "%MOD_FOLDER%/hlas/improved_shadow_evade"  ~override~

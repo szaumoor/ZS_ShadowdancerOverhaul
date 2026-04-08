@@ -32,8 +32,8 @@
 - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
 - Shadow Maze no longer weakens living targets as I no longer think that is in theme. An area maze effect with increasing saving throw penalty is already quite nice.
 - Allowed HIPS, the invisibility associated with Shadow Evade, and the shade's ability to go invisible to be affected by the spell state CANNOT_TURN_INVISIBLE if using a mod that takes advantage of that (like my tweak pack True Sight improvement component)
-- Shadow Conjuration variants no longer exist as separate spells, but as one now called Shadow Call, as it is in Pathfinder. Each time you would gain the new tier, the new spells are added to the pool of spells you can conjure with your usages, which are now also capped at 3 (one per tier). The Umbral Shades HLA will now both add the new spells to the selections AND another usage to the "parent" spell, therefore allowing at most 6 castings of the known spells. (TODO)
-- As a consequence of the previous point, the Delayed Blast Shadow Fireball now replaces the Shadow Fireball when the Umbral Shades HLA is acquired. (TODO)
+- Shadow Conjuration variants no longer exist as separate spells, but as one now called Shadow Call, as it is in Pathfinder. Each time you would gain the new tier, the new spells are added to the pool of spells you can conjure with your usages, which are now also capped at 3 (one per tier). The Umbral Shades HLA will now both add the new spells to the selections AND another usage to the "parent" spell
+- As a consequence of the previous point, the Delayed Blast Shadow Fireball now replaces the Shadow Fireball when the Umbral Shades HLA is acquired.
 - Benefits from Umbral Swap for the Shade itself last 2 rounds instead of 3
 - Reduced the Save vs. Breath and Movement Rate bonus to 1 as passives of the kit
 - Shadow Call (Conjuration) no longer lets you cast Shield, and that usage is now instead replaced by the previously separate ability of Shadow Illusion

@@ -169,12 +169,16 @@ Requirements: Shadowdancer only~
 @2101 = ~Shadow Call
 This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level.
 
+At level 3, the following spells are available:
+
+SHADOW ILLUSION: Conjure shadowy illusions that disorient an enemy. Unless a save vs. Spell is made, this ability causes one of the following effects for 1 round: fear, berserk, blindness, or confusion. For the next four rounds, the enemy has a chance each round to resist these effects, but may still succumb to them. For the full 5 rounds, the enemy suffers 25% spell failure and also loses immunity to sneak attacks and backstabs, if it had it. Save penalty improves by 1 at level 8 and every 6 levels thereafter, up to -4. At level 12, the effect spreads to nearby enemies. At level 14, it also causes 10% physical damage weakness and -4 penalty to Armor Class. At level 17, blindness is no longer optional, and always applies. Finally, This spell has no effect on creatures with very high intelligence (18 or more) or on those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.
+SLEEP: Lull all creatures in a 15-ft. area of effect around the point of impact into a comatose slumber. Targets with more than 4 HD are unaffected.
+
 From level 6, the following spells are available:
 
 DARKNESS: Pull a mass of magical darkness over a 15-ft. area, blinding anyone inside as long as they remain there. After leaving the area, the victim may remain blinded for up to 1 round.
 INVISIBILITY: Become completely invisible for 24 hours, as per the arcane spell of the same name.
 MAGIC MISSILE: Conjure illusory magic missiles that unerringly strike the target, dealing 1d4+1 magic damage each. Every four levels, the shadowdancer adds one extra missile to the spell, up to 5 missiles.
-SLEEP: Lull all creatures in a 15-ft. area of effect around the point of impact into a comatose slumber. Targets with more than 4 HD are unaffected.
 
 At level 12, the following spells become available:
 
@@ -189,9 +193,34 @@ SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold,
 SHADESKIN: Drawing on the shade, the shadowdancer emulates a lesser shadow version of the arcane spell Stoneskin, covering <PRO_HIMHER> in 3 layers of skins (increased by 1 at levels 21 and 24) that protect against physical attacks such as melee weapons and projectiles for 3 hours.
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.~
 
-@2104 = ~Shades~
-@2105 = ~Shades
-This skill allows the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level. The following spells are available:
+@21050 = ~Shadow Fireball~
+
+@2107 = ~Umbral Call~
+@2108 = ~Umbral Call
+This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilities in order to cast even more spells at half <PRO_HISHER> level. This will also add one more use of Shadow Call. The following spells are added to <PRO_HISHER> pool of spells:
+
+DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
+
+SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
+
+SHADOWSTEP: As per the shadowdancer ability.
+
+Requirements: Shadowdancer only~
+
+@21080 = ~Delayed Blast Shadow Fireball~
+
+@21090 = ~Umbral Call
+This skill allows the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level. The following abilities are available:
+
+SHADOW ILLUSION: Conjure shadowy illusions that disorient an enemy. Unless a save vs. Spell is made, this ability causes one of the following effects for 1 round: fear, berserk, blindness, or confusion. For the next four rounds, the enemy has a chance each round to resist these effects, but may still succumb to them. For the full 5 rounds, the enemy suffers 25% spell failure and also loses immunity to sneak attacks and backstabs, if it had it. Save penalty improves by 1 at level 8 and every 6 levels thereafter, up to -4. At level 12, the effect spreads to nearby enemies. At level 14, it also causes 10% physical damage weakness and -4 penalty to Armor Class. At level 17, blindness is no longer optional, and always applies. Finally, This spell has no effect on creatures with very high intelligence (18 or more) or on those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.
+
+SLEEP: Lull all creatures in a 15-ft. area of effect around the point of impact into a comatose slumber. Targets with more than 4 HD are unaffected.
+
+DARKNESS: Pull a mass of magical darkness over a 15-ft. area, blinding anyone inside as long as they remain there. After leaving the area, the victim may remain blinded for up to 1 round.
+
+INVISIBILITY: Become completely invisible for 24 hours, as per the arcane spell of the same name.
+
+MAGIC MISSILE: Conjure illusory magic missiles that unerringly strike the target, dealing 1d4+1 magic damage each. Every four levels, the shadowdancer adds one extra missile to the spell, up to 5 missiles.
 
 MELF'S ACID ARROW: Conjure a magical arrow that speeds unerringly to its target. The arrow inflicts 2d4 points of acid damage, and for every 6 levels of the shadowdancer, the acid lasts for another round, unless somehow dispelled, inflicting another 2d4 points of damage each round.
 
@@ -205,51 +234,11 @@ SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold,
 
 SHADESKIN: Drawing on the shade, the shadowdancer emulates a lesser shadow version of the arcane spell Stoneskin, covering <PRO_HIMHER> in 3 layers of skins (increased by 1 at levels 21 and 24) that protect against physical attacks such as melee weapons and projectiles for 3 hours.
 
-SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.~
-
-@21050 = ~Shadow Fireball~
-
-@2107 = ~Umbral Shades~
-@2108 = ~Umbral Shades
-This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilities in order to cast even more spells at half <PRO_HISHER> level. This will also add one more use of Shadow Call. The following spells are added to <PRO_HISHER> pool of spells:
-
-DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
-
-SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
-
-SHADOWSTEP: As per the shadowdancer ability.
-
-Requirements: Shadowdancer only~
-
-@21080 = ~Delayed Blast Shadow Fireball~
-
-@21090 = ~Umbral Shades
-This skill allows the shadowdancer to draw great amounts of energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level. The following spells are available:
-
-DARKNESS: Pull a mass of magical darkness over a 15-ft. area, blinding anyone inside as long as they remain there. After leaving the area, the victim may remain blinded for up to 1 round.
-
-INVISIBILITY: Become completely invisible for 24 hours, as per the arcane spell of the same name.
-
-MAGIC MISSILE: Conjure illusory magic missiles that unerringly strike the target, dealing 1d4+1 magic damage each. Every four levels, the shadowdancer adds one extra missile to the spell, up to 5 missiles.
-
-SLEEP: Lull all creatures in a 15-ft. area of effect around the point of impact into a comatose slumber. Targets with more than 4 HD are unaffected.
-
-MELF'S ACID ARROW: Conjure a magical arrow that speeds unerringly to its target. The arrow inflicts 2d4 points of acid damage, and for every 6 levels of the shadowdancer, the acid lasts for another round, unless somehow dispelled, inflicting another 2d4 points of damage each round.
-
-WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering an area about 15 ft. in radius. Anyone in the area when the spell is cast must succeed at a saving throw or be Held by it. Each round that a creature remains in the web, it must save again or be unable to move.
-
-MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere around the shadowdancer that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating. It lasts for 1 round per 2 levels of the shadowdancer.
-
-BLINDNESS: Temporarily blinds the target for 2 hours if a saving throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
-
-SHADESKIN: Drawing on the shade, the shadowdancer emulates a lesser shadow version of the arcane spell Stoneskin, covering <PRO_HIMHER> in 3 layers of skins (increased by 1 at levels 21 and 24) that protect against physical attacks such as melee weapons and projectiles for 3 hours.
-
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.
 
 DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
 
 SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
-
 SHADOWSTEP: As per the shadowdancer ability.~
 
 @2109 = ~Shadow Shield~
@@ -284,8 +273,8 @@ This ability cannot be dispelled or Breached, although the invisibility effect c
 
 @2122 = ~Shadow Dance: Evaded effect~
 
-@23 = ~Backstab immunity removed~
-@24 = ~Backstab immunity removal effect wore off~
+@23 = ~Backstab Immunity removed~
+@24 = ~Backstab Immunity removal effect wore off~
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
@@ -296,7 +285,7 @@ For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, making <PRO_HI
 The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. In this new form, damage resistance increases to 50%, the invisibility becomes Improved Invisibility, the shadowdancer regenerates 1 Hit Point per second, and is immune to all divination spells for its 5-round duration.~
 
 @60 = ~Shadow Twin
-This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail.~
+This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot use the Summon Shadow or Summon Nighthaunt abilities.~
 
 @70 = ~Shadow Leap~
 @71 = ~Shadow Leap

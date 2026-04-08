@@ -1,4 +1,4 @@
-COPY_EXISTING ~zs#sdl1j.spl~ ~override~ // Shadow Jump spell selection
+COPY_EXISTING ~zs#sdl1j.spl~ ~override~ // Shadowstep spell selection
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@3) ref_desc = RESOLVE_STR_REF(@4) END
 
 COPY_EXISTING ~zs#sdl1c.spl~ ~override~ // Shadowstep planeshift
@@ -93,16 +93,16 @@ COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
-COPY_EXISTING ~zs#sdh20.spl~ ~override~
+COPY_EXISTING ~zs#sdh20.spl~ ~override~ // Summon Nighthaunt
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700001) END
 
 COPY_EXISTING ~zs#sdl4b.spl~ ~override~ // Summon Nighthaunt (HLA)
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700002) END
 
-COPY_EXISTING ~zs#sdh30.spl~ ~override~ // Deadly Shadows (HLA)
+COPY_EXISTING ~zs#sdh30.spl~ ~override~ // Shadow Warrior (HLA)
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@22500) ref_desc = RESOLVE_STR_REF(@22501) END
 
-COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self concealment
+COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self-concealment (HLA)
     PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
 
         PATCH_IF zs_sd_selfconcealment_dr > 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN
@@ -117,7 +117,7 @@ COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self concealment
 
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@15) ref_desc = RESOLVE_STR_REF(@16) END
 
-COPY_EXISTING ~zs#sdh02.spl~ ~override~ // Shadow artisan
+COPY_EXISTING ~zs#sdh02.spl~ ~override~ // Shadow Weaver
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@13) ref_desc = RESOLVE_STR_REF(@14) END
 
 ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/zssdfb0.pro~
@@ -134,7 +134,10 @@ COPY_EXISTING ~zssdfb2.spl~ ~override~ // delayed blast Shadow Fireball
 COPY_EXISTING ~zs#sdh06.spl~ ~override~ // shadow call
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2100) ref_desc = RESOLVE_STR_REF(@2101) END
 
-COPY_EXISTING ~zs#sdh11.spl~ ~override~ // umbral shades
+COPY_EXISTING ~zs#sdh11.spl~ ~override~ // umbral call
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@21090) END
+
+COPY_EXISTING ~zs#sdhus.spl~ ~override~ // umbral call (hla)
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2107) ref_desc = RESOLVE_STR_REF(@2108) END
 
 OUTER_SET spell_cloudburst               = IDS_OF_SYMBOL (spell CLERIC_CLOUDBURST)
@@ -300,7 +303,7 @@ BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~simulacr.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shade and Shadow Twin in abilities
     LPF DELETE_EFFECT INT_VAR match_opcode = 144 END
-    LPF ADD_SPL_SELFEFF STR_VAR effects = ~op=172,res=zs#sdl4a;op=172,res=spcl936~ END
+    LPF ADD_SPL_SELFEFF STR_VAR effects = ~op=172,res=zs#sdl4a;op=172,res=spcl936;op=172,res=zs#sdl4b~ END
 BUT_ONLY
 
 COPY_EXISTING ~spcl937.spl~ ~override~ // Shadow Maze
