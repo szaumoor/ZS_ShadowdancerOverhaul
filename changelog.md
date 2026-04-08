@@ -5,12 +5,13 @@
 - Fixed small issue where the possible level drain spell of nighthaunt attacks was not fully protecting characters under barbarian rage or berserker rage from being affected by part of its effects.
 - Fixed possible problem when summoning the level 40 version of the Nighthaunt
 - Fixed Chilling Strike forcing a save vs. Spell for some FX to trigger, despite its effects not being subject to saving throws
-- Fixed shadow strike not allowing a small chance of briefly stripping the target's backstab immunity away as intended
+- Fixed shadow strike not allowing a small chance of briefly stripping the target's backstab immunity away as intendedalt
 - Fixed shadow summons not being protected from the wish version of Horrid Wilting as they should
 - Fixed other small issues in shadow strike
 - Tightened Shadow Form's implementation so there's no chance the invisibility can fail or be dispelled, as that was the intention
 - Fixed the invisibility after Teleport Without Error from the shadow summons being permanent instead of lasting only 7 seconds as intended
 - The leveling up process was not reporting accurately when shadowstep uses are gained in the game console
+- Fixed one visual effect of Shadow Evade twice after activating it instead of just once
 
 ## Modifications
 

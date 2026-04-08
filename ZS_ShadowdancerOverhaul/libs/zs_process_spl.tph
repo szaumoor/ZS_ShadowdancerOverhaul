@@ -366,7 +366,9 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/zs_sdshd.d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/shadow_scripts/zs_sdshd.baf~
 
 DEFINE_PATCH_MACRO apply_spl_code BEGIN
-    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ override_script="" class_script="" END
+    WRITE_ASCII 0x248 ""
+    WRITE_ASCII 0x250 ""
+    LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ END
     PATCH_IF GAME_IS "iwdee" BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     END
@@ -421,7 +423,7 @@ COPY_EXISTING ~zs#sds36.cre~ ~override~ // Nighthaunt
 BUT_ONLY
 
 COPY_EXISTING_REGEXP ~^zs#sds[0-9][0-9]\.eff$~ ~override~
-    LPF ALTER_EFF_FILE STR_VAR resource2=~bdether~ END
+    WRITE_ASCII 0x70 ~bdether~
 BUT_ONLY
 
 ACTION_IF GAME_IS "bgee" BEGIN
