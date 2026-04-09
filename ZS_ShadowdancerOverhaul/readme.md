@@ -93,6 +93,7 @@ It is currently compatible with PoD (Pits of Despair), the only mod I know of th
 - **Summoned Shade Balance:** The summoned shade may be overpowered at high levels (28-40). Feedback on its performance is welcome.
 - **Shadow Conjuration Logging:** These spells may log their sub-spells twice in the combat log. This is a known, harmless visual bug.
 - **Hide in Plain Sight Bug:** Pausing at the wrong moment when using Hide in Plain Sight can cause the ability to trigger multiple times. This does not cause any problems, since extra instances are removed on the next cast, but I've implemented some defensive fixes to limit it.
+- **Summon Nighthaunt Unlock:** Because of the necessary hack used to blocking Summon Nighthaunt HLA until level 30, force-leveling more than one level at a time might not properly detect your character is at the required level 30 to unlock it, rendering the unlocking impossible. Play normally, or test it carefully.
 
 ## Credits
 

@@ -15,5 +15,5 @@ COPY "%MOD_FOLDER%/abilities/level_up_messages" ~override~
      "%MOD_FOLDER%/hlas/shadow_dance"           ~override~
      "%MOD_FOLDER%/hlas/shadow_strike"          ~override~
      "%MOD_FOLDER%/hlas/summon_nighthaunt"      ~override~
-     "%MOD_FOLDER%/hlas/shadow_warrior"         ~override~
+     "%MOD_FOLDER%/hlas/fight_shade"            ~override~
      ~%MOD_FOLDER%/hlas/LUZSSD.2DA~             ~override~

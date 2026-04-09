@@ -5,13 +5,14 @@
 - Fixed small issue where the possible level drain spell of nighthaunt attacks was not fully protecting characters under barbarian rage or berserker rage from being affected by part of its effects.
 - Fixed possible problem when summoning the level 40 version of the Nighthaunt
 - Fixed Chilling Strike forcing a save vs. Spell for some FX to trigger, despite its effects not being subject to saving throws
-- Fixed shadow strike not allowing a small chance of briefly stripping the target's backstab immunity away as intendedalt
+- Fixed shadow strike not allowing a small chance of briefly stripping the target's backstab immunity away as intended
 - Fixed shadow summons not being protected from the wish version of Horrid Wilting as they should
 - Fixed other small issues in shadow strike
 - Tightened Shadow Form's implementation so there's no chance the invisibility can fail or be dispelled, as that was the intention
 - Fixed the invisibility after Teleport Without Error from the shadow summons being permanent instead of lasting only 7 seconds as intended
 - The leveling up process was not reporting accurately when shadowstep uses are gained in the game console
 - Fixed one visual effect of Shadow Evade twice after activating it instead of just once
+- Icon fix for Shadow Illusion
 
 ## Modifications
 
@@ -20,7 +21,7 @@
 - Shadow Leap cooldown increased to 1 turn from 3 rounds
 - Summon Shade now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Otherwise, the shadow summon stays at what it would be at level 28 (greater shadowlord). The HLA unlocks at level 30.
 - Nighthaunt now improves at level 35 and 40 instead of 38 and 40
-- New HLA added, "Shadow Warrior", which improves the offensive capabilities derived from shadowstep and shadow leap slightly and is now a prerequisite for shadow strike
+- New HLA added, "Fight in the Shade", which improves the offensive capabilities derived from shadowstep and shadow leap slightly and is now a prerequisite for shadow strike
 - Can no longer dual-class from this kit
 - Added an "able to poison weapons" portrait icon as a placeholder when using the Shadow Strike HLA ability.
 - Slightly buffed the Shadow Strike HLA:
@@ -28,7 +29,7 @@
   - Beshadowed Strike: Increased duration of blindness from 3 to 4 rounds
   - Enervating Strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and applies a 40% movement speed reduction, and if the target's strength is already halved, it reduces THAC0 by 5, forces them to deal minimum damage, saving throws are decreased by 1, and Armor Class by 2, if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects above are removed.
   - All: Attacks always cause maximum damage within the first round of the mode (before: only for enervating strike)
-- Shadow Strike now requires the new Shadow Warrior HLA
+- Shadow Strike now requires the new Fight in the Shade HLA
 - Summoned shades are now always immune to Shadow Fireball and Delayed Blast Shadow Fireball
 - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
 - Shadow Maze no longer weakens living targets as I no longer think that is in theme. An area maze effect with increasing saving throw penalty is already quite nice.

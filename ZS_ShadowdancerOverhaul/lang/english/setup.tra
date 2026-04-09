@@ -13,7 +13,7 @@ SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowda
 – May cast Shadow Leap once per turn. This is a lesser version of Shadowstep that lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining subtle defensive and offensive bonuses for one round. Unlike Shadowstep, it requires concentration and can be interrupted.
 – At level 3, <PRO_HESHE> may cast Shadow Call once per day. Further uses are gained at levels 12 and 18.
 
-SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, Web, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Cone of Cold, Shadow Fireball, Shadeskin, and Shadow Door. Where appropriate, these spells are always cast at half the shadowdancer's current level.
+SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, Web, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Cone of Cold, Shadow Fireball, Shadeskin, and Shadow Door. Where appropriate, these spells are always cast at half <PRO_HISHER> current level.
 
 – May cast Summon Shadow once per day, gaining a single use at level 4.
 
@@ -67,15 +67,6 @@ BLINK: Alternatively, the shadowdancer may instantly teleport to any visible loc
 This spell does not break invisibility.~
 
 @5 = ~Shadow Illusion~
-@6 = ~Shadow Illusion
-Conjure shadowy illusions that disorient an enemy. Unless a save vs. Spell is made, this ability causes one of the following effects for 1 round: fear, berserk, blindness, or confusion. For the next four rounds, the enemy has a chance each round to resist these effects, but may still succumb to them. For the full 5 rounds, the enemy suffers 25% spell failure and also loses immunity to sneak attacks and backstabs, if it had it. The spell improves at higher levels as follows:
-
-– Save penalty improves by 1 at level 8, and every 6 levels thereafter, up to -4.
-– At level 12, the spell affects nearby enemies, causing chaos among them.
-– At level 14, the targets become more susceptible to damage, taking 10% more physical damage and suffering a -4 penalty to Armor Class.
-– At level 17, blindness is always applied if the spell is successful, along with any other effects. This blindness cannot be resisted in subsequent rounds.
-
-This spell has no effect on creatures with very high intelligence (18 or more) or on those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.~
 
 @7 = ~Summon Shadow~
 @8 = ~Summon Shadow
@@ -104,7 +95,7 @@ Call forth an invisible nighthaunt from the Shadowfell for 8 hours, or until it 
 @10 = ~Hide in Plain Sight
 Immediately hide, even in plain sight, for 20 seconds once per turn. The cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
 
-The chance of success is based directly on the shadowdancer's Hide in Shadows score, as follows:
+The chance of success is tied to the shadowdancer's Hide in Shadows score, as follows:
 
 – 0-30: 50% chance of success
 – 31-50: 65% chance of success
@@ -132,12 +123,12 @@ This ability opens a temporary gateway to a small pocket of the Plane of Shadow.
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
-Your intuitive command of shadow allows you to weave it with greater grace and precision. As a testament to your profound connection to it, you gain the following passive benefits permanently:
+Your intuitive command of shadow allows you to weave it and commune with it. You gain the following passive benefits permanently:
 
 – Immunity to Blindness
 – Casting speed, movement rate, and weapon speed factor are permanently increased by 2
-– May perform backstabs from any angle
-– For 2 rounds after landing a critical hit, the target loses immunity to backstabs, if it had it, and the shadowdancer gains +5% critical hit chance and cannot critically miss (does not stack)
+– Backstabs can be performed from any angle
+– Critical Hit Effect: For 2 rounds, the target loses immunity to backstabs, if it had it, and the shadowdancer gains +5% critical hit chance and immunity to critical misses. This bonus does not stack
 
 Requirements: Shadowdancer only~
 
@@ -151,7 +142,7 @@ The shadowdancer may infuse <PRO_HISHER> attacks with shadow magic, causing them
 
 In addition, critical hit chance is increased by 5%, and if the target is immune to backstabs, the shadowdancer's hits have a 10% chance to remove that immunity for 10 seconds (this may not happen more than once every 5 rounds per target). None of these effects are affected by Magic Resistance, and they do not stack with each other. Each new application replaces the previous one.
 
-Requirements: Shadow Warrior~
+Requirements: Fight in the Shade~
 
 @13100 = ~Backstab Immunity Stripped~
 
@@ -167,7 +158,7 @@ Requirements: Shadowdancer only~
 
 @2100 = ~Shadow Call~
 @2101 = ~Shadow Call
-This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level.
+This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of spells, cast at half <PRO_HISHER> level.
 
 At level 3, the following spells are available:
 
@@ -292,9 +283,9 @@ This ability creates an almost exact duplicate of the shadowdancer for 2 turns. 
 Step through the shadows, teleporting a short distance. Unlike Shadowstep, this ability requires concentration, but it can be cast once per turn at will and does not interrupt invisibility. The following benefits apply for 1 round:
 
 – THAC0: +1
-– Speed Factor: +3
 – Armor Class: +1
 – Saving Throws: +1
+– Speed Factor: +3
 
 These benefits do not stack with themselves or with those granted by Shadowstep, and they are consumed on the first successful attack against an enemy, if one is made before the round ends. Note that after casting, the shadowdancer requires one second of concentration to complete the teleport and may not move during that time.~
 
@@ -379,20 +370,29 @@ This ability can be used once every 2 turns and has no effect if used on a non-a
 
 @22200 = ~Umbral Swap is available for use.~
 
-@22500 = ~Shadow Warrior~
-@22501 = ~Shadow Warrior
-The shadowdancer's mastery of <PRO_HISHER> innate shadow arts becomes more powerful.
+@22500 = ~Fight in the Shade~
+@22501 = ~Fight in the Shade
+The shadowdancer's mastery of their innate shadow arts allows them to become more capable in combat when under the effects of Shadow Evade, Shadow Form, Shadowstep, and Shadow Leap.
+
+When casting Shadow Evade or Shadow Form:
+
+– Movement rate: +1
+– Magic Resistance: +10%
+– Damage Resistance: +3%
+– Retributive Invisibility: 5% chance when hit to become Invisible instantly for 2 rounds (90% chance), or to have Shadow Evade or Shadow Form recast immediately on the shadowdancer (10% chance), and rebuking the target, dealing 1d6 magic and cold damage, and stunning them for 1 round if they fail a Save vs. Spell at -1.
 
 When casting Shadowstep:
 
-– Damage bonus becomes +5 (from +3)
-– THAC0 bonus becomes +10 (from +6)
-– Critical hit chance bonus becomes +20% (from 15%)
+– Movement rate: +1
+– Damage: +2
+– THAC0: +2
+– Critical Hit Chance: +5%
 
 When casting Shadow Leap:
 
-– Damage: +1 (from none)
-– THAC0 bonus becomes +2 (from +1)
+– Movement rate: +1
+– Damage: +1
+– THAC0: +1
 
 Requirements: Shadowdancer only~
 

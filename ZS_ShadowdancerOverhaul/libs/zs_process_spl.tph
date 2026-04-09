@@ -88,7 +88,7 @@ COPY_EXISTING ~sppr309.spl~ ~override~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) ref_desc = RESOLVE_STR_REF(@6) END
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) END
 
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
@@ -99,7 +99,7 @@ COPY_EXISTING ~zs#sdh20.spl~ ~override~ // Summon Nighthaunt
 COPY_EXISTING ~zs#sdl4b.spl~ ~override~ // Summon Nighthaunt (HLA)
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@700000) ref_desc = RESOLVE_STR_REF(@700002) END
 
-COPY_EXISTING ~zs#sdh30.spl~ ~override~ // Shadow Warrior (HLA)
+COPY_EXISTING ~zs#sdh30.spl~ ~override~ // Fight in the shade (HLA)
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@22500) ref_desc = RESOLVE_STR_REF(@22501) END
 
 COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self-concealment (HLA)
@@ -219,6 +219,9 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
 COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadow strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
 
+COPY_EXISTING ~zssdh14n.spl~ ~override~ // backstab removal effect
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@13100) END
+
 COPY_EXISTING ~zssdh14j.spl~ ~override~ // enervating
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@134) END
 
@@ -273,7 +276,7 @@ COPY_EXISTING ~zs#sdh2d.spl~ ~override~ // critical hit effect shadow weaver
 COPY_EXISTING ~spcl938.spl~ ~override~ // Shadow Form, adds the extra effects
     LPF ALTER_SPELL INT_VAR ref_desc = RESOLVE_STR_REF(@11) END
     SET op9_loc_speed = 255 + (20 << 16)
-    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=zs#sdl5a;op=291,p2=1,p1=0,ip=3;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3,ip=4;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p1=0,p2=155;op=101,p1=0,p2=116;op=101,p1=0,p2=70;op=101,p1=0,p2=193;op=101,p1=0,p2=47;op=206,p1=0,res=zssdfb1;op=206,p1=0,res=zssdfb2~ END
+    LPF ADD_SPL_SELFEFF INT_VAR dur=30 p1=50 rd=0 pwr=0 STR_VAR effects = ~op=321,ip=0,res=zs#sdl5a;op=7,p2=255,p1=136;op=291,p2=1,p1=0,ip=3;op=146,p2=1,dur=0,res=zs#sfh0;op=146,p2=1,dur=0,res=zs#sfh1;op=27;op=173;op=28;op=29;op=30;op=31;op=69,p1=0;op=204,p1=0,p2=3,ip=4;op=0,p1=4;op=98,p1=1;op=9,p1=1024402944,p2=%op9_loc_speed%;op=51,p1=33752320,p2=255;op=101,p1=0,p2=155;op=101,p1=0,p2=116;op=101,p1=0,p2=70;op=101,p1=0,p2=193;op=101,p1=0,p2=47;op=206,p1=0,res=zssdfb1;op=206,p1=0,res=zssdfb2~ END
 
     PATCH_IF GAME_IS ~iwdee~ BEGIN
         LPF ALTER_EFFECT INT_VAR match_opcode=61 opcode=50 duration=30 timing=0 parameter1="-784830976" parameter2=op9_loc_speed END
@@ -423,7 +426,7 @@ COPY_EXISTING ~zs#sds36.cre~ ~override~ // Nighthaunt
 BUT_ONLY
 
 COPY_EXISTING_REGEXP ~^zs#sds[0-9][0-9]\.eff$~ ~override~
-    WRITE_ASCII 0x70 ~bdether~
+    WRITE_ASCII 0x70 ~bdether~ #8
 BUT_ONLY
 
 ACTION_IF GAME_IS "bgee" BEGIN

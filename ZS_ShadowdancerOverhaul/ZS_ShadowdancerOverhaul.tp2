@@ -4,17 +4,6 @@ VERSION "1.2.5"
 README ~%MOD_FOLDER%/readme.md~
 AUTO_EVAL_STRINGS
 ASK_EVERY_COMPONENT
-
-MODDER
-	setup_tra none
-	area_variables none
-	missing_extern none
-	missing_resref none
-	ict2_actions none
-	missing_eval none
-	overwriting_file none
-	fun_args warn
-
 ALWAYS
     INCLUDE "%MOD_FOLDER%/libs/zs_sd_functions.tph"
 	INCLUDE "%MOD_FOLDER%/libs/zs_splprot_include.tph"
