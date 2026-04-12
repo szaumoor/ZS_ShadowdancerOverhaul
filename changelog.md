@@ -13,6 +13,7 @@
 - The leveling up process was not reporting accurately when shadowstep uses are gained in the game console
 - Fixed one visual effect of Shadow Evade twice after activating it instead of just once
 - Icon fix for Shadow Illusion
+- Shadow Leap can no longer be used during Shadowstep: Planeshift
 
 ## Modifications
 
@@ -21,7 +22,7 @@
 - Shadow Leap cooldown increased to 1 turn from 3 rounds
 - Summon Shade now only scales up to shadowdancer level 28. A new HLA was added, "Summon Nighthaunt", which replaces the original ability. Otherwise, the shadow summon stays at what it would be at level 28 (greater shadowlord). The HLA unlocks at level 30.
 - Nighthaunt now improves at level 35 and 40 instead of 38 and 40
-- New HLA added, "Fight in the Shade", which improves the offensive capabilities derived from shadowstep and shadow leap slightly and is now a prerequisite for shadow strike
+- New HLA added, "Fight in the Shade", which improves slightly the benefits granted by Shadowstep, Shadow Leap, Shadow Evade, and Shadow Form, and is now a prerequisite for shadow strike
 - Can no longer dual-class from this kit
 - Added an "able to poison weapons" portrait icon as a placeholder when using the Shadow Strike HLA ability.
 - Slightly buffed the Shadow Strike HLA:

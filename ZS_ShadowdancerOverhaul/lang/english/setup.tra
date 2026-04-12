@@ -10,7 +10,7 @@ Advantages:
 
 SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowdancer to step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable while time stands still for everyone else. During this time, <PRO_HESHE> cannot harm others, be targeted, or cast spells, but may move freely. Upon returning to the Prime, <PRO_HESHE> gains temporary bonuses to <PRO_HISHER> combat ability, including the power to backstab from any angle. These benefits scale with the shadowdancer's level. As an alternative to Planeshift, <PRO_HESHE> may instead Blink, that is, instantly teleport to a visible location, gaining the same benefits as the former upon completing the teleporation.
 
-– May cast Shadow Leap once per turn. This is a lesser version of Shadowstep that lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining subtle defensive and offensive bonuses for one round. Unlike Shadowstep, it requires concentration and can be interrupted.
+– May cast Shadow Leap once per turn. This is a lesser version of Shadowstep that lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining mild bonuses for one round. Unlike Shadowstep, it requires concentration and can be interrupted.
 – At level 3, <PRO_HESHE> may cast Shadow Call once per day. Further uses are gained at levels 12 and 18.
 
 SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to conjure semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, Web, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Cone of Cold, Shadow Fireball, Shadeskin, and Shadow Door. Where appropriate, these spells are always cast at half <PRO_HISHER> current level.
@@ -282,7 +282,6 @@ This ability creates an almost exact duplicate of the shadowdancer for 2 turns. 
 @71 = ~Shadow Leap
 Step through the shadows, teleporting a short distance. Unlike Shadowstep, this ability requires concentration, but it can be cast once per turn at will and does not interrupt invisibility. The following benefits apply for 1 round:
 
-– THAC0: +1
 – Armor Class: +1
 – Saving Throws: +1
 – Speed Factor: +3
@@ -379,20 +378,14 @@ When casting Shadow Evade or Shadow Form:
 – Movement rate: +1
 – Magic Resistance: +10%
 – Damage Resistance: +3%
-– Retributive Invisibility: 5% chance when hit to become Invisible instantly for 2 rounds (90% chance), or to have Shadow Evade or Shadow Form recast immediately on the shadowdancer (10% chance), and rebuking the target, dealing 1d6 magic and cold damage, and stunning them for 1 round if they fail a Save vs. Spell at -1.
+– Retributive Invisibility: 5% chance when hit to have Shadow Evade or Shadow Form recast immediately on the shadowdancer, rebuking the target for 2d6 points of magic damage, and stunning them for 1 round. The target may attempt to Save vs. Spell at -1 to avoid the stun and take only half damage. 
 
-When casting Shadowstep:
+When casting Shadowstep or Shadow Leap:
 
 – Movement rate: +1
 – Damage: +2
 – THAC0: +2
 – Critical Hit Chance: +5%
-
-When casting Shadow Leap:
-
-– Movement rate: +1
-– Damage: +1
-– THAC0: +1
 
 Requirements: Shadowdancer only~
 
