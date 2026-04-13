@@ -40,3 +40,5 @@
 - Benefits from Umbral Swap for the Shade itself last 2 rounds instead of 3
 - Reduced the Save vs. Breath and Movement Rate bonus to 1 as passives of the kit
 - Shadow Call (Conjuration) no longer lets you cast Shield, and that usage is now instead replaced by the previously separate ability of Shadow Illusion
+- Shadow Evade and Shadow Form now color the character jet black
+- Added Magical Fire and Magical Cold to the resistances of the Shadow Evade / Form
