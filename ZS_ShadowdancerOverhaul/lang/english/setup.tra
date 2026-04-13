@@ -49,7 +49,7 @@ So, with a heavy heart, you left the familiar rooftops and lamplit streets of yo
 @4 = ~Shadowstep
 This spell can be cast in two ways: Planeshift or Blink. The shadowdancer chooses the version at the moment of casting. If none is chosen, the spell is lost.
 
-PLANESHIFT: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a saving throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
+PLANESHIFT: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a Saving Throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
 
 Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for roughly half a round:
 
@@ -58,7 +58,7 @@ Upon returning to the Prime Material Plane, the shadowdancer gains the following
 – Luck: +1
 – THAC0: +1, increasing by +1 every 3 levels (up to +6)
 – Damage: +1, increasing by +1 every 6 levels (up to +3)
-– Critical hit chance: +5%, improving to +10% at level 13 and +15% at level 25
+– Critical Hit Chance: +5%, improving to +10% at level 13 and +15% at level 25
 
 These benefits are consumed after the first successful attack that is not blocked by weapon immunities. For the rest of the effect's duration, the shadowdancer retains +6 to Saving Throws and Armor Class.
 
@@ -174,9 +174,9 @@ MAGIC MISSILE: Conjure illusory magic missiles that unerringly strike the target
 At level 12, the following spells become available:
 
 MELF'S ACID ARROW: Conjure a magical arrow that speeds unerringly to its target. The arrow inflicts 2d4 points of acid damage, and for every 6 levels of the shadowdancer, the acid lasts for another round, unless somehow dispelled, inflicting another 2d4 points of damage each round.
-WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering an area about 15 ft. in radius. Anyone in the area when the spell is cast must succeed at a saving throw or be Held by it. Each round that a creature remains in the web, it must save again or be unable to move.
+WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering an area about 15 ft. in radius. Anyone in the area when the spell is cast must succeed at a Saving Throw or be Held by it. Each round that a creature remains in the web, it must save again or be unable to move.
 MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere around the shadowdancer that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating. It lasts for 1 round per 2 levels of the shadowdancer.
-BLINDNESS: Temporarily blinds the target for 2 hours if a saving throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
+BLINDNESS: Temporarily blinds the target for 2 hours if a Saving Throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
 
 Finally, at level 18, the following spells are gained:
 
@@ -215,11 +215,11 @@ MAGIC MISSILE: Conjure illusory magic missiles that unerringly strike the target
 
 MELF'S ACID ARROW: Conjure a magical arrow that speeds unerringly to its target. The arrow inflicts 2d4 points of acid damage, and for every 6 levels of the shadowdancer, the acid lasts for another round, unless somehow dispelled, inflicting another 2d4 points of damage each round.
 
-WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering an area about 15 ft. in radius. Anyone in the area when the spell is cast must succeed at a saving throw or be Held by it. Each round that a creature remains in the web, it must save again or be unable to move.
+WEB: Creates a many-layered mass of strong, sticky strands similar to spider webs, covering an area about 15 ft. in radius. Anyone in the area when the spell is cast must succeed at a Saving Throw or be Held by it. Each round that a creature remains in the web, it must save again or be unable to move.
 
 MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere around the shadowdancer that prevents any 1st-, 2nd-, or 3rd-level spell effects from penetrating. It lasts for 1 round per 2 levels of the shadowdancer.
 
-BLINDNESS: Temporarily blinds the target for 2 hours if a saving throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
+BLINDNESS: Temporarily blinds the target for 2 hours if a Saving Throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
 
 SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
 
@@ -231,28 +231,9 @@ DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball tha
 
 SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
 SHADOWSTEP: As per the shadowdancer ability.~
+@21091 = ~Shadeskin~
 
 @2109 = ~Shadow Shield~
-@2110 = ~Shadow Shield
-(Illusion/Phantasm)
-
-Level: 7
-Range: 0
-Duration: 2 turns
-Casting time: 6
-Area of Effect: The shadowdancer
-Saving Throw: None
-
-The shadowdancer becomes enveloped in a mantle of shifting shadows and silent illusions, gaining the following benefits:
-
-– +2 bonus to Armor Class, increased to +4 against missile attacks
-– Blur, as per the Blur spell
-– +20 bonus to Hide in Shadows and Move Silently
-– Surrounded by 8 images, as per the Mirror Image spell
-– Immunity to normal and +1 weapons
-– Immunity to Necromancy spells
-
-This protection can be removed by Dispel Magic or by spells that dispel illusions, such as True Sight.~
 
 @2120 = ~Shadow Dance~
 @2121 = ~Shadow Dance
@@ -260,7 +241,7 @@ For five rounds, shadowdancers of exceptional skill can perform an agile and dis
 
 During this time, the shadowdancer becomes briefly invisible for 3 seconds once per round, disorienting nearby enemies and disrupting their targeting. This ability also improves Armor Class by 6 and Saving Throws by 3. In addition, it lets the shadowdancer move so quickly that <PRO_HISHER> movement rate increases by 4 (base is 9) and missiles cannot strike <PRO_HIMHER>.
 
-This ability cannot be dispelled or Breached, although the invisibility effect can be disrupted by True Sight and other effects that dispel invisibility.~
+This ability cannot be dispelled or removed by Breach, although the invisibility effect can be disrupted by True Sight and other effects that dispel invisibility.~
 
 @2122 = ~Shadow Dance: Evaded effect~
 
@@ -276,12 +257,13 @@ For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, making <PRO_HI
 The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. In this new form, damage resistance increases to 50%, the invisibility becomes Improved Invisibility, the shadowdancer regenerates 1 Hit Point per second, and is immune to all divination spells for its 5-round duration.~
 
 @60 = ~Shadow Twin
-This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot use the Summon Shadow or Summon Nighthaunt abilities.~
+This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot create a Shadow Twin themselves, or use the Summon Shadow or Summon Nighthaunt abilities.~
 
 @70 = ~Shadow Leap~
 @71 = ~Shadow Leap
 Step through the shadows, teleporting a short distance. Unlike Shadowstep, this ability requires concentration, but it can be cast once per turn at will and does not interrupt invisibility. The following benefits apply for 1 round:
 
+– THAC0: +1
 – Armor Class: +1
 – Saving Throws: +1
 – Speed Factor: +3
@@ -347,7 +329,7 @@ The shade attempts to dispel all magic as per the Dispel Magic spell.~
 
 @216 = ~Doom the Living~
 @217 = ~Doom the Living
-The nighthaunt points at a living target and releases a ray of shadowy energy. The target must make a Save vs. Death at -2 or be slain instantly. If the save succeeds, the target still takes 1d10+4 magic damage and is afflicted with the effects of the Doom spell for 1 turn. This secondary effect cannot be resisted.~
+The nighthaunt points at a living target and releases a ray of dark energy. The target must make a Save vs. Death at -2 or be slain instantly. If the save succeeds, the target still takes 1d10+4 magic damage and is afflicted with the effects of the Doom spell for 1 turn. This secondary effect cannot be resisted.~
 
 @218 = ~See Invisibility~
 @219 = ~See Invisibility
@@ -378,7 +360,7 @@ When casting Shadow Evade or Shadow Form:
 – Movement rate: +1
 – Magic Resistance: +10%
 – Damage Resistance: +3%
-– Retributive Invisibility: 5% chance when hit to have Shadow Evade or Shadow Form recast immediately on the shadowdancer, rebuking the target for 2d6 points of magic damage, and stunning them for 1 round. The target may attempt to Save vs. Spell at -1 to avoid the stun and take only half damage. 
+– Retributive Invisibility: When hit, there is a 5% chance that Shadow Evade or Shadow Form will be recast immediately on the shadowdancer (this may trigger only once every 3 rounds), rebuking the target for 2d6 points of magic damage and stunning them for 1 round. The target may attempt a Save vs. Spell at -1 to avoid the stun and take only half damage.
 
 When casting Shadowstep or Shadow Leap:
 
