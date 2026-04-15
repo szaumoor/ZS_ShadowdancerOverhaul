@@ -1,7 +1,7 @@
 @0 = ~SHADOWDANCER: Shadowdancers move with effortless grace along the threshold between light and darkness, innately weaving the magic of shadows and illusions. They are a varied lot, but all see shadow as a force to shape rather than fear. Whether driven by curiosity, ambition, or necessity, shadowdancers are renowned for their stealth, agility, and ability to strike swiftly from the dark. Their talents make them exceptional scouts and spies, able to infiltrate and gather information with a skill few thieves can match. Despite their affinity with darkness, they are not necessarily evil. To a shadowdancer, darkness is simply a tool, stripped of the moral judgments others place upon it.
 
 Advantages:
-– Infravision, even if it is not normally available to the selected race, and may see through magical darkness
+– Infravision, even if it is not normally available to the selected race, and may not be blinded by magical darkness
 – Stealthy: +20 points to Hide in the Shadows and Move Silently at level 1, improving by +5 every third level thereafter.
 – Natural Evasion: +2 Armor Class (double vs. Missile), +1 bonus to movement rate, and Saves vs. Breath.
 – Slippery Mind: A shadowdancer's mind is difficult to pin down, gaining a +1 bonus to Saving Throws vs. Spells, Wands, and all Enchantment and Illusion effects. This bonus increases by +1 at level 12 and every 12 levels thereafter.
@@ -123,7 +123,7 @@ This ability opens a temporary gateway to a small pocket of the Plane of Shadow.
 
 @13 = ~Shadow Weaver~
 @14 = ~Shadow Weaver
-Your intuitive command of shadow allows you to weave it and commune with it. You gain the following passive benefits permanently:
+The shadowdancer's communion with the shadow grants them certain passive benefits permanently:
 
 – Immunity to Blindness
 – Casting speed, movement rate, and weapon speed factor are permanently increased by 2
@@ -180,6 +180,7 @@ BLINDNESS: Temporarily blinds the target for 2 hours if a Saving Throw is failed
 
 Finally, at level 18, the following spells are gained:
 
+CONE OF COLD: Brings the cold of the Shadowfell, generating a cone-shaped area of extreme cold extending outward in a cone 18 ft. long with a 90-deg. arc. It drains heat and causes 1d4+1 points of damage per level of the caster.
 SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
 SHADESKIN: Drawing on the shade, the shadowdancer emulates a lesser shadow version of the arcane spell Stoneskin, covering <PRO_HIMHER> in 3 layers of skins (increased by 1 at levels 21 and 24) that protect against physical attacks such as melee weapons and projectiles for 3 hours.
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.~
@@ -192,7 +193,7 @@ This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilit
 
 DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
 
-SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
+SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
 
 SHADOWSTEP: As per the shadowdancer ability.
 
@@ -201,7 +202,7 @@ Requirements: Shadowdancer only~
 @21080 = ~Delayed Blast Shadow Fireball~
 
 @21090 = ~Umbral Call
-This skill allows the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of arcane spells, cast at half <PRO_HISHER> level. The following abilities are available:
+This skill allows the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of spells, cast at half <PRO_HISHER> level. The following abilities are available:
 
 SHADOW ILLUSION: Conjure shadowy illusions that disorient an enemy. Unless a save vs. Spell is made, this ability causes one of the following effects for 1 round: fear, berserk, blindness, or confusion. For the next four rounds, the enemy has a chance each round to resist these effects, but may still succumb to them. For the full 5 rounds, the enemy suffers 25% spell failure and also loses immunity to sneak attacks and backstabs, if it had it. Save penalty improves by 1 at level 8 and every 6 levels thereafter, up to -4. At level 12, the effect spreads to nearby enemies. At level 14, it also causes 10% physical damage weakness and -4 penalty to Armor Class. At level 17, blindness is no longer optional, and always applies. Finally, This spell has no effect on creatures with very high intelligence (18 or more) or on those that can see through illusions, such as demons and dragons. It is not subject to Magic Resistance or dispelling effects, although True Sight can remove it or prevent its effects from taking hold.
 
@@ -221,16 +222,16 @@ MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere arou
 
 BLINDNESS: Temporarily blinds the target for 2 hours if a Saving Throw is failed, and imposes a -4 penalty to attack rolls and Armor Class.
 
-SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
-
 SHADESKIN: Drawing on the shade, the shadowdancer emulates a lesser shadow version of the arcane spell Stoneskin, covering <PRO_HIMHER> in 3 layers of skins (increased by 1 at levels 21 and 24) that protect against physical attacks such as melee weapons and projectiles for 3 hours.
 
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.
 
 DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
 
-SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, +2 Armor Class (+4 vs. missiles), 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
+SHADOW SHIELD: Envelops the shadowdancer in a mantle of shifting shadows and silent illusions, granting Blur, 8 mirror images, immunity to normal and +1 weapons, immunity to necromancy spells, and a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, as well as by True Sight.
+
 SHADOWSTEP: As per the shadowdancer ability.~
+
 @21091 = ~Shadeskin~
 
 @2109 = ~Shadow Shield~
