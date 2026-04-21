@@ -35,3 +35,4 @@ COPY_EXISTING ~luzssd.2da~ ~override~
     
     LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL914~ END // remove improved evasion
     LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL918~ END // remove alchemy
+    LPF patch_remove_hla STR_VAR remove_ability=~GA_SPCL917~ END // remove avoid death

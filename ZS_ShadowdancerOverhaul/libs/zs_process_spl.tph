@@ -73,7 +73,7 @@ COPY_EXISTING ~zssdmsg0.spl~ ~override~ // gained shadow evade for the first tim
 COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow call (first time)
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
 
-COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shade
+COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shadow
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
 
 COPY_EXISTING ~zs#sdl1m.spl~ ~override~ // Hide in plain sight
@@ -90,7 +90,7 @@ BUT_ONLY IF_EXISTS
 COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) END
 
-COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shade
+COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon shadow
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@7) ref_desc = RESOLVE_STR_REF(@8) END
 
 COPY_EXISTING ~zs#sdh20.spl~ ~override~ // Summon Nighthaunt
@@ -216,35 +216,29 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // shadow dance
         LPF DELETE_EFFECT STR_VAR match_resource = "spin134" END
     END
 
-COPY_EXISTING ~zssdh14b.spl~ ~override~ // shadow strike
+COPY_EXISTING ~zssdh14b.spl~ ~override~ // fell strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
 
 COPY_EXISTING ~zssdh14n.spl~ ~override~ // backstab removal effect
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@13100) END
 
-COPY_EXISTING ~zssdh14j.spl~ ~override~ // enervating
+COPY_EXISTING ~zssdh14j.spl~ ~override~ // enervating strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@134) END
 
-COPY_EXISTING ~zssdh14c.spl~ ~override~ // chilling
+COPY_EXISTING ~zssdh14c.spl~ ~override~ // chilling strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@133) END
 
-COPY_EXISTING ~zssdh14h.spl~ ~override~ // beshadow
+COPY_EXISTING ~zssdh14h.spl~ ~override~ // veiled strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@132) END
 
-COPY_EXISTING ~spwi408.spl~ ~override/zssdstnk.spl~ // shadeskih
+COPY_EXISTING ~spwi721.spl~ ~override/zssdmsiv.spl~ // mass invisibility
     LPM CONVERT_SPL_TO_INNATE
     LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@21091) END
-    LPF CLONE_HEADER INT_VAR level=21 STR_VAR match_icon = "spwi408b" END
-    LPF CLONE_HEADER INT_VAR match_level=21 level=24 STR_VAR match_icon = "spwi408b" END
-    LPF ALTER_EFFECT INT_VAR header=1 match_opcode = 218 parameter1=4 END
-    LPF ALTER_EFFECT INT_VAR header=2 match_opcode = 218 parameter1=5 END
-    LPF ALTER_EFFECT_EX INT_VAR duration = 900 STR_VAR match_duration_ex = "(o_duration > 1800)" END
+    LPF ALTER_HEADER_EX STR_VAR match_level_ex = "(o_level > 1)" level_ex = "(THIS * 2)" END
+    LPF ALTER_HEADER INT_VAR speed = 1 END
 
 ACTION_IF GAME_IS "bgee" BEGIN
-
-    COPY_EXISTING ~zssdcncl.spl~ ~override~ // cone of cold
-        LPF ALTER_SPELL INT_VAR ref_name = 26492 END
 
     COPY_EXISTING ~zssdmelf.spl~ ~override~ // melf's acid arrow
         LPF ALTER_SPELL INT_VAR ref_name = 26393 END
@@ -305,7 +299,7 @@ COPY_EXISTING ~spcl936.spl~ ~override~ // Shadow Twin, fixed wrong duration, fee
     LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=139 target=1 timing=3 parameter1=RESOLVE_STR_REF(@500) duration=120 END
 BUT_ONLY IF_EXISTS
 
-COPY_EXISTING ~simulacr.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shade and Shadow Twin in abilities
+COPY_EXISTING ~simulacr.spl~ ~override~ // fixes issues in 2.6.6 of simulacra's, prevents Summon Shadow, Summon Nighthaunt, and Shadow Twin in abilities
     LPF DELETE_EFFECT INT_VAR match_opcode = 144 END
     LPF ADD_SPL_SELFEFF STR_VAR effects = ~op=172,res=zs#sdl4a;op=172,res=spcl936;op=172,res=zs#sdl4b~ END
 BUT_ONLY
@@ -358,7 +352,7 @@ COPY_EXISTING ~zs#sdsm.spl~ ~override~ // See invisibility
 
 ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/zssddark.pro~
 
-COPY_EXISTING ~zs#sdsh.spl~ ~override~ // Darkness
+COPY_EXISTING ~zs#sdsh.spl~ ~override~ // Darkness 15' feet
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@210) ref_desc = RESOLVE_STR_REF(@211) END
     LPF ALTER_HEADER INT_VAR match_type = 1 projectile = %zssddark% END
 
@@ -450,9 +444,7 @@ END
 COPY_EXISTING ~zssdsw1b.spl~ ~override~ // Shadow Weapon
               ~zssdsw2b.spl~ ~override~ 
               ~zssdsw3b.spl~ ~override~ 
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
-
-COPY_EXISTING ~zssdsw8d.spl~ ~override~ // Shadow Weapon
+              ~zssdsw8d.spl~ ~override~ 
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@255) END
 
 ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
