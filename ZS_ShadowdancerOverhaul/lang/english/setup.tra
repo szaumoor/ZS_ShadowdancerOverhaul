@@ -9,7 +9,7 @@ Advantages:
 – Hide in Plain Sight: <PRO_HESHE> can hide, even while observed, for 20 seconds. This ability has a base cooldown of 1 turn, reduced by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds. The chance of success depends on <PRO_HISHER> Hide in Shadows skill, but this ability is separate from the standard thief hiding skill and functions as an innate power.
 – May cast Shadowstep once per day, gaining one additional use every two levels thereafter.
 
-SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowdancer to step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable while time stands still for everyone else. During this time, <PRO_HESHE> cannot harm others, be targeted, or cast spells, but may move freely. Upon returning to the Prime Material Plane, <PRO_HESHE> gains temporary bonuses to <PRO_HISHER> combat ability, including the power to backstab from any angle. These benefits scale with the shadowdancer's level. As an alternative to Planeshift, <PRO_HESHE> may instead Blink, that is, instantly teleport to a visible location, gaining the same benefits as the former upon completing the teleportation.
+SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowdancer to step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable while time stands still for everyone else. During this time, <PRO_HESHE> cannot harm others, be targeted, or cast spells, but may move freely. Upon returning to the Prime Material Plane, <PRO_HESHE> gains brief temporary bonuses to <PRO_HISHER> combat ability, including the power to backstab from any angle. These benefits scale with the shadowdancer's level. As an alternative to Planeshift, <PRO_HESHE> may instead Blink, that is, instantly teleport to a visible location, gaining the same benefits as the former upon completing the teleportation.
 
 – May cast Shadow Leap once per turn. This is a lesser version of Shadowstep that lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining mild bonuses for one round. Unlike Shadowstep, it requires concentration and can be interrupted.
 – At level 3, <PRO_HESHE> may cast Shadow Call once per day. Further uses are gained at levels 6, 12, and 18.
@@ -52,7 +52,7 @@ This ability may be cast in one of two forms: Planeshift or Blink. The shadowdan
 
 PLANESHIFT: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a Saving Throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
 
-Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for roughly half a round:
+Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for about half a round:
 
 – May backstab once from any direction
 – Attacks cannot critically miss and ignore weapon speed factor
@@ -61,7 +61,7 @@ Upon returning to the Prime Material Plane, the shadowdancer gains the following
 – Damage: +1, with an additional +1 every 6 levels (up to +3)
 – Critical Hit Chance: +5%, improving to +10% at level 13 and +15% at level 25
 
-These offensive benefits are consumed after the first successful attack that is not blocked by weapon immunities. For the remainder of the effect's duration, the shadowdancer retains a +6 bonus to Armor Class and Saving Throws.
+The offensive benefits are consumed after the first successful attack that is not blocked by weapon immunities. Additionally, for one round, the shadowdancer will also remain invisible and under the effects of Blur (+3 Armor Class, +1 to Saving Throws).
 
 BLINK: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
 
@@ -124,9 +124,9 @@ Requirements: Improved Shadow Evade~
 @12 = ~Shadow Maze
 This ability opens a temporary gateway to a small pocket of the Plane of Shadow. All enemies within 7 feet of the shadowdancer must make a Save vs. Spell at a -4 penalty or become trapped inside that space for 5 to 14 rounds. This spell becomes harder to resist as the shadowdancer grows more experienced: the penalty becomes -5 at level 28 and -6 at level 36.~
 
-@13 = ~Shadeweaver~
-@14 = ~Shadeweaver
-The shadowdancer's communion with shadow grants <PRO_HIMHER> the following permanent benefits:
+@13 = ~One With The Shadow~
+@14 = ~One With The Shadow
+The shadowdancer's deep communion with Shadow grants <PRO_HIMHER> the following permanent benefits:
 
 – Immunity to blindness
 – Casting speed, movement rate, and weapon speed factor are permanently increased by 2
@@ -147,7 +147,7 @@ The shadowdancer may infuse <PRO_HISHER> attacks with energy from the Shadow Dee
 
 During this time, the shadowdancer's critical hit chance is increased by 5%. In addition, if the target is immune to backstabs, each successful hit has a 10% chance to remove that immunity for 10 seconds. This can occur only once every 5 rounds per target. These effects ignore Magic Resistance. Fell Strike effects do not stack; each new application replaces the previous one.
 
-Requirements: Fight in the Shade~
+Requirements: Shadebound~
 
 @13100 = ~Backstab Immunity Stripped~
 
@@ -185,7 +185,6 @@ DARKNESS 15' FEET: Pull a mass of magical darkness over a 15-ft. area, blinding 
 Finally, at level 18, the following spells are gained:
 
 SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
-
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.~
 
 @21050 = ~Shadow Fireball~
@@ -228,7 +227,6 @@ DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball tha
 SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
 
 MASS INVISIBILITY: Upon casting this spell, the shadowdancer causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility.~
-
 
 @2109 = ~Shadow Shield~
 
