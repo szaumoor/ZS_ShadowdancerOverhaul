@@ -141,7 +141,7 @@ The shadowdancer may infuse <PRO_HISHER> attacks with energy from the Shadow Dee
 
 – Veiled Strike: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds and blind the target for 4 rounds (Save vs. Spell at -4 negates blindness).
 
-– Chilling Strike: Each backstab deals an extra 1d6+1 cold damage and 1d6+1 magic damage. This bonus damage is doubled against blinded targets. In addition, each backstab has a 20% chance to force the target to make a Save vs. Death (at -1 if blinded). On a failed save, the target is stunned for 1 round 20% of the time; otherwise, the target is slowed for 2 rounds.
+– Chilling Strike: Each backstab deals an extra 1d6+1 cold damage and 1d6+1 magic damage. This bonus damage is doubled against blinded targets. In addition, each backstab has a 20% chance to force the target to make a Save vs. Death (at -2 if blinded). On a failed save, the target is stunned for 1 round 20% of the time; otherwise, the target is slowed for 2 rounds.
 
 – Enervating Strike: Each backstab forces the target to make a Save vs. Death at -2 or have <PRO_HISHER> Strength and movement rate halved for 8 rounds. If the target is already enervated, the backstab instead imposes a -5 penalty to THAC0, a -2 penalty to Armor Class, a -1 penalty to Saving Throws, and causes the target to deal minimum damage with physical attacks. These secondary effects end when the enervation expires.
 
@@ -226,7 +226,7 @@ DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball tha
 
 SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
 
-MASS INVISIBILITY: Upon casting this spell, the shadowdancer causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility.~
+MASS INVISIBILITY: Upon casting this spell, the shadowdancer instantly causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility.~
 
 @2109 = ~Shadow Shield~
 

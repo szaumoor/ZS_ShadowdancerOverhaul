@@ -253,7 +253,6 @@ COPY_EXISTING ~zssdh14h.spl~ ~override~ // veiled strike
 
 COPY_EXISTING ~spwi721.spl~ ~override/zssdmsiv.spl~ // mass invisibility
     LPM CONVERT_SPL_TO_INNATE
-    LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@21091) END
     LPF ALTER_HEADER_EX STR_VAR match_level_ex = "(o_level > 1)" level_ex = "(THIS * 2)" END
     LPF ALTER_HEADER INT_VAR speed = 1 END
