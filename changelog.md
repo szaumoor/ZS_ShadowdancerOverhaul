@@ -45,7 +45,7 @@
   - Umbral Shades now grants Mass Invisibility instead of Shadowstep, which also replaces Shadow Door, since it is an improvement over the latter in every metric.
   - Now allows you to cast Shadow Illusion, which was previously a separate ability
   - Removed Shield, Cone of Cold, Stoneskin, and Web from the pool of spells
-  - Shadow Shield from Umbral Call now also grants 3 layers of stoneskin, but no longer grants immunity to normal and +1 weapons and the Armor Class bonus is now reduced to +3
+  - Shadow Shield from Umbral Call now also grants 3 layers of stoneskin, immunity to level drain, and all instant-death effects, but no longer grants immunity to normal and +1 weapons and the Armor Class bonus is now reduced to +3 from +5
 - Other Changes:
   - Shadow Weaver HLA renamed → Shadeweaver
   - New HLA added, "Shadebound", which improves slightly the benefits granted by Shadowstep, Shadow Leap, Shadow Evade, and Shadow Form, and is now a prerequisite for Fell Strike
