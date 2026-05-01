@@ -31,7 +31,7 @@ Disadvantages:
 – Backstab multiplier follows the normal progression, but stops at 4x
 – May only distribute 15 skill points per level (40 at level 1) among thieving skills
 – May not use the Set Snare ability or learn High-Level Abilities that introduce traps
-– May not select any thief High-Level Abilities other than Assassination
+– May not select any thief High-Level Abilities other than Assassination and Use Any Item
 – May not dual-class~
 
 @1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you spent your childhood yearning for a life cloaked in shadow and secrecy. While other children played at knights and dragons, you slipped unseen through Candlekeep's quiet halls, imagining yourself a phantom among the unwary. The ambling, distracted monks became secret lords and unsuspecting marks in your mind, their purses and possessions tempting small tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, usually with little more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you have found little satisfaction in pilfering from your caretakers. Your heart yearns for a larger stage, one where silence, subtlety, and a gift for moving unseen may at last find their proper use.~
@@ -80,7 +80,7 @@ This loyal undead companion is weaker than its natural counterparts, but grows s
 – Shadowlord from levels 20 to 27
 – Greater Shadowlord from level 28 onward
 
-The creature's Hit Dice are always 1 lower than the shadowdancer's, up to a maximum of 27 HD.~
+The creature's Hit Dice are always 1 lower than the shadowdancer's, up to a maximum of 27 HD. Note that no more than one of these creatures may be active at a time.~
 
 @700000 = ~Summon Nighthaunt~
 @700001 = ~Summon Nighthaunt
@@ -90,6 +90,8 @@ Requirements: Level 30 or higher, Shadowdancer only~
 
 @700002 = ~Summon Nighthaunt
 Call forth an invisible nighthaunt from the Demiplane of Shadow for 8 hours, or until it is slain. This powerful nigthshade possesses all the immunities of lesser shadows, but is stronger, more resistant to damage, and can occasionally drain one or two levels with its attacks. It becomes slightly more powerful at shadowdancer levels 35 and 40.~
+
+@700010 = ~You may not summon more than one shadowdancer shade.~
 
 @9 = ~Hide in Plain Sight~
 @90 = ~Failed to Hide in Plain Sight~
@@ -139,13 +141,13 @@ Requirements: Shadowdancer only~
 @131 = ~Fell Strike
 The shadowdancer may infuse <PRO_HISHER> attacks with energy from the Shadow Deep. For 1 round after activation, <PRO_HISHER> attacks deal maximum damage. For 1 turn, <PRO_HISHER> backstabs also gain one of the following effects, chosen when this ability is activated:
 
-– Veiled Strike: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds and blind the target for 4 rounds (Save vs. Spell at -4 negates blindness).
+– Veiled Strike: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds. Additionally, it blinds the target for 4 rounds unless a Save vs. Spell at -4 succeeds. If the target is blinded already, the chances for the shadowdancer to become invisible on backstab are 60% instead.
 
 – Chilling Strike: Each backstab deals an extra 1d6+1 cold damage and 1d6+1 magic damage. This bonus damage is doubled against blinded targets. In addition, each backstab has a 20% chance to force the target to make a Save vs. Death (at -2 if blinded). On a failed save, the target is stunned for 1 round 20% of the time; otherwise, the target is slowed for 2 rounds.
 
 – Enervating Strike: Each backstab forces the target to make a Save vs. Death at -2 or have <PRO_HISHER> Strength and movement rate halved for 8 rounds. If the target is already enervated, the backstab instead imposes a -5 penalty to THAC0, a -2 penalty to Armor Class, a -1 penalty to Saving Throws, and causes the target to deal minimum damage with physical attacks. These secondary effects end when the enervation expires.
 
-During this time, the shadowdancer's critical hit chance is increased by 5%. In addition, if the target is immune to backstabs, each successful hit has a 10% chance to remove that immunity for 10 seconds. This can occur only once every 5 rounds per target. These effects ignore Magic Resistance. Fell Strike effects do not stack; each new application replaces the previous one.
+During this time, the shadowdancer's critical hit chance is increased by 5%. In addition, if the target is immune to backstabs, each successful hit (backstab or not) has a 10% chance to remove that immunity for 10 seconds. This can occur only once every 5 rounds per target. These effects ignore Magic Resistance. Fell Strike's variations do not stack; each new application replaces the previous one.
 
 Requirements: Shadebound~
 
@@ -195,9 +197,9 @@ This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilit
 
 DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
 
-SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
+SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy, level drain, and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
 
-MASS INVISIBILITY: Upon casting this spell, the shadowdancer causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility. This replaces the Shadow Door ability and is cast instantly.
+MASS INVISIBILITY: Upon casting this spell, the shadowdancer causes all friendly creatures within the area of effect to be affected by the spell Improved Invisibility. This replaces the Shadow Door ability and is cast with a casting speed of 1.
 
 Requirements: Shadowdancer only~
 

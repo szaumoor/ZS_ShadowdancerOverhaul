@@ -19,9 +19,6 @@ There were several things about BeamDog's implementation of shadowdancers that I
 - **Slippery Mind**: **+1 bonus** against **Spells**, **Wands**, and **Enchantment and Illusion** effects. This bonus improves by +1 at level 12 and every 12 levels thereafter.
 - **Shadow Haven**: Gained at level 10. Regenerate 1 HP per round while invisible and become undetectable by magical means except True Sight. The shadowdancer also gains +2 Armor Class, THAC0, Damage, and Saving Throws against spectral creatures.
 - **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This avoids having to wait until level 5 to backstab at all, which is a horrendous experience in BGEE.
-- **Alignment restricted to any non-lawful**
-- **Cannot use Set Snare or learn trap HLAs**
-- **Cannot select thief HLAs other than Assassination**
 - **Can no longer dual class**
 
 ### SKILLS
@@ -44,11 +41,11 @@ There were several things about BeamDog's implementation of shadowdancers that I
 
 ### HLAs
 
-- All normal thief HLAs are removed except **Assassination**.
+- All normal thief HLAs are removed except **Assassination** and **Use Any Item**.
 - **Shadow Dance**: Allows the shadowdancer to move with agility and grace for 5 rounds, dodging most AoE effects that can be dodged and other aimed effects such as dragon breath, fireballs, lightning bolts, skull traps, and similar effects. During this time, the shadowdancer becomes immune to missile attacks, gains +6 Armor Class, +3 Saving Throws, and +4 Movement Rate, and becomes invisible for 3 seconds once each round, disrupting enemy targeting unless they can see through invisibility. The ability cannot be dispelled or removed by Breach, though the invisibility can still be removed by True Sight and other effects that dispel invisibility.
 - **Shadebound**: Strengthens the shadowdancer while under the effects of shadow arts. Shadow Evade and Shadow Form grant +1 Movement Rate, +10% Magic Resistance, +3% Damage Resistance, and a small chance to retaliate when struck by re-entering Shadow Evade or Shadow Form, dealing magic damage, and stunning the attacker. Shadowstep and Shadow Leap grant +1 Movement Rate, +2 Damage, +2 THAC0, and +5% Critical Hit Chance. This unlocks Fell Strike.
 - **Fell Strike**: This ability lets the shadowdancer imbue their attacks with energy from the Shadow Deep. For 1 round after activation, attacks deal maximum damage. For 1 turn, backstabs gain one of three chosen effects. During this time, critical hit chance increases by 5%, and against backstab-immune targets, successful hits have a 10% chance to remove that immunity for 10 seconds, once every 5 rounds per target. These effects ignore Magic Resistance.
-  - **Veiled Strike**: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds and blind the target for 4 rounds if they fail a Save vs. Spell at -4.
+  - **Veiled Strike**: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds (double chance if target is already blind) and blind the target for 4 rounds if they fail a Save vs. Spell at -4.
   - **Chilling Strike**: Each backstab deals extra 1d6+1 cold and 1d6+1 magic damage. This bonus damage is doubled against blinded targets. Each backstab also has a 20% chance to force a Save vs. Death, at -2 if blinded; on a failed save, the target is either stunned for 1 round or slowed for 2 rounds.
   - **Enervating Strike**: Backstabs halve the victim's Strength and movement rate for 8 rounds if they fail a Save vs. Death at -2 (does not stack, cannot reduce Strength below 1, cannot be re-applied while it's affecting the enemy). A subsequent backstab reduces THAC0 by 5, Saving Throws by 1, Armor Class by 2, and forces the target to deal minimum damage. Once the strength halving effect runs out, the secondary effects are also dispelled.
 - **Self-concealment**: 5% universal damage resistance and +1 AC. Can be taken three times. Inspired by NWN. Damage resistance is configurable in the preferences file.
@@ -69,12 +66,12 @@ There were several things about BeamDog's implementation of shadowdancers that I
   - +4 Armor Class
   - +4 Saving Throws
   - Regenerate 1 HP per second while the effect is active
-  - Cannot be detected by divination spells until the shadowdancer partially reveals themselves by taking offensive actions, or until the effect ends. This does not prevent creatures that naturally see through invisibility from detecting the shadowdancer.
+  - Cannot be detected by divination spells until the effect ends, and they can only be seen when the shadowdancer partially reveals themselves by taking offensive actions. This does not prevent creatures that naturally see through invisibility from detecting the shadowdancer.
   - Requires **Improved Shadow Evade**
 - **Umbral Call**: Upgrades Shadow Call and adds one more use. It replaces Shadow Fireball with Delayed Blast Shadow Fireball, replaces Shadow Door with instant Mass Invisibility, and adds Shadow Shield.
   - **Shadow Shield**: For 2 turns, blocks the first 3 physical attacks, grants Blur and 8 shadowy mirror images, and grants immunity to necromancy, level drain, and instant-death effects, plus +20 Hide in Shadows and Move Silently. It can be dispelled by Dispel Magic, but not by True Sight.
-  - **Delayed Blast Shadow Fireball**: Similar to Delayed Blast Fireball, dealing a combination of 15d6 fire, cold, and magic damage. The shadowdancer and their summoned shade are immune to the shadowdancer's own Delayed Blast Shadow Fireball.
-  - **Mass Invisibility**: Instantly affects all friendly creatures within the area of effect with Improved Invisibility.
+  - **Delayed Blast Shadow Fireball**: Similar to Delayed Blast Fireball, dealing a combination of 15d6 fire, cold, and magic damage. The shadowdancer and their summoned shade are immune to the shadowdancer's own Delayed Blast Shadow Fireball. Replaces Shadow Fireball.
+  - **Mass Invisibility**: Instantly affects all friendly creatures within the area of effect with Improved Invisibility. Replaces Shadow Door.
 
 It also changes the **Rod of Shadowstep** so that it uses the new Shadowstep effects, is usable **3 times per day**, and activates completely instantly unlike other consumable effects. It does not disappear forever when drained; it recharges after a rest.
 
@@ -99,7 +96,7 @@ It is currently compatible with PoD (Pits of Despair), the only mod I know of th
 - **CTRL+R Warning:** Using CTRL+R while an ability is on cooldown will prevent it from being restored. This affects any shadowdancer or summoned shadow ability with a cooldown timer.
 - **Planeshift Exploit:** It is possible to get a guaranteed hit at the very end of Planeshift's Time Stop effect due to the engine bug associated with Time Stop duration. You can attack safely once the "Talk" button reappears in the UI, whether Time Stop is still active or not. Whether you abuse this is up to you.
 - **Planeshift & Time Stop:** Because it uses a Time Stop effect, Planeshift can be cast repeatedly to wait out hostile effects without risk. For a less cheesy alternative, Blink is also available.
-- **Summoned Shade Balance:** The summoned shade may be overpowered at high levels (28-40). Feedback on its performance is welcome.
+- **Summoned Shade Balance:** The summoned shade may be overpowered at high levels. Feedback on its performance is welcome.
 - **Shadow Call Logging:** These spells may log their sub-spells twice in the combat log. This is a known, harmless visual bug.
 - **Hide in Plain Sight Bug:** Pausing at the wrong moment when using Hide in Plain Sight can cause the ability to trigger multiple times. This does not cause any problems, since extra instances are removed on the next cast, but I've implemented some defensive fixes to limit it.
 - **Summon Nighthaunt Unlock:** Because of the necessary hack used to blocking Summon Nighthaunt HLA until level 30, force-leveling more than one level at a time might not properly detect your character is at the required level 30 to unlock it, rendering the unlocking impossible. Play normally, or test it carefully.
