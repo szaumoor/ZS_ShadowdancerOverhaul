@@ -25,7 +25,7 @@ jobs:
 
     env:
       TAG_NAME: ${{ github.event.inputs.tag || github.ref_name }}
-      PROJECT_NAME: ZSTweaks
+      PROJECT_NAME: ZS_ShadowdancerOverhaul
 
     steps:
       - name: Checkout code
