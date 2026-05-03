@@ -1,129 +1,108 @@
-# RoyalProtector's Shadowdancer Overhaul
+# Kaelyn's Shadowdancer Overhaul
 
 ## 1. Install Shadowdancer kit
 
-This part installs my custom **Shadowdancer** kit. For technical reasons, it will disable the original shadowdancer, as this mod models the shadowdancer around a basic thief kit.
+There were several things about BeamDog's implementation of shadowdancers that I didn't like.
 
-They were several things in the way shadowdancers were implemented by BeamDog, that I didn't like at all.
+- **Hiding in Plain Sight**: Overpowered. Enemy AI mostly does not know how to respond to it, making it too easy to exploit, and it has bugs such as halved Hide in the Shadows cooldown while Hasted and no cooldown for clones. For that reason, this mod does not simply overhaul the existing Shadowdancer kit: it adds a new one and removes the original from character generation, since BeamDog hardcoded Hide in Plain Sight and the original implementation is generally broken and overpowered.
+- **Shadowstep**: Uses Time Stop effects and buggy mechanics such as setting APR to 0. It breaks tactics like jumping from one enemy to another to chain backstabs, which are the shadowdancer's main advantage and damage source since they have no traps, while offering little offensive or defensive value in return.
+- **Too limited**: This is not specific to the shadowdancer, but to classes in general. There are too few abilities and not enough individuality. The shadowdancer can cast Shadowstep and hide in plain sight, and that's it. This mod adds new abilities drawn mostly from Forgotten Realms material, with a little Pathfinder mixed in. I'm not even trying to balance it against other kits; if you ask me, single-class thieves should generally be much more powerful.
 
-- **Hiding in plain sight**: Overpowered, and the enemy AI for the most part doesn't know what to do with it, it's a little too easy to exploit it -- and there are bugs associated with it, such as halved Hiding in the Shadows cooldown when Hasted and no cooldown for clones.
-- **Shadowstep**: using broken Time Stop effects, as well as using prone to bug-out effects such as setting APR to 0. Breaks fancy tactics such as jumping from one enemy to another to chain backstabs (which is the one advantage and main source of damage by shadowdancers since they have no traps!), and offers no protection or advantage when using it, offensive or defensive (for the most part).
-- **Too limited**: This is not specific to the shadowdancer, but of classes in general. Not enough abilities, and not enough singularity. The shadowdancer can cast Shadowstep, and hide in plain sight. That's it. This mod introduces new abilities taken mostly from Forgotten Realms writings, and a little bit from Pathfinder. Thieves are already pretty low-power in vanilla, and this is my take for the shadowdancer.
+### PASSIVE TRAITS
 
-So here's what the mod changes:
-
-### PASSIVES
-
-- **Hide in plain sight** now works with an innate spell. You can choose to instantly hide in plain sight for 20 seconds. To prevent spamming, this ability returns to you after 1 turn. As you level, the cooldown gets reduced by 1 round, down to 2 rounds of wait at level 40. It's also not affected by wild magic, silence, or dead magic and it does not take up your action per round. The Hide in Shadows ability functions identically compared to other Thieves.
-- **Innate infravision**: Shadowdancers should be able to see in the dark better, so regardless of race, you get infravision by default, and an appropriate icon will appear on your portrait.
-- **Natural evasion**: Start out with a bonus to AC, AC against Missiles, Saves vs. Breath, and movement speed of 2
-- **Stealthy: +20 bonus to Hiding in the Shadows and Moving Silently** at the start (up from +10), improves by 5 points at level 3, and every three levels thereafter
-- **40** points to distribute **at level 1**, and **15** from that point on.
-- **Elusive mind**: This is a renamed **Slippery mind** (universal +1 saving throw as per BeamDog's design), which now offers instead a **+1 bonus** against **Spells**, **Wands**, and **Enchantment and Illusion** effects. This bonus improves by +1 at level 12, and every 12 levels thereafter.
-- At level **10**, gains the ability **Shadow Haven**, allowing them to regenerate 1 HP per round while invisible, much like your shade companion, and become permanently non-detectable by divination spells except for True Sight.
-- **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This makes them combat-wise in BGEE as feasible as any other thief, which prevents the annoyance of vanilla shadowdancers not being able to backstab anything until level 5, while keeping backstab power progression equally satisfying as with any other thief.
+- **Hide in Plain Sight** is no longer tied to the normal hiding ability. Instead, it is an uninterruptible innate spell-like ability that makes you invisible for 20 seconds, with success based on your Hide in Shadows ability. To prevent spamming, it returns after 1 turn, and the cooldown decreases by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds.
+- **Innate Infravision**
+- **Immune to magical darkness**
+- **Natural Evasion**: Start with +2 Base AC, doubled against missile attacks, +1 Saves vs. Breath, and +1 movement speed
+- **Stealthy**: +20 to Hiding skills, increasing by 5 at level 3 and every three levels thereafter
+- **Thief Skill points**: 40 points to distribute **at level 1**, and **15** on subsequent levels
+- **Slippery Mind**: **+1 bonus** against **Spells**, **Wands**, and **Enchantment and Illusion** effects. This bonus improves by +1 at level 12 and every 12 levels thereafter.
+- **Shadow Haven**: Gained at level 10. Regenerate 1 HP per round while invisible and become undetectable by magical means except True Sight. The shadowdancer also gains +2 Armor Class, THAC0, Damage, and Saving Throws against spectral creatures.
+- **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This avoids having to wait until level 5 to backstab at all, which is a horrendous experience in BGEE.
+- **Can no longer dual class**
 
 ### SKILLS
 
-- **Shadowstep**: You have one use of this immediately at level 1 and get another one at level 3 and every second level henceforth (20 uses at level 40 -- 25 at level 50 if there's no spell cap). This spell is cast instantly, cannot be interrupted and does not take up your action per round. It allows you to select two flavors when cast:
-  - **Planeshift:** This ability is essentially vanilla **Shadowstep**. It offers several advantages, for a limited time for its duration, and 1-3 seconds after it:
-    - You **move faster** as you level up, so you can maneuver for whatever purpose more effectively.
-    - You are able to **ignore effects that can be saved against briefly** (this is interpreted as evasion, which shadowdancers would be masters at).
-    - All attempts at casting spells will fail until the duration of this spell is over.
-    - You become **invisible** immediately and **cannot have your invisibility detected**
-    - +1 Luck
-    - You get an **increasing bonus** to **THAC0** (up to +6, on top of invisibility bonuses), **damage** (up to +3), and **critical hit** chances (up to 15%) for a few seconds after ending the effect -- you can think of this as preparation. This means this ability can be used for both defensive and offensive maneuvers, by either escaping and resisting very briefly most effects that can be blocked with saving throws, or chaining backstabs effectively, which you can do from any direction, just like NPCs do (only for that duration though).
-    - You can attack immediately (**speed factor 0**) and **without the possibility of critical misses**.
-    - Although this ability uses the Time Stop opcode, it's not Time Stop, and therefore, creatures immune to Time Stop will not be allowed to take advantage of their immunity.
-  - **Blink:** This version allows you to teleport instantly, without going through the ~7 seconds of Time Stop. The benefits that the Time Stop version grants are the same as the Planeshift version and last for 4 seconds. Refer to the description of the other version for more details. You can spam this as per your needs (for example, when hasted, to chain 2 backstabs to two enemies), but the benefits will not stack, only refreshed (don't try to backstab more than one enemy in one round if you're not hasted, and no more than 2 if you're hasted, the engine will kick you out of invisibility if you try).
-- **Shadow Leap**: This is a minor Shadowstep teleport that grants minor combat benefits for 1 round, does not interrupt invisibility, that can be interrupted, and the shadowdancer can perform once per 3 rounds.
-- **Shadow Illusion**: You get one use of this at level 3. This was inspired by both Pathfinder and NWN2, but essentially the idea is that you're able to discombobulate enemies through illusions in various ways if they fail a Save vs. Spell (this save improves per level up to -4). This bypasses magic resistance and all protections.
-  - In essence, casting this spell can cause one of these effects for 5 rounds in a single enemy: fear, berserk, confusion, blindness. They may resist it in the following rounds, but may fall prey to the same effect in the following rounds if they fail the save all the same.
-  - Additionally, they get a 25% chance of spell disruption for the whole duration, and become able to be affected by backstabs and sneak attacks, if they had such immunity.
-  - At higher levels it becomes a small area-of-effect spell, and later makes enemies take 10% more physical damage and get an Armor Class penalty of 4, and the blindness effect is guaranteed when the saving throw fails.
-  - Doesn't affect creatures of INT of 18 and above as well as powerful creatures that can't be tricked, like golems, dragons, balors, solars, etc.
-- **Summon Shade**: You get this ability at level 4. You can summon a shade to fight at your side. It can be summoned once per day for 8 hours and grows in power with you. Here are some common traits at any level:
-  - **Neutrally aligned**. It's supposed to have the same alignment as you, but I wouldn't know how to build it such that it matches your character's alignment anyway (and there are only a handful of situations where the alignment would be important).
-  - **Summoned invisible**
-  - **Regenerates** very slowly over time. Starts out with 1 HP per 5 rounds, which will improve every tier up to 1 HP per round at level 40. It regenerates faster if invisible (+1 HP per round).
-  - **Immune to turning**. Cannot be turned by your party or anyone else.
-  - **Immune to anti-summon spells**. Additionally, Horrid Wilting will not affect them.
-  - **Immune to blindness**. It's at home in the dark.
-  - **Immune to intelligence drain by Illithids**
-  - **Immune** to **Acid**, **Cold**, later becomes immune to **Electricity** too, and gains a small amount of Magic Resistance.
-  - **Resists 20% of physical damage, 30% for missile**, which increases slowly up to 50% and 60% respectively later on. It starts off with 18 HP and goes up to 100 eventually.
-  - **All the usual undead immunities**, like poison and stun as well as **immunity to backstabs and critical hits**.
-  - Evolves into a **Greater Shadow**, a **Shadowlord**, a **Greater Shadowlord** and a **Nighthaunt**.
-  - Gets a few selected innate spells to cast (illusion spells, teleporting, and a few to drain life, among others).
-  - Their attacks can **drain strength** and absorb a slight amount of HP, which can be saved against (save vs. death at +2, which improves with level, up to -1), and won't be able to kill by draining. Normal shadows don't have this limitation. When the shadow becomes a Nighthaunt, they also have a small chance of draining one or two levels from victims when they attack (subject to probabilities).
-  - Unlike normal shadows, **it can be harmed by normal weapons** at lower levels. This is done for balance reasons. During ToB and late SoA it's probably okay to have that immunity, your party should be extremely powerful, and dangerous enemies wielding normal weapons rare.
-  - All other stats, defenses and offensive capabilities slowly improve as you level up (APR, THAC0, movement speed, spells, STR/DEX/etc).
-- **Shadow Evade**: you get this at level 4, then again at level 8 and 16. It's essentially a significantly less powerful Shadow Form: +4 AC, +15% damage reduction (+20% at level 8, +25% at level 16) for 5 rounds. It grants invisibility during this time.
-- **Shadow Conjuration**: Similar to the abilities in NWN, this allows the shadowdancer to cast a small selection of spells that are cast, where it applies, at half the shadowdancers's level. There are three versions:
-  - **Shadow Conjuration**: Gains one use at level 6, 9, and 12. May cast Sleep, Shield, Magic Missile, Darkness 15' Radius, Invisibility.
-  - **Greater** Shadow Conjuration: Gains one use at level 12, 15, and 18. May cast Melf's Acid Arrow, Web, Minor Globe of Invulnerability, and Blindness.
-  - **Shades**: Gains one use at level 18, 21, and 24. May cast Cone of Cold, Shadow Fireball (special purple-colored fireball that deals a mix of magic, cold, and fire damage), Stoneskin (limited to 5 skins at most), Shadow Door.
+- **Shadowstep**: You get one use immediately at level 1, another at level 3, and one more every second level thereafter. It is cast instantly, cannot be interrupted, and does not use your action per round. When cast, you choose between two versions:
+  - **Planeshift:** This is essentially vanilla **Shadowstep**. For its duration, and for a few seconds afterward, it grants:
+    - **Offensive:** +1 Luck, cannot critically miss, ignores weapon speed factor, +1 THAC0 (increases by 1 every 3 levels, up to +6), +1 Damage (increases by 1 every 6 levels, up to +3), 5% critical hit chance (+5% at levels 13 and 25), and may backstab once from any angle.
+    - **Defensive**: While in the Shadow Plane, becomes completely undetectable and immune to all effects that allow a Saving Throw. After returning, remains invisible and under Blur for 1 round, gaining +3 Armor Class and +1 Saving Throws.
+    - **Other:** Movement speed increases by a factor of 2 (+1 every 3 levels). During Planeshift, the shadowdancer cannot attack, be attacked, or cast spells.
+  - **Blink:** This version teleports instantly. It grants the same benefits as the other version.
+- **Shadow Leap**: A much weaker Shadowstep-style teleport that grants minor benefits for 1 round, does not break invisibility, and can be used once per turn. Unlike normal Shadowstep, it can be interrupted by damage and uses your action per round.
+- **Shadow Illusion**: Available through Shadow Call from level 3. It discombobulates enemies through illusions, causing various mind-affecting and other effects if they fail their saving throws. Its effectiveness and area of effect both improve with level. It bypasses magic resistance and dispelling effects, but does not fool creatures that see through illusions or creatures with Intelligence 18 or higher. This is available through the Shadow Call ability.
+- **Summon Shadow**: You get this ability at level 4. It summons an invisible undead shadow to fight at your side, starting as a humble shadow and growing into more powerful and dangerous creatures as you level up. It can be summoned once per day for 8 hours. It regenerates slowly, faster while invisible, cannot be blinded, cannot be turned or destroyed by banishment effects, and has the usual immunities of a spectral undead being. It also resists damage and can temporarily drain Strength from victims that fail a Save vs. Death. It evolves from Shadow at levels 4-11, to Greater Shadow at levels 12-19, Shadowlord at levels 20-27, and Greater Shadowlord from level 28 onward. Its Hit Dice are always 1 lower than the shadowdancer's, up to a maximum of 27 HD.
+- **Shadow Evade**: You get this at level 5, then again at levels 10 and 15. It is essentially a much weaker Shadow Form: +4 AC, +2 Saving Throws, +15% damage reduction, and invisibility for 5 rounds. Each additional daily use improves the damage resistance by 5%, to a maximum of 25%. It also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball cast through Shadow Call.
+- **Shadow Call**: Similar to the abilities in NWN, this lets the shadowdancer cast a small selection of semi-real spells at half the shadowdancer's level where applicable. You get one use at level 3, with further uses at levels 6, 12, and 18.
+  - At level 3, may cast Shadow Illusion and Sleep.
+  - At level 6, adds Invisibility, Magic Missile, and Blindness.
+  - At level 12, adds Darkness 15' Radius, Melf's Acid Arrow, and Minor Globe of Invulnerability.
+  - At level 18, adds Shadow Fireball and Shadow Door.
 
 ### HLAs
 
-- **Alchemy** is completely removed
-- **Assassination** and **Avoid Death** are kept exactly as is
-- **Evasion and Improved evasion** are **replaced** by a new one called **Shadow Dance**. This ability allows the shadowdancer to move with agility and grace, dodging most AoE effect that can be dodged, and other aimed effects (dragon breath, fireballs, cone of cold, etc, but not things like Horrid Wilting), becoming immune to projectiles, getting +6 Armor Class and +3 to saving throws. Additionally, every round, the Shadowdancer becomes invisible for half a round, which messes with the targeting of enemies, and may help with backstabbing, if the timing is right.
-- **Scribe Scrolls** is replaced by a new ability called **Shadowstrike**. This ability allows the shadowdancer to imbue their attacks with shadow magic, having a 10% chance of disabling the backstab immunity of targets if they fail a save vs. Spell at -2 for 10 seconds (only once every 5 rounds), increasing their critical hit chances by 5% and adding the following effects to backstabs for 1 turn:
-  - **Beshadowed Strike**: 30% chance of becoming invisible when successfully backstabbing, making target blind for 3 rounds if they fail a save vs. Spell at -4
-  - **Chilling Strike**: Backstabs deal extra 1d4 cold and 1d4 magic damage. If the target is blinded, they deal extra 2d4+1 cold and 2d4+1 magic damage instead.
-  - **Enervating Strike**: Backstabs halve the victim's Strength for 5 rounds if they fail a Save vs. Death (does not stack, and cannot reduce Strength below 1). Attacks will also deal maximum damage during the first round.
-- **Self-concealment**: 5% universal damage resistance, +1 AC, can be taken three times. Inspired by NWN. DR is configurable.
-- **Shadow Weaver**: Can be taken once. Inspired by Pathfinder's "Shadow Master". The following traits are permanently gained:
+- All normal thief HLAs are removed except **Assassination** and **Use Any Item**.
+- **Shadow Dance**: Allows the shadowdancer to move with agility and grace for 5 rounds, dodging most AoE effects that can be dodged and other aimed effects such as dragon breath, fireballs, lightning bolts, skull traps, and similar effects. During this time, the shadowdancer becomes immune to missile attacks, gains +6 Armor Class, +3 Saving Throws, and +4 Movement Rate, and becomes invisible for 3 seconds once each round, disrupting enemy targeting unless they can see through invisibility. The ability cannot be dispelled or removed by Breach, though the invisibility can still be removed by True Sight and other effects that dispel invisibility.
+- **Shadebound**: Strengthens the shadowdancer while under the effects of shadow arts. Shadow Evade and Shadow Form grant +1 Movement Rate, +10% Magic Resistance, +3% Damage Resistance, and a small chance to retaliate when struck by re-entering Shadow Evade or Shadow Form, dealing magic damage, and stunning the attacker. Shadowstep and Shadow Leap grant +1 Movement Rate, +2 Damage, +2 THAC0, and +5% Critical Hit Chance. This unlocks Fell Strike.
+- **Fell Strike**: This ability lets the shadowdancer imbue their attacks with energy from the Shadow Deep. For 1 round after activation, attacks deal maximum damage. For 1 turn, backstabs gain one of three chosen effects. During this time, critical hit chance increases by 5%, and against backstab-immune targets, successful hits have a 10% chance to remove that immunity for 10 seconds, once every 5 rounds per target. These effects ignore Magic Resistance.
+  - **Veiled Strike**: Each backstab has a 30% chance to render the shadowdancer immediately invisible for 2 rounds (double chance if target is already blind) and blind the target for 4 rounds if they fail a Save vs. Spell at -4.
+  - **Chilling Strike**: Each backstab deals extra 1d6+1 cold and 1d6+1 magic damage. This bonus damage is doubled against blinded targets. Each backstab also has a 20% chance to force a Save vs. Death, at -2 if blinded; on a failed save, the target is either stunned for 1 round or slowed for 2 rounds.
+  - **Enervating Strike**: Backstabs halve the victim's Strength and movement rate for 8 rounds if they fail a Save vs. Death at -2 (does not stack, cannot reduce Strength below 1, cannot be re-applied while it's affecting the enemy). A subsequent backstab reduces THAC0 by 5, Saving Throws by 1, Armor Class by 2, and forces the target to deal minimum damage. Once the strength halving effect runs out, the secondary effects are also dispelled.
+- **Self-concealment**: 5% universal damage resistance and +1 AC. Can be taken three times. Inspired by NWN. Damage resistance is configurable in the preferences file.
+- **One With The Shadow**: The following passive benefits are permanently gained:
   - Immunity to blindness
   - Backstabs may be performed from any angle
   - Movement speed, casting speed, and speed factor permanently increase by 2
-  - Critical hits make the target susceptible to backstabs for 2 rounds
-  - Critical hits also cause the shadowdancer for those two rounds to be incapable of critically missing (non-stackable)
+  - Critical hits make the target susceptible to backstabs and the shadowdancer incapable of critically missing for 2 rounds
   - Critical chances improve by 5% for 2 rounds after critically hitting (non-stackable)
-- **Shadow Maze**: vanilla HLA, but save vs. spell penalties improve with level (to -5 at level 28, -6 at level 36, and -7 at 44 if level is uncapped) and its duration does not depend on enemy intelligence: the number of rounds it lasts is randomized between 5 and 14. Additionally, it uses the visual effects from Ether Gate (and removes the delay of Maze), which are frankly much better looking. After returning from the pocket, living creatures feel weak, taking a -2 penalty to most combat related stats, as well as movement speed, STR and DEX. Can be taken unlimited times.
-- **Shadow Twin**: vanilla HLA, but the duration is the correct 2 turns (currently bugged at 1 turn). Additionally, the bugs in 2.6.6 that prevent the use of Detect Traps/Illusions and Hide in the Shadows were fixed, though Simulacrums can't summon a shadow. Can be taken unlimited times.
-- **Improved Shadow Evade**: This upgrades your Shadow Evade permanently to Shadow Form, essentially replacing the 3 casts of Shadow Evade with 3 of Shadow Form. This opens up the Shadow Form HLA. Can be taken once.
+- **Shadow Maze**: Opens a temporary gateway to a small pocket of the Plane of Shadow. All enemies within 7 feet must make a Save vs. Spell at -4 or become trapped for 5 to 14 rounds. The save penalty improves to -5 at level 28 and -6 at level 36.
+- **Shadow Twin**: Creates an almost exact duplicate for 2 turns. The duplicate is created at 60% of the shadowdancer's current level, has all abilities the shadowdancer would have at that level, and has 60% of the shadowdancer's Hit Points. It cannot create another Shadow Twin or use Summon Shadow or Summon Nighthaunt.
+- **Summon Nighthaunt**: Permanently upgrades Summon Shadow, allowing the shadowdancer to call forth an invisible nighthaunt for 8 hours instead. This powerful nightshade is tougher and deadlier than lesser shadows, can occasionally drain one or two levels with its attacks, and improves slightly at shadowdancer levels 35 and 40. Requires level 30 or higher.
+- **Improved Shadow Evade**: Permanently upgrades your Shadow Evade to Shadow Form. Can be taken once.
 - **Shadow Form**: Same, but:
-  - It makes your invisibility undispellable for its duration. Note that you will appear partially visible when performing an offensive action, same as always, but it will not be dispelled by any effects.
-  - It makes you resist +50% of ALL damage for 5 rounds, not just physical damage (mimics displacement).
-  - +4 AC is added, similar to how it's done in NWN
+  - Duration is 5 rounds, plus 1 round per 10 levels starting at level 30.
+  - Invisibility becomes Improved Invisibility.
+  - Resist +50% of ALL damage, not just physical damage
+  - +4 Armor Class
+  - +4 Saving Throws
   - Regenerate 1 HP per second while the effect is active
-  - Can be taken unlimited times.
-- **Deep Shades**: This new HLA is the continuation of the shadow conjuration line. It may be chosen three times, and allows the caster to cast one of the following:
-  - **Shadow Shield**: A defensive spell roughly inspired by the NWN/NWN2 spell, which grants Blur, +2 AC (+4 vs. missile), 8 Mirror Images, a shadow-like appearance, +20 ability in hiding, immunity to weapons under +2 enchantment, and immunity to necromantic effects. It lasts for 2 turns.
-  - **Delayed Blast Shadow Fireball**: Similar to Shadow Fireball, but based on the Delayed Blast Fireball.
-  - **Shadowstep**
+  - Cannot be detected by divination spells until the effect ends, and they can only be seen when the shadowdancer partially reveals themselves by taking offensive actions. This does not prevent creatures that naturally see through invisibility from detecting the shadowdancer.
+  - Requires **Improved Shadow Evade**
+- **Umbral Call**: Upgrades Shadow Call and adds one more use. It replaces Shadow Fireball with Delayed Blast Shadow Fireball, replaces Shadow Door with instant Mass Invisibility, and adds Shadow Shield.
+  - **Shadow Shield**: For 2 turns, blocks the first 3 physical attacks, grants Blur and 8 shadowy mirror images, and grants immunity to necromancy, level drain, and instant-death effects, plus +20 Hide in Shadows and Move Silently. It can be dispelled by Dispel Magic, but not by True Sight.
+  - **Delayed Blast Shadow Fireball**: Similar to Delayed Blast Fireball, dealing a combination of 15d6 fire, cold, and magic damage. The shadowdancer and their summoned shade are immune to the shadowdancer's own Delayed Blast Shadow Fireball. Replaces Shadow Fireball.
+  - **Mass Invisibility**: Instantly affects all friendly creatures within the area of effect with Improved Invisibility. Replaces Shadow Door.
 
-Also, it changes the **Rod of Shadowstep** such that it uses the new Shadowstep effects, it's usable **3 times per day**, and the usage is completely instant, unlike other consumable effects. It does not disappear forever when drained, it recharges after a rest.
+It also changes the **Rod of Shadowstep** so that it uses the new Shadowstep effects, is usable **3 times per day**, and activates completely instantly unlike other consumable effects. It does not disappear forever when drained; it recharges after a rest.
 
 ## 2. Make Shaman Spirit Form mirror the benefits of Shadow Form
 
-This is just for consistency. If installed, Spirit Form will also protect against non-physical types of damage, and will not be dispellable. Additionally, it makes the casting speed instant, same as Shadow Form, which should help in using it in combat (though this does not make it truly uninterruptible).
+This is purely for consistency. If installed, Spirit Form also protects against non-physical damage, becomes instant-cast like Shadow Form, grants Improved Invisibility, regenerates 1 HP per second, and prevents divination detection until the shaman partially reveals themselves or the effect ends.
 
 ## 3. Allow vanilla Shadowdancers to take advantage of Rogue Rebalancing's HLA
 
-This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, if RR is installed first (crucial). RR does not support shadowdancers, and this ensures the new HLAs are provided. The overhauled Shadowdancer does not take advantage of RR, this component exists only for the purpose of those that are not interested in the overhaul, just on making the kit "feel included" in RR.
+This component allows vanilla Shadowdancers to take advantage of RR's new HLAs, if RR is installed first (crucial). RR does not support shadowdancers on its own, and this ensures the new HLAs are provided. The overhauled Shadowdancer does not use RR; this component exists only for those who are not interested in the overhaul and just want the vanilla kit to feel included in RR.
 
 ## Compatibility & Notes
 
-Should be compatible with anything that doesn't modify the shadowdancer kit directly. My other mods will take this mod into account if shadowdancer-specific changes are made.
+It should be compatible with anything that does not modify the shadowdancer kit directly. My other mods will take this mod into account if they make shadowdancer-specific changes.
 
-I would suggest installing my tweaks in ZSTweaks for Avoid Death and Assassination to make all the HLAs all the more rewarding, as well as my other thematic rogue tweaks, including THAC0 improvements to rogues. Finally, for BG, I would highly recommend installing something that enables the Evasion ability from IWD, to make thieves truly more powerful than they are (and they should be).
+I would suggest installing my tweaks in ZSTweaks for Assassination to make the remaining thief HLA even more rewarding, along with my other thematic rogue tweaks, including THAC0 improvements for rogues. For BG, I also highly recommend installing something that enables the Evasion ability from IWD, to make thieves more powerful than they are, as they should be.
 
-It's currently compatible with PoD (Pits of Despair), as it is the only mod that I know of that introduces joinable NPC shadowdancers. That mod is not yet available, but compatibility is given nevertheless. It is highly recommended in any event because vanilla shadowdancer is largely unremarkable comparatively.
+It is currently compatible with PoD (Pits of Despair), the only mod I know of that introduces joinable NPC shadowdancers. That mod is not yet available, but compatibility is included nevertheless. It is highly recommended regardless, because vanilla shadowdancer is comparatively unremarkable.
 
 ## Notes for users & issues
 
-- Using **CTRL+R** on the shadowdancer will bug out at-will abilities with a cooldown. For example, if you use Hide in Plain sight, and use CTRL+R within the cooldown's duration seconds, the effect that returns the ability to you will be cancelled. This also applies to other abilities that have a cooldown, such as the summoned shadow's abilities of Shadow Swap or See Invisibility. CTRL+R is harmless outside of that. Be cautious however whenever a spell mentions having a "cooldown" or being able to use "once per x rounds or turns". If it bugs out, and you don't have a backup, you will have to re-add those abilities with NearInfinity, or EEKeeper (latter is not recommended).
-- There's a very small window where it's possible to hit someone at the very last moments of **Planeshift** during Time Stop, which guarantees a hit. It's a side effect of a tweak to make it less likely for your character to not be able to attack after Shadow Jump, which is caused by the duration of Time Stop being inconsistent, which is an unfixable engine bug (without source code access, that is), mixed with setting your APR to 0 for its duration. You'll know you can attack safely **when the Talking button becomes enabled** in the UI (Time stop or not), the rest is up to you and your tolerance for cheesiness. I personally just wait half a second more to reduce the chances of the enemy escaping my reach, or until the time stop is visibly over.
-- **Planeshift** is a Time Stop effect, so it would be possible to cast it over and over to make some effect on the enemy wear off with no consequences. So again, it's a matter of your tolerance for cheesiness. As an alternative, Blink was added. See above for more information on that alternative.
-- The summoned shade might actually be a little overpowered at higher levels (28-40), but I'm honestly not entirely sure. Feedback is welcome.
-- **Shadow Conjuration**-type spells will log some of the subspells twice. It's unavoidable due to how I'm handling the "half the shadowdancer" casting level effect. I'll fix it if I find a solution at some point.
-- There is some wonkiness when using Hide in plain sight, where if you use the ability and pause at an unfortunate time, the ability may trigger 6 times in a row for some reason and after the cooldown, you'll get back 6 instances of the ability. It does not cause any problems, however, as all existing instances are removed after each casting. I don't have for now a solution to this inconvenience.
+- **CTRL+R Warning:** Using CTRL+R while an ability is on cooldown will prevent it from being restored. This affects any shadowdancer or summoned shadow ability with a cooldown timer.
+- **Planeshift Exploit:** It is possible to get a guaranteed hit at the very end of Planeshift's Time Stop effect due to the engine bug associated with Time Stop duration. You can attack safely once the "Talk" button reappears in the UI, whether Time Stop is still active or not. Whether you abuse this is up to you.
+- **Planeshift & Time Stop:** Because it uses a Time Stop effect, Planeshift can be cast repeatedly to wait out hostile effects without risk. For a less cheesy alternative, Blink is also available.
+- **Summoned Shade Balance:** The summoned shade may be overpowered at high levels. Feedback on its performance is welcome.
+- **Shadow Call Logging:** These spells may log their sub-spells twice in the combat log. This is a known, harmless visual bug.
+- **Hide in Plain Sight Bug:** Pausing at the wrong moment when using Hide in Plain Sight can cause the ability to trigger multiple times. This does not cause any problems, since extra instances are removed on the next cast, but I've implemented some defensive fixes to limit it.
+- **Summon Nighthaunt Unlock:** Because of the necessary hack used to blocking Summon Nighthaunt HLA until level 30, force-leveling more than one level at a time might not properly detect your character is at the required level 30 to unlock it, rendering the unlocking impossible. Play normally, or test it carefully.
 
 ## Credits
 
-- All the community on **Discord** for providing helpful insights and suggestions
+- All the community on **Discord** for helpful insights and suggestions
 - zenblack for providing cool icons
-- **BeamDog** for introducing me to the shadowdancer kit, which is currently my favorite class/kit, conceptually. This mod is really my way of making me like it functionally too.
+- **BeamDog** for introducing me to the shadowdancer kit, which is still my favorite class/kit conceptually. This mod is really my way of making me like it functionally too.

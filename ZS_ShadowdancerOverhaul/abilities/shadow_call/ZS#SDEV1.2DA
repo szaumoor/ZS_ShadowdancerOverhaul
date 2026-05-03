@@ -1,0 +1,11 @@
+2DA V1.0
+****
+                ResRef      Type
+SHADILL         ZS#SDL3A    3
+SLEEP           SPWI116     3
+BLINDNESS       SPWI106     3
+MAGIC_MISS      ZSSDMGMI    3
+INVISIBILI      SPWI206     3
+DARKNESS        ZS#SDSH     3
+MELF_ARROW      ZSSDMELF    3
+MINOR_GLOBE     ZSSDMIGL    3

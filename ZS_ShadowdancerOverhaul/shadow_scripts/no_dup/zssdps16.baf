@@ -1,0 +1,45 @@
+// IF Shadow IS NOT in area, it can be summoned
+IF
+    !Exists("ZS_SHADOW")
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        CreateVisualEffectObject("bdether", Myself)
+        ChangeAnimationNoEffect("zs#sds16")
+END
+
+// IF Shadow IS in area AND IS enemy, it can be summoned
+IF
+    Exists("ZS_SHADOW")
+    Allegiance("ZS_SHADOW",EVILCUTOFF)
+THEN
+    RESPONSE #200
+        SetInterrupt(FALSE)
+        CreateVisualEffectObject("bdether", Myself)
+        ChangeAnimationNoEffect("zs#sds16")
+        DestroySelf()
+END
+
+// IF Shadow IS in area AND IS NOT alive AND IS NOT an enemy, it can be summoned
+IF
+    Exists("ZS_SHADOW")
+    StateCheck("ZS_SHADOW", STATE_REALLY_DEAD)
+    !Allegiance("ZS_SHADOW",EVILCUTOFF)
+THEN
+    RESPONSE #300
+        SetInterrupt(FALSE)
+        CreateVisualEffectObject("bdether", Myself)
+        ChangeAnimationNoEffect("zs#sds16")
+END
+
+// IF Shadow IS in area AND IS alive AND IS NOT an enemy, it cannot be summoned
+IF
+    Exists("ZS_SHADOW")
+    !StateCheck("ZS_SHADOW", STATE_REALLY_DEAD)
+    !Allegiance("ZS_SHADOW",EVILCUTOFF)
+THEN
+    RESPONSE #400
+        SetInterrupt(FALSE)
+        DisplayStringNoName(Myself,@700010) 
+        DestroySelf()
+END

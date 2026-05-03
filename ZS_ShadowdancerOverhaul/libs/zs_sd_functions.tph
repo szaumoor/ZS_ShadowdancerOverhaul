@@ -5,4 +5,4 @@ INCLUDE ~%MOD_FOLDER%/libs/zs_subtle_functions.tpa~
 INCLUDE "%MOD_FOLDER%/libs/zs_add_effects.tpa"
 INCLUDE ~%MOD_FOLDER%/libs/zs_alter_functions.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/zs_checks.tpa~
-INCLUDE ~%MOD_FOLDER%/libs/zs_getters.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/zs_tipun.tpa~

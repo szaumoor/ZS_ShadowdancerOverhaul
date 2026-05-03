@@ -48,7 +48,11 @@ STR_VAR
     ground_icon = ~none~
     desc_img    = ~none~
 BEGIN
-    LPF CHECK_EXTENSION STR_VAR extension = "ITM" END
+
+    PATCH_IF zs_debug BEGIN
+        LPF CHECK_EXTENSION STR_VAR extension = "ITM" END
+    END
+
     PATCH_IF unid_ref_name > "-2" BEGIN
         WRITE_LONG 0x08 unid_ref_name
     END ELSE PATCH_IF unid_ref_name < "-2" BEGIN
@@ -279,7 +283,11 @@ INT_VAR
     parameter4     = "-1"
     secondary_type = "-1"
 BEGIN
-    LPF CHECK_EXTENSION STR_VAR extension = "EFF" END
+
+    PATCH_IF zs_debug BEGIN
+        LPF CHECK_EXTENSION STR_VAR extension = "EFF" END
+    END
+
     PATCH_IF target > "-1" BEGIN
         WRITE_LONG 0x14 target
     END
@@ -332,7 +340,11 @@ STR_VAR
     casting_sound = ~none~
     icon = ~none~
 BEGIN
-    LPF CHECK_EXTENSION STR_VAR extension = "SPL" END
+
+    PATCH_IF zs_debug BEGIN
+        LPF CHECK_EXTENSION STR_VAR extension = "SPL" END
+    END
+
     PATCH_IF ref_name > "-2" BEGIN
         WRITE_LONG 0x08 ref_name
     END ELSE PATCH_IF ref_name < "-2" BEGIN
@@ -421,7 +433,11 @@ INT_VAR
 STR_VAR
     dialog = ~none~
 BEGIN
-    LPF CHECK_EXTENSION STR_VAR extension = "CRE" END
+
+    PATCH_IF zs_debug BEGIN
+        LPF CHECK_EXTENSION STR_VAR extension = "CRE" END
+    END
+
     PATCH_IF name > "-2" BEGIN
         WRITE_LONG 0x08 name
     END ELSE PATCH_IF name < "-2" BEGIN
@@ -471,30 +487,6 @@ BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION ALTER_PROJECTILE
-INT_VAR
-    trap_size      = "-1"
-    explosion_size = "-1"
-BEGIN
-    LPF CHECK_EXTENSION STR_VAR extension = "PRO" END
-    READ_SHORT 0x8 projectile_type
-
-    PATCH_IF trap_size > "-1" BEGIN
-        PATCH_IF projectile_type = 3 BEGIN
-            WRITE_SHORT 0x204 trap_size
-        END ELSE BEGIN
-            PATCH_FAIL "Trap size can only be modified if the projectile is an Area of Effect"
-        END
-    END
-
-    PATCH_IF explosion_size > "-1" BEGIN
-        PATCH_IF projectile_type = 3 BEGIN
-            WRITE_SHORT 0x206 explosion_size
-        END ELSE BEGIN
-            PATCH_FAIL "Explosion size can only be modified if the projectile is an Area of Effect"
-        END
-    END
-END
 
 DEFINE_PATCH_FUNCTION FOREACH_CRE_EFF
 INT_VAR

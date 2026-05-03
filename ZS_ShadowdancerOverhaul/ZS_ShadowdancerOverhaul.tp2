@@ -1,20 +1,9 @@
 BACKUP "weidu_external/backup/ZS_ShadowdancerOverhaul"
 SUPPORT "Kaelyn at Gibberlings's forum https://www.gibberlings3.net/profile/12720-kaelyn/ or at kaelyn@tuta.io"
-VERSION "1.2.4"
-README ~%MOD_FOLDER%/README.md~
+VERSION "1.2.5"
+README ~%MOD_FOLDER%/readme.md~
 AUTO_EVAL_STRINGS
 ASK_EVERY_COMPONENT
-/*
-MODDER
-	setup_tra none
-	area_variables none
-	missing_extern none
-	missing_resref none
-	ict2_actions none
-	missing_eval none
-	overwriting_file none
-	fun_args warn
-*/
 ALWAYS
     INCLUDE "%MOD_FOLDER%/libs/zs_sd_functions.tph"
 	INCLUDE "%MOD_FOLDER%/libs/zs_splprot_include.tph"
@@ -27,10 +16,6 @@ LANGUAGE
 
 BEGIN @1000 DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-
-// BEGIN @1000 DESIGNATED 100 // WAY OF SHADOW KIT
-// REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
-// REQUIRE_COMPONENT "ZS_ShadowdancerOverhaul.tp2" "100" @10003
 
 BEGIN @1005 DESIGNATED 5000 // SPIRIT FORM CONSISTENCY TWEAK
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
