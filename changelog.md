@@ -14,6 +14,8 @@
 - Fixed one visual effect of Shadow Evade twice after activating it instead of just once
 - Icon fix for Shadow Illusion
 - Shadow Leap can no longer be used during Shadowstep: Planeshift
+- Fixed Blink variant of Shadowstep allowing a teleport to any discovered part of the map
+- Fixed a previous fix for Hide in Plain Sight not affecting every variation thereof
 
 ## Modifications
 
@@ -22,7 +24,7 @@
   - Beshadowed Strike renamed → Veiled Strike
   - Added an "able to poison weapons" portrait icon as a placeholder when using the Fell Strike HLA.
   - Chilling Strike: Increased damage to 1d6 cold and magic damage, 2d6+1 cold and magic damage to blinded targets; may slow or stun targets briefly upon a failed save (20% chance). Now grants a 20% chance of stunning or slowing the target on backstab (chosen randomly)
-  - Veiled Strike: Increased duration of blindness from 3 to 4 rounds. Backstabbing an already-blinded target doubles the chances of self invisible
+  - Veiled Strike: Increased duration of blindness from 3 to 4 rounds. Backstabbing an already-blinded target doubles the chances of self invisibility
   - Enervating Strike: Strength halving can no longer be re-applied, but extends duration to 8 rounds, and applies a 50% movement speed reduction, and if the target's strength is already halved, it reduces THAC0 by 5, forces them to deal minimum damage, saving throws are decreased by 1, and Armor Class by 2, if they fail the same save. Once the target ceases to be enervated (strength goes back to normal, as far as this ability is concerned -- after 8 rounds), all the effects above are removed.
   - All: Attacks always cause maximum damage within the first round of the mode (before: only for enervating strike)
 - Summon Shade Changes:
@@ -37,6 +39,7 @@
   - Cooldown increased from 3 rounds to 1 turn
   - Shadow Leap's brief minor combat bonus is dispelled on the first hit after now, similar to how shadowstep works, where only the first attack after the teleport is boosted
   - Shadowstep now adds 1 round of Blur after returning to the Prime / teleporting, inspired by Pathfinder's ability of the same name
+  - Shadowstep variants no longer casts instantly, even when the game is paused. It can still be cast repeatedly as before, with a casting speed of 0 (effectively instant) but its casting will add a normal cooldown if a different ability is cast after it. This also means the ability can be interrupted now, but as compensation, the casting of the spell will make the shadowdancer immune to damage for an instant. Unclear how reliable this is to avoid interruption. Offer feedback if you try.
 - Shadow Evade / Form Changes:
   - Shadow Evade and Shadow Form now color the character jet black
   - Added Magical Fire and Magical Cold to the resistances of the Shadow Evade / Form
