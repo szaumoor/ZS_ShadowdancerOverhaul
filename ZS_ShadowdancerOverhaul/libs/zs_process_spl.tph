@@ -74,9 +74,6 @@ COPY_EXISTING ~zs#sdl2a.spl~ ~override~ // shadow haven
 COPY_EXISTING ~zssdmsga.spl~ ~override~ // shadowstep new use
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@710) END
 
-COPY_EXISTING ~zssdmsgb.spl~ ~override~ // shadow evade new use
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@711) END
-
 COPY_EXISTING ~zssdmsgc.spl~ ~override~ // shadow call new use
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@712) END
 
