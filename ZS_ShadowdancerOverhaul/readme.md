@@ -13,10 +13,10 @@ There were several things about BeamDog's implementation of shadowdancers that I
 - **Hide in Plain Sight** is no longer tied to the normal hiding ability. Instead, it is an uninterruptible innate spell-like ability that makes you invisible for 20 seconds, with success based on your Hide in Shadows ability. To prevent spamming, it returns after 1 turn, and the cooldown decreases by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds.
 - **Innate Infravision**
 - **Immune to magical darkness**
-- **Natural Evasion**: Start with +2 Base AC, doubled against missile attacks, +1 Saves vs. Breath, and +1 movement speed
+- **Natural Evasion**: Start with +2 Base AC, +1 to all Saving Throws, and +1 movement speed
 - **Stealthy**: +20 to Hiding skills, increasing by 5 at level 3 and every three levels thereafter
 - **Thief Skill points**: 40 points to distribute **at level 1**, and **15** on subsequent levels
-- **Slippery Mind**: **+1 bonus** against **Spells**, **Wands**, and **Enchantment and Illusion** effects. This bonus improves by +1 at level 12 and every 12 levels thereafter.
+- **Slippery Mind**: **+2 bonus** against **Enchantment and Illusion** effects. The shadowdancer has a 50% chance per round to get rid of negative mind-influencing effects if the shadowdancer succeeds at a Save vs. Spell at -2
 - **Shadow Haven**: Gained at level 10. Regenerate 1 HP per round while invisible and become undetectable by magical means except True Sight. The shadowdancer also gains +2 Armor Class, THAC0, Damage, and Saving Throws against spectral creatures.
 - **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This avoids having to wait until level 5 to backstab at all, which is a horrendous experience in BGEE.
 - **Can no longer dual class**
@@ -32,7 +32,7 @@ There were several things about BeamDog's implementation of shadowdancers that I
 - **Shadow Leap**: A much weaker Shadowstep-style teleport that grants minor benefits for 1 round, does not break invisibility, and can be used once per turn. Unlike normal Shadowstep, it can be interrupted by damage and uses your action per round.
 - **Shadow Illusion**: Available through Shadow Call from level 3. It discombobulates enemies through illusions, causing various mind-affecting and other effects if they fail their saving throws. Its effectiveness and area of effect both improve with level. It bypasses magic resistance and dispelling effects, but does not fool creatures that see through illusions or creatures with Intelligence 18 or higher. This is available through the Shadow Call ability.
 - **Summon Shadow**: You get this ability at level 4. It summons an invisible undead shadow to fight at your side, starting as a humble shadow and growing into more powerful and dangerous creatures as you level up. It can be summoned once per day for 8 hours. It regenerates slowly, faster while invisible, cannot be blinded, cannot be turned or destroyed by banishment effects, and has the usual immunities of a spectral undead being. It also resists damage and can temporarily drain Strength from victims that fail a Save vs. Death. It evolves from Shadow at levels 4-11, to Greater Shadow at levels 12-19, Shadowlord at levels 20-27, and Greater Shadowlord from level 28 onward. Its Hit Dice are always 1 lower than the shadowdancer's, up to a maximum of 27 HD.
-- **Shadow Evade**: You get this at level 5, then again at levels 10 and 15. It is essentially a much weaker Shadow Form: +4 AC, +2 Saving Throws, +15% damage reduction, and invisibility for 5 rounds. Each additional daily use improves the damage resistance by 5%, to a maximum of 25%. It also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball cast through Shadow Call.
+- **Shadow Evade**: You get three uses of this at level 10. It is essentially a much weaker Shadow Form: +4 AC, +2 Saving Throws, +15% damage reduction, and invisibility for 5 rounds. Damage resistance increases by 5% at levels 15 and 20. It also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball cast through Shadow Call.
 - **Shadow Call**: Similar to the abilities in NWN, this lets the shadowdancer cast a small selection of semi-real spells at half the shadowdancer's level where applicable. You get one use at level 3, with further uses at levels 6, 12, and 18.
   - At level 3, may cast Shadow Illusion and Sleep.
   - At level 6, adds Invisibility, Magic Missile, and Blindness.
@@ -56,7 +56,7 @@ There were several things about BeamDog's implementation of shadowdancers that I
   - Critical hits make the target susceptible to backstabs and the shadowdancer incapable of critically missing for 2 rounds
   - Critical chances improve by 5% for 2 rounds after critically hitting (non-stackable)
 - **Shadow Maze**: Opens a temporary gateway to a small pocket of the Plane of Shadow. All enemies within 7 feet must make a Save vs. Spell at -4 or become trapped for 5 to 14 rounds. The save penalty improves to -5 at level 28 and -6 at level 36.
-- **Shadow Twin**: Creates an almost exact duplicate for 2 turns. The duplicate is created at 60% of the shadowdancer's current level, has all abilities the shadowdancer would have at that level, and has 60% of the shadowdancer's Hit Points. It cannot create another Shadow Twin or use Summon Shadow or Summon Nighthaunt.
+- **Shadow Twin**: Creates an almost exact duplicate for 2 turns. The duplicate is created at 60% of the shadowdancer's current level, has all abilities the shadowdancer would have at that level, and has 60% of the shadowdancer's Hit Points. It cannot create another Shadow Twin or use Summon Shadow or Summon Nighthaunt. **It can only be picked once.**
 - **Summon Nighthaunt**: Permanently upgrades Summon Shadow, allowing the shadowdancer to call forth an invisible nighthaunt for 8 hours instead. This powerful nightshade is tougher and deadlier than lesser shadows, can occasionally drain one or two levels with its attacks, and improves slightly at shadowdancer levels 35 and 40. Requires level 30 or higher.
 - **Improved Shadow Evade**: Permanently upgrades your Shadow Evade to Shadow Form. Can be taken once.
 - **Shadow Form**: Same, but:
@@ -73,7 +73,7 @@ There were several things about BeamDog's implementation of shadowdancers that I
   - **Delayed Blast Shadow Fireball**: Similar to Delayed Blast Fireball, dealing a combination of 15d6 fire, cold, and magic damage. The shadowdancer and their summoned shade are immune to the shadowdancer's own Delayed Blast Shadow Fireball. Replaces Shadow Fireball.
   - **Mass Invisibility**: Instantly affects all friendly creatures within the area of effect with Improved Invisibility. Replaces Shadow Door.
 
-It also changes the **Rod of Shadowstep** so that it uses the new Shadowstep effects, is usable **3 times per day**, and activates completely instantly unlike other consumable effects. It does not disappear forever when drained; it recharges after a rest.
+It also changes the **Rod of Shadowstep** so that it uses the new Shadowstep effects, is usable **3 times per day**, and activates instantly unlike other consumable effects. It does not disappear forever when drained; it recharges after a rest.
 
 ## 2. Make Shaman Spirit Form mirror the benefits of Shadow Form
 

@@ -429,12 +429,13 @@ Weight: 2~
 
 // OTHER TWEAKS
 @6000 = ~Spirit Form
-
 Duration: 5 rounds + 1/10 levels starting at level 30
 Casting Time: Instant
 Area of Effect: The caster
 
-The shaman slips into a space between the spirit world and the material plane, becoming partially incorporeal. For its duration, the shaman gains a +4 Armor Class bonus, regenerates 1 HP per second, and reduces all attacks directed against them to 50% of their normal damage. During this time, the shaman is also under the effects of Improved Invisibility and may not be detected by any divinations until they partially reveal themselves by taking certain actions or until the effect ends.~
+The shaman slips into a space between the spirit world and the material plane, becoming partially incorporeal. For its duration, the shaman regenerates 1 Hit Point per second, gains +4 Armor Class, +4 to all Saving Throws, Improved Invisibility, and 50% Damage Resistance.
+
+The shaman also cannot be detected by divination spells until <PRO_HESHE> partially reveals <PRO_HIMHER>self by taking offensive actions, or until the effect ends. This does not prevent creatures that naturally see through invisibility from detecting the shaman.~
 
 // COMPONENT RESTRICTIONS
 @10000 = ~This component is only available in BGEE, BG2EE, IWDEE, and EET~
