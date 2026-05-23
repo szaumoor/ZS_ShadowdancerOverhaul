@@ -1,18 +1,20 @@
 @0 = ~SHADOWDANCER: Shadowdancers move with effortless grace along the threshold between light and darkness, weaving shadows and illusion into their art. They are a varied lot, but all see shadow as a force to shape rather than fear. Whether driven by curiosity, ambition, or necessity, shadowdancers are renowned for their stealth, agility, and ability to strike swiftly from the dark. Their talents make them exceptional scouts and spies, able to infiltrate and gather information with a skill few thieves can match. Despite their affinity with darkness, they are not necessarily evil; to a shadowdancer, darkness is simply a tool, stripped of the moral judgments others place upon it.
 
 Advantages:
-– Infravision, even if it is not normally available to the selected race
-– May not be blinded by magical darkness
+– Permanent Infravision and immunity to magical darkness.
 – Stealthy: +20 points to Hide in Shadows and Move Silently at level 1, improving by +5 every 3 levels thereafter.
-– Natural Evasion: +2 Armor Class (doubled vs. missile attacks), +1 bonus to Movement Rate and Saves vs. Breath.
-– Slippery Mind: A shadowdancer's mind is difficult to pin down, gaining a +1 bonus to Saving Throws vs. Spells, Wands, and all Enchantment and Illusion effects. This bonus increases by +1 at level 12 and every 12 levels thereafter.
-– Hide in Plain Sight: <PRO_HESHE> can hide, even while observed, for 20 seconds. This ability has a base cooldown of 1 turn, reduced by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds. The chance of success depends on <PRO_HISHER> Hide in Shadows skill, but this ability is separate from the standard thief hiding skill and functions as an innate power.
+– Natural Evasion: +2 Armor Class, +1 bonus to Movement Rate and all Saving Throws.
+– Slippery Mind: A shadowdancer's mind is difficult to pin down, gaining a +2 bonus to Saving Throws vs. all Enchantment and Illusion effects. Additionally, every round, <PRO_HESHE> has a 50% chance per round to be freed of a negative mind-influencing effect if <PRO_HESHE> succeeds at a Save vs. Breath at -4. The chances to make an attempt increase by 10% at level 8 and every eighth level thereafter, up 100% chances at level 40.
+– Hide In Plain Sight: Once per turn, <PRO_HESHE> can hide for 20 seconds even while observed with a chance of success that depends on <PRO_HISHER> Hide in Shadows skill. Cooldown decreases by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds.
 – May cast Shadowstep once per day, gaining one additional use every two levels thereafter.
 
-SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowdancer to step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable while time stands still for everyone else. During this time, <PRO_HESHE> cannot harm others, be targeted, or cast spells, but may move freely. Upon returning to the Prime Material Plane, <PRO_HESHE> gains brief temporary bonuses to <PRO_HISHER> combat ability, including the power to backstab from any angle. These benefits scale with the shadowdancer's level. As an alternative to Planeshift, <PRO_HESHE> may instead Blink, that is, instantly teleport to a visible location, gaining the same benefits as the former upon completing the teleportation.
+SHADOWSTEP: The first variation of this ability, Planeshift, allows the shadowdancer to step into the Shadow Plane for about 7 seconds, moving faster, effectively resisting and dodging every attack, and becoming completely undetectable while time stands still for everyone else. During this time, <PRO_HESHE> cannot harm others, be targeted, or cast spells, but may move freely. Upon returning to the Prime Material Plane, <PRO_HESHE> gains brief temporary bonuses to <PRO_HISHER> combat ability, including the power to backstab from any angle. These benefits scale with the shadowdancer's level. As an alternative to Planeshift, <PRO_HESHE> may instead Blink, that is, instantly teleport to a visible location.
 
-– May cast Shadow Leap once per turn. This is a lesser version of Shadowstep that lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining mild bonuses for one round. Unlike Shadowstep, it requires concentration and can be interrupted.
-– At level 3, <PRO_HESHE> may cast Shadow Call once per day. Further uses are gained at levels 6, 12, and 18.
+– May cast Shadow Leap once per turn.
+
+SHADOW LEAP: This lesser version of Shadowstep lets the shadowdancer slide through the shadows faster than the eye can follow, teleporting a short distance and gaining mild bonuses for one round. 
+
+– At level 3, <PRO_HESHE> may cast Shadow Call once per day.
 
 SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to create semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Shadow Fireball and Shadow Door. Where applicable, these spells are cast at half <PRO_HISHER> current level.
 
@@ -20,18 +22,22 @@ SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplan
 
 SUMMON SHADOW: Bring forth an undead shadow from the Demiplane of Shadow for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and effects that banish summoned creatures. Its touch can temporarily drain Strength from its victims, and as the shadowdancer gains experience, the shadow grows as well, becoming more capable and eventually evolving into more powerful shadows.
 
-– May cast Shadow Evade once per day, gaining one additional use at level 5 and another at levels 10 and 15.
+– At level 6, gains a second use of Shadow Call
+– At level 10, the shadowdancer may cast Shadow Evade three times per day, and gains the passive benefit Shadow Haven.
 
-SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible. Each additional daily use adds 5% damage resistance.
+SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible. Damage resistance increases by 5% at levels 15 and 20.
 
-– Shadow Haven: From level 10 onward, <PRO_HESHE> becomes attuned to the shadow, making <PRO_HIMHER> undetectable by magical means except True Sight, and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
+SHADOW HAVEN: The shadowdancer becomes undetectable by all mundane and magical means except True Sight, and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
+
+– At level 12, gains a third use of Shadow Call
+– At level 18, gains a fourth use of Shadow Call
 
 Disadvantages:
 – Alignment restricted to any non-lawful
-– Backstab multiplier follows the normal progression, but stops at 4x
-– May only distribute 15 skill points per level (40 at level 1) among thieving skills
-– May not use the Set Snare ability or learn High-Level Abilities that introduce traps
-– May not select any thief High-Level Abilities other than Assassination and Use Any Item
+– Backstab multiplier does not progress after 4x
+– May only distribute 15 skill points per level among thieving skills
+– May not spend skill points on the Set Traps ability
+– May not select any Thief High-Level Abilities other than Assassination and Use Any Item
 – May not dual-class~
 
 @1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you spent your childhood yearning for a life cloaked in shadow and secrecy. While other children played at knights and dragons, you slipped unseen through Candlekeep's quiet halls, imagining yourself a phantom among the unwary. The ambling, distracted monks became secret lords and unsuspecting marks in your mind, their purses and possessions tempting small tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, usually with little more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you have found little satisfaction in pilfering from your caretakers. Your heart yearns for a larger stage, one where silence, subtlety, and a gift for moving unseen may at last find their proper use.~
@@ -44,6 +50,7 @@ So, with a heavy heart, you left the familiar rooftops and lamplit streets of ho
 
 // SHADOWDANCER SPELLS
 
+@1100 = ~Slippery Mind: Freed from mind-influencing effect~
 @300 = ~Planeshift~
 @301 = ~Blink~
 @3 = ~Shadowstep~
@@ -247,7 +254,7 @@ This ability cannot be dispelled or removed by Breach, although the invisibility
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% Damage Resistance, and invisibility. Each additional daily use of this ability increases the Damage Resistance bonus by 5%, to a maximum of 25%. Shadow Evade also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball cast through Shadow Call.~
+For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% Damage Resistance, and invisibility. Damage Resistance increase by 5% at levels 15 and 20. Shadow Evade also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball when cast through Shadow Call.~
 
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
@@ -256,7 +263,9 @@ The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. 
 Requirements: Shadowdancer only~
 
 @60 = ~Shadow Twin
-This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot create a Shadow Twin themselves, or use the Summon Shadow or Summon Nighthaunt abilities.~
+This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot create a Shadow Twin themselves, or use the Summon Shadow or Summon Nighthaunt abilities.
+
+Requirements: Shadowdancer only~
 
 @70 = ~Shadow Leap~
 @71 = ~Shadow Leap
@@ -395,7 +404,6 @@ Requirements: Shadowdancer only~
 @709 = ~Shadowlord improves to Greater Shadowlord~
 
 @710 = ~Gained new use of Shadowstep~
-@711 = ~Gained new use of Shadow Evade~
 @712 = ~Gained a new use of Shadow Call~
 
 @720 = ~Stealthy bonus gained~
@@ -403,7 +411,7 @@ Requirements: Shadowdancer only~
 
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer kit~
-@1005 = ~Make Shaman Spirit Form mirror Shadow Form's benefits~
+@1005 = ~Make Spirit Form mirror Shadow Form's benefits~
 @1010 = ~Allow vanilla shadowdancers to use Rogue Rebalancing's HLA overhaul~
 // @1020 = ~Tweak Vienxay's shadowmage kit to adapt to and incorporate elements from this kit~
 // END INSTALLER TEXT
@@ -414,18 +422,20 @@ Requirements: Shadowdancer only~
 STATISTICS:
 
 Charge abilities:
-– Shadowstep 3 times/day
+– Shadowstep 3 times/day, cast at character level
+  Special: Step through the shadows as per the shadowdancer ability of the same name, gaining offensive benefits that allow to strike harder, and defensive benefits that allow you to evade almost any effect for a very brief time.
 
 Weight: 2~
 
 // OTHER TWEAKS
 @6000 = ~Spirit Form
-
 Duration: 5 rounds + 1/10 levels starting at level 30
 Casting Time: Instant
 Area of Effect: The caster
 
-The shaman slips into a space between the spirit world and the material plane, becoming partially incorporeal. For its duration, the shaman gains a +4 Armor Class bonus, regenerates 1 HP per second, and reduces all attacks directed against them to 50% of their normal damage. During this time, the shaman is also under the effects of Improved Invisibility and may not be detected by any divinations until they partially reveal themselves by taking certain actions or until the effect ends.~
+The shaman slips into a space between the spirit world and the material plane, becoming partially incorporeal. For its duration, the shaman regenerates 1 Hit Point per second, gains +4 Armor Class, +4 to all Saving Throws, Improved Invisibility, and 50% Damage Resistance.
+
+The shaman also cannot be detected by divination spells until <PRO_HESHE> partially reveals <PRO_HIMHER>self by taking offensive actions, or until the effect ends. This does not prevent creatures that naturally see through invisibility from detecting the shaman.~
 
 // COMPONENT RESTRICTIONS
 @10000 = ~This component is only available in BGEE, BG2EE, IWDEE, and EET~

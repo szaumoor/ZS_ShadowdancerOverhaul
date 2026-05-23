@@ -21,6 +21,7 @@ LAF ADD_KIT_EX
 END
 
 COPY_EXISTING ~luzssd.2da~ ~override~
+    LPF patch_replace_hla STR_VAR remove_ability=~GA_SPCL936~ ability=~GA_SPCL936~ num_allowed=~1~ END // shadow twin one use restriction
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH08~ num_allowed=~1~ END // improved shadow evade
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH01~ num_allowed=~3~ END // self-concealment
     LPF patch_add_hla STR_VAR ability=~AP_ZS#SDH02~ num_allowed=~1~ END // shadow artisan
