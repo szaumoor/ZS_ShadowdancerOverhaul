@@ -254,7 +254,7 @@ This ability cannot be dispelled or removed by Breach, although the invisibility
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% Damage Resistance, and invisibility. Each additional daily use of this ability increases the Damage Resistance bonus by 5%, to a maximum of 25%. Shadow Evade also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball cast through Shadow Call.~
+For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% Damage Resistance, and invisibility. Damage Resistance increase by 5% at levels 15 and 20. Shadow Evade also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball when cast through Shadow Call.~
 
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
