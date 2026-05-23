@@ -16,7 +16,7 @@ There were several things about BeamDog's implementation of shadowdancers that I
 - **Natural Evasion**: Start with +2 Base AC, +1 to all Saving Throws, and +1 movement speed
 - **Stealthy**: +20 to Hiding skills, increasing by 5 at level 3 and every three levels thereafter
 - **Thief Skill points**: 40 points to distribute **at level 1**, and **15** on subsequent levels
-- **Slippery Mind**: **+2 bonus** against **Enchantment and Illusion** effects. The shadowdancer has a 50% chance per round to get rid of negative mind-influencing effects if the shadowdancer succeeds at a Save vs. Spell at -2
+- **Slippery Mind**: **+2 bonus** against **Enchantment and Illusion** effects. The shadowdancer has a 50% chance per round to get rid of negative mind-influencing effects if the shadowdancer succeeds at a Save vs. Breath at -4. Chances of it improve by 10% every eighth level.
 - **Shadow Haven**: Gained at level 10. Regenerate 1 HP per round while invisible and become undetectable by magical means except True Sight. The shadowdancer also gains +2 Armor Class, THAC0, Damage, and Saving Throws against spectral creatures.
 - **Backstab progression** is the same as a normal thief, but it stops at level 9 with x4 and never improves further. This avoids having to wait until level 5 to backstab at all, which is a horrendous experience in BGEE.
 - **Can no longer dual class**
