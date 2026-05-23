@@ -4,7 +4,7 @@ Advantages:
 – Permanent Infravision and immunity to magical darkness.
 – Stealthy: +20 points to Hide in Shadows and Move Silently at level 1, improving by +5 every 3 levels thereafter.
 – Natural Evasion: +2 Armor Class, +1 bonus to Movement Rate and all Saving Throws.
-– Slippery Mind: A shadowdancer's mind is difficult to pin down, gaining a +2 bonus to Saving Throws vs. all Enchantment and Illusion effects. Additionally, every round, <PRO_HESHE> has a 45% chance per round to be freed of a negative mind-influencing effect if they Save vs. Breath at +2. The chances and Saving Throws to be freed from these effects improve by 10% and 1, respectively, at level 8 and every eighth level thereafter (8 -> 55%, +1; 16 -> 65%, +0; 24 -> 75%, -1; 32 -> 85%, -2; 40, 95%, -3; 48, 100%, -4
+– Slippery Mind: A shadowdancer's mind is difficult to pin down, gaining a +2 bonus to Saving Throws vs. all Enchantment and Illusion effects. Additionally, every round, <PRO_HESHE> has a 50% chance per round to be freed of a negative mind-influencing effect if <PRO_HESHE> succeeds at a Save vs. Breath at -4. The chances to make an attempt increase by 10% at level 8 and every eighth level thereafter, up 100% chances at level 40.
 – Hide In Plain Sight: Once per turn, <PRO_HESHE> can hide for 20 seconds even while observed with a chance of success that depends on <PRO_HISHER> Hide in Shadows skill. Cooldown decreases by 1 round at level 5 and every 5 levels thereafter, to a minimum of 2 rounds.
 – May cast Shadowstep once per day, gaining one additional use every two levels thereafter.
 
@@ -34,10 +34,10 @@ SHADOW HAVEN: The shadowdancer becomes undetectable by all mundane and magical m
 
 Disadvantages:
 – Alignment restricted to any non-lawful
-– Backstab multiplier follows the normal progression, but stops at 4x
-– May only distribute 15 skill points per level (40 at level 1) among thieving skills
+– Backstab multiplier does not progress after 4x
+– May only distribute 15 skill points per level among thieving skills
 – May not spend skill points on the Set Traps ability
-– May not select any normal thief High-Level Abilities other than Assassination and Use Any Item
+– May not select any Thief High-Level Abilities other than Assassination and Use Any Item
 – May not dual-class~
 
 @1 = ~Inspired by your foster father's colorful tales of rogues and scoundrels, you spent your childhood yearning for a life cloaked in shadow and secrecy. While other children played at knights and dragons, you slipped unseen through Candlekeep's quiet halls, imagining yourself a phantom among the unwary. The ambling, distracted monks became secret lords and unsuspecting marks in your mind, their purses and possessions tempting small tests of your growing skill. Gorion, ever perceptive, has more than once asked you to discreetly return an inkwell or scroll to its rightful place, usually with little more than a knowing glance. Though the deeper vaults of the keep remain beyond your reach, you have found little satisfaction in pilfering from your caretakers. Your heart yearns for a larger stage, one where silence, subtlety, and a gift for moving unseen may at last find their proper use.~

@@ -64,9 +64,6 @@ COPY_EXISTING ~zs#sdl1b.spl~ ~override~ // Hide in plain sight
 COPY_EXISTING ~zs#sdl1g.spl~ ~override~ // stealthy repeating bonus
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@720) END
 
-COPY_EXISTING ~zs#sdl1l.spl~ ~override~ // slippery mind repeating bonus
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@721) END
-
 COPY_EXISTING ~zs#sdl2a.spl~ ~override~ // shadow haven
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@700) END
 
@@ -245,20 +242,26 @@ COPY_EXISTING ~zs#sdh12.spl~ ~override~ // Shadow Dance
         LPF DELETE_EFFECT STR_VAR match_resource = "spin134" END
     END
 
+
+OUTER_SET fell_strike_name = RESOLVE_STR_REF(@130)
+LAF cd_new_portrait_icon INT_VAR description = fell_strike_name STR_VAR bam_file="zssdg144" RET fell_strike_icon = icon END
 COPY_EXISTING ~zssdh14b.spl~ ~override~ // Fell Strike
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@130) ref_desc = RESOLVE_STR_REF(@131) END
+    LPF ALTER_SPELL INT_VAR ref_name = fell_strike_name ref_desc = RESOLVE_STR_REF(@131) END
 
 COPY_EXISTING ~zssdh14n.spl~ ~override~ // backstab removal effect
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@13100) END
 
 COPY_EXISTING ~zssdh14j.spl~ ~override~ // Enervating Strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@134) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END
 
 COPY_EXISTING ~zssdh14c.spl~ ~override~ // Chilling Strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@133) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END
 
 COPY_EXISTING ~zssdh14h.spl~ ~override~ // Veiled Strike
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@132) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END
 
 COPY_EXISTING ~spwi721.spl~ ~override/zssdmsiv.spl~ // Mass Invisibility
     LPM CONVERT_SPL_TO_INNATE
