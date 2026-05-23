@@ -404,7 +404,6 @@ Requirements: Shadowdancer only~
 @709 = ~Shadowlord improves to Greater Shadowlord~
 
 @710 = ~Gained new use of Shadowstep~
-@711 = ~Gained new use of Shadow Evade~
 @712 = ~Gained a new use of Shadow Call~
 
 @720 = ~Stealthy bonus gained~
@@ -412,7 +411,7 @@ Requirements: Shadowdancer only~
 
 // INSTALLER TEXT
 @1000 = ~Install the overhauled Shadowdancer kit~
-@1005 = ~Make Shaman Spirit Form mirror Shadow Form's benefits~
+@1005 = ~Make Spirit Form mirror Shadow Form's benefits~
 @1010 = ~Allow vanilla shadowdancers to use Rogue Rebalancing's HLA overhaul~
 // @1020 = ~Tweak Vienxay's shadowmage kit to adapt to and incorporate elements from this kit~
 // END INSTALLER TEXT
@@ -423,7 +422,8 @@ Requirements: Shadowdancer only~
 STATISTICS:
 
 Charge abilities:
-– Shadowstep 3 times/day
+– Shadowstep 3 times/day, cast at character level
+  Special: Step through the shadows as per the shadowdancer ability of the same name, gaining offensive benefits that allow to strike harder, and defensive benefits that allow you to evade almost any effect for a very brief time.
 
 Weight: 2~
 

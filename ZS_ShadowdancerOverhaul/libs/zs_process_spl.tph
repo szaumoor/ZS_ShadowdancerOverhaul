@@ -22,7 +22,6 @@ COPY_EXISTING ~zs#sdl1e.spl~ ~override~ // Shadowstep subspell
               ~zs#sdl1k.spl~ ~override~ 
    LPF ALTER_EFFECT INT_VAR match_opcode = 22 opcode = 250 END
 
-
 COPY_EXISTING ~zs#sdl1h.spl~ ~override~ // Shadowstep blink
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@301) END
     LPF ALTER_EFFECT INT_VAR resist_dispel = 0 END
