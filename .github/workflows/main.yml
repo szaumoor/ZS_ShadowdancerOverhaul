@@ -55,7 +55,7 @@ jobs:
             --exclude=.git/
             --exclude=package/
             --exclude=.gitignore
-            --exclude=readme.md
+            --exclude=/readme.md
           )
 
           if [[ "${{ matrix.platform }}" != "windows" ]]; then
