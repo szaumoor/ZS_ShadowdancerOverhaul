@@ -390,7 +390,7 @@ ACTION_IF !VARIABLE_IS_SET zs_splprot BEGIN
                 PRINT "[WARN]: zs_not_equal_kit not set!"
             END
 
-            LAF LOG_WARNING_FAIL STR_VAR log_level="fail" message = "[FAIL]: Not all splprot entries could be inserted! Exiting installation." END
+            FAIL "[FAIL]: Not all splprot entries could be inserted! Exiting installation."
 
         END
 
