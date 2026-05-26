@@ -75,6 +75,19 @@ BLINK: Alternatively, the shadowdancer may instantly teleport to any visible loc
 This spell does not break invisibility.~
 
 @5 = ~Shadow Illusion~
+@6 = ~Shadow Illusion
+The shadowdancer creates silent illusions out of raw shadow to disorient an enemy. On a failed Save vs. Spell, the target suffers fear, berserk, blindness, or confusion for 1 round (randomly).
+
+For the next 4 rounds, it is allowed to make another Save vs. Spell each round to get rid of the effect but may still succumb in subsequent rounds. For the full 5 rounds, it also suffers 25% spell failure and loses immunity to backstabs.
+
+The spell improves in the following manner:
+
+– The save penalty improves by 1 at level 8 and every 6 levels thereafter, to a maximum of -4. 
+– At level 12, the effect spreads to nearby enemies after the initial hit.
+– At level 14, it also causes 10% physical damage vulnerability and a -4 Armor Class penalty.
+– At level 17, blindness always applies independently of the other possible effects if the Save is failed.
+
+This spell has no effect on creatures with Intelligence 18 or higher, or on those able to see through illusions. It ignores Magic Resistance and dispelling effects, though True Sight prevents and counters its effects.~
 
 @7 = ~Summon Shadow~
 @8 = ~Summon Shadow

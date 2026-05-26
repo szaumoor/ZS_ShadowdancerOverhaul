@@ -101,7 +101,7 @@ COPY_EXISTING ~sppr309.spl~ ~override~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) END
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) ref_desc = RESOLVE_STR_REF(@6) END
 
 COPY_EXISTING ~zs#sdl4a.spl~ ~override/zs#sdl4c.spl~
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shadow
