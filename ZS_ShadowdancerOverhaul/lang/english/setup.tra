@@ -22,15 +22,17 @@ SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplan
 
 SUMMON SHADOW: Bring forth an undead shadow from the Demiplane of Shadow for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and effects that banish summoned creatures. Its touch can temporarily drain Strength from its victims, and as the shadowdancer gains experience, the shadow grows as well, becoming more capable and eventually evolving into more powerful shadows.
 
-– At level 6, gains a second use of Shadow Call
-– At level 10, the shadowdancer may cast Shadow Evade three times per day, and gains the passive benefit Shadow Haven.
+– At level 5, the shadowdancer may cast Shadow Evade three times per day.
 
-SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible. Damage resistance increases by 5% at levels 15 and 20.
+SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible. Damage resistance increases by 5% at levels 10 and 15.
+
+– At level 6, gains a second use of Shadow Call.
+– At level 10, gains the passive benefit Shadow Haven.
 
 SHADOW HAVEN: The shadowdancer becomes undetectable by all mundane and magical means except True Sight, and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
 
-– At level 12, gains a third use of Shadow Call
-– At level 18, gains a fourth use of Shadow Call
+– At level 12, gains a third use of Shadow Call.
+– At level 18, gains a fourth use of Shadow Call.
 
 Disadvantages:
 – Alignment restricted to any non-lawful
@@ -276,7 +278,7 @@ The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. 
 Requirements: Shadowdancer only~
 
 @60 = ~Shadow Twin
-This ability creates an almost exact duplicate of the shadowdancer for 2 turns. The duplicate is created at 60% of the shadowdancer's current level and has all the abilities the shadowdancer would have at that level. It also has 60% of the shadowdancer's Hit Points. The duplicate is fully under the shadowdancer's control. This ability may only be used once every 2 turns; attempts to cast it before then will fail. The Shadow Twin cannot create a Shadow Twin themselves, or use the Summon Shadow or Summon Nighthaunt abilities.
+Once per day, the shadowdancer may create an almost exact duplicate of themselves for 2 turns. The duplicate is created at 60% of the their current level and has all the abilities they would have at that level. It also has 60% of their Hit Points. The duplicate is fully under the shadowdancer's control. The Shadow Twin cannot create a Shadow Twin themselves, or use the Summon Shadow or Summon Nighthaunt abilities.
 
 Requirements: Shadowdancer only~
 
