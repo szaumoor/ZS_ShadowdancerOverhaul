@@ -1,7 +1,12 @@
 # Changelog
 
+## Fixes
+
+- Fix small issue in the interaction of Shadebound and Shadow Leap
+- Fixed the inconsistency in Shadow Evade progression and standardized Shadow Evade it to one use at level 5, 9, and 13. DR improvement happens at levels 9 and 13.
+
 ## Modifications
 
 - Shadow Leap now teleports instantly. Casting speed is still 2.
 - Added LABELs to components
-- Fixed the inconsistency in description and CLAB file with Shadow Evade. Now it's gained at level 5 instead of 10, and it improves at level 10 and 15, instead of gained at 15 and 20.
+- Added a new icon for Summon Nighthaunt

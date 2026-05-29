@@ -22,16 +22,18 @@ SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplan
 
 SUMMON SHADOW: Bring forth an undead shadow from the Demiplane of Shadow for 8 hours. It is loyal to the caster, resistant to damage, and immune to turning and effects that banish summoned creatures. Its touch can temporarily drain Strength from its victims, and as the shadowdancer gains experience, the shadow grows as well, becoming more capable and eventually evolving into more powerful shadows.
 
-– At level 5, the shadowdancer may cast Shadow Evade three times per day.
+– At level 5, the shadowdancer may cast Shadow Evade once day.
 
-SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible. Damage resistance increases by 5% at levels 10 and 15.
+SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also invisible.
 
 – At level 6, gains a second use of Shadow Call.
+– At level 9, gains a second use of Shadow Evade and Damage resistance increases to 20%.
 – At level 10, gains the passive benefit Shadow Haven.
 
 SHADOW HAVEN: The shadowdancer becomes undetectable by all mundane and magical means except True Sight, and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
 
 – At level 12, gains a third use of Shadow Call.
+– At level 9, gains a third use of Shadow Evade and Damage resistance increases to 25%.
 – At level 18, gains a fourth use of Shadow Call.
 
 Disadvantages:
@@ -59,7 +61,7 @@ So, with a heavy heart, you left the familiar rooftops and lamplit streets of ho
 @4 = ~Shadowstep
 This ability may be cast in one of two forms: Planeshift or Blink. The shadowdancer chooses the version at the moment of casting; if no choice is made, the spell is lost.
 
-PLANESHIFT: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a Saving Throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
+Planeshift: Instantly step into the Shadow Plane for about 7 seconds, increasing movement speed by a factor of 2 (+1 every 3 levels). While in the Shadow Plane, the shadowdancer is completely undetectable, immune to all effects that allow a Saving Throw, and time stands still for others. During this period, <PRO_HESHE> cannot attack, be attacked, or cast spells, but may move freely for tactical positioning.
 
 Upon returning to the Prime Material Plane, the shadowdancer gains the following benefits for about half a round:
 
@@ -72,7 +74,7 @@ Upon returning to the Prime Material Plane, the shadowdancer gains the following
 
 The offensive benefits are consumed after the first successful attack that is not blocked by weapon immunities. Additionally, for one round, the shadowdancer will also remain invisible and under the effects of Blur (+3 Armor Class, +1 to Saving Throws).
 
-BLINK: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
+Blink: Alternatively, the shadowdancer may instantly teleport to any visible location. This version grants all the same benefits as Planeshift, which apply immediately after teleporting.
 
 This spell does not break invisibility.~
 
@@ -419,6 +421,7 @@ Requirements: Shadowdancer only~
 @709 = ~Shadowlord improves to Greater Shadowlord~
 
 @710 = ~Gained new use of Shadowstep~
+@711 = ~Gained new use of Shadow Evade~
 @712 = ~Gained a new use of Shadow Call~
 
 @720 = ~Stealthy bonus gained~
