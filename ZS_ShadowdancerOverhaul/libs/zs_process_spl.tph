@@ -86,6 +86,9 @@ COPY_EXISTING ~zssdmsg0.spl~ ~override~ // gained shadow evade for the first tim
 COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow call (first time)
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
 
+COPY_EXISTING ~zssdmsg2.spl~ ~override~ // gained shadow evade for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@711) END
+
 COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shadow
     LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
 
@@ -101,7 +104,7 @@ COPY_EXISTING ~sppr309.spl~ ~override~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
-    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) END
+    LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@5) ref_desc = RESOLVE_STR_REF(@6) END
 
 COPY_EXISTING ~zs#sdl4a.spl~ ~override/zs#sdl4c.spl~
 COPY_EXISTING ~zs#sdl4a.spl~ ~override~ // Summon Shadow
