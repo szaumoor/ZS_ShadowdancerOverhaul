@@ -14,6 +14,10 @@ LANGUAGE
 	"English"
 	"english"
 	"ZS_ShadowdancerOverhaul/lang/english/setup.tra"
+LANGUAGE
+	"Simplified Chinese"
+	"schinese"
+	"ZS_ShadowdancerOverhaul/lang/schinese/setup.tra"
 
 BEGIN @1000 LABEL ~zs_shadowdancer_overhaul~ DESIGNATED 100 // MAIN COMPONENT
 REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @10000
