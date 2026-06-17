@@ -409,6 +409,9 @@ END
 
 ACTION_IF GAME_IS "iwdee" BEGIN
     COPY_EXISTING ~zsshcomm.itm~ ~override~
+                  ~zsshcomn.itm~ ~override~
+                  ~zsshcomo.itm~ ~override~
+                  ~zsshcomp.itm~ ~override~
         LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
     BUT_ONLY
 END
