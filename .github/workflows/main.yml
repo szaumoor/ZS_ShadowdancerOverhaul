@@ -89,9 +89,10 @@ jobs:
         uses: Nexus-Mods/upload-action@v1.0.0-beta.8
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_group_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG1_GROUP_ID }}
+          file_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG1_GROUP_ID }}
           filename: ${{ env.PLATFORM_SHORT }}-${{ env.PROJECT_NAME }}-${{ env.TAG_NAME }}.zip
           version: ${{ env.TAG_NAME }}
+          description: More info on latest changes at https://github.com/szaumoor/ZS_ShadowdancerOverhaul/blob/main/changelog.md
           display_name: ${{ env.PROJECT_NAME }} ${{ env.TAG_NAME }}
           file_category: main
 
@@ -100,8 +101,9 @@ jobs:
         uses: Nexus-Mods/upload-action@v1.0.0-beta.8
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_group_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG2_GROUP_ID }}
+          file_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG2_GROUP_ID }}
           filename: ${{ env.PLATFORM_SHORT }}-${{ env.PROJECT_NAME }}-${{ env.TAG_NAME }}.zip
           version: ${{ env.TAG_NAME }}
+          description: More info on latest changes at https://github.com/szaumoor/ZS_ShadowdancerOverhaul/blob/main/changelog.md
           display_name: ${{ env.PROJECT_NAME }} ${{ env.TAG_NAME }}
           file_category: main
