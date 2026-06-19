@@ -104,5 +104,6 @@ It is currently compatible with PoD (Pits of Despair), the only mod I know of th
 ## Credits
 
 - All the community on **Discord** for helpful insights and suggestions
+- MephistoSatanDevil for the translation to Simplified Chinese
 - zenblack for providing cool icons
 - **BeamDog** for introducing me to the shadowdancer kit, which is still my favorite class/kit conceptually. This mod is really my way of making me like it functionally too.

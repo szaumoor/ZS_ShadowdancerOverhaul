@@ -1,12 +1,11 @@
 # Changelog
 
-## Fixes
+## Fix
 
-- Fix small issue in the interaction of Shadebound and Shadow Leap
-- Fixed the inconsistency in Shadow Evade progression and standardized Shadow Evade it to one use at level 5, 9, and 13. DR improvement happens at levels 9 and 13.
+- Fixed Planeshift granting double THAC0 bonus through Shadebound
 
 ## Modifications
 
-- Shadow Leap now teleports instantly. Casting speed is still 2.
-- Added LABELs to components
-- Added a new icon for Summon Nighthaunt
+- The mod is now available in Simplified Chinese thanks to user MephistoSatanDevil
+- Tightened critical miss bonus in Shadowstep so it's very unlikely to critically miss even if the user has a probably absurd amount of critical miss penalties
+- Added automatic update on NexusMods.com through GitHub actions

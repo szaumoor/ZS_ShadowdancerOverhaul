@@ -401,13 +401,19 @@ DEFINE_PATCH_MACRO apply_spl_code BEGIN
     WRITE_ASCII 0x250 ""
     WRITE_ASCII 0x280 "ZS_SHADOW"
     LPF ALTER_CRE INT_VAR name=shade_name tooltip=shade_name STR_VAR dialog=~zs_sdshd~ END
-    PATCH_IF GAME_IS "iwdee" BEGIN
-        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
-    END
     ADD_CRE_ITEM "imoenhp1" #1 #0 #0 ~unstealable&undroppable~ ~belt~
     LPF ADD_CRE_EFFECT INT_VAR opcode=17 timing=3 parameter1=100 target=1 parameter2=2 END
     LPF ADD_CRE_EFFECT INT_VAR opcode=112 timing=10 parameter1=3 target=1 duration=20 STR_VAR resource=~imoenhp1~ END
     LPF ADD_CRE_EFFECT INT_VAR opcode=68 timing=3 parameter1=1 target=1 duration=2399 STR_VAR resource = "bdether" END
+END
+
+ACTION_IF GAME_IS "iwdee" BEGIN
+    COPY_EXISTING ~zsshcomm.itm~ ~override~
+                  ~zsshcomn.itm~ ~override~
+                  ~zsshcomo.itm~ ~override~
+                  ~zsshcomp.itm~ ~override~
+        LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 32089 parameter1 = 35571 END
+    BUT_ONLY
 END
 
 OUTER_SET shade_name = RESOLVE_STR_REF(@250)
