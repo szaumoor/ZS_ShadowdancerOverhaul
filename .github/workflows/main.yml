@@ -86,7 +86,7 @@ jobs:
 
       - name: Upload to Nexus Mods (BG1)
         if: matrix.platform == 'windows'
-        uses: Nexus-Mods/upload-action@v1.0.0-beta.3
+        uses: Nexus-Mods/upload-action@v1.0.0-beta.8
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
           file_group_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG1_GROUP_ID }}
@@ -97,7 +97,7 @@ jobs:
 
       - name: Upload to Nexus Mods (BG2)
         if: matrix.platform == 'windows'
-        uses: Nexus-Mods/upload-action@v1.0.0-beta.3
+        uses: Nexus-Mods/upload-action@v1.0.0-beta.8
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
           file_group_id: ${{ secrets.NEXUSMODS_ZS_SHADOWDANCEROVERHAUL_BG2_GROUP_ID }}
