@@ -296,6 +296,12 @@ END
 
 COPY_EXISTING ~zs#sdh07.spl~ ~override~ // Shadow Shield
     LPF ALTER_SPELL INT_VAR ref_name = RESOLVE_STR_REF(@2109) END
+    SET has_eefixpack = MOD_IS_INSTALLED "eefixpack.tp2" "0"
+
+    PATCH_IF has_eefixpack BEGIN
+        LPF CLONE_EFFECT INT_VAR match_opcode=0 opcode=328 parameter1=0 
+        special=1 parameter2=IDS_OF_SYMBOL(splstate DEATH_IMMUNITY) END
+    END
 
 COPY_EXISTING ~zs#sdh2d.spl~ ~override~ // critical hit effect One With The Shadow
     LPF ALTER_EFFECT INT_VAR check_globals = 0 match_opcode = 139 match_timing = 0 parameter1 = RESOLVE_STR_REF(@23) END
