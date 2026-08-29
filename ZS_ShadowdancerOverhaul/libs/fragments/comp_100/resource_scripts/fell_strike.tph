@@ -1,0 +1,19 @@
+OUTER_SET fell_strike_name = RESOLVE_STR_REF(@130)
+LAF cd_new_portrait_icon INT_VAR description = fell_strike_name STR_VAR bam_file="zssdg144" RET fell_strike_icon = icon END
+COPY_EXISTING ~zssdh14b.spl~ ~override~ // Fell Strike
+    LPF ALTER_SPELL INT_VAR name=fell_strike_name desc=RESOLVE_STR_REF(@131) END
+
+COPY_EXISTING ~zssdh14n.spl~ ~override~ // backstab removal effect
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@13100) END
+
+COPY_EXISTING ~zssdh14j.spl~ ~override~ // Enervating Strike
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@134) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END
+
+COPY_EXISTING ~zssdh14c.spl~ ~override~ // Chilling Strike
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@133) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END
+
+COPY_EXISTING ~zssdh14h.spl~ ~override~ // Veiled Strike
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@132) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = fell_strike_icon END

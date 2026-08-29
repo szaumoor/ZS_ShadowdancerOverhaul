@@ -1,0 +1,48 @@
+///// SHADOWSTEP \\\\\
+COPY_EXISTING ~zs#sdl1j.spl~ ~override~ // Spell selection
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@3) desc=RESOLVE_STR_REF(@4) END
+
+COPY_EXISTING ~zs#sdl1c.spl~ ~override~ // Planeshift
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@300) END
+    LPF ALTER_EFFECT INT_VAR resist_dispel = 0 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 325 duration = 11 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 66 duration = 11 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 310 duration = 8 END
+    LPF ALTER_EFFECT INT_VAR power = 100 END
+    // update, too lazy to update the files themselves
+    LPF ALTER_EFFECT INT_VAR match_opcode = 176 duration = 10 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = 3 duration = 14 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 325 parameter1=1 duration=14 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 20 duration = 14 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 66 duration = 14 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 65 duration = 14 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 7 duration = 8 END
+
+ // update, too lazy to update the files themselves
+COPY_EXISTING ~zs#sdl1e.spl~ ~override~ // Shadowstep subspell
+              ~zs#sdl1k.spl~ ~override~ 
+   LPF ALTER_EFFECT INT_VAR match_opcode = 22 opcode = 250 END
+
+COPY_EXISTING ~zs#sdl1h.spl~ ~override~ // Blink
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@301) END
+    LPF ALTER_EFFECT INT_VAR resist_dispel = 0 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 321 duration = 0 END
+
+     // update, too lazy to update the files themselves
+    LPF ALTER_EFFECT INT_VAR match_opcode = 176 duration = 2 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = 3 duration = 6 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 325 parameter1=1 duration=6 END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 20 duration = 6 END
+    LPF CLONE_EFFECT INT_VAR match_opcode = 20 opcode = 65 END
+
+///// SHADOW LEAP \\\\\
+COPY_EXISTING ~zsdleap0.spl~ ~override~ 
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@70) desc=RESOLVE_STR_REF(@71) END
+    LPF ALTER_EFFECT INT_VAR check_headers=0 match_opcode = 139 parameter1 = RESOLVE_STR_REF(@7100) END
+
+///// ROD OF SHADOWSTEP \\\\\
+COPY_EXISTING ~ohdrod.itm~ ~override~ 
+    LPF ALTER_ITEM INT_VAR id_ref_desc = RESOLVE_STR_REF(@5000) END
+    LPF ALTER_HEADER INT_VAR match_type = 3 charges = 3 drained = 3 flag_recharge = 1 target=7 END
+    LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode=146 parameter1=0 opcode=148 STR_VAR resource=~zs#sdl1j~ END
+BUT_ONLY IF_EXISTS

@@ -1,0 +1,29 @@
+///// PASSIVES \\\\\
+COPY_EXISTING ~zs#sdl1g.spl~ ~override~ // Stealthy
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@720) END
+
+COPY_EXISTING ~zs#sdl2a.spl~ ~override~ // Shadow Haven
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@700) END
+
+COPY_EXISTING ~zssdmsga.spl~ ~override~ // Shadowstep new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@710) END
+
+COPY_EXISTING ~zssdmsgc.spl~ ~override~ // Shadow call new use
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@712) END
+
+COPY_EXISTING ~zssdmsg0.spl~ ~override~ // gained shadow evade for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@703) END
+
+COPY_EXISTING ~zssdmsg1.spl~ ~override~ // gained shadow call (first time)
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@704) END
+
+COPY_EXISTING ~zssdmsg2.spl~ ~override~ // gained shadow evade for the first time
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@711) END
+
+COPY_EXISTING ~zssdmsg5.spl~ ~override~ // gained summon shadow
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@702) END
+
+COPY_EXISTING ~zs#sdl1w.spl~ ~override~
+    PATCH_FOR_EACH resource IN ~#cureber~ ~#curecon~ ~#curefbm~ ~#curefer~ ~#curestn~ BEGIN
+        LPF CLONE_EFFECT INT_VAR match_opcode=161 opcode=146 timing=0 parameter2=1 STR_VAR resource = ~%resource%~ END
+    END

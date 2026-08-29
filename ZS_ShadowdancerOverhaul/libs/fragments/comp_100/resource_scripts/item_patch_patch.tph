@@ -1,0 +1,11 @@
+ACTION_IF MOD_IS_INSTALLED ~ZS_ItemPack.tp2~ ~304~ BEGIN
+
+    PRINT "Patching Kukri of the Eclipse in Kaelyn's Item Pack"
+    OUTER_SET shadowdancer = IDS_OF_SYMBOL(kit SHADOWDANCER)
+    OUTER_SET zs_shadowdancer = IDS_OF_SYMBOL(kit ZS_SHADOWDANCER)
+    COPY_EXISTING ~zsipkre0.itm~ ~override~
+                  ~zsipkre2.itm~ ~override~
+        LPF CLONE_EFFECT INT_VAR match_opcode = 177 match_parameter1 = shadowdancer parameter1=zs_shadowdancer END
+    BUT_ONLY
+
+END

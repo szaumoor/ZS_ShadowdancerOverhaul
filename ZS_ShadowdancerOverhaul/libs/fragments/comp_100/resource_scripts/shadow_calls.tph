@@ -1,0 +1,58 @@
+ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/zssdfb0.pro~
+ADD_PROJECTILE ~%MOD_FOLDER%/projectiles/zssdfb3.pro~
+
+COPY_EXISTING ~zssdfb1.spl~ ~override~ // Shadow Fireball
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@21050) END
+    LPF ALTER_HEADER INT_VAR projectile = %zssdfb0% END
+
+COPY_EXISTING ~zssdfb2.spl~ ~override~ // Delayed Blast Shadow Fireball
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@21080) END
+    LPF ALTER_HEADER INT_VAR projectile = %zssdfb3% END
+
+COPY_EXISTING ~zs#sdh06.spl~ ~override~ // Shadow Call
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@2100) desc=RESOLVE_STR_REF(@2101) END
+
+COPY_EXISTING ~zs#sdh11.spl~ ~override~ // Umbral Call
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@2107) desc=RESOLVE_STR_REF(@21090) END
+
+COPY_EXISTING ~zs#sdhus.spl~ ~override~ // Umbral Call (hla)
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@2107) desc=RESOLVE_STR_REF(@2108) END
+
+LAF cd_clone_spell_bulk INT_VAR make_innate = 1 STR_VAR source = "spwi721" destination = "zssdmsiv" END
+INCLUDE ~%fragments%/cd_clone_spell_bulk_last.tpa~
+
+COPY_EXISTING ~zssdmsiv.spl~ ~override~ // Mass Invisibility
+    LPF ALTER_HEADER_EX STR_VAR match_level_ex = "(o_level > 1)" level_ex = "(THIS * 2)" END
+    LPF ALTER_HEADER INT_VAR speed = 1 END
+
+ACTION_IF GAME_IS "bgee" BEGIN
+
+    COPY_EXISTING ~zssdmelf.spl~ ~override~ // melf's acid arrow
+        LPF ALTER_SPELL INT_VAR name=26393 END
+
+    COPY_EXISTING ~zssdmigl.spl~ ~override~ // minor globe of invulnerability
+        LPF ALTER_SPELL INT_VAR name=26448 END
+
+    COPY_EXISTING ~zssdshdo.spl~ ~override~ // shadow door
+        LPF ALTER_SPELL INT_VAR name=26496 END
+
+END
+
+ACTION_IF GAME_IS "iwdee" BEGIN
+
+    COPY_EXISTING ~zssdshdo.spl~ ~override~ // shadow door
+        LPF ALTER_SPELL INT_VAR name=36602 END
+
+    COPY_EXISTING ~zssdmgmi.spl~ ~override~ // magic missile
+        LPF ALTER_SPELL INT_VAR name=2968 END
+
+END
+
+COPY_EXISTING ~zs#sdh07.spl~ ~override~ // Shadow Shield
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@2109) END
+    SET has_eefixpack = MOD_IS_INSTALLED "eefixpack.tp2" "0"
+
+    PATCH_IF has_eefixpack BEGIN
+        LPF CLONE_EFFECT INT_VAR match_opcode=0 opcode=328 parameter1=0 
+        special=1 parameter2=IDS_OF_SYMBOL(splstate DEATH_IMMUNITY) END
+    END

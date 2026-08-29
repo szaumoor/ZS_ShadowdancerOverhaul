@@ -25,7 +25,6 @@ ACTION_IF MOD_IS_INSTALLED ~zbpod.tp2~ "0" BEGIN
 
 END
 
-
 ACTION_IF MOD_IS_INSTALLED ~Setup-Fade.tp2~ "93" BEGIN
     PRINT "Patching Fade NPC..."
     COPY_EXISTING ~e3fade13.cre~ ~override~

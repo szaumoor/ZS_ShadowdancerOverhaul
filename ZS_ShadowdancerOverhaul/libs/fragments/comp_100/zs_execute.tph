@@ -1,0 +1,51 @@
+COPY "%root%/abilities/level_up_messages" ~override~
+     "%root%/abilities/hips"              ~override~
+     "%root%/abilities/sd_bonuses"        ~override~
+     "%root%/abilities/shadow_call"       ~override~
+     "%root%/abilities/shadow_evade"      ~override~
+     "%root%/abilities/shadow_illusion"   ~override~
+     "%root%/abilities/shadowstep"        ~override~
+     "%root%/abilities/summon_shadow"     ~override~
+     "%root%/abilities/shadow_leap"       ~override~
+     "%root%/hlas/one_with_shadow"        ~override~
+     "%root%/hlas/umbral_call"            ~override~
+     "%root%/hlas/improved_shadow_evade"  ~override~
+     "%root%/hlas/self_concealment"       ~override~
+     "%root%/hlas/shadow_dance"           ~override~
+     "%root%/hlas/fell_strike"            ~override~
+     "%root%/hlas/summon_nighthaunt"      ~override~
+     "%root%/hlas/shadebound"             ~override~
+     "%root%/hlas/shadow_form"            ~override~
+     ~%root%/hlas/LUZSSD.2DA~             ~override~
+
+ACTION_BASH_FOR ~%fragments%/comp_100/kit_insertion/~ ~.*\.tph$~ BEGIN
+  INCLUDE ~%BASH_FOR_FILESPEC%~
+END
+
+ACTION_BASH_FOR ~%fragments%/comp_100/resource_scripts/~ ~.*\.tph$~ BEGIN
+  INCLUDE ~%BASH_FOR_FILESPEC%~
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

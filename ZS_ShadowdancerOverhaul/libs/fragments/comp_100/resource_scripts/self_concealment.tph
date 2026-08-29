@@ -1,0 +1,15 @@
+///// SELF-CONCEALMENT \\\\\
+COPY_EXISTING ~zs#sdh01.spl~ ~override~ // Self-concealment (HLA)
+    PATCH_IF zs_sd_selfconcealment_dr != 5 BEGIN
+
+        PATCH_IF zs_sd_selfconcealment_dr > 0 AND zs_sd_selfconcealment_dr <= 10 BEGIN
+            PATCH_FOR_EACH opcode IN 86 87 88 89 27 28 29 30 31 173 BEGIN
+                LPF ALTER_EFFECT INT_VAR match_opcode = opcode parameter1 = zs_sd_selfconcealment_dr END
+            END
+        END ELSE BEGIN
+            PATCH_FAIL "zs_sd_selfconcealment_dr must be higher than 0 and lower or equal to 10" 
+        END
+
+    END
+
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@15) desc=RESOLVE_STR_REF(@16) END
