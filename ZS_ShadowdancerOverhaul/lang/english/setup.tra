@@ -16,7 +16,7 @@ SHADOW LEAP: This lesser version of Shadowstep lets the shadowdancer slide throu
 
 – At level 3, <PRO_HESHE> may cast Shadow Call once per day.
 
-SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to create semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Shadow Fireball and Shadow Door. Where applicable, these spells are cast at half <PRO_HISHER> current level.
+SHADOW CALL: This skill allows the shadowdancer to draw energy from the Demiplane of Shadow to create semi-real versions of various spells. At level 3, <PRO_HESHE> gets access to Shadow Illusion and Sleep. At level 6, <PRO_HESHE> gains access to Invisibility, Magic Missile, and Blindness. At level 12, <PRO_HESHE> gains access to Darkness 15' Radius, Melf's Acid Arrow, and Minor Globe of Invulnerability. Finally, at level 18, <PRO_HESHE> gains access to Ebonflame and Shadow Door. Where applicable, these spells are cast at half <PRO_HISHER> current level.
 
 – At level 4, <PRO_HISHER> may cast Summon Shadow once per day.
 
@@ -30,7 +30,7 @@ SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, b
 – At level 9, gains a second use of Shadow Evade and damage resistance increases to 20%.
 – At level 10, gains the passive benefit Shadow Haven.
 
-SHADOW HAVEN: The shadowdancer becomes undetectable by all mundane and magical means except True Sight, and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
+SHADOW HAVEN: The shadowdancer becomes impossible to detect magically while under the effects of Shadow Evade or Hide in Plain Sight. Other sources of invisibility can only be dispelled by True Sight. Additionally, <PRO_HIMHER> and regenerates 1 Hit Point per round while invisible. In addition, the shadowdancer's deeper understanding of the Shadow Plane allows <PRO_HIMHER> to fight spectral creatures more effectively, gaining +2 to Armor Class, THAC0, Damage, and Saving Throws against them.
 
 – At level 12, gains a third use of Shadow Call.
 – At level 13, gains a third use of Shadow Evade and damage resistance increases to 25%.
@@ -118,30 +118,30 @@ Call forth an invisible nighthaunt from the Demiplane of Shadow for 8 hours, or 
 @700010 = ~You may not summon more than one shadowdancer shade.~
 
 @9 = ~Hide in Plain Sight~
-@90 = ~Failed to Hide in Plain Sight~
 @10 = ~Hide in Plain Sight
-Immediately hide, even in plain sight, for 20 seconds. This ability has a base cooldown of 1 turn, and the cooldown decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
+Immediately hide, even in plain sight, for 20 seconds. This ability cannot be interrupted and has a base cooldown of 1 turn, which decreases by 1 round at level 5 and every 5 levels thereafter, reaching a minimum of 2 rounds at level 40.
 
 The chance of success is tied to the shadowdancer's Hide in Shadows skill, as follows:
 
-– 0-30: 50% chance of success
-– 31-50: 65% chance of success
-– 51-75: 80% chance of success
-– 76-100: 90% chance of success
-– 101-150: 95% chance of success
-– 151-200: 99% chance of success
-– 201+: 100% chance of success
+0–30: 33% chance of success
+31–50: 50% chance of success
+51–75: 66% chance of success
+76–100: 80% chance of success
+101–150: 90% chance of success
+151–200: 95% chance of success
+200–250: 99% chance of success
+251+: 100% chance of success
 
 Note that this chance is affected by penalties or bonuses to Hide in Shadows, such as from magical effects or gear.~
 
 @10010 = ~Hide in Plain Sight is available for use.~
 
 @11 = ~Shadow Form
-Duration: 5 rounds + 1 round/10 levels starting at level 30
+Duration: 5 rounds plus 1 round at levels 30 and 40
 Casting Time: Instant
 Area of Effect: The caster
 
-This ability is an enhanced form of Shadow Evade that temporarily replaces part of the shadowdancer's flesh with shadowstuff, rendering <PRO_HIMHER> partially incorporeal. For its duration, the shadowdancer regenerates 1 Hit Point per second, gains +4 Armor Class, +4 to all Saving Throws, Improved Invisibility, and 50% Damage Resistance.
+This ability is an enhanced form of Shadow Evade that temporarily replaces part of the shadowdancer's flesh with shadowstuff, rendering <PRO_HIMHER> partially incorporeal. For its duration, the shadowdancer regenerates 1 Hit Point per second, gains +4 Armor Class, +4 to all Saving Throws, Improved Invisibility, and 40% Damage Resistance.
 
 The shadowdancer also cannot be detected by divination spells until <PRO_HESHE> partially reveals <PRO_HIMHER>self by taking offensive actions, or until the effect ends. This does not prevent creatures that naturally see through invisibility from detecting the shadowdancer.
 
@@ -152,7 +152,7 @@ This ability opens a temporary gateway to a small pocket of the Plane of Shadow.
 
 @13 = ~One With The Shadow~
 @14 = ~One With The Shadow
-The shadowdancer's deep communion with Shadow grants <PRO_HIMHER> the following permanent benefits:
+The shadowdancer's deep communion with the shadow grants <PRO_HIMHER> the following permanent benefits:
 
 – Immunity to blindness
 – Casting speed, movement rate, and weapon speed factor are permanently increased by 2
@@ -210,16 +210,16 @@ DARKNESS 15' FEET: Pull a mass of magical darkness over a 15-ft. area, blinding 
 
 Finally, at level 18, the following spells are gained:
 
-SHADOW FIREBALL: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
+EBONFLAME: An illusory version of Fireball that deals a mix of fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Shadow Fireball.
 SHADOW DOOR: By means of this spell, the shadowdancer creates the illusion of a door and appears to step through it and disappear. In reality, <PRO_HESHE> darts aside and can flee, totally invisible (as per the Improved Invisibility spell), for 9 rounds plus 1 round every 2 levels of the shadowdancer.~
 
-@21050 = ~Shadow Fireball~
+@21050 = ~Ebonflame~
 
 @2107 = ~Umbral Call~
 @2108 = ~Umbral Call
 This skill allows the shadowdancer to upgrade <PRO_HISHER> Shadow Call capabilities in order to cast even more spells at half <PRO_HISHER> level. This will also add one more use of Shadow Call. The following spells are added to <PRO_HISHER> pool of spells:
 
-DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Shadow Fireball ability.
+DELAYED EBONFLAME: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball. This replaces the Ebonflame ability.
 
 SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy, level drain, and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
 
@@ -227,7 +227,7 @@ MASS INVISIBILITY: Upon casting this spell, the shadowdancer causes all friendly
 
 Requirements: Shadowdancer only~
 
-@21080 = ~Delayed Blast Shadow Fireball~
+@21080 = ~Delayed Ebonflame~
 
 @21090 = ~Umbral Call
 This skill allows the shadowdancer to draw substantial energy from the Demiplane of Shadow to conjure a semi-real duplicate of a selection of spells, cast at half <PRO_HISHER> level. The following abilities are available:
@@ -248,7 +248,7 @@ MINOR GLOBE OF INVULNERABILITY: Creates a faintly shimmering magical sphere arou
 
 DARKNESS 15' FEET: Pull a mass of magical darkness over a 15-ft. area, blinding anyone inside as long as they remain there. After leaving the area, the victim may remain blinded for up to 1 round.
 
-DELAYED BLAST SHADOW FIREBALL: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
+DELAYED EBONFLAME: An illusory version of Delayed Blast Fireball that deals a combination of 15d6 fire, cold, and magic damage in a purple blast. It otherwise functions identically. The shadowdancer and <PRO_HISHER> summoned shade are immune to <PRO_HISHER> own Delayed Blast Shadow Fireball.
 
 SHADOW SHIELD: For 2 turns, the shadowdancer is cloaked in a mantle of shifting shadows that blocks the first 3 physical attacks, grants Blur, and creates 8 shadowy mirror images. It also grants immunity to necromancy, level drain, and instant-death effects, as well as a +20 bonus to Hide in Shadows and Move Silently. This spell can be dispelled by Dispel Magic, but not by True Sight.
 
@@ -271,11 +271,15 @@ This ability cannot be dispelled or removed by Breach, although the invisibility
 
 @25 = ~Shadow Evade~
 @26 = ~Shadow Evade
-For 5 rounds, the shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% Damage Resistance, and invisibility. Damage Resistance increase by 5% at levels 9 and 13. It also grants immunity to Shadow Fireball and Delayed Blast Shadow Fireball.~
+Duration: 5 rounds plus 1 round at levels 30 and 40
+Casting Time: Instant
+Area of Effect: The caster
+
+The shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains +4 Armor Class, +2 to all Saving Throws, 15% damage resistance, and invisibility. Damage resistance increases by 5% at levels 9 and 13. It also grants immunity to Ebonflame and Delayed Ebonflame. After level 10, the invisibility granted by this ability cannot be broken by any divination attacks, including True Sight.~
 
 @27 = ~Improved Shadow Evade~
 @28 = ~Improved Shadow Evade
-The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. In this enhanced form, Damage Resistance increases to 50%, invisibility becomes Improved Invisibility, the shadowdancer regenerates 1 Hit Point per second, and gains immunity to all divination spells for the duration of the effect.
+The shadowdancer's Shadow Evade ability is permanently upgraded to Shadow Form. In this enhanced form, damage resistance increases to 40%, invisibility becomes Improved, and the shadowdancer regenerates 1 Hit Point per second. Furthermore, the duration of the effect increases at level 30 and 40 by 1 round.
 
 Requirements: Shadowdancer only~
 
@@ -286,7 +290,7 @@ Requirements: Shadowdancer only~
 
 @70 = ~Shadow Leap~
 @71 = ~Shadow Leap
-Step through the shadows, teleporting a short distance. Unlike Shadowstep, this ability requires concentration, but may be used at will once per turn and does not break invisibility. The following benefits apply for 1 round:
+Step through the shadows, teleporting a short distance. Unlike Shadowstep, this ability does not grant invisibility and requires concentration, but may be used at will once per turn and does not break pre-existing invisibility. The following benefits apply for 1 round:
 
 – THAC0: +1
 – Armor Class: +1
@@ -334,7 +338,7 @@ The shade teleports to any point within its field of vision instantly and become
 
 @208 = ~Beshadowed Form~
 @209 = ~Beshadowed Form
-The shade envelops itself in shadowstuff, greatly increasing its defenses for 2 rounds. While this effect is active, it gains +4 Armor Class, +50% Fire Resistance, and +50% Magic Damage Resistance. In addition, all of its other pre-existing resistances are increased by 50% of their current value. The shade also becomes invisible as per Improved Invisibility and regenerates 1 Hit Point per second.
+The shade envelops itself in more shadowstuff, greatly increasing its defenses for 2 rounds. While this effect is active, it gains +4 Armor Class, +50% Fire Resistance, and +50% Magic Damage Resistance. In addition, all of its other pre-existing resistances are increased by 50% of their current value. The shade also becomes invisible as per Improved Invisibility and regenerates 1 Hit Point per second.
 
 From level 16 onward, this ability also blocks the first successful melee or ranged attack that would inflict physical damage, so long as it occurs within 4 rounds of activation.
 
@@ -364,7 +368,7 @@ The shade briefly gains the ability to see invisible creatures, revealing them u
 
 @220 = ~Umbral Swap~
 @221 = ~Umbral Swap
-The shade instantly swaps places with an allied creature through a Shadowstep. The ally becomes invisible for 2 rounds and immediately stops attacking. The shade appears at the ally's former location, ready to fight, and gains the following benefits for 2 rounds:
+The shade instantly swaps places with an allied creature through a two-way shadowstep. The ally becomes invisible for 2 rounds and immediately stops attacking. The shade appears at the ally's former location, ready to fight,gaining the following benefits for 2 rounds:
 
 – Armor Class: +2
 – Saving Throws: +2
@@ -386,15 +390,16 @@ While under the effects of Shadow Evade or Shadow Form:
 
 – Movement rate: +1
 – Magic Resistance: +10%
-– Damage Resistance: +3%
-– Retributive Invisibility: When struck, the shadowdancer has a 5% chance to immediately re-enter Shadow Evade or Shadow Form (this may occur only once every 3 rounds), lashing out at the attacker for 2d6 points of magic damage and stunning them for 1 round. A Save vs. Spell at -1 halves the damage and negates the stun.
+– Damage Resistance: +3% (Shadow Evade), 5% (Shadow Form)
+– Retributive Invisibility: When struck, the shadowdancer has a 5% chance to immediately refresh the duration of Shadow Evade or Shadow Form (this may occur only once every 3 rounds), lashing out at the attacker for 3d6 points of magic damage and stunning them for 1 round. A Saving Throw vs. Spell at -2 halves the damage and negates the stun.
 
 While under the effects of Shadowstep or Shadow Leap:
 
 – Movement rate: +1
-– Damage: +2
-– THAC0: +2
+– Damage: +1 (Shadow Leap), +2 (Shadowstep)
+– THAC0: +1 (Shadow Leap), +2 (Shadowstep)
 – Critical Hit Chance: +5%
+– Immediately recover Hit Points: 1d2 (Shadow Leap), 1d4 (Shadowstep)
 
 Requirements: Shadowdancer only~
 

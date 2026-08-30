@@ -3,14 +3,14 @@
 ## Fixes
 
 - More seamless compatibility with the fixpack
-- Lessened the chances of Shadowstep (Planeshift) being impossible to cast for a brief moment after duration of the Time Stop effect runs out (TODO)
+- Fixed a problem where Planeshift couldn't be cast immediately after Blink or a previous Planeshift, leading to loss of abilities (TODO)
 - Fixed a problem where various abilities didn't have an icon in the spell description window due to a quirk in the engine, where spell icons must end in the letter "b", thus only those that did were visible (or showed the right icon)
 
 ## Modifications
 
 - Added improved and more unique animation for Shadow Evade
 - Added improved and more unique animation for Shadow Step (Blink)
-- Reduced the potential cheese for people that use this kit with Argent77 multiclass kit mod and try to stack Shadow Evade or Shadow Form with Hardiness, such that they can never work together. You're in a lactose-intolerant diet with me to the extent that I can help it. (TODO)
+- Reduced the potential cheese for people that use this kit with Argent77 multiclass kit mod and try to stack Shadow Evade or Shadow Form with Hardiness, such that they can never work together. You're in a lactose-intolerant diet with me to the extent that I can help it.
 - Clarified that Shadow Haven in fact makes it impossible to dispel the invisibility granted by Shadow Evade, as the Nondetection granted gives immunity to opcodes that dispel invisibility and the spell is not classified as Illusion or Illusive Protection.
 - The invisibility granted by Hide in Plain Sight is now given the same treatment, becoming undispellable at level 10, only broken if it runs out after 20 seconds, or the shadowdancer does something hostile. Those that see through such things would also see them, as usual.
 - Slight rework of the chances based on Hide in the Shadows skill to HIPS in the following manner:
@@ -33,3 +33,8 @@
     - Melf's Acid Arrow: -4 at level 30, -5 at level 40. -6 at level 50 if XP is uncapped.
     - Delayed Ebonflame: -3 at level 30, -4 at level 40. -5 if XP is uncapped.
     - In effect, Umbral Call decreases the chances the spells will be disbelieved, improving the overall value of the HLA.
+- Reduced baseline damage resistance of Shadow Form to 40%
+- Shadebound now increases damage resistance of Shadow Form by 5% and 3% in the case of Shadow Evade
+- THAC0 and Damage bonuses from Shadebound are halves in Shadow Leap compared to Shadowstep
+- Shadebound retributive invisibility while in Shadow Evade/Form damage increased to 3d6, saving throw penalty is at -2 now to avoid stun and half of the damage.
+- Shadow Evade duration now also increases by 1 round at levels 30, 40 and 50, much like Shadow Form, for those that might want to allocate more points on other things.
