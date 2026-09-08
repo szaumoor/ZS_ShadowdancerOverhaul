@@ -1,9 +1,9 @@
-INCLUDE "%libs%/zs_splprot_include.tph"
+INCLUDE "%root%/zs_sd_prefs.txt"
+INCLUDE "%fragments%/zs_splprot_include.tph"
 
 OUTER_SPRINT functions "%libs%/functions"
 ACTION_BASH_FOR ~%functions%/~ ~.*\.tpa$~ BEGIN
   INCLUDE ~%BASH_FOR_FILESPEC%~
 END
 
-INCLUDE "%root%/zs_sd_prefs.txt"
 INCLUDE ~%libs%/components/zs_sd_comp_%COMPONENT_NUMBER%.tph~

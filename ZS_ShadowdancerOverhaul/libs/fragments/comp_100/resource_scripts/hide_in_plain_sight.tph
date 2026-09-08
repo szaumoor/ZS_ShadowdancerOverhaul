@@ -1,19 +1,12 @@
 ///// HIDE IN PLAIN SIGHT \\\\\
 COPY_EXISTING ~zs#sdl1b.spl~ ~override~
     LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@9) desc=RESOLVE_STR_REF(@10) END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1p" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=51 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1q" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=66 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1r" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=81 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1s" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=101 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1t" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=151 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" STR_VAR match_resource = "zs#sdl1u" END
-    LPF ALTER_EFFECT INT_VAR match_parameter1=201 match_opcode=318 parameter2 = "%zs_hideinshadows_<n%" END
-    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_>n%" STR_VAR match_resource = "zs#sdl1v" END
+
+    PATCH_FOR_EACH skill IN 31 51 76 101 151 201 251 BEGIN
+        LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_<n%" match_parameter1=%skill% END
+    END
+
+    LPF ALTER_EFFECT INT_VAR parameter2="%zs_hideinshadows_>n%" match_parameter1=250 END 
 
 // ensure hide in plain sight complete dispel (mostly just to remove the "invisibility faded" sound at the end) with simple detect invisibility spells
 COPY_EXISTING ~sppr309.spl~ ~override~

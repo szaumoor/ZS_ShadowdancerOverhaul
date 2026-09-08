@@ -27,7 +27,7 @@ SUMMON SHADOW: Bring forth an undead shadow from the Demiplane of Shadow for 8 h
 
 – At level 5, the shadowdancer may cast Shadow Evade once day.
 
-SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +4 bonus to Armor Class, a +2 bonus to all Saving Throws, and +15% universal damage resistance. During this time, <PRO_HESHE> is also under the effects of Improved Invisibility.
+SHADOW EVADE: The shadowdancer cloaks <PRO_HIMHER>self in shadow for 5 rounds, becoming harder to hit. It grants a +2 bonus to Armor Class and +15% universal damage resistance. During this time, <PRO_HESHE> is also under the effects of Improved Invisibility (with only a +2 bonus to Saving Throws).
 
 – At level 6, gains a second use of Shadow Call.
 – At level 9, gains a second use of Shadow Evade and damage resistance increases to 20%.
@@ -278,7 +278,7 @@ Duration: 5 rounds plus 1 round at levels 30 and 40
 Casting Time: Instant
 Area of Effect: The caster
 
-The shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains immunity to backstabs, +4 Armor Class, Improved Invisibility (with only a +2 bonus to Saving Throws), and 15% damage resistance. Damage resistance increases by 5% at levels 9 and 13. It also grants immunity to Ebonflame and Delayed Ebonflame. If the invisibility is dispelled, all the benefits associated with the ability also disappear.
+The shadowdancer cloaks <PRO_HIMHER>self in shadow, becoming harder to hit. While this effect lasts, <PRO_HESHE> gains immunity to backstabs, +2 Armor Class, Improved Invisibility (with only a +2 bonus to Saving Throws), and 15% damage resistance. Damage resistance increases by 5% at levels 9 and 13. It also grants immunity to Ebonflame and Delayed Ebonflame. If the invisibility is dispelled, all the benefits associated with the ability also disappear.
 
 After level 10, the invisibility granted by this ability cannot be broken by any divination attacks, including True Sight.~
 

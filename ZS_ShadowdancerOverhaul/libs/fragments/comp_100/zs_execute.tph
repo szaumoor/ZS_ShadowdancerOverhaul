@@ -1,5 +1,4 @@
-COPY "%root%/abilities/level_up_messages" ~override~
-     "%root%/abilities/hips"              ~override~
+COPY "%root%/abilities/hips"              ~override~
      "%root%/abilities/sd_bonuses"        ~override~
      "%root%/abilities/shadow_call"       ~override~
      "%root%/abilities/shadow_evade"      ~override~
