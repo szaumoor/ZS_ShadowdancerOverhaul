@@ -40,4 +40,4 @@
 - Shadow Evade duration now also increases by 1 round at levels 30, 40 and 50, much like Shadow Form, for those that might want to allocate more points on other things.
 - Shadow Evade and Shadow Form now grant immunity to backstabs for its duration.
 - Shadow Evade now grants Improved Invisibility. If this invisibility is dispelled, all protections are dispelled with it. This ceases to be possible after level 10, when the shadowdancer becomes nigh undetectable through Shadow Haven.
-- Hide in Plain Sight now will have no effect within one round of the shadowdancer being hit. This is a small counterbalance to reduce the possibility of cheese somewhat. This will also not activate the cooldown so it is risk free to try to hide. This is inspired by a feature The Artisan added to his own overhaul of the kit
+- Hide in Plain Sight now will have no effect within one round of the shadowdancer being hit. This is a small counterbalance to reduce the possibility of cheese somewhat. This is inspired by a feature The Artisan added to his own overhaul of the kit
