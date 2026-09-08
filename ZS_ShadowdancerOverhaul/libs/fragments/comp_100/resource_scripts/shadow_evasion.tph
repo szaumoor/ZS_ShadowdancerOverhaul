@@ -19,13 +19,36 @@ COPY_EXISTING ~spcl938.spl~ ~override~ // Shadow Form, adds the extra effects
 IF_EXISTS
 
 COPY_EXISTING ~spwish12.spl~ ~override~
-              ~spdwd02.spl~ ~override~ 
-              ~spcl907.spl~ ~override~ 
+              ~spdwd02.spl~  ~override~ 
+              ~spcl907.spl~  ~override~ 
     LPF CLONE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource = "spcl907" resource="zs#sdl5a" END
     LPF CLONE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource = "spcl907" resource="spcl938" END
 
+DEFINE_PATCH_MACRO patch_file BEGIN
+    LPF ALTER_EFF_FILE INT_VAR opcode = 326 parameter2 = 139 parameter1 = 2**22 STR_VAR resource="zsseviv2" END 
+END
+LAF CREATE_EQ_EFF STR_VAR filename = "zsseviv0" END
+
+DEFINE_PATCH_MACRO patch_file BEGIN
+    LPF ADD_SPL_SELFEFF STR_VAR effects=~op=321,res=zsseviv2~ END 
+END
+LAF CREATE_SELF_SPL STR_VAR filename = "zsseviv1" END
+
+DEFINE_PATCH_MACRO patch_file BEGIN
+    LPF ADD_SPL_SELFEFF STR_VAR effects=~op=325,p1=2,dur=30~ END
+    LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 30 END
+    LPF ALTER_EFFECT INT_VAR check_globals = 0 header=1 match_duration = 30 duration = 36 END
+    LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 40 END
+    LPF ALTER_EFFECT INT_VAR check_globals = 0 header=2 match_duration = 30 duration = 42 END
+    LPF ADD_SPELL_HEADER INT_VAR copy_header = 1 zs_min_level_for_copy = 50 END
+    LPF ALTER_EFFECT INT_VAR check_globals = 0 header=3 match_duration = 30 duration = 48 END
+END
+LAF CREATE_SELF_SPL STR_VAR filename = "zsseviv2" END
+
 COPY_EXISTING ~zs#sdl5a.spl~ ~override~ // SHADOW EVADE
     LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@25) desc=RESOLVE_STR_REF(@26) END
+    LPF CLONE_EFFECT INT_VAR match_opcode=20 opcode=146 parameter2=1 STR_VAR resource = "zsseviv2" insert="below" END
+    LPF CLONE_EFFECT INT_VAR match_opcode=20 opcode=272 parameter2=3 parameter1=1 STR_VAR resource = "zsseviv0" insert="last" END
 
 COPY_EXISTING ~zs#sdh08.spl~ ~override~ // SHADOW EVADE IMPROVE HLA
     LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@27) desc=RESOLVE_STR_REF(@28) END
