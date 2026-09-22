@@ -1,0 +1,462 @@
+@0 = ~OMBRA DANZANTE: Le ombre danzanti si muovono con grazia e naturalezza lungo il confine tra luce e oscurità, intrecciando ombre e illusioni nella loro arte. Sono individui molto diversi tra loro, ma tutti considerano l'ombra una forza da plasmare piuttosto che da temere. Che siano mossi dalla curiosità, dall'ambizione o dalla necessità, le ombre danzanti sono celebri per la loro furtività, agilità e capacità di colpire rapidamente dalle tenebre. I loro talenti ne fanno esploratori e spie eccezionali, capaci di infiltrarsi e raccogliere informazioni con un'abilità che pochi ladri possono eguagliare. Nonostante la loro affinità con l'oscurità, non sono necessariamente malvagie: per un'ombra danzante, le tenebre sono semplicemente uno strumento, privo dei giudizi morali che gli altri vi attribuiscono.
+
+Vantaggi:
+– Infravisione permanente e immunità all'oscurità magica.
+– Furtività: +20 punti a Nascondersi tra le ombre e Muoversi Silenziosamente al 1° livello, con un ulteriore +5 ogni 3 livelli successivi.
+– Elusione Naturale: +2 alla Classe Armatura, +1 al Fattore-movimento e a tutti i tiri-salvezza.
+– Mente Sfuggente: La mente di un'ombra danzante è difficile da soggiogare e ottiene un bonus pari a +2 ai tiri-salvezza contro tutti gli effetti di Ammaliamento e Illusione. Inoltre, ogni round, <PRO_HESHE> ha il 50% di probabilità di liberarsi da un effetto negativo che influenza la mente se <PRO_HESHE> supera un tiro-salvezza contro Soffio con una penalità pari a -4. La probabilità che venga effettuato un tentativo aumenta del 10% all'8° livello e ogni 8 livelli successivi, fino al 100% al 40° livello.
+– Nascondersi in Piena Vista: Una volta per turno, <PRO_HESHE> può nascondersi per 20 secondi anche mentre è sotto osservazione, con una probabilità di successo che dipende dall'abilità Nascondersi tra le ombre di <PRO_HISHER>. Il tempo di recupero diminuisce di 1 round al 5° livello e ogni 5 livelli successivi, fino a un minimo di 2 round.
+– Può utilizzare Passo d'Ombra una volta al giorno, ottenendo un uso aggiuntivo ogni 2 livelli successivi.
+
+PASSO D'OMBRA: La prima variante di questa abilità, Spostamento Planare, permette all'ombra danzante di entrare nel Piano delle Ombre per circa 7 secondi, muovendosi più velocemente, resistendo ed eludendo di fatto ogni attacco e diventando completamente non individuabile mentre il tempo resta immobile per tutti gli altri. Durante questo periodo, <PRO_HESHE> non può ferire gli altri, essere bersagliato o lanciare incantesimi, ma può muoversi liberamente. Quando ritorna nel Primo Piano Materiale, <PRO_HESHE> ottiene per breve tempo bonus alle capacità di combattimento di <PRO_HISHER>, compresa la possibilità di eseguire una Pugnalata alle Spalle da qualsiasi direzione. Questi benefici aumentano con il livello dell'ombra danzante. In alternativa allo Spostamento Planare, <PRO_HESHE> può utilizzare Balzo, teletrasportandosi istantaneamente in una posizione visibile.
+
+– Può utilizzare Salto d'Ombra una volta per turno.
+
+SALTO D'OMBRA: Questa versione minore di Passo d'Ombra permette all'ombra danzante di scivolare attraverso le ombre più rapidamente di quanto l'occhio possa seguire, teletrasportandosi per una breve distanza e ottenendo modesti bonus per un round.
+
+– Al 3° livello, <PRO_HESHE> può utilizzare Richiamo d'Ombra una volta al giorno.
+
+RICHIAMO D'OMBRA: Questa abilità permette all'ombra danzante di attingere energia dal Semipiano delle Ombre per creare versioni semireali di vari incantesimi. Al 3° livello, <PRO_HESHE> ottiene accesso a Illusione d'Ombra e Sonno. Al 6° livello, <PRO_HESHE> ottiene accesso a Invisibilità, Dardo Incantato e Accecare. Al 12° livello, <PRO_HESHE> ottiene accesso a Oscurità, Raggio 5 metri, Freccia Acida di Melf e Globo Minore d'Invulnerabilità. Infine, al 18° livello, <PRO_HESHE> ottiene accesso a Palla di Fuoco d'Ombra e Porta d'Ombra. Quando applicabile, questi incantesimi vengono lanciati a metà del livello attuale di <PRO_HISHER>.
+
+– Al 4° livello, <PRO_HISHER> può utilizzare Evocare Ombra una volta al giorno.
+
+EVOCARE OMBRA: Evoca un'ombra non morta dal Semipiano delle Ombre per 8 ore. È fedele al lanciatore, resistente ai danni e immune a Scacciare Non morti e agli effetti che bandiscono le creature evocate. Il suo tocco può risucchiare temporaneamente la Forza delle vittime e, man mano che l'ombra danzante acquisisce esperienza, anche l'ombra cresce, diventando più capace e infine evolvendosi in forme più potenti.
+
+– Al 5° livello, l'ombra danzante può utilizzare Elusione d'Ombra una volta al giorno.
+
+ELUSIONE D'OMBRA: L'ombra danzante avvolge <PRO_HIMHER> nelle ombre per 5 round, diventando più difficile da colpire. Ottiene un bonus pari a +4 alla Classe Armatura, +2 a tutti i tiri-salvezza e il 15% di resistenza a tutti i danni. Durante questo periodo, <PRO_HESHE> è anche invisibile.
+
+– Al 6° livello, ottiene un secondo uso di Richiamo d'Ombra.
+– Al 9° livello, ottiene un secondo uso di Elusione d'Ombra e la resistenza ai danni aumenta al 20%.
+– Al 10° livello, ottiene il beneficio passivo Rifugio d'Ombra.
+
+RIFUGIO D'OMBRA: L'ombra danzante diventa non individuabile con qualsiasi mezzo comune o magico, fatta eccezione per Visione del Vero, e rigenera 1 Punto Ferita per round mentre è invisibile. Inoltre, la più profonda comprensione del Piano delle Ombre permette a <PRO_HIMHER> di combattere più efficacemente le creature spettrali, ottenendo +2 alla Classe Armatura, al THAC0, ai danni e ai tiri-salvezza contro di esse.
+
+– Al 12° livello, ottiene un terzo uso di Richiamo d'Ombra.
+– Al 13° livello, ottiene un terzo uso di Elusione d'Ombra e la resistenza ai danni aumenta al 25%.
+– Al 18° livello, ottiene un quarto uso di Richiamo d'Ombra.
+
+Svantaggi:
+– Può avere qualsiasi allineamento non legale.
+– Il moltiplicatore della Pugnalata alle Spalle non aumenta oltre x4.
+– Può distribuire soltanto 15 punti per livello tra le abilità da ladro.
+– Non può spendere punti nell'abilità Piazzare Trappole.
+– Tra le Abilità di Alto Livello del ladro può scegliere soltanto Assassinio e Utilizzare Qualsiasi Oggetto.
+– Non può biclassare.~
+
+@1 = ~Ispirato dai pittoreschi racconti di tuo padre adottivo su furfanti e lestofanti, hai trascorso l'infanzia desiderando una vita avvolta nell'ombra e nel segreto. Mentre gli altri bambini giocavano a cavalieri e draghi, tu sgusciavi senza farti notare attraverso i silenziosi corridoi di Candlekeep, immaginandoti come uno spettro tra gli ignari. Nella tua mente, i monaci distratti che passeggiavano senza fretta diventavano signori segreti e bersagli inconsapevoli, mentre le loro borse e i loro averi ti offrivano piccole occasioni per mettere alla prova la tua abilità sempre maggiore. Gorion, sempre perspicace, ti ha chiesto più di una volta di rimettere discretamente al proprio posto un calamaio o una pergamena, di solito limitandosi a uno sguardo eloquente. Sebbene i sotterranei più profondi della fortezza restino fuori dalla tua portata, hai trovato ben poca soddisfazione nel sottrarre oggetti a chi si prende cura di te. Il tuo cuore anela a un palcoscenico più vasto, dove il silenzio, la discrezione e il dono di muoverti senza essere visto possano finalmente trovare il loro vero scopo.~
+
+@2 = ~“Dove c'è molta luce, l'ombra è profonda.” Non l'hai mai considerata una massima di saggezza, soltanto un dato di fatto utile. Con il favore della notte, le strade illuminate creano punti ciechi, e chi fissa la luce raramente nota ciò che si muove tra un bagliore e l'altro. Hai imparato ad attraversare spazi aperti scegliendo il momento giusto, a svanire senza lasciare traccia e a passare da una chiazza d'oscurità all'altra così rapidamente che i testimoni giurano che tu non sia mai stato nel mezzo. Quel talento attirò attenzioni indesiderate la notte in cui un incarico si concluse con troppe domande senza risposta e nessuna spiegazione che qualcuno ritenesse rassicurante.
+
+La guardia cittadina ha poca pazienza per i misteri, e i devoti sono pronti a condannare qualsiasi cosa sappia di blasfemia o arti oscure. I capi delle gilde, dal canto loro, non vedono di buon occhio metodi che non riescono a comprendere. Nessuno può provare ciò che hai fatto, eppure voci e superstizioni si sono addensate attorno al tuo nome al punto da renderlo scomodo da pronunciare ad alta voce. Nel tuo mestiere, essere difficile da catturare è utile. Dare nell'occhio non lo è.
+
+Così, con il cuore pesante, hai lasciato i tetti familiari e le strade illuminate dai lampioni della tua terra, dirigendoti verso il Nord. Forse tra qualche anno le storie svaniranno e verranno liquidate come fandonie da taverna. Fino ad allora, le città di frontiera offrono notti più buie, controlli meno severi, più spazio per lavorare e meno testimoni inclini a colmare i vuoti con la fantasia.~
+
+// SHADOWDANCER SPELLS
+
+@1100 = ~Mente Sfuggente: effetto di influenza mentale rimosso~
+@300 = ~Spostamento Planare~
+@301 = ~Balzo~
+@3 = ~Passo d'Ombra~
+@4 = ~Passo d'Ombra
+Questa abilità può essere utilizzata in una delle due forme: Spostamento Planare o Balzo. L'ombra danzante sceglie la variante al momento dell'attivazione; se non viene effettuata alcuna scelta, l'uso dell'abilità va perduto.
+
+Spostamento Planare: Entra istantaneamente nel Piano delle Ombre per circa 7 secondi, aumentando il Fattore-movimento di 2 (+1 ogni 3 livelli). Mentre si trova nel Piano delle Ombre, l'ombra danzante è completamente non individuabile, immune a tutti gli effetti che consentono un tiro-salvezza e il tempo resta immobile per gli altri. Durante questo periodo, <PRO_HESHE> non può attaccare, essere attaccato o lanciare incantesimi, ma può muoversi liberamente per riposizionarsi tatticamente.
+
+Al ritorno nel Primo Piano Materiale, l'ombra danzante ottiene i seguenti benefici per circa mezzo round:
+
+– Può eseguire una sola Pugnalata alle Spalle da qualsiasi direzione.
+– Gli attacchi non possono fallire criticamente e ignorano il Fattore-velocità dell'arma.
+– Fortuna: +1
+– THAC0: +1, con un ulteriore +1 ogni 3 livelli (fino a +6).
+– Danno: +1, con un ulteriore +1 ogni 6 livelli (fino a +3).
+– Possibilità di Colpo Critico: +5%, che aumenta a +10% al 13° livello e +15% al 25° livello.
+
+I benefici offensivi vengono consumati dopo il primo attacco andato a segno che non sia bloccato dalle immunità alle armi. Inoltre, per un round, l'ombra danzante rimane invisibile e sotto gli effetti di Sfocatura (+3 alla Classe Armatura, +1 ai tiri-salvezza).
+
+Balzo: In alternativa, l'ombra danzante può teletrasportarsi istantaneamente in qualsiasi posizione visibile. Questa variante conferisce tutti gli stessi benefici dello Spostamento Planare, che si applicano immediatamente dopo il teletrasporto.
+
+Questa abilità non interrompe l'invisibilità.~
+
+@5 = ~Illusione d'Ombra~
+@6 = ~Illusione d'Ombra
+L'ombra danzante crea illusioni silenziose dalla pura sostanza d'ombra per disorientare un nemico. Se fallisce un tiro-salvezza contro Incantesimi, il bersaglio subisce casualmente paura, berserk, cecità o confusione per 1 round.
+
+Per i 4 round successivi, può effettuare un nuovo tiro-salvezza contro Incantesimi ogni round per liberarsi dell'effetto, ma può comunque ricaderne vittima nei round seguenti. Per tutti e 5 i round, ha inoltre una probabilità del 25% di fallire il lancio degli incantesimi e perde l'immunità alla Pugnalata alle Spalle.
+
+L'incantesimo migliora nel modo seguente:
+
+– La penalità al tiro-salvezza diventa più severa di 1 punto all'8° livello e ogni 6 livelli successivi, fino a -4.
+– Al 12° livello, l'effetto si propaga ai nemici vicini dopo il colpo iniziale.
+– Al 14° livello, provoca anche una vulnerabilità del 10% ai danni fisici e una penalità pari a -4 alla Classe Armatura.
+– Al 17° livello, se il tiro-salvezza fallisce, la cecità si applica sempre indipendentemente dagli altri possibili effetti.
+
+Questo incantesimo non ha effetto sulle creature con Intelligenza pari o superiore a 18 né su quelle in grado di vedere attraverso le illusioni. Ignora la Resistenza alla Magia e gli effetti di dissoluzione, sebbene Visione del Vero ne prevenga e contrasti gli effetti.~
+
+@7 = ~Evocare Ombra~
+@8 = ~Evocare Ombra
+Evoca un'ombra non morta e invisibile dal Semipiano delle Ombre per 8 ore o finché non viene uccisa. La creatura non può essere accecata e possiede le consuete immunità di un essere spettrale non morto, ma è immune a Scacciare Non morti e non può essere distrutta dagli effetti che bandiscono le creature evocate. È resistente ai danni, si rigenera lentamente, soprattutto mentre è invisibile, e con il tocco può risucchiare temporaneamente la Forza delle vittime se queste falliscono un tiro-salvezza contro Morte.
+
+Questo fedele compagno non morto è più debole delle sue controparti naturali, ma diventa più potente man mano che l'ombra danzante acquisisce esperienza. Si evolve in forme più potenti e resistenti, ottiene abilità innate e infine diventa un tipo superiore di ombra:
+
+– Ombra dal 4° all'11° livello.
+– Ombra Maggiore dal 12° al 19° livello.
+– Signore delle Ombre dal 20° al 27° livello.
+– Signore delle Ombre Maggiore dal 28° livello in poi.
+
+I Dadi-vita della creatura sono sempre inferiori di 1 rispetto a quelli dell'ombra danzante, fino a un massimo di 27 DV. Non può essere attiva più di una di queste creature alla volta.~
+
+@700000 = ~Evocare Presenza Notturna~
+@700001 = ~Evocare Presenza Notturna
+Potenzia permanentemente la tua evocazione d'ombra, permettendoti di richiamare al suo posto una Presenza Notturna dal Semipiano delle Ombre. Questa potente ombra notturna è più resistente e molto più letale. Le capacità e le statistiche della Presenza Notturna migliorano leggermente quando l'ombra danzante raggiunge il 35° e il 40° livello.
+
+Requisiti: 30° livello o superiore, solo Ombra Danzante~
+
+@700002 = ~Evocare Presenza Notturna
+Evoca una Presenza Notturna invisibile dal Semipiano delle Ombre per 8 ore o finché non viene uccisa. Questa potente ombra notturna possiede tutte le immunità delle ombre minori, ma è più forte, più resistente ai danni e può occasionalmente risucchiare uno o due livelli con i suoi attacchi. Diventa leggermente più potente quando l'ombra danzante raggiunge il 35° e il 40° livello.~
+
+@700010 = ~Non puoi evocare più di una creatura d'ombra alla volta.~
+
+@9 = ~Nascondersi in Piena Vista~
+@90 = ~Tentativo di Nascondersi in Piena Vista fallito~
+@10 = ~Nascondersi in Piena Vista
+Permette di nascondersi immediatamente, persino in piena vista, per 20 secondi. Questa abilità ha un tempo di recupero base di 1 turno, che diminuisce di 1 round al 5° livello e ogni 5 livelli successivi, fino a raggiungere un minimo di 2 round al 40° livello.
+
+La probabilità di successo dipende dall'abilità Nascondersi tra le ombre dell'ombra danzante, come segue:
+
+– 0-30: 50% di probabilità di successo.
+– 31-50: 65% di probabilità di successo.
+– 51-75: 80% di probabilità di successo.
+– 76-100: 90% di probabilità di successo.
+– 101-150: 95% di probabilità di successo.
+– 151-200: 99% di probabilità di successo.
+– 201+: 100% di probabilità di successo.
+
+Questa probabilità è influenzata da penalità o bonus a Nascondersi tra le ombre, come quelli derivanti da effetti magici o equipaggiamento.~
+
+@10010 = ~Nascondersi in Piena Vista è disponibile per l'uso.~
+
+@11 = ~Forma d'Ombra
+Durata: 5 round + 1 round ogni 10 livelli a partire dal 30° livello
+Tempo di lancio: Istantaneo
+Area d'effetto: Il lanciatore
+
+Questa abilità è una forma potenziata di Elusione d'Ombra che sostituisce temporaneamente parte della carne dell'ombra danzante con tessuto d'ombra, rendendo <PRO_HIMHER> parzialmente incorporeo. Per tutta la durata dell'effetto, l'ombra danzante rigenera 1 Punto Ferita al secondo, ottiene +4 alla Classe Armatura, +4 a tutti i tiri-salvezza, Invisibilità Potenziata e il 50% di Resistenza al Danno.
+
+L'ombra danzante non può inoltre essere individuata dagli incantesimi di divinazione finché <PRO_HESHE>, compiendo azioni offensive, non rende <PRO_HIMHER> parzialmente visibile o finché l'effetto non termina. Ciò non impedisce alle creature naturalmente in grado di vedere attraverso l'invisibilità di individuare l'ombra danzante.
+
+Requisiti: Elusione d'Ombra Potenziata~
+
+@12 = ~Labirinto delle Ombre
+Questa abilità apre un passaggio temporaneo verso una piccola sacca del Piano delle Ombre. Tutti i nemici entro 2 metri dall'ombra danzante devono effettuare con successo un tiro-salvezza contro Incantesimi con una penalità pari a -4 o restare intrappolati in quello spazio per un periodo compreso tra 5 e 14 round. Questa abilità diventa più difficile da contrastare man mano che l'ombra danzante acquisisce esperienza: la penalità diventa -5 al 28° livello e -6 al 36° livello.~
+
+@13 = ~Tutt'uno con l'Ombra~
+@14 = ~Tutt'uno con l'Ombra
+La profonda comunione dell'ombra danzante con l'Ombra conferisce a <PRO_HIMHER> i seguenti benefici permanenti:
+
+– Immunità alla cecità.
+– Il Tempo di lancio, il Fattore-movimento e il Fattore-velocità delle armi migliorano permanentemente di 2.
+– Le Pugnalate alle Spalle possono essere eseguite da qualsiasi direzione.
+– Effetto del Colpo Critico: Con un colpo critico, il bersaglio perde l'immunità alla Pugnalata alle Spalle per 2 round, se la possedeva. Per la stessa durata, l'ombra danzante ottiene +5% alla Possibilità di Colpo Critico e l'immunità ai fallimenti critici. Questi bonus non sono cumulativi, ma ulteriori colpi critici ne rinnovano la durata.
+
+Requisiti: solo Ombra Danzante~
+
+@130 = ~Colpo Funesto~
+@131 = ~Colpo Funesto
+L'ombra danzante può infondere gli attacchi di <PRO_HISHER> con l'energia delle Profondità dell'Ombra. Per 1 round dopo l'attivazione, gli attacchi di <PRO_HISHER> infliggono il massimo danno possibile. Per 1 turno, le Pugnalate alle Spalle di <PRO_HISHER> ottengono inoltre uno dei seguenti effetti, scelto al momento dell'attivazione dell'abilità:
+
+– Colpo Velato: Ogni Pugnalata alle Spalle ha il 30% di probabilità di rendere immediatamente invisibile l'ombra danzante per 2 round. Inoltre, acceca il bersaglio per 4 round, a meno che non superi un tiro-salvezza contro Incantesimi con una penalità pari a -4. Se il bersaglio è già accecato, la probabilità che l'ombra danzante diventi invisibile con una Pugnalata alle Spalle sale invece al 60%.
+
+– Colpo Gelido: Ogni Pugnalata alle Spalle infligge 1d6+1 punti di danno da freddo e 1d6+1 punti di danno magico aggiuntivi. Questo danno aggiuntivo raddoppia contro i bersagli accecati. Inoltre, ogni Pugnalata alle Spalle ha il 20% di probabilità di costringere il bersaglio a effettuare un tiro-salvezza contro Morte (con una penalità pari a -2 se è accecato). Se il tiro-salvezza fallisce, nel 20% dei casi il bersaglio viene stordito per 1 round; altrimenti viene rallentato per 2 round.
+
+– Colpo Debilitante: Ogni Pugnalata alle Spalle costringe il bersaglio a effettuare un tiro-salvezza contro Morte con una penalità pari a -2; in caso di fallimento, la Forza e il Fattore-movimento di <PRO_HISHER> vengono dimezzati per 8 round. Se il bersaglio è già debilitato, la Pugnalata alle Spalle infligge invece una penalità pari a -5 al THAC0, -2 alla Classe Armatura e -1 ai tiri-salvezza, e fa sì che il bersaglio infligga il danno minimo possibile con gli attacchi fisici. Questi effetti secondari terminano quando la debilitazione svanisce.
+
+Durante questo periodo, la Possibilità di Colpo Critico dell'ombra danzante aumenta del 5%. Inoltre, se il bersaglio è immune alla Pugnalata alle Spalle, ogni colpo andato a segno, che sia o meno una Pugnalata alle Spalle, ha il 10% di probabilità di rimuovere tale immunità per 10 secondi. Ciò può verificarsi una sola volta ogni 5 round per ciascun bersaglio. Questi effetti ignorano la Resistenza alla Magia. Le varianti di Colpo Funesto non sono cumulative: ogni nuova applicazione sostituisce la precedente.
+
+Requisiti: Vincolo d'Ombra~
+
+@13100 = ~Immunità alla Pugnalata alle Spalle rimossa~
+
+@132 = ~Colpo Velato~
+@133 = ~Colpo Gelido~
+@134 = ~Colpo Debilitante~
+
+@15 = ~Auto-Occultamento~
+@16 = ~Auto-Occultamento
+La tua essenza si fonde ulteriormente con l'ombra, conferendoti permanentemente +%zs_sd_selfconcealment_dr%% di resistenza a tutti i tipi di danno e un bonus pari a +1 alla Classe Armatura. Questa abilità può essere selezionata fino a tre volte.
+
+Requisiti: solo Ombra Danzante~
+
+@2100 = ~Richiamo d'Ombra~
+@2101 = ~Richiamo d'Ombra
+Questa abilità permette all'ombra danzante di attingere energia dal Semipiano delle Ombre per creare duplicati semireali di una selezione di incantesimi, lanciati a metà del livello di <PRO_HISHER>.
+
+Al 3° livello sono disponibili i seguenti incantesimi:
+
+ILLUSIONE D'OMBRA: Evoca illusioni d'ombra per disorientare un nemico. Se fallisce un tiro-salvezza contro Incantesimi, il bersaglio subisce paura, berserk, cecità o confusione per 1 round. Per i 4 round successivi, può effettuare un nuovo tiro-salvezza ogni round, ma può comunque ricadere vittima dell'effetto. Per 5 round ha inoltre una probabilità del 25% di fallire il lancio degli incantesimi e perde l'immunità alla Pugnalata alle Spalle. La penalità al tiro-salvezza diventa più severa di 1 punto all'8° livello e ogni 6 livelli successivi, fino a -4. Al 12° livello, l'effetto si propaga ai nemici vicini. Al 14° livello, provoca anche una vulnerabilità del 10% ai danni fisici e una penalità pari a -4 alla Classe Armatura. Al 17° livello, la cecità si applica sempre. Questo incantesimo non ha effetto sulle creature con Intelligenza pari o superiore a 18 né su quelle in grado di vedere attraverso le illusioni. Ignora la Resistenza alla Magia e gli effetti di dissoluzione, sebbene Visione del Vero ne prevenga gli effetti.
+SONNO: Fa cadere in un sonno comatoso tutte le creature in un'area del raggio di 4,5 metri attorno al punto d'impatto. I bersagli con più di 4 DV non subiscono alcun effetto.
+
+Dal 6° livello sono disponibili i seguenti incantesimi:
+
+ACCECARE: Se il bersaglio fallisce un tiro-salvezza, viene accecato per 2 ore e subisce una penalità pari a -4 ai tiri per colpire e alla Classe Armatura.
+INVISIBILITÀ: Rende l'ombra danzante completamente invisibile per 24 ore, come l'incantesimo arcano omonimo.
+DARDO INCANTATO: Evoca dardi incantati illusori che colpiscono infallibilmente il bersaglio, infliggendo ciascuno 1d4+1 punti di danno magico. Ogni quattro livelli, l'ombra danzante aggiunge un dardo all'incantesimo, fino a un massimo di 5.
+
+Al 12° livello diventano disponibili i seguenti incantesimi:
+
+FRECCIA ACIDA DI MELF: Evoca una freccia magica che si dirige infallibilmente verso il bersaglio. La freccia infligge 2d4 punti di danno da acido e, per ogni 6 livelli dell'ombra danzante, l'acido persiste per un round aggiuntivo, a meno che non venga dissolto in qualche modo, infliggendo altri 2d4 punti di danno a ogni round.
+GLOBO MINORE D'INVULNERABILITÀ: Crea una sfera magica debolmente scintillante attorno all'ombra danzante che impedisce agli effetti degli incantesimi di 1°, 2° o 3° livello di penetrarla. Dura 1 round ogni 2 livelli dell'ombra danzante.
+OSCURITÀ, RAGGIO 5 METRI: Avvolge un'area del raggio di 4,5 metri in una massa di oscurità magica, accecando chiunque si trovi al suo interno finché vi rimane. Dopo aver lasciato l'area, la vittima può restare accecata per un massimo di 1 round.
+
+Infine, al 18° livello si ottengono i seguenti incantesimi:
+
+PALLA DI FUOCO D'OMBRA: Una versione illusoria di Palla di Fuoco che infligge una combinazione di danni da fuoco, da freddo e magici in un'esplosione violacea. Per il resto funziona in modo identico. L'ombra danzante e la creatura d'ombra evocata da <PRO_HISHER> sono immuni alla Palla di Fuoco d'Ombra di <PRO_HISHER>.
+PORTA D'OMBRA: Mediante questo incantesimo, l'ombra danzante crea l'illusione di una porta e sembra attraversarla e scomparire. In realtà, <PRO_HESHE> si sposta rapidamente di lato e può fuggire, completamente invisibile come per l'incantesimo Invisibilità Potenziata, per 9 round più 1 round ogni 2 livelli dell'ombra danzante.~
+
+@21050 = ~Palla di Fuoco d'Ombra~
+
+@2107 = ~Richiamo Umbratile~
+@2108 = ~Richiamo Umbratile
+Questa abilità permette all'ombra danzante di potenziare le capacità di Richiamo d'Ombra di <PRO_HISHER> per lanciare ancora più incantesimi a metà del livello di <PRO_HISHER>. Conferisce inoltre un uso aggiuntivo di Richiamo d'Ombra. I seguenti incantesimi vengono aggiunti alla riserva di <PRO_HISHER>:
+
+PALLA DI FUOCO RITARDATA D'OMBRA: Una versione illusoria di Palla di Fuoco Ritardata che infligge una combinazione di 15d6 punti di danno da fuoco, da freddo e magici in un'esplosione violacea. Per il resto funziona in modo identico. L'ombra danzante e la creatura d'ombra evocata da <PRO_HISHER> sono immuni alla Palla di Fuoco Ritardata d'Ombra di <PRO_HISHER>. Questa abilità sostituisce Palla di Fuoco d'Ombra.
+
+SCUDO D'OMBRA: Per 2 turni, l'ombra danzante viene avvolta da un manto di ombre mutevoli che blocca i primi 3 attacchi fisici, conferisce Sfocatura e crea 8 immagini speculari d'ombra. Concede inoltre immunità alla Necromanzia, al Risucchio di Livello e agli effetti di morte istantanea, nonché un bonus pari a +20 a Nascondersi tra le ombre e Muoversi Silenziosamente. Questo incantesimo può essere dissolto da Dissolvi Magie, ma non da Visione del Vero.
+
+INVISIBILITÀ DI MASSA: Lanciando questo incantesimo, l'ombra danzante fa sì che tutte le creature alleate all'interno dell'area d'effetto siano soggette all'incantesimo Invisibilità Potenziata. Sostituisce Porta d'Ombra e viene lanciato con Tempo di lancio pari a 1.
+
+Requisiti: solo Ombra Danzante~
+
+@21080 = ~Palla di Fuoco Ritardata d'Ombra~
+
+@21090 = ~Richiamo Umbratile
+Questa abilità permette all'ombra danzante di attingere una notevole quantità di energia dal Semipiano delle Ombre per evocare duplicati semireali di una selezione di incantesimi, lanciati a metà del livello di <PRO_HISHER>. Sono disponibili le seguenti abilità:
+
+ILLUSIONE D'OMBRA: Evoca illusioni d'ombra per disorientare un nemico. Se fallisce un tiro-salvezza contro Incantesimi, il bersaglio subisce paura, berserk, cecità o confusione per 1 round. Per i 4 round successivi, può effettuare un nuovo tiro-salvezza ogni round, ma può comunque ricadere vittima dell'effetto. Per 5 round ha inoltre una probabilità del 25% di fallire il lancio degli incantesimi e perde l'immunità alla Pugnalata alle Spalle. La penalità al tiro-salvezza diventa più severa di 1 punto all'8° livello e ogni 6 livelli successivi, fino a -4. Al 12° livello, l'effetto si propaga ai nemici vicini. Al 14° livello, provoca anche una vulnerabilità del 10% ai danni fisici e una penalità pari a -4 alla Classe Armatura. Al 17° livello, la cecità si applica sempre. Questo incantesimo non ha effetto sulle creature con Intelligenza pari o superiore a 18 né su quelle in grado di vedere attraverso le illusioni. Ignora la Resistenza alla Magia e gli effetti di dissoluzione, sebbene Visione del Vero ne prevenga gli effetti.
+
+SONNO: Fa cadere in un sonno comatoso tutte le creature in un'area del raggio di 4,5 metri attorno al punto d'impatto. I bersagli con più di 4 DV non subiscono alcun effetto.
+
+ACCECARE: Se il bersaglio fallisce un tiro-salvezza, viene accecato per 2 ore e subisce una penalità pari a -4 ai tiri per colpire e alla Classe Armatura.
+
+INVISIBILITÀ: Rende l'ombra danzante completamente invisibile per 24 ore, come l'incantesimo arcano omonimo.
+
+DARDO INCANTATO: Evoca dardi incantati illusori che colpiscono infallibilmente il bersaglio, infliggendo ciascuno 1d4+1 punti di danno magico. Ogni quattro livelli, l'ombra danzante aggiunge un dardo all'incantesimo, fino a un massimo di 5.
+
+FRECCIA ACIDA DI MELF: Evoca una freccia magica che si dirige infallibilmente verso il bersaglio. La freccia infligge 2d4 punti di danno da acido e, per ogni 6 livelli dell'ombra danzante, l'acido persiste per un round aggiuntivo, a meno che non venga dissolto in qualche modo, infliggendo altri 2d4 punti di danno a ogni round.
+
+GLOBO MINORE D'INVULNERABILITÀ: Crea una sfera magica debolmente scintillante attorno all'ombra danzante che impedisce agli effetti degli incantesimi di 1°, 2° o 3° livello di penetrarla. Dura 1 round ogni 2 livelli dell'ombra danzante.
+
+OSCURITÀ, RAGGIO 5 METRI: Avvolge un'area del raggio di 4,5 metri in una massa di oscurità magica, accecando chiunque si trovi al suo interno finché vi rimane. Dopo aver lasciato l'area, la vittima può restare accecata per un massimo di 1 round.
+
+PALLA DI FUOCO RITARDATA D'OMBRA: Una versione illusoria di Palla di Fuoco Ritardata che infligge una combinazione di 15d6 punti di danno da fuoco, da freddo e magici in un'esplosione violacea. Per il resto funziona in modo identico. L'ombra danzante e la creatura d'ombra evocata da <PRO_HISHER> sono immuni alla Palla di Fuoco Ritardata d'Ombra di <PRO_HISHER>.
+
+SCUDO D'OMBRA: Per 2 turni, l'ombra danzante viene avvolta da un manto di ombre mutevoli che blocca i primi 3 attacchi fisici, conferisce Sfocatura e crea 8 immagini speculari d'ombra. Concede inoltre immunità alla Necromanzia, al Risucchio di Livello e agli effetti di morte istantanea, nonché un bonus pari a +20 a Nascondersi tra le ombre e Muoversi Silenziosamente. Questo incantesimo può essere dissolto da Dissolvi Magie, ma non da Visione del Vero.
+
+INVISIBILITÀ DI MASSA: Lanciando questo incantesimo, l'ombra danzante fa sì che tutte le creature alleate all'interno dell'area d'effetto siano istantaneamente soggette all'incantesimo Invisibilità Potenziata.~
+
+@2109 = ~Scudo d'Ombra~
+
+@2120 = ~Danza d'Ombra~
+@2121 = ~Danza d'Ombra
+Per 5 round, l'ombra danzante esegue una danza agile e disorientante che permette a <PRO_HIMHER> di eludere automaticamente gli incantesimi e gli attacchi speciali che normalmente possono essere schivati, come il soffio di drago, le palle di fuoco, i fulmini, le Trappole del Teschio, gli esplosivi e altri effetti simili.
+
+Durante questo periodo, l'ombra danzante diventa invisibile per 3 secondi una volta per round, costringendo i nemici a interrompere il bersagliamento, a meno che non siano in grado di vedere attraverso l'invisibilità. La Classe Armatura migliora di 6, i tiri-salvezza di 3 e il Fattore-movimento di 4 (base 9). Inoltre, l'ombra danzante si muove così rapidamente che gli attacchi con armi a distanza non possono colpire <PRO_HIMHER>.
+
+Questa abilità non può essere dissolta o rimossa da Breccia, sebbene l'effetto di invisibilità possa comunque essere rimosso da Visione del Vero e da altri effetti che dissolvono l'invisibilità.~
+
+@2122 = ~Danza d'Ombra: effetto eluso~
+
+@23 = ~Immunità alla Pugnalata alle Spalle rimossa~
+@24 = ~L'effetto di rimozione dell'immunità alla Pugnalata alle Spalle è terminato~
+
+@25 = ~Elusione d'Ombra~
+@26 = ~Elusione d'Ombra
+Per 5 round, l'ombra danzante avvolge <PRO_HIMHER> nelle ombre, diventando più difficile da colpire. Finché l'effetto permane, <PRO_HESHE> ottiene +4 alla Classe Armatura, +2 a tutti i tiri-salvezza, il 15% di Resistenza al Danno e invisibilità. La Resistenza al Danno aumenta del 5% ai livelli 9 e 13. Conferisce inoltre immunità a Palla di Fuoco d'Ombra e Palla di Fuoco Ritardata d'Ombra.~
+
+@27 = ~Elusione d'Ombra Potenziata~
+@28 = ~Elusione d'Ombra Potenziata
+L'abilità Elusione d'Ombra dell'ombra danzante viene potenziata permanentemente, diventando Forma d'Ombra. In questa forma migliorata, la Resistenza al Danno aumenta al 50%, l'invisibilità diventa Invisibilità Potenziata, l'ombra danzante rigenera 1 Punto Ferita al secondo e ottiene immunità a tutti gli incantesimi di divinazione per la durata dell'effetto.
+
+Requisiti: solo Ombra Danzante~
+
+@60 = ~Ombra Gemella
+Una volta al giorno, l'ombra danzante può creare per 2 turni un duplicato quasi esatto di sé. Il duplicato viene creato al 60% del livello attuale dell'ombra danzante e possiede tutte le abilità che avrebbe a quel livello. Possiede inoltre il 60% dei suoi Punti Ferita. Il duplicato è completamente sotto il controllo dell'ombra danzante. L'Ombra Gemella non può creare a sua volta un'Ombra Gemella né utilizzare le abilità Evocare Ombra o Evocare Presenza Notturna.
+
+Requisiti: solo Ombra Danzante~
+
+@70 = ~Salto d'Ombra~
+@71 = ~Salto d'Ombra
+Attraversa le ombre teletrasportandoti per una breve distanza. A differenza di Passo d'Ombra, questa abilità richiede concentrazione; può essere utilizzata a volontà, ma non più di una volta per turno, e non interrompe l'invisibilità. Per 1 round si applicano i seguenti benefici:
+
+– THAC0: +1
+– Classe Armatura: +1
+– Tiri-salvezza: +1
+– Fattore-velocità dell'arma: -3
+
+Questi bonus non sono cumulativi con se stessi né con quelli conferiti da Passo d'Ombra. L'intero effetto viene consumato al primo attacco andato a segno contro un nemico, se tale attacco viene effettuato prima della fine del round.~
+
+@7100 = ~Salto d'Ombra è disponibile per l'uso~
+
+// END OF SHADOWDANCER SPELLS
+
+// SUMMON SHADOW DIALOG
+@100 = ~Il tuo compagno d'ombra si volta lentamente a guardarti con i suoi occhi informi. Una voce fredda e priva di emozioni risuona nitidamente nella tua mente: "Salute, mio <PRO_LADYLORD>. Cosa comandi?"~
+@101 = ~Attacca i nemici non appena li vedi.~
+@102 = ~Non attaccare i nemici, a meno che non siano loro ad attaccarti per primi.~
+@103 = ~Non attaccare i nemici, a meno che non siano loro ad attaccarmi per primi.~
+@104 = ~Non attaccare né reagire in alcun modo. Limitati a seguire i miei ordini diretti.~
+@105 = ~In realtà, quello che stai facendo adesso va bene. Continua così.~
+@106 = ~Il tuo compagno d'ombra si volta lentamente a guardarti con i suoi occhi informi e ti fissa in attesa di ordini. Una voce risuona nella tua mente: "Sì, mio <PRO_LADYLORD>?"~
+@107 = ~La voce dice: "Come desideri, mio <PRO_LADYLORD>."~ // order
+// @108 = ~La creatura d'ombra ignora i tuoi tentativi di comunicare con lei.~ // no way of detecting "owner" for now
+// END SUMMON SHADOW DIALOG
+
+// SUMMONED SHADOW STR
+@198 = ~Svanire nell'Ombra~
+@199 = ~Svanire nell'Ombra
+Questa abilità permette alla creatura d'ombra di svanire alla vista. Può diventare istantaneamente invisibile per 24 ore e l'effetto non può essere interrotto. Al raggiungimento del 16° livello, ottiene anche la possibilità di utilizzare Invisibilità Potenziata, che dura 2 turni.~
+
+@200 = ~Svanire~
+@201 = ~Svanire
+La creatura d'ombra diventa istantaneamente invisibile per 24 ore. Questo effetto non può essere interrotto.~
+
+@202 = ~Risucchio di Vita~
+@203 = ~Risucchio di Vita
+La creatura d'ombra risucchia la forza vitale della vittima, infliggendo 1d4+4 punti di danno magico, che vengono trasferiti alla creatura d'ombra sotto forma di guarigione o Punti Ferita aggiuntivi per 1 turno.~
+
+@204 = ~Tocco del Vampiro~
+@205 = ~Tocco del Vampiro
+La creatura d'ombra risucchia la salute della vittima come per l'incantesimo Tocco del Vampiro.~
+
+@206 = ~Teletrasporto senza errore~
+@207 = ~Teletrasporto senza errore
+La creatura d'ombra si teletrasporta istantaneamente in qualsiasi punto entro il proprio campo visivo e diventa invisibile per 1 round.~
+
+@208 = ~Forma Ammantata d'Ombra~
+@209 = ~Forma Ammantata d'Ombra
+La creatura d'ombra si avvolge nel tessuto d'ombra, aumentando notevolmente le proprie difese per 2 round. Finché l'effetto è attivo, ottiene +4 alla Classe Armatura, +50% alla Resistenza al Fuoco e +50% alla Resistenza al Danno Magico. Inoltre, tutte le altre resistenze preesistenti aumentano del 50% del loro valore attuale. La creatura d'ombra diventa inoltre invisibile come per Invisibilità Potenziata e rigenera 1 Punto Ferita al secondo.
+
+Dal 16° livello in poi, questa abilità blocca anche il primo attacco in mischia o a distanza andato a segno che infliggerebbe danni fisici, purché avvenga entro 4 round dall'attivazione.
+
+Questa abilità può essere utilizzata una volta ogni 2 turni. Il tempo di recupero scende a 15 round al 15° livello, 13 round al 19° livello e 10 round al 24° livello.~
+
+@20209 = ~Forma Ammantata d'Ombra è disponibile per l'uso.~
+
+@210 = ~Oscurità, Raggio 5 metri~
+@211 = ~Oscurità, Raggio 5 metri
+La creatura d'ombra genera un'oscurità totale e impenetrabile. Nell'area d'effetto non funzionano né la luce normale né quella magica. Ogni forma di visione, compresa l'infravisione, viene gravemente limitata; qualsiasi creatura ostile intrappolata nell'area è, a tutti gli effetti, accecata come per l'incantesimo da mago di 1° livello. Le creature che lasciano l'area recuperano la vista normale dopo 1 round.~
+
+@212 = ~Svanire Profondo~
+@213 = ~Svanire Profondo
+La creatura d'ombra diventa invisibile come per l'incantesimo Invisibilità Potenziata per 2 turni.~
+
+@214 = ~Dissolvi Magie~
+@215 = ~Dissolvi Magie
+La creatura d'ombra tenta di dissolvere tutta la magia come per l'incantesimo Dissolvi Magie.~
+
+@216 = ~Condanna del Vivente~
+@217 = ~Condanna del Vivente
+La Presenza Notturna punta verso un bersaglio vivente e scaglia un raggio di energia oscura. Il bersaglio deve effettuare con successo un tiro-salvezza contro Morte con una penalità pari a -2 o morire istantaneamente. Se il tiro-salvezza riesce, il bersaglio subisce comunque 1d10+4 punti di danno magico e gli effetti dell'incantesimo Devastazione per 1 turno. Questo effetto secondario di Devastazione non può essere contrastato dai tiri-salvezza.~
+
+@218 = ~Vedere Invisibilità~
+@219 = ~Vedere Invisibilità
+La creatura d'ombra ottiene brevemente la capacità di vedere le creature invisibili, rivelandole a meno che non siano protette dagli effetti di divinazione. Questo incantesimo viene lanciato istantaneamente come azione gratuita una volta ogni 3 round e non può essere interrotto.~
+
+@220 = ~Scambio Umbratile~
+@221 = ~Scambio Umbratile
+La creatura d'ombra scambia istantaneamente la propria posizione con quella di una creatura alleata mediante un Passo d'Ombra. L'alleato diventa invisibile per 2 round e interrompe immediatamente gli attacchi. La creatura d'ombra appare nella posizione precedentemente occupata dall'alleato, pronta a combattere, e ottiene i seguenti benefici per 2 round:
+
+– Classe Armatura: +2
+– Tiri-salvezza: +2
+– THAC0: +2
+– Danno: +2
+– Resistenza al Danno: +5%
+– Possibilità di Colpo Critico: +5%
+– Attacchi per Round: +1/2
+
+Questa abilità può essere utilizzata una volta ogni 2 turni e non ha effetto se viene usata su una creatura non alleata o sulla stessa creatura d'ombra. Il tempo di recupero diminuisce ogni volta che la creatura d'ombra evolve in una forma più potente, fino a un minimo di 5 round qualora infine diventi una Presenza Notturna.~
+
+@22200 = ~Scambio Umbratile è disponibile per l'uso.~
+
+@22500 = ~Vincolo d'Ombra~
+@22501 = ~Vincolo d'Ombra
+Il dominio dell'ombra danzante sulle energie del Piano delle Ombre rafforza <PRO_HIMHER> in battaglia mentre è sotto gli effetti delle arti d'ombra di <PRO_HISHER>.
+
+Mentre è sotto gli effetti di Elusione d'Ombra o Forma d'Ombra:
+
+– Fattore-movimento: +1
+– Resistenza alla Magia: +10%
+– Resistenza al Danno: +3%
+– Invisibilità Ritorsiva: Quando viene colpita, l'ombra danzante ha il 5% di probabilità di riattivare immediatamente Elusione d'Ombra o Forma d'Ombra; ciò può avvenire soltanto una volta ogni 3 round. L'ombra danzante si scaglia inoltre contro l'aggressore, infliggendogli 2d6 punti di danno magico e stordendolo per 1 round. Un tiro-salvezza contro Incantesimi con una penalità pari a -1 dimezza i danni e annulla lo stordimento.
+
+Mentre è sotto gli effetti di Passo d'Ombra o Salto d'Ombra:
+
+– Fattore-movimento: +1
+– Danno: +2
+– THAC0: +2
+– Possibilità di Colpo Critico: +5%
+
+Requisiti: solo Ombra Danzante~
+
+// NAMES OF CRE
+@250 = ~Ombra~
+@251 = ~Ombra Maggiore~
+@252 = ~Signore delle Ombre~
+@253 = ~Signore delle Ombre Maggiore~
+@254 = ~Presenza Notturna~
+// END OF SUMMON SHADOW SPELLS
+
+@255 = ~Forza Risucchiata~
+
+@500 = ~Ombra Gemella è ora disponibile per l'uso~
+
+@700 = ~Nuova abilità passiva ottenuta: Rifugio d'Ombra~
+@701 = ~Nuova abilità attiva ottenuta: Illusione d'Ombra~
+@702 = ~Nuova abilità attiva ottenuta: Evocare Ombra~
+@703 = ~Nuova abilità attiva ottenuta: Elusione d'Ombra~
+@704 = ~Nuova abilità attiva ottenuta: Richiamo d'Ombra~
+
+@707 = ~Ombra si evolve in Ombra Maggiore~
+@708 = ~Ombra Maggiore si evolve in Signore delle Ombre~
+@709 = ~Signore delle Ombre si evolve in Signore delle Ombre Maggiore~
+
+@710 = ~Ottenuto un nuovo uso di Passo d'Ombra~
+@711 = ~Ottenuto un nuovo uso di Elusione d'Ombra~
+@712 = ~Ottenuto un nuovo uso di Richiamo d'Ombra~
+
+@720 = ~Ottenuto un bonus alla Furtività~
+@721 = ~Ottenuto un bonus di Mente Sfuggente~
+
+// INSTALLER TEXT
+@1000 = ~Installa il kit Ombra Danzante revisionato~
+@1005 = ~Rendi i benefici di Forma Spirituale identici a quelli di Forma d'Ombra~
+@1010 = ~Consenti alle ombre danzanti originali di utilizzare la revisione delle Abilità di Alto Livello di Rogue Rebalancing~
+// @1020 = ~Modifica il kit Mago delle Ombre di Vienxay per adattarlo e incorporare elementi di questo kit~
+// END INSTALLER TEXT
+
+// ITMS
+@5000 = ~Questa verga sembra contorcersi e mutare nella tua mano, eppure non avverti alcun movimento. Ombre oleose strisciano continuamente sulla sua superficie, sebbene la loro origine rimanga un mistero. La verga emana un'aura oscura e, se impugnata nel modo corretto, permette al portatore di "saltare" apparentemente da un punto all'altro durante la battaglia.
+
+STATISTICHE:
+
+Abilità attivabili:
+– Passo d'Ombra 3 volte al giorno, lanciato al livello del personaggio.
+  Speciale: Attraversa le ombre come per l'omonima abilità dell'ombra danzante, ottenendo benefici offensivi per colpire più duramente e difensivi per eludere quasi qualsiasi effetto per un brevissimo periodo.
+
+Peso: 2~
+
+// OTHER TWEAKS
+@6000 = ~Forma Spirituale
+Durata: 5 round + 1 round ogni 10 livelli a partire dal 30° livello
+Tempo di lancio: Istantaneo
+Area d'effetto: Il lanciatore
+
+Lo sciamano scivola in uno spazio fra il mondo spirituale e il piano materiale, rendendosi parzialmente incorporeo. Per tutta la durata dell'effetto, lo sciamano rigenera 1 Punto Ferita al secondo, ottiene +4 alla Classe Armatura, +4 a tutti i tiri-salvezza, Invisibilità Potenziata e il 50% di Resistenza al Danno.
+
+Lo sciamano non può inoltre essere individuato dagli incantesimi di divinazione finché <PRO_HESHE>, compiendo azioni offensive, non rende <PRO_HIMHER> parzialmente visibile o finché l'effetto non termina. Ciò non impedisce alle creature naturalmente in grado di vedere attraverso l'invisibilità di individuare lo sciamano.~
+
+// COMPONENT RESTRICTIONS
+@10000 = ~Questo componente è disponibile soltanto in BGEE, BG2EE, IWDEE ed EET~
+@10001 = ~Questo componente è disponibile soltanto in BGEE, BG2EE ed EET~
+@10002 = ~La correzione è già inclusa nel componente principale~
+@10003 = ~Questo componente richiede il componente principale di Shadowdancer Overhaul~
