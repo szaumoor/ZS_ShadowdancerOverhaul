@@ -1,8 +1,0 @@
-INCLUDE "%MOD_FOLDER%/libs/zs_a7functions.tpa"
-INCLUDE "%MOD_FOLDER%/libs/zs_ardanis_functions.tpa"
-INCLUDE "%MOD_FOLDER%/libs/zs_cdfunctions.tpa"
-INCLUDE ~%MOD_FOLDER%/libs/zs_subtle_functions.tpa~
-INCLUDE "%MOD_FOLDER%/libs/zs_add_effects.tpa"
-INCLUDE ~%MOD_FOLDER%/libs/zs_alter_functions.tpa~
-INCLUDE ~%MOD_FOLDER%/libs/zs_checks.tpa~
-INCLUDE ~%MOD_FOLDER%/libs/zs_tipun.tpa~

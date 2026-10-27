@@ -1,0 +1,10 @@
+///// SHADOW ILLUSION \\\\\
+COPY_EXISTING ~zs#sdl3a.spl~ ~override~ // Shadow Illusion
+    LPF ALTER_SPELL INT_VAR name=RESOLVE_STR_REF(@5) desc=RESOLVE_STR_REF(@6) END
+
+COPY_EXISTING ~sppr505.spl~ ~override~ // True sight protection
+              ~spwi609.spl~ ~override~
+              ~spcl232.spl~ ~override~
+              ~spcl732.spl~ ~override~
+    LPF ADD_SPL_SELFEFF INT_VAR rd=0 ip=0 STR_VAR effects= ~ip=-1,op=206,p1=-1,rd=3,res=zs#sdl3a,dur=60;op=321,res=zs#sdl3a;op=321,res=zs#sdl3b;op=321,res=zs#sdl3c;op=321,res=zs#sdl3d;op=321,res=zs#sdl3e~ END
+BUT_ONLY IF_EXISTS
