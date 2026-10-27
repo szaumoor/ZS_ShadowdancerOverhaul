@@ -2,4 +2,4 @@
 
 ## Fixed
 
-- Debug flag is off
+- Shadowstep fix for nonsensical console log line when using Planeshift version
