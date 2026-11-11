@@ -2,4 +2,4 @@
 
 ## Fixed
 
-- Shadowstep fix for nonsensical console log line when using Planeshift version
+- Shadowstep fix for inability to cast Planeshift version in quick succession of after the Blink version
